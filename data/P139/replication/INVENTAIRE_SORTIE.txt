@@ -1,0 +1,19 @@
+# Inventaire complet du repertoire de sortie de l'execution de reference de P139 (second ordinateur, Linux, OpenJDK 21),
+# releve apres la fin des deux cotes : chemin relatif au repertoire de sortie, taille en octets.
+# Conserves dans ce depot (meme nom, sous data/P139/replication/) : science/cote{1,2}.ckpt, .java.exit, .stdout.log, .stderr.log.
+# Non conserves : wrapper.log et preflight.log (journal du lanceur et releve de l'environnement d'execution) et les
+# catalogues science/cote{1,2}.taches ; l'empreinte de ces catalogues est imprimee par l'execution (CATALOGUE_SHA256) et
+# est celle des fichiers data/P139/cote{1,2}.taches (controle R5 de verifier_recus.py).
+# Aucun fichier de touche (science/cote{1,2}.ckpt.touches) n'y figure.
+preflight.log 619
+science/cote1.ckpt 4008015
+science/cote1.java.exit 2
+science/cote1.stderr.log 95
+science/cote1.stdout.log 37361
+science/cote1.taches 5092815
+science/cote2.ckpt 4977342
+science/cote2.java.exit 2
+science/cote2.stderr.log 95
+science/cote2.stdout.log 40573
+science/cote2.taches 6435284
+wrapper.log 56

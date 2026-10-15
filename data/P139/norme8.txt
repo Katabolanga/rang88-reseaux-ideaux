@@ -1,0 +1,5 @@
+# vecteur de norme 8 de (P139, alpha) : premiere ligne TOUCHE de A_norme8_recherche_cote1_29_10_S16.log (Rang88CertZ, cote 1, BA = 29/10, S = 16)
+# energie courte 398/139, energie de fibre 1015256/278^2 ; somme = 16 = 2 * 8
+cote = 1
+u = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+y = [-2, 0, 1, -1, 0, 1, 2, 2, 0, 1, 0, -1, 0, 1, 1, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

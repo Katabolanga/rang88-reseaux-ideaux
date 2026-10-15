@@ -1,0 +1,18 @@
+# Inventaire complet du repertoire de sortie de l'execution de reference de P599 (second ordinateur, Linux, OpenJDK 21),
+# releve apres la fin des deux cotes : chemin relatif au repertoire de sortie, taille en octets.
+# Conserves dans ce depot (meme nom, sous data/P599/replication/) : science/cote{1,2}.ckpt, .java.exit, .stdout.log, .stderr.log.
+# Les catalogues science/cote{1,2}.taches sont identiques octet pour octet a data/P599/cote{1,2}.taches (une seule copie est
+# conservee). Non conserves : wrapper.log (vide) et preflight.log (releve de l'environnement d'execution).
+# Aucun fichier de touche (science/cote{1,2}.ckpt.touches) n'y figure.
+preflight.log 621
+science/cote1.ckpt 5544904
+science/cote1.java.exit 2
+science/cote1.stderr.log 95
+science/cote1.stdout.log 77085
+science/cote1.taches 6469852
+science/cote2.ckpt 6842800
+science/cote2.java.exit 2
+science/cote2.stderr.log 95
+science/cote2.stdout.log 76429
+science/cote2.taches 8107957
+wrapper.log 0

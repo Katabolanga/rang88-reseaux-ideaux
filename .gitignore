@@ -1,0 +1,5 @@
+# fichier de R. Sakamoto, a telecharger soi-meme (non redistribue) : voir externe/LISEZMOI.md
+externe/integer_input.txt
+# sorties de code/preparation/preparer.sh et historique de PARI/GP
+sortie_preparation/
+gp_history.txt

@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ces données ou ces programmes, citez la note ci-dessous. / If you use this material, please cite the note below."
+title: "rang88-reseaux-ideaux : données, programmes et vérifications de la note « Réseaux idéaux pairs unimodulaires de rang 88 sur Q(ζ₁₁₅) »"
+type: dataset
+authors:
+  - family-names: Gauvin
+    given-names: Ivan
+version: "1.0"
+date-released: "2026-10-15"
+abstract: >-
+  Données et vérificateurs qui accompagnent la note « Réseaux idéaux pairs unimodulaires de rang 88 sur Q(ζ₁₁₅) » :
+  h⁻(115) et orbites galoisiennes, certificat d'isométrie H ≅ L₀, témoins de norme 6, programme certifiant Rang88CertZ
+  et preuve de non-omission, entrées et reçus des exécutions pour les réseaux X₁₃₉ et X₅₉₉, certificats de classe.
+  Claude Opus 5.5 (Anthropic) et Astra (OpenAI) ont assisté l'auteur ; ils ne sont pas auteurs.
+keywords:
+  - réseaux idéaux
+  - réseaux unimodulaires pairs
+  - réseaux extrémaux
+  - corps cyclotomiques
+  - énumération certifiée
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/Katabolanga/rang88-reseaux-ideaux"
+preferred-citation:
+  type: article
+  title: "Réseaux idéaux pairs unimodulaires de rang 88 sur Q(ζ₁₁₅)"
+  authors:
+    - family-names: Gauvin
+      given-names: Ivan
+  year: 2026
+  month: 10
+  notes: "Prépublication ; texte source et PDF dans le dossier article/ de ce dépôt."

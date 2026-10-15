@@ -1,0 +1,927 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english,french]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[a4paper,textwidth=15cm,textheight=23.5cm,centering]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{xurl}
+
+\usepackage{array}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+\setlist[enumerate]{leftmargin=2.2em}
+\setlist[itemize]{leftmargin=1.6em}
+
+\theoremstyle{plain}
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{proposition}[theoreme]{Proposition}
+\newtheorem{lemme}[theoreme]{Lemme}
+\newtheorem{corollaire}[theoreme]{Corollaire}
+\newtheorem{question}[theoreme]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theoreme]{Définition}
+\newtheorem{remarque}[theoreme]{Remarque}
+\numberwithin{equation}{section}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\Op}{\mathcal{O}^{+}}
+\newcommand{\Dif}{\mathfrak{D}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Tc}{\mathcal{T}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Nm}{N}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Stab}{Stab}
+\newcommand{\Clp}{\Cl^{+}}
+\newcommand{\Up}{U^{+}}
+\newcommand{\Upp}{U^{+}_{\gg0}}
+\newcommand{\Lz}{L_{0}}
+\newcommand{\LS}{L_{S}}
+\newcommand{\Trp}{\Tr^{+}}
+\newcommand{\st}[1]{\textup{\textsf{\small[#1]}}}
+\newcommand{\DEM}{\st{démontré}}
+\newcommand{\GRH}{\st{sous GRH}}
+\newcommand{\ASS}{\st{assisté par calcul}}
+\newcommand{\CONS}{\st{constaté}}
+\newcommand{\OUV}{\st{ouvert}}
+
+\makeatletter
+\@namedef{subjclassname@2020}{Classification MSC 2020}
+\makeatother
+\renewcommand{\keywordsname}{Mots-clés}
+
+\title[Réseaux idéaux de rang 88 sur $\Q(\zeta_{115})$]{Réseaux idéaux pairs unimodulaires de rang $88$\\ sur $\Q(\zeta_{115})$}
+\author{Ivan Gauvin}
+\date{15 octobre 2026}
+\subjclass[2020]{11H06 ; 11H56, 11R18, 11R29, 11E12}
+\keywords{réseaux idéaux, réseaux unimodulaires pairs, réseaux extrémaux, corps cyclotomiques, groupe des classes, énumération certifiée}
+
+\begin{document}
+
+\begin{abstract}
+Soit $L=\Q(\zeta_{115})$, de degré $88$. Nous étudions l'ensemble $S$ des classes de réseaux idéaux unimodulaires $(I,\Tr_{L/\Q}(\alpha x\bar y))$ sur $L$ ; ces réseaux sont pairs. Nous montrons que $S$ est en bijection avec le groupe des classes de $L$, qui est cyclique d'ordre $h^-(115)=44\,697\,909=3\cdot331\cdot45\,013$, et que $S$ se répartit en $508\,463$ orbites galoisiennes. Les deux réseaux extrémaux de Sakamoto, $\Lz$ et $\LS$, occupent l'orbite principale et l'unique orbite de $3$-torsion non triviale. Nous démontrons que deux réseaux idéaux de minimum au moins $8$ sur $L$ sont isométriques si et seulement si leurs classes sont conjuguées sous $\Gal(L/\Q)$. Nous étendons aux idéaux non principaux un recollement en deux formes de rang $44$ et nous en tirons, par une inégalité de type Parseval, un critère d'extrémalité fini. Les orbites de huit idéaux premiers sont rejetées par des vecteurs explicites de norme $6$. Pour deux idéaux premiers de degré $2$, $P_{139}$ et $P_{599}$, les réseaux qu'ils portent sont extrémaux : leur minimum $8$ est établi par une démonstration assistée par ordinateur, dont le modèle d'exécution est explicité et dont les calculs ont été répliqués sur un second ordinateur. Ils ne sont isométriques ni entre eux ni à $\Lz$ et $\LS$, sans GRH. À notre connaissance, après vérification bibliographique au 13 octobre 2026, ce sont deux nouveaux exemples de réseaux extrémaux de rang $88$.
+
+\medskip
+\noindent\textsc{Abstract.} \foreignlanguage{english}{Let $L=\Q(\zeta_{115})$. We study the set $S$ of classes of unimodular ideal lattices over $L$; they are even of rank $88$. We show that $S$ is in bijection with the class group of $L$, which is cyclic of order $h^-(115)=44\,697\,909$, and splits into $508\,463$ Galois orbits; Sakamoto's two extremal lattices lie in the principal orbit and in the unique non-trivial $3$-torsion orbit. We prove that two ideal lattices over $L$ with minimum at least $8$ are isometric if and only if their classes are Galois conjugate. We extend a gluing construction to non-principal ideals and derive a finite extremality criterion from a Parseval-type inequality. The orbits of eight prime ideals are rejected by explicit vectors of norm $6$. For two prime ideals of degree $2$, above $139$ and $599$, the lattices they carry are extremal: their minimum $8$ is established by a computer-assisted proof, with an explicit execution model and computations replicated on a second computer. They are isometric neither to each other nor to Sakamoto's lattices, unconditionally. To our knowledge, after a literature check as of October 13, 2026, they are two new examples of extremal lattices of rank $88$.}
+\end{abstract}
+
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small Chaque énoncé porte son statut : \DEM, \GRH, \ASS, \CONS{} ou \OUV{} (définitions au \S\ref{subsec:statuts}). Les réserves sont regroupées aux \S\S\ref{subsec:hyp} et~\ref{subsec:methodes}.}}
+\end{center}
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{Contexte}
+Un réseau pair unimodulaire de rang $n$ a un minimum au plus égal à $2\lfloor n/24\rfloor+2$ ; il est dit \emph{extrémal} si son minimum atteint cette valeur. C'est la borne de Mallows, Odlyzko et Sloane, rappelée dans l'introduction de~\cite{Sak26}. En rang $88$, un réseau extrémal est donc un réseau pair unimodulaire de minimum $8$.
+
+D'après l'introduction de~\cite{Sak26}, aucun réseau extrémal de rang supérieur à $80$ n'était connu avant cette prépublication ; pour le rang $80$, elle cite~\cite{BN98,Wat12}. Sakamoto~\cite{Sak26} construit deux réseaux extrémaux de rang $88$, non isométriques. Il les note $L$ et $L_0$ ; nous notons $\LS$ le premier et $\Lz$ le second. Ce sont des produits tensoriels hermitiens sur $\Q(\sqrt{-23})$ : $\LS=E\otimes J$ et $\Lz=E\otimes J_0$, où $E$ est l'anneau des entiers de $\Q(\sqrt{-23},\zeta_5)$, $J=(47,\zeta_{23}-21)$ est un idéal non principal de $\Q(\zeta_{23})$ et $J_0$ est un idéal principal de $\Q(\zeta_{23})$. La première version de~\cite{Sak26}, du 14 septembre 2026, ne contient que $\LS$ ; $\Lz$ apparaît dans la seconde version, du 27 septembre 2026. D'après~\cite[rem.~3.11]{Sak26}, ces deux réseaux sont des réseaux idéaux sur $\Q(\zeta_{115})$, portés par $J\OO_L$ et par l'idéal principal $J_0\OO_L$. D'après~\cite[th.~A.10]{Sak26}, leurs groupes d'automorphismes sont d'ordres $1\,457\,280$ et $2\,914\,560$. La remarque~5.6 de~\cite{Sak26} précise que la construction tensorielle ne donne que ces deux classes d'isométrie, et que ce n'est pas une classification des réseaux extrémaux de rang~$88$.
+
+Le réseau $H=(\OO_L,\Tr_{L/\Q}(\beta_0z\bar z))$, pour un $\beta_0\in\Q(\zeta_{115})^+$ explicite (voir les notations ci-dessous), est isométrique à $\Lz$ (\S\ref{subsec:sakamoto}). Le réseau $H$ n'est donc pas nouveau : Sakamoto a la priorité. L'extrémalité de $\Lz$ est celle de~\cite[prop.~5.5]{Sak26} ; nous ne l'avons pas redémontrée.
+
+La présente note part de la remarque suivante : $\Lz$ et $\LS$ sont deux éléments d'un ensemble fini $S$, celui des classes de réseaux idéaux unimodulaires sur $L=\Q(\zeta_{115})$. Elle décrit $S$ et cherche lesquels de ses éléments sont de minimum $8$.
+
+\subsection{Contenu de la note}
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item \emph{L'ensemble $S$} (\S\ref{sec:S}). Tout réseau idéal unimodulaire sur $L$ est pair. L'ensemble $S$ est en bijection avec $\Cl(L)$, cyclique d'ordre $44\,697\,909=3\cdot331\cdot45\,013$. Il a $508\,463$ orbites sous $\Gal(L/\Q)$, de tailles $1$, $2$, $22$, $44$ et $88$. Le réseau $\Lz$ est l'orbite principale et $\LS$ l'unique orbite de $3$-torsion non triviale.
+\item \emph{Théorème d'isométrie} (\S\ref{sec:isometrie}). Deux réseaux idéaux de minimum $\ge8$ sur $L$ sont isométriques si et seulement si leurs classes dans $S$ sont conjuguées sous $\Gal(L/\Q)$.
+\item \emph{Recollement et critère} (\S\ref{sec:recollement}). Pour un idéal entier $I$ premier à $\bar I$, le réseau $(I,b_\alpha)$ se plonge dans une somme de deux formes de rang $44$. Un lemme de Parseval donne un critère d'extrémalité : il suffit d'examiner les projections d'énergie au plus $1057/200$.
+\item \emph{Énumération certifiante} (\S\ref{sec:certifiant}). Un programme applique ce critère. Une preuve de non-omission en décrit la portée, sous un modèle explicite de la machine.
+\item \emph{Résultats} (\S\ref{sec:resultats}). Huit idéaux premiers donnent des réseaux non extrémaux, par un vecteur explicite de norme~$6$. Deux idéaux premiers de degré~$2$, $P_{139}$ et $P_{599}$, portent deux nouveaux réseaux extrémaux, à notre connaissance au 13 octobre 2026, non isométriques entre eux ni aux réseaux de Sakamoto ; le minimum est établi par une démonstration assistée par ordinateur (théorème~\ref{thm:extremaux}). Quatre autres idéaux sont des survivants partiels d'un filtre, sans conclusion.
+\end{enumerate}
+
+Le minimum $8$ de $X_{139}$ et de $X_{599}$ est établi par une démonstration assistée par ordinateur (théorème~\ref{thm:extremaux}) : un programme, dont la non-omission est démontrée dans un modèle explicite de la machine (\S\ref{sec:certifiant}), a parcouru les deux côtés du critère du \S\ref{sec:recollement} sans trouver de vecteur court. Chaque balayage a été exécuté deux fois, sur deux ordinateurs différents, sous deux systèmes et deux versions de Java, et les reçus des deux exécutions sont identiques octet pour octet. La non-isométrie est démontrée sans GRH.
+
+\subsection{Statuts}\label{subsec:statuts}
+Nous utilisons cinq statuts.
+\begin{itemize}
+\item \DEM{} : preuve complète dans le texte, ou identité exacte rejouable (témoin entier, certificat), au besoin avec un résultat publié cité nommément.
+\item \GRH{} : dépend d'un calcul de groupe de classes ou d'unités par \texttt{bnfinit} de PARI/GP.
+\item \ASS{} : démontré sous des hypothèses nommées qui portent sur une exécution d'un programme (machine, matériel, intégrité des journaux). Ces hypothèses sont H1 à H4 (\S\ref{subsec:hyp}).
+\item \CONS{} : sortie de programme sans valeur de preuve.
+\item \OUV{} : non établi.
+\end{itemize}
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{>{\raggedright\arraybackslash}p{7.3cm}>{\raggedright\arraybackslash}p{6.9cm}}
+\toprule
+Énoncé & Statut \\
+\midrule
+$h^-(115)=44\,697\,909$ ;$\Cl(L)$ cyclique ; $\Clp(L^+)\cong\Z/2$ (prop.~\ref{prop:hmoins}, \ref{prop:S}) & démontré (formule analytique en arithmétique exacte ; $h^+=1$ par~\cite{Mil14}) \\
+Parité ; bijection $S\leftrightarrow\Cl(L)$ (prop.~\ref{prop:pair}, \ref{prop:S}) & démontré \\
+Action de Galois ; $508\,463$ orbites (prop.~\ref{prop:car}, tableau~\ref{tab:orbites}) & démontré (relation de Stickelberger, normes exactes, formule de Burnside) \\
+$H\cong\Lz$ & démontré (certificat entier) ; Sakamoto a la priorité \\
+Extrémalité de $\Lz$ et de $\LS$ & \cite[prop.~5.5 et \S5]{Sak26} ; non redémontrée ici \\
+Place de $\Lz$ et de $\LS$ dans $S$ (prop.~\ref{prop:L0LS}) & démontré, modulo la description idéale et le lemme~A.9 de~\cite{Sak26} \\
+Lemmes~\ref{lem:syl23} et~\ref{lem:syl5} ; th.~\ref{thm:isometrie} ; cor.~\ref{cor:bijection} & démontré (preuve interne, relue par un second assistant, voir la déclaration finale) \\
+Prop.~\ref{prop:recollement} ; lemmes~\ref{lem:A}, \ref{lem:parseval}, \ref{lem:nul} ; th.~\ref{thm:critere} & démontré \\
+Th.~\ref{thm:nonomission} (non-omission du programme) & démontré sous le modèle de machine M1--M3 ; relu par un second assistant, dans une portée limitée \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\begin{tabular}{>{\raggedright\arraybackslash}p{7.3cm}>{\raggedright\arraybackslash}p{6.9cm}}
+\toprule
+Énoncé & Statut \\
+\midrule
+Non-extrémalité pour $P_{461}$, $P_{691}$, $P_{1151}$, $P_{1381}$, $P_{1471}$, $P_{829}$, $P_{1289}$, $P_{1979}$ (tableau~\ref{tab:rejets}) & démontré, sans GRH (témoins exacts de norme $6$) \\
+Localisation de ces classes dans $\Cl(L)$ & composante $3$ : sans GRH ; composantes $331$ et $45\,013$ : sous GRH \\
+$P_{139}$, $P_{599}$ : réseaux pairs unimodulaires ; vecteur de norme $8$ & démontré (contrôles exacts) \\
+$P_{139}$ : aucun vecteur non nul de norme $\le6$ & minimum $\ge8$ assisté par calcul (H1--H3) ; deux exécutions complètes sur deux ordinateurs, reçus identiques \\
+$P_{599}$ : aucun vecteur non nul de norme $\le6$ & minimum $\ge8$ assisté par calcul (H1--H3) ; deux exécutions complètes sur deux ordinateurs, reçus identiques \\
+$[P_{139}]^3\neq1$ ; l'ordre de $[P_{599}]$ est divisible par $331$ (prop.~\ref{prop:classeP139}, \ref{prop:classeP599}) & démontré, sans GRH \\
+Ni $P_{139}$ ni $P_{599}$ n'est isométrique à $\Lz$ ou à $\LS$ (prop.~\ref{prop:noniso}) & démontré, modulo~\cite{Sak26} et le th.~\ref{thm:isometrie} ; ne dépend pas de l'énoncé assisté \\
+Extrémalité de $X_{139}$ et $X_{599}$ ; non-isométrie entre eux, à $\Lz$ et à $\LS$ (th.~\ref{thm:extremaux}) & minimum : démonstration assistée par ordinateur (M1, M2, H1--H3) ; non-isométrie : démontrée, sans GRH (rem.~\ref{rem:normeF}) \\
+Étiquette exacte des orbites de $P_{139}$ et $P_{599}$ & sous GRH (détail au \S\ref{subsec:classes}) \\
+$P_{3359}$, $P_{4049}$, $P_{4969}$, $P_{5659}$ (tableau~\ref{tab:survivants}) & constaté : survivants partiels d'un filtre ; aucune conclusion \\
+Nombre d'orbites de minimum $8$ dans $S$ & ouvert ; entre $4$ et $508\,463$ : les orbites de $\Lz$ et de $\LS$ (minimum par~\cite{Sak26}) et celles de $X_{139}$ et $X_{599}$ (th.~\ref{thm:extremaux}), deux à deux distinctes \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Ce qui est repris de la littérature et ce qui est propre à ce travail}\label{subsec:connu}
+\emph{Repris.} Les réseaux $\Lz$ et $\LS$, leur extrémalité, leur description comme réseaux idéaux sur $\Q(\zeta_{115})$ et leurs groupes d'automorphismes sont dus à Sakamoto~\cite{Sak26}. La parité automatique d'un réseau idéal unimodulaire lorsque $L/L^+$ est non ramifiée aux places finies est classique~\cite{Bay84,Bay99}. Le paramétrage des réseaux idéaux par des classes d'idéaux et par un quotient d'unités est celui de Nebe~\cite[rem.~4.4]{Neb16} ; Nebe~\cite[lemme~4.3, th.~4.5]{Neb16} utilise aussi le sens « conjugués, donc isométriques » du théorème~\ref{thm:isometrie}. L'égalité $h(\Q(\zeta_{115})^+)=1$ est due à Miller~\cite{Mil14}. La formule analytique du nombre de classes relatif et la relation de Stickelberger sont classiques~\cite{Was97}. Le recollement de réseaux est classique~\cite[ch.~4]{SPLAG}. La borne de Blichfeldt~\cite{Bli29} sert au théorème d'isométrie.
+
+\emph{Propre à ce travail.} Le calcul de $h^-(115)$ tel qu'il est utilisé ici, la description de $S$ et de ses orbites (\S\ref{sec:S}) ; le théorème d'isométrie pour $m=115$, dont la preuve n'utilise pas le théorème de Kronecker (\S\ref{sec:isometrie}) ; le recollement pour un idéal non principal, le lemme de Parseval et le critère (\S\ref{sec:recollement}) ; le programme certifiant et sa preuve de non-omission (\S\ref{sec:certifiant}) ; les rejets, les deux candidats et leurs classes (\S\ref{sec:resultats}). Le certificat entier d'isométrie $H\cong\Lz$ est aussi de ce travail ; le réseau, lui, est celui de Sakamoto.
+
+\emph{Recherche d'antériorité.} Une recherche bibliographique a été faite en octobre 2026 : arXiv, notice et texte de~\cite{Sak26} (version~2 du 27 septembre 2026), dépôt de calculs de son auteur, catalogue de Nebe et Sloane (explicitement incomplet), recherches par mots-clés dans des sources académiques. Le seul autre objet explicite de rang $88$ repéré a une matrice de Gram dont la diagonale contient $6$ : il a un vecteur de norme $6$ et n'est pas extrémal. Aucun autre exemple explicite de réseau extrémal de rang $88$ n'a été identifié. À notre connaissance, à la date du 13 octobre 2026, $X_{139}$ et $X_{599}$ sont donc deux nouveaux exemples ; c'est le résultat d'une recherche datée, pas une preuve de priorité sur un travail non publié ou non indexé.
+
+\subsection*{Plan}
+Le \S\ref{sec:S} décrit $S$. Le \S\ref{sec:isometrie} démontre le théorème d'isométrie. Le \S\ref{sec:recollement} établit le recollement, le lemme de Parseval et le critère. Le \S\ref{sec:certifiant} présente l'énumération certifiante et ses hypothèses. Le \S\ref{sec:resultats} donne les résultats. Le \S\ref{sec:fin} réunit les questions ouvertes, les méthodes et la déclaration d'usage de l'intelligence artificielle.
+
+\subsection*{Notations}
+On pose $\zeta=\zeta_{115}$, $L=\Q(\zeta)$, de degré $88$, $L^+=\Q(c)$ avec $c=\zeta+\zeta^{-1}$, et $\Op=\Z[c]$, anneau des entiers de $L^+$. On note $x\mapsto\bar x$ la conjugaison complexe, $\Nm=\Nm_{L/L^+}$, $\Trp=\Tr_{L^+/\Q}$, $\Dif$ la différente de $L^+$, $U_L$ et $\Up$ les groupes d'unités de $L$ et de $L^+$, $\Upp$ le groupe des unités totalement positives de $L^+$, et $\mu_L$ le groupe des racines de l'unité de $L$, d'ordre $230$. Pour $a$ premier à $115$, $\sigma_a$ est l'automorphisme $\zeta\mapsto\zeta^a$. On pose $e=\zeta-\zeta^{-1}$ ; on a $e^2=c^2-4$. On note $T=\Q(\zeta_{23})$ et $F=\Q(\sqrt{-23})$, sous-corps de $L$.
+
+Un \emph{réseau idéal} est un couple $X=(I,\alpha)$, où $I$ est un idéal fractionnaire de $L$ et $\alpha\in L^+$ est totalement positif ($\alpha\gg0$), muni de la forme $b_\alpha(x,y)=\Tr_{L/\Q}(\alpha x\bar y)$. La \emph{norme} d'un vecteur $z$ est $b_\alpha(z,z)$. On fixe un élément $\beta_0\in L^+$ totalement positif tel que $\beta_0\Dif=\Op$ ; il est écrit en clair dans les données qui accompagnent la note (\S\ref{subsec:methodes}), où ces deux propriétés sont contrôlées exactement. On pose $H=(\OO_L,\beta_0)$.
+
+\section{L'ensemble des réseaux idéaux unimodulaires sur \texorpdfstring{$\Q(\zeta_{115})$}{Q(zeta115)}}\label{sec:S}
+
+\subsection{Parité et unimodularité}
+
+\begin{proposition}\label{prop:pair}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item L'extension $L/L^+$ est non ramifiée aux places finies, $e$ est une unité, et $\Dif_L=\Dif\,\OO_L$.
+\item Le réseau $(I,\alpha)$ est unimodulaire si et seulement si $\alpha\,\Nm(I)\,\Dif=\Op$.
+\item Tout réseau idéal unimodulaire sur $L$ est pair.
+\end{enumerate}
+\DEM
+\end{proposition}
+
+\begin{proof}
+(a) On a $\OO_L=\Op[\zeta]$, et $\zeta$ est racine de $X^2-cX+1$ ; la différente relative est donc engendrée par $e=\zeta-\zeta^{-1}=-\zeta^{-1}(1-\zeta^2)$. Comme $\zeta^2$ est une racine primitive de l'unité d'ordre $115$, qui n'est pas une puissance d'un nombre premier, $1-\zeta^2$ est une unité. Par transitivité, $\Dif_L=\Dif\,\OO_L$.
+(b) Le dual de $I$ pour $b_\alpha$ est $(\alpha\bar I\Dif_L)^{-1}$. Donc $(I,\alpha)$ est unimodulaire si et seulement si $\alpha I\bar I\Dif_L=\OO_L$, c'est-à-dire $\alpha\Nm(I)\Dif\,\OO_L=\OO_L$ ; on conclut par l'injectivité de l'extension des idéaux de $L^+$ à $L$.
+(c) Pour $z\in I$, on a $z\bar z\in I\bar I\cap L^+=\Nm(I)$, donc $\alpha z\bar z\in\Dif^{-1}$ et $b_\alpha(z,z)=2\Trp(\alpha z\bar z)\in2\Z$.
+\end{proof}
+
+Soit $S$ l'ensemble des réseaux idéaux unimodulaires $(I,\alpha)$ sur $L$, modulo la relation $(I,\alpha)\sim(xI,\alpha/(x\bar x))$, $x\in L^\times$. L'application $z\mapsto xz$ est une isométrie de $(I,\alpha)$ sur $(xI,\alpha/(x\bar x))$. Le groupe $\Gal(L/\Q)$ agit sur $S$ par $\sigma_a(I,\alpha)=(\sigma_aI,\sigma_a\alpha)$, et $z\mapsto\sigma_a(z)$ est une isométrie de $(I,\alpha)$ sur $\sigma_a(I,\alpha)$. Deux éléments de $S$ conjugués sous $\Gal(L/\Q)$ sont donc isométriques.
+
+\subsection{Nombre de classes}
+
+\begin{proposition}\label{prop:hmoins}
+On a $h^-(115)=44\,697\,909=3\cdot331\cdot45\,013$ et $h(L^+)=1$. Par suite $h(L)=44\,697\,909$ est sans facteur carré, et
+\[
+\Cl(L)\cong\Z/3\times\Z/331\times\Z/45\,013
+\]
+est cyclique. \DEM
+\end{proposition}
+
+\begin{proof}
+La formule analytique du nombre de classes relatif s'écrit $h^-=Q\,w\prod_{\chi}\bigl(-\tfrac12B_{1,\chi^*}\bigr)$, où le produit porte sur les caractères impairs modulo $115$, $\chi^*$ est le caractère primitif associé, $Q=2$ est l'indice de Hasse et $w=230$ (\cite[th.~4.17]{Was97}). Le produit a été évalué en arithmétique exacte dans $\Q(\zeta_{44})$ et vaut $44\,697\,909$. Un second calcul, indépendant, en entiers et en rationnels, sans aucun calcul de groupe de classes, donne la même valeur (\S\ref{subsec:methodes}). Le même programme redonne $h^-(87)=1\,536$, $h^-(65)=64$ et $h^-(85)=6\,205$. L'égalité $h(L^+)=1$ est due à Miller~\cite[th.~1.1]{Mil14}, sans GRH. Un groupe abélien d'ordre sans facteur carré est cyclique.
+\end{proof}
+
+\subsection{Structure de \texorpdfstring{$S$}{S}}
+Soit $\Nm^+\colon\Cl(L)\to\Clp(L^+)$, $[I]\mapsto[\Nm(I)]$, à valeurs dans le groupe des classes au sens restreint de $L^+$.
+
+\begin{proposition}\label{prop:S}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item L'application $\Nm^+$ est triviale, $\Clp(L^+)\cong\Z/2$, $[\Upp:(\Up)^2]=2$ et $\Nm(U_L)=\Upp$.
+\item L'application $(I,\alpha)\mapsto[I]$ est une bijection de $S$ sur $\Cl(L)$, compatible à l'action de $\Gal(L/\Q)$. En particulier $|S|=44\,697\,909$ : chaque classe d'idéaux porte un seul réseau idéal unimodulaire, à équivalence près.
+\item Pour un idéal $I$, soit $\nu\gg0$ un générateur de $\Nm(I)$. Alors $(I,\beta_0/\nu)$ représente l'élément de $S$ d'image $[I]$.
+\end{enumerate}
+\DEM
+\end{proposition}
+
+\begin{proof}
+(a) La suite exacte des signes donne $|\Clp(L^+)|=h(L^+)\,[\Upp:(\Up)^2]$, qui est une puissance de $2$ puisque $h(L^+)=1$. Comme $\Cl(L)$ est d'ordre impair (proposition~\ref{prop:hmoins}), son image par $\Nm^+$ est triviale. D'autre part $L/L^+$ est non ramifiée aux places finies et ramifiée aux places infinies ; $L$ est donc contenu dans le corps de classes de Hilbert restreint de $L^+$, et la réciprocité d'Artin donne $\Clp(L^+)/\Nm^+(\Cl(L))\cong\Gal(L/L^+)$. D'où $|\Clp(L^+)|=2$ et $[\Upp:(\Up)^2]=2$.
+
+L'élément $1-\zeta$ est une unité, et $-\zeta=(1-\zeta)/(1-\bar\zeta)$ engendre $\mu_L$ : ce n'est pas un carré dans $\mu_L$. Donc $1-\zeta\notin\mu_L\Up$, l'indice de Hasse vaut $2$~\cite[th.~4.12, cor.~4.13]{Was97}, et $\Nm(U_L)=(\Up)^2\cup(2-c)(\Up)^2$ avec $2-c=\Nm(1-\zeta)$. Si $2-c$ était un carré $u^2$ de $\Up$, l'unité $(1-\zeta)/u$ serait de valeur absolue $1$ en toute place, donc une racine de l'unité, et $1-\zeta$ serait dans $\mu_L\Up$. Ainsi $[\Nm(U_L):(\Up)^2]=2$. Comme $\Nm(U_L)\subset\Upp$, on a $\Nm(U_L)=\Upp$.
+
+(b) Par la proposition~\ref{prop:pair}~(b), $(I,\alpha)\in S$ si et seulement si $\Nm(I)\Dif=(\alpha^{-1})$ avec $\alpha^{-1}\gg0$. L'image de $S$ est donc l'ensemble des classes $[I]$ telles que $\Nm^+([I])=[\Dif]^{-1}$ dans $\Clp(L^+)$. Or $[\Dif]$ est triviale dans $\Clp(L^+)$, puisque $\beta_0\Dif=\Op$ avec $\beta_0\gg0$, et $\Nm^+$ est triviale. L'image est donc $\Cl(L)$ tout entier. À $I$ fixé, les $\alpha$ convenables forment une classe $\alpha_0\Upp$, et $(I,\alpha)\sim(I,\alpha')$ si et seulement s'il existe $x\in U_L$ avec $\alpha'=\alpha/(x\bar x)$. Les fibres sont donc des espaces principaux homogènes sous $\Upp/\Nm(U_L)$, groupe trivial par (a). La compatibilité à l'action de Galois est immédiate.
+
+(c) Le générateur $\nu$ existe car $\Nm^+$ est triviale, et $(\beta_0/\nu)\Nm(I)\Dif=\beta_0\Dif=\Op$.
+\end{proof}
+
+\begin{remarque}
+Le paramétrage par des classes d'idéaux et par $\Upp/\Nm(U_L)$ est celui de la remarque~4.4 de Nebe~\cite{Neb16}. Pour $m=115$, la fibre au-dessus de chaque classe n'a qu'un élément ; au-dessus de la classe principale, c'est $H$. Les matrices de Gram construites pour cette note sont contrôlées exactement : elles sont entières, paires et de déterminant $1$.
+\end{remarque}
+
+\subsection{Action galoisienne et orbites}
+
+\begin{proposition}\label{prop:car}
+Pour $p\in\{3,331,45\,013\}$, soit $\Cl_p$ le sous-groupe d'ordre $p$ de $\Cl(L)$. Le groupe $\Gal(L/\Q)$ agit sur $\Cl_p\cong\F_p$ par un caractère impair $\chi_p$ à valeurs dans $\F_p^\times$, dont l'ordre et le noyau sont les suivants ; la dernière colonne donne la taille des orbites sur $\Cl_p\smallsetminus\{0\}$.
+\begin{center}\small
+\begin{tabular}{rr>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{4.2cm}r}
+\toprule
+$p$ & ordre & noyau de $\chi_p$ & corps fixe du noyau & taille des orbites \\
+\midrule
+$3$ & $2$ & noyau du symbole de Legendre modulo $23$, d'ordre $44$ & $F=\Q(\sqrt{-23})$ & $2$ \\
+$331$ & $22$ & $\{1,22,24,68\}=\langle\sigma_{22}\rangle$ & $K_{22}$, de degré $22$ & $22$ \\
+$45\,013$ & $44$ & $\{1,91\}=\langle\sigma_{91}\rangle$ & $K_{44}=\Q(\zeta_5,\zeta_{23}+\zeta_{23}^{-1})$ & $44$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+La conjugaison complexe agit par $-1$ sur $\Cl(L)$. \DEM
+\end{proposition}
+
+\begin{proof}
+Comme $p$ ne divise pas $88$, le $p$-sous-groupe de Sylow de $\Cl(L)$ se décompose en composantes isotypiques sous $\Gal(L/\Q)$ ; il est ici d'ordre $p$, donc égal à une seule composante, associée à un caractère $\chi_p$. La conjugaison complexe agit par $-1$ : pour toute classe $[I]$, $[I][\bar I]$ est l'image dans $\Cl(L)$ de $[\Nm(I)]\in\Cl(L^+)=1$. Le caractère $\chi_p$ est donc impair. Il est identifié par la relation de Stickelberger et par la formule analytique~\cite[th.~4.17 et th.~6.10]{Was97} : pour chacune des six classes de conjugaison rationnelle de caractères impairs modulo $115$, on a calculé exactement la norme de $\frac12B_{1,\chi^*}$. Les facteurs eulériens des trois classes imprimitives sont de normes $1$, $2$ et $2$ ; ils n'introduisent aucun facteur $3$, $331$ ou $45\,013$. Pour chaque $p$, une seule classe a une norme divisible par $p$, et la valuation y vaut $1$. Ces calculs exacts ont fait l'objet d'un contrôle indépendant (\S\ref{subsec:methodes}). Les automorphismes $\sigma_{24}$ et $\sigma_{91}$ sont d'ordre $2$ : $\sigma_{24}$ conjugue $\zeta_5$ et fixe $\zeta_{23}$, $\sigma_{91}$ fixe $\zeta_5$ et conjugue $\zeta_{23}$.
+\end{proof}
+
+Appelons \emph{support} d'une classe l'ensemble des $p$ pour lesquels sa composante dans $\Cl_p$ est non nulle. Le stabilisateur d'une classe est l'intersection des noyaux des $\chi_p$, $p$ dans le support. Toutes les classes de même support ont donc des orbites de même taille, et le décompte suivant en résulte ; il a aussi été recompté par la formule de Burnside.
+
+\begin{table}[ht]
+\caption{Orbites de $\Gal(L/\Q)$ dans $S\cong\Cl(L)$, selon le support. Statut : démontré.}\label{tab:orbites}
+\centering\small
+\begin{tabular}{lrrrl}
+\toprule
+support & classes & taille des orbites & orbites & stabilisateur \\
+\midrule
+$\emptyset$ (classe principale) & $1$ & $1$ & $1$ & $\Gal(L/\Q)$ \\
+$\{3\}$ & $2$ & $2$ & $1$ & d'ordre $44$ \\
+$\{331\}$ & $330$ & $22$ & $15$ & $\langle\sigma_{22}\rangle$, d'ordre $4$ \\
+$\{3,331\}$ & $660$ & $44$ & $15$ & $\langle\sigma_{24}\rangle$ \\
+$\{45\,013\}$ & $45\,012$ & $44$ & $1\,023$ & $\langle\sigma_{91}\rangle$ \\
+$\{3,45\,013\}$ & $90\,024$ & $88$ & $1\,023$ & trivial \\
+$\{331,45\,013\}$ & $14\,853\,960$ & $88$ & $168\,795$ & trivial \\
+$\{3,331,45\,013\}$ & $29\,707\,920$ & $88$ & $337\,590$ & trivial \\
+\midrule
+total & $44\,697\,909$ & & $508\,463$ & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Il y a donc $1\,053$ orbites à stabilisateur non trivial en dehors des deux premières lignes. Le nombre $508\,463$ est celui de toutes les orbites de $S$ ; le nombre de celles qui sont formées de réseaux de minimum $8$ n'est pas connu.
+
+\begin{remarque}[normalisateur de $\langle\zeta\rangle$]\label{rem:normalisateur}
+Pour $X\in S$, les automorphismes de $X$ qui normalisent le groupe $\langle\zeta\rangle$ des multiplications sont les $z\mapsto\lambda\sigma_a(z)$ avec $\sigma_a\in\Stab(X)$, et $\lambda$ est déterminé par $a$ à $\mu_L$ près. Ce groupe est donc d'ordre $230\cdot|\Stab(X)|$, soit $20\,240$, $10\,120$, $920$, $460$ ou $230$ pour les orbites de taille $1$, $2$, $22$, $44$ ou $88$. En effet, un tel automorphisme $\psi$ vérifie $\psi\zeta\psi^{-1}=\zeta^a$ pour un $a$ premier à $115$ ; comme à l'étape~3 de la preuve du théorème~\ref{thm:isometrie}, $\psi(z)=\lambda\sigma_a(z)$ avec $\lambda\sigma_a(I)=I$ et $\alpha\lambda\bar\lambda=\sigma_a(\alpha)$, donc $\sigma_a\in\Stab(X)$. Réciproquement, pour $\sigma_a\in\Stab(X)$, la relation $\sigma_a(I,\alpha)\sim(I,\alpha)$ fournit un tel $\lambda$. Deux choix de $\lambda$ pour le même $a$ diffèrent par une unité $u$ telle que $u\bar u=1$, de valeur absolue $1$ en toute place : par le théorème de Kronecker, $u\in\mu_L$. \DEM
+\end{remarque}
+
+\subsection{Place des deux réseaux de Sakamoto}\label{subsec:sakamoto}
+
+L'isométrie $H\cong\Lz$ est établie par un certificat : une matrice entière $P$ de taille $88$, de déterminant $-1$, vérifie $PGP^{\mathsf T}=G_H$, où $G$ est la matrice de Gram de $\Lz$ publiée dans le dépôt de données de~\cite{Sak26} (\S\ref{subsec:methodes}) et $G_H=(\Tr_{L/\Q}(\beta_0\zeta^{i-j}))$. Une seconde identité entière, $QG_{\mathrm{art}}Q^{\mathsf T}=G$ avec $\det Q=1$, montre que $G$ est la matrice de Gram de la construction de~\cite[\S5.4]{Sak26} dans une base explicite. Ces deux identités ont été vérifiées en arithmétique exacte par deux programmes, puis par un troisième, écrit indépendamment (\S\ref{subsec:methodes}). Statut de $H\cong\Lz$ : \DEM, sans GRH. Ce certificat ne dit rien du minimum.
+
+\begin{proposition}\label{prop:L0LS}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item La classe de $\Lz$ dans $S$ est la classe principale, d'orbite de taille $1$.
+\item La classe de $\LS$ dans $S$ est de support $\{3\}$. C'est l'unique orbite de ce support, de taille $2$.
+\end{enumerate}
+\st{démontré, modulo~\cite[rem.~3.11 et lemme~A.9]{Sak26}}
+\end{proposition}
+
+\begin{proof}
+(a) résulte de $H\cong\Lz$ et de $H=(\OO_L,\beta_0)$.
+(b) D'après~\cite[rem.~3.11]{Sak26}, $\LS$ est le réseau idéal de $J\OO_L$. Cet idéal n'est pas principal : s'il l'était, $\LS$ et $\Lz$ auraient la même classe de Steinitz comme modules sur l'anneau des entiers de $F$, ce que contredit~\cite[lemme~A.9]{Sak26}. Sa classe est de $3$-torsion, car $J$ est un idéal de $T=\Q(\zeta_{23})$ et $\Cl(T)\cong\Z/3$~\cite{Sak26}. Elle est donc d'ordre $3$. Le sous-groupe d'ordre $3$ de $\Cl(L)$ a deux éléments non nuls, échangés par la conjugaison complexe (proposition~\ref{prop:car}).
+\end{proof}
+
+\begin{remarque}\label{rem:nonlibre}
+Pour tout automorphisme $t$ de $\LS$ de polynôme caractéristique $\Phi_{115}$, $\LS$ n'est pas un $\Z[t]$-module libre. En effet, un tel module libre serait isométrique à un réseau $(\OO_L,\gamma)$, donc à $H\cong\Lz$ par la proposition~\ref{prop:S}, ce que contredit~\cite[th.~A.10]{Sak26}. \st{démontré, modulo~\cite[th.~A.10]{Sak26}}
+\end{remarque}
+
+\section{Le théorème d'isométrie}\label{sec:isometrie}
+
+Pour un entier $n$, on note $\gamma_n$ la constante d'Hermite. La borne de Blichfeldt~\cite{Bli29} s'écrit $\gamma_n\le B_n=\frac2\pi\,\Gamma\bigl(2+\frac n2\bigr)^{2/n}$. On a $B_{22}\approx3{,}9174$ et $B_{44}\approx6{,}6471$. Nous utilisons seulement les majorations rationnelles strictes
+\begin{equation}\label{eq:blichfeldt}
+\gamma_{22}<\frac{126}{31},\qquad \gamma_{44}<\frac{210}{31},
+\end{equation}
+qui résultent de $\pi>31/10$, $12!<(63/10)^{11}$ et $23!<(21/2)^{22}$.
+
+\begin{lemme}[Sylow $23$]\label{lem:syl23}
+Soit $X$ un réseau pair unimodulaire de rang $88$ et de minimum au moins $8$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item Tout automorphisme d'ordre $23$ de $X$ est sans point fixe non nul.
+\item Les $23$-sous-groupes de Sylow de $\Aut(X)$ sont d'ordre au plus $23$. En particulier, les sous-groupes d'ordre $23$ de $\Aut(X)$ sont conjugués.
+\end{enumerate}
+\DEM
+\end{lemme}
+
+\begin{proof}
+(a) Soit $t\in\Aut(X)$ d'ordre $23$. Son polynôme caractéristique est $\Phi_{23}^{z}(x-1)^{88-22z}$ avec $1\le z\le4$. Soient $F_t$ le réseau fixe de $t$, de rang $88-22z$, et $F_t^\perp$ son orthogonal, de rang $22z$ ; $F_t^\perp$ est un $\Z[\zeta_{23}]$-module de rang $z$. Comme $X$ est unimodulaire, les groupes discriminants de $F_t$ et de $F_t^\perp$ sont isomorphes ; ce groupe est annulé par $1-t$, donc isomorphe à $\F_{23}^{\,s}$ avec $s\le z$ (résultat classique sur le type d'un automorphisme d'ordre premier, voir~\cite{Neb13}). Les réseaux $F_t$ et $F_t^\perp$ sont de minimum au moins $8$ et de déterminant $23^s$.
+\begin{itemize}
+\item Si $z=1$, $F_t^\perp$ est de rang $22$ et de déterminant $23^s$, $s\le1$. Son invariant d'Hermite est au moins $8/23^{1/22}$, qui dépasse $126/31$ car $(8\cdot31/126)^{22}>23$. Cela contredit~\eqref{eq:blichfeldt}.
+\item Si $z=2$, $F_t$ est de rang $44$ et de déterminant $23^s$, $s\le2$. Son invariant d'Hermite est au moins $8/23^{2/44}$, qui dépasse $210/31$ car $(8\cdot31/210)^{44}>23^2$. Contradiction.
+\item Si $z=3$, $F_t$ est de rang $22$ et de déterminant $23^s$, $s\le3$. Son invariant d'Hermite est au moins $8/23^{3/22}$, qui dépasse $126/31$ car $(8\cdot31/126)^{22}>23^3$. Contradiction.
+\end{itemize}
+Donc $z=4$ : $t$ est sans point fixe non nul.
+
+(b) Un $23$-groupe d'ordre supérieur à $23$ contient un sous-groupe d'ordre $23^2$, cyclique ou isomorphe à $C_{23}\times C_{23}$. Un élément d'ordre $529$ est impossible dans $\Aut(X)$, car $\varphi(529)=506>88$. Un sous-groupe $C_{23}\times C_{23}$ agirait sur $X\otimes\Q$ sans constituant trivial, par (a) ; chacun de ses constituants irréductibles serait de dimension $22$, avec un noyau d'ordre $23$, et un élément non trivial de ce noyau aurait des points fixes non nuls, ce qui contredit (a). Les sous-groupes d'ordre $23$ sont donc des sous-groupes de Sylow, et ils sont conjugués.
+\end{proof}
+
+\begin{lemme}[Sylow $5$ dans le centralisateur]\label{lem:syl5}
+Soit $X=(I,\alpha)$ un réseau idéal sur $L$, et soit $P_X=\langle\zeta^5\rangle\subset\Aut(X)$ le groupe d'ordre $23$ des multiplications par les puissances de $\zeta^5$. Soit $C$ le centralisateur de $P_X$ dans $\Aut(X)$. Les sous-groupes d'ordre $5$ de $C$ sont conjugués dans $C$. \DEM
+\end{lemme}
+
+\begin{proof}
+Tout $g\in C$ commute à la multiplication par $\zeta^5$, qui engendre $T=\Q(\zeta_{23})$ : $g$ est $T$-linéaire sur $X\otimes\Q=L\cong T^4$. Le polynôme $\Phi_5$ est irréductible sur $T$, car $\Q(\zeta_5)\cap T=\Q$ ; donc $T[x]/(x^5-1)\cong T\times T(\zeta_5)$. Si $g\in C$ est d'ordre $5$, le $T[g]$-module $T^4$ contient un facteur $T(\zeta_5)$, de dimension $4$ : il lui est égal, et $g$ est sans point fixe non nul. Un sous-groupe $C_5\times C_5$ de $C$ agirait sur $T^4$ par des constituants irréductibles non triviaux, de dimension $4$ et de noyau d'ordre $5$ ; il n'y a place que pour un seul constituant, et l'action ne serait pas fidèle. Un élément d'ordre $25$ de $C$ exigerait un constituant de dimension $[T(\zeta_{25}):T]=20>4$. Les $5$-sous-groupes de Sylow du groupe fini $C$ sont donc d'ordre $5$, et les sous-groupes d'ordre $5$ de $C$ sont conjugués dans $C$.
+\end{proof}
+
+\begin{theoreme}[isométrie]\label{thm:isometrie}
+Soient $X_1=(I_1,\alpha_1)$ et $X_2=(I_2,\alpha_2)$ deux réseaux idéaux unimodulaires sur $L=\Q(\zeta_{115})$, de minimum au moins $8$. Alors $X_1\cong X_2$ si et seulement si les classes de $X_1$ et de $X_2$ dans $S$ sont conjuguées sous $\Gal(L/\Q)$. \DEM
+\end{theoreme}
+
+\begin{proof}
+Le sens « si » résulte des isométries $z\mapsto xz$ et $z\mapsto\sigma_a(z)$. Réciproquement, soit $\psi\colon X_1\to X_2$ une isométrie, et soit $\tau_j\in\Aut(X_j)$ la multiplication par $\zeta$. Les réseaux $X_1$ et $X_2$ sont pairs (proposition~\ref{prop:pair}), donc le lemme~\ref{lem:syl23} s'applique à $X_2$.
+
+\emph{Étape 1.} Le groupe $\psi\langle\tau_1^5\rangle\psi^{-1}$ est un sous-groupe d'ordre $23$ de $\Aut(X_2)$. Par le lemme~\ref{lem:syl23}, il est conjugué à $P_2=\langle\tau_2^5\rangle$. Quitte à composer $\psi$ à gauche par un automorphisme de $X_2$, on a $\psi\langle\tau_1^5\rangle\psi^{-1}=P_2$.
+
+\emph{Étape 2.} Le groupe $\psi\langle\tau_1^{23}\rangle\psi^{-1}$ est d'ordre $5$ et commute à $P_2$, puisque $\tau_1^{23}$ commute à $\tau_1^5$. Par le lemme~\ref{lem:syl5} appliqué à $X_2$, il existe $g$ dans le centralisateur de $P_2$ tel que $g\psi\langle\tau_1^{23}\rangle\psi^{-1}g^{-1}=\langle\tau_2^{23}\rangle$. Posons $\psi'=g\psi$. Comme $g$ centralise $P_2$, on a encore $\psi'\langle\tau_1^5\rangle\psi'^{-1}=P_2$.
+
+\emph{Étape 3.} Le groupe $\langle\tau_j\rangle$ est engendré par $\tau_j^5$ et $\tau_j^{23}$. Donc $\psi'\langle\tau_1\rangle\psi'^{-1}=\langle\tau_2\rangle$, et $\psi'\tau_1\psi'^{-1}=\tau_2^{a}$ pour un $a$ premier à $115$. Le prolongement $\Q$-linéaire de $\psi'$ à $L$ vérifie $\psi'(\zeta z)=\zeta^a\psi'(z)$ ; il est donc $\sigma_a$-semi-linéaire : $\psi'(z)=\lambda\sigma_a(z)$ avec $\lambda=\psi'(1)\in L^\times$. On en tire $\lambda\sigma_a(I_1)=I_2$ et $\Tr_{L/\Q}(\alpha_2\lambda\bar\lambda\,\sigma_a(z\bar w))=\Tr_{L/\Q}(\alpha_1z\bar w)$ pour tous $z,w$, donc $\alpha_2\lambda\bar\lambda=\sigma_a(\alpha_1)$. Ainsi $(I_2,\alpha_2)\sim\sigma_a(I_1,\alpha_1)$.
+\end{proof}
+
+\begin{remarque}
+Ici, $115=5\cdot23$ et les deux arguments de Sylow suffisent : la preuve n'utilise ni le théorème de Kronecker ni le groupe des classes. Les comparaisons rationnelles de~\eqref{eq:blichfeldt}, le détail sur les $23$-groupes et l'alignement des deux sous-groupes de Sylow ont été relus par un second assistant. La preuve n'a pas été relue par un spécialiste.
+\end{remarque}
+
+\begin{corollaire}\label{cor:bijection}
+Les classes d'isométrie de réseaux pairs unimodulaires de rang $88$ et de minimum $8$ qui possèdent un automorphisme de polynôme caractéristique $\Phi_{115}$ ou $\Phi_{230}$ sont en bijection avec les orbites de $\Gal(L/\Q)$ dans $S$ formées de réseaux de minimum $8$. \DEM
+\end{corollaire}
+
+\begin{proof}
+Comme $\Phi_{230}(x)=\Phi_{115}(-x)$, il suffit de traiter $\Phi_{115}$. Soit $(X,t)$, avec $t$ de polynôme caractéristique $\Phi_{115}$ ; $X$ est un module sans torsion de rang $1$ sur $\Z[t]\cong\OO_L$, et le choix d'un vecteur non nul l'identifie à un idéal fractionnaire $I$. Une forme bilinéaire symétrique définie positive invariante par $\zeta$ sur $L$ est de la forme $b_\alpha$, avec $\alpha\in L^+$ totalement positif. Ainsi $X\cong(I,\alpha)\in S$. Le changement de vecteur ne change pas la classe dans $S$, et un autre choix de $t$ donne une classe conjuguée, par le théorème~\ref{thm:isometrie}. L'application obtenue est injective par le sens « si », et surjective puisque la multiplication par $\zeta$ est un automorphisme de polynôme caractéristique $\Phi_{115}$ de tout $(I,\alpha)$.
+\end{proof}
+
+\begin{remarque}\label{rem:autresorbites}
+Les réseaux $\Lz$ et $\LS$ occupent deux orbites de minimum $8$, d'après~\cite{Sak26}. Par le théorème~\ref{thm:isometrie}, un réseau de minimum $8$ dont la classe a un support contenant $331$ ou $45\,013$ ne serait isométrique ni à $\Lz$ ni à $\LS$. Le théorème~\ref{thm:extremaux}, dont la démonstration du minimum est assistée par ordinateur, porte à quatre la borne inférieure : le nombre d'orbites de minimum $8$ est compris entre $4$ et $508\,463$ ; sa valeur exacte reste \emph{ouverte}. Les autres entiers $m$ tels que $\varphi(m)=88$ sont $89$, $178$, $184$, $230$ et $276$ ; $230$ redonne $115$, et les autres ne sont pas traités ici.
+\end{remarque}
+
+\section{Recollement, lemme de Parseval et critère d'extrémalité}\label{sec:recollement}
+
+Une énumération directe des vecteurs de norme au plus $6$ en rang $88$ est hors de portée : une estimation du nombre de nœuds de l'énumération de Fincke--Pohst~\cite{FP85}, faite sur $\Lz$, donne $2{,}4\cdot10^{22}$ \CONS. La réduction LLL ne trouve pas non plus de vecteurs courts : sur $\Lz$, de minimum $8$, elle s'arrête à la norme $16$ \CONS. Ce paragraphe ramène la question à des énumérations en rang~$44$.
+
+\subsection{Recollement pour un idéal non principal}
+Dans ce paragraphe, $I$ est un idéal entier de $\OO_L$ tel que $I+\bar I=\OO_L$. C'est le cas d'un idéal premier $I\ne\bar I$. On note $q=[\OO_L:I]$ sa norme absolue, $\nu\gg0$ un générateur de $\Nm(I)$ (proposition~\ref{prop:S}) et $\alpha=\beta_0/\nu$. On a $I\cap\bar I=I\bar I=\nu\OO_L$ et $\Nm_{L^+/\Q}(\nu)=q$. On définit deux formes quadratiques sur $L^+$ :
+\[
+\Lambda(a)=\Trp(\alpha a^2),\qquad \Lambda'(b)=\Trp\bigl(\alpha(4-c^2)b^2\bigr).
+\]
+
+\begin{proposition}[recollement]\label{prop:recollement}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item L'application $z\mapsto(a,b)=\bigl(z+\bar z,\ (z-\bar z)/e\bigr)$ est une isométrie de $(I,b_\alpha)$ sur
+\[
+M_I=\bigl\{(a,b)\in\Op\times\Op:\ (a+eb)/2\in I\bigr\},\qquad \text{muni de}\quad N(a,b)=\tfrac12\bigl(\Lambda(a)+\Lambda'(b)\bigr).
+\]
+\item Dans la base $(c^{i})_{0\le i<44}$ de $\Op$, les formes $\Lambda$ et $\Lambda'$ sont rationnelles, définies positives, de déterminant $1/q$. L'indice de $M_I$ dans $\Op\times\Op$ est $2^{44}q$.
+\item À $a$ fixé, les $b$ tels que $(a,b)\in M_I$ forment une classe modulo $2\nu\Op$, ou l'ensemble vide. Le réseau $2\nu\Op$, muni de $\Lambda'$, est de déterminant $4^{44}q$. Le même énoncé vaut en échangeant les rôles de $a$ et de $b$, avec $\Lambda$ sur $2\nu\Op$.
+\end{enumerate}
+\DEM
+\end{proposition}
+
+\begin{proof}
+(a) Pour $z\in\OO_L$, $a=z+\bar z$ est dans $\OO_L\cap L^+=\Op$. Le quotient $b=(z-\bar z)/e$ est réel, et il est entier car $e$ est une unité (proposition~\ref{prop:pair}). On a $z=(a+eb)/2$, donc l'application est injective et son image sur $I$ est $M_I$. Comme $\bar e=-e$ et $e^2=c^2-4$,
+\[
+z\bar z=\tfrac14(a+eb)(a-eb)=\tfrac14\bigl(a^2+(4-c^2)b^2\bigr),
+\]
+d'où $b_\alpha(z,z)=2\Trp(\alpha z\bar z)=\frac12(\Lambda(a)+\Lambda'(b))$.
+
+(b) La forme $\Trp(\beta_0xy)$ est de déterminant $1$ sur $\Op$, puisque $\beta_0\Dif=\Op$. La multiplication du multiplicateur par $1/\nu$ multiplie le déterminant par $\Nm_{L^+/\Q}(\nu)^{-1}=1/q$. Enfin $4-c^2=-e^2$ est une unité totalement positive, de norme $1$. Pour l'indice : comme $e=2\zeta-c$, on a $a+eb=(a-cb)+2\zeta b$, donc $(a+eb)/2\in\OO_L$ équivaut à $a\equiv cb\pmod{2\Op}$. L'image de $\OO_L$ est ainsi d'indice $2^{44}$ dans $\Op\times\Op$, et $M_I$ y est d'indice $[\OO_L:I]=q$.
+
+(c) Si $(a,b)$ et $(a,b')$ sont dans $M_I$, alors $e(b-b')\in2I$. Comme $b-b'$ est réel et $\bar e=-e$, on a aussi $e(b-b')\in2\bar I$, donc $e(b-b')\in2(I\cap\bar I)=2\nu\OO_L$ et $b-b'\in2\nu\Op$. Réciproquement, pour $x\in\Op$, $e\nu x\in I$. Le déterminant de $\Lambda'$ sur $2\nu\Op$ est $\Nm_{L^+/\Q}(2\nu)^2/q=(2^{44}q)^2/q=4^{44}q$. L'argument est le même pour $a$.
+\end{proof}
+
+L'identité matricielle correspondante, et l'indice $2^{44}q$, ont été contrôlés exactement sur chaque idéal traité (\S\ref{subsec:methodes}).
+
+\subsection{Orbite de \texorpdfstring{$\zeta$}{zeta} et lemme de Parseval}
+Soit $z\in I$ non nul, de norme $N=b_\alpha(z,z)$. Pour $k\in\Z/115$, on note $(a_k,b_k)$ l'image de $\zeta^kz$ et l'on pose
+\[
+f(k)=\Tr_{L/\Q}\bigl(\alpha\,\zeta^{2k}z^2\bigr)\in\R .
+\]
+
+\begin{lemme}[moyenne nulle]\label{lem:A}
+Pour tout $k$, $\Lambda(a_k)=N+f(k)$ et $\Lambda'(b_k)=N-f(k)$. En particulier $|f(k)|\le N$. De plus $\sum_{k\in\Z/115}f(k)=0$ et, pour tout $k$,
+\begin{equation}\label{eq:R5}
+\sum_{t=0}^{4}f(k+23t)=0 .
+\end{equation}
+\DEM
+\end{lemme}
+
+\begin{proof}
+Posons $z_k=\zeta^kz$ ; on a $z_k\bar z_k=z\bar z$. Alors $a_k^2=z_k^2+\bar z_k^2+2z\bar z$ et $(4-c^2)b_k^2=-(z_k-\bar z_k)^2=-z_k^2-\bar z_k^2+2z\bar z$. Comme $\Trp(\alpha(w+\bar w))=\Tr_{L/\Q}(\alpha w)$ pour $w\in L$, on obtient $\Lambda(a_k)=f(k)+N$ et $\Lambda'(b_k)=-f(k)+N$. Les deux formes sont positives, d'où $|f(k)|\le N$. On a $f(k)=\sum_a\sigma_a(\alpha z^2)\,\omega^{2ak}$, où $a$ parcourt $(\Z/115)^\times$ et $\omega=\exp(2i\pi/115)$. La somme sur $k$ est nulle car $\sum_k\omega^{2ak}=0$. La relation~\eqref{eq:R5} vient de $\sum_{t=0}^{4}\omega^{46at}=\sum_{t=0}^{4}\exp(2i\pi\cdot2at/5)=0$, puisque $5$ ne divise pas $a$.
+\end{proof}
+
+Pour un idéal non principal, $\alpha z^2$ appartient à $(\beta_0/\nu)I^2$, et $I^2/(I\bar I)=I/\bar I$ n'est pas entier : les valeurs $f(k)$ ne sont pas entières en général. Le lemme suivant donne l'estimation dont nous avons besoin.
+
+\begin{lemme}[Parseval]\label{lem:parseval}
+Pour tout $z\in I$ non nul, de norme $N$,
+\[
+\frac1{115}\sum_{k\in\Z/115}f(k)^2=\sum_{a}\sigma_a(\alpha)^2\,|\sigma_a(z)|^4\ \ge\ \frac{N^2}{88}.
+\]
+\DEM
+\end{lemme}
+
+\begin{proof}
+Dans l'écriture $f(k)=\sum_a\sigma_a(\alpha z^2)\omega^{2ak}$, les $88$ fréquences $2a$ sont deux à deux distinctes modulo $115$. L'orthogonalité des caractères de $\Z/115$ donne l'égalité, avec $|\sigma_a(\alpha z^2)|=\sigma_a(\alpha)|\sigma_a(z)|^2$. L'inégalité est celle de Cauchy--Schwarz, appliquée à $N=\sum_a\sigma_a(\alpha)|\sigma_a(z)|^2$, somme de $88$ termes.
+\end{proof}
+
+\begin{corollaire}[seuil]\label{cor:seuil}
+Soit $z\in I$ non nul, de norme $N$, et soit $M=\max_k|f(k)|$. Alors $M\ge N\sqrt{5/352}$. Il existe donc $k$ tel que
+\[
+\min\bigl(\Lambda(a_k),\Lambda'(b_k)\bigr)\le N\Bigl(1-\sqrt{5/352}\Bigr).
+\]
+Si $N\le6$, ce minimum est au plus $6-\sqrt{45/88}<1057/200$. \DEM
+\end{corollaire}
+
+\begin{proof}
+Cinq réels de somme nulle et de valeur absolue au plus $M$ ont une somme de carrés au plus $4M^2$ : la somme des carrés est convexe, et son maximum sur ce polytope est atteint en un sommet, de la forme $(M,M,-M,-M,0)$ à permutation près. Par~\eqref{eq:R5}, les $115$ valeurs de $f$ se répartissent en $23$ quintuplets de somme nulle. Donc $\sum_kf(k)^2\le23\cdot4M^2$, et le lemme~\ref{lem:parseval} donne $115N^2/88\le92M^2$, soit $M^2\ge5N^2/352$. Si $f(k)=-M$, alors $\Lambda(a_k)=N-M$ ; si $f(k)=M$, alors $\Lambda'(b_k)=N-M$. Enfin $6\sqrt{5/352}=\sqrt{45/88}$, et $6-\sqrt{45/88}<1057/200$ équivaut à $(143/200)^2=20\,449/40\,000<45/88$, qui est vrai.
+\end{proof}
+
+La seule inégalité $M\ge N/\sqrt{88}$ donnerait le seuil $6(1-1/\sqrt{88})\approx5{,}3604$, un peu moins bon. La valeur numérique du seuil est $6-\sqrt{45/88}\approx5{,}2849$.
+
+\begin{lemme}[projections nulles]\label{lem:nul}
+Soit $z\in I$ non nul, de norme $N\le6$. Il existe au plus un $k\in\Z/115$ tel que $a_k=0$ ou $b_k=0$. Il existe un $k$ tel que l'une des deux projections $a_k$, $b_k$ soit \emph{non nulle} et d'énergie au plus $1057/200$. \DEM
+\end{lemme}
+
+\begin{proof}
+On a $a_k=0$ si et seulement si $\zeta^{2k}=-\bar z/z$, et $b_k=0$ si et seulement si $\zeta^{2k}=\bar z/z$. Comme $-1\notin\langle\zeta\rangle$ et que $k\mapsto\zeta^{2k}$ est injective sur $\Z/115$, au plus un $k$ annule une projection. Soit $k$ donné par le corollaire~\ref{cor:seuil}. Si la projection d'énergie minimale est non nulle, c'est fini. Sinon, disons $a_k=0$ ; alors $f(k)=-N$. Par~\eqref{eq:R5}, les quatre autres termes du quintuplet de $k$ ont pour somme $N$ ; l'un d'eux, $f(k')$, est au moins $N/4$. Alors $\Lambda'(b_{k'})=N-f(k')\le3N/4\le9/2<1057/200$, et $b_{k'}\ne0$ par unicité. Le cas $b_k=0$ est symétrique.
+\end{proof}
+
+\subsection{Le critère}
+
+\begin{theoreme}[critère]\label{thm:critere}
+Le réseau $(I,b_\alpha)$ n'a aucun vecteur non nul de norme au plus $6$ si et seulement si les deux conditions suivantes sont satisfaites.
+\begin{enumerate}[label=\textup{(C\arabic*)}]
+\item Il n'existe aucun $(a,b)\in M_I$ avec $a\ne0$, $\Lambda(a)\le1057/200$ et $\Lambda(a)+\Lambda'(b)\le12$.
+\item Il n'existe aucun $(a,b)\in M_I$ avec $b\ne0$, $\Lambda'(b)\le1057/200$ et $\Lambda(a)+\Lambda'(b)\le12$.
+\end{enumerate}
+Sous ces conditions, le réseau, qui est pair, est de minimum au moins $8$. \DEM
+\end{theoreme}
+
+\begin{proof}
+Un couple exclu par (C1) ou (C2) est l'image d'un vecteur non nul de norme au plus $6$ (proposition~\ref{prop:recollement}). Réciproquement, si $z\ne0$ est de norme au plus $6$, le lemme~\ref{lem:nul} fournit une rotation $\zeta^kz\in I$, de même norme, dont une projection est non nulle et d'énergie au plus $1057/200$ ; la somme des deux énergies est $2N\le12$. Cette rotation contredit (C1) ou (C2).
+\end{proof}
+
+Nous appelons \emph{côté~1} la vérification de (C1) et \emph{côté~2} celle de (C2). Chaque côté demande deux énumérations emboîtées : celle des projections courtes $a$ (resp.\ $b$) non nulles d'énergie au plus $1057/200$, en rang $44$ ; puis, pour chacune, celle des vecteurs de la classe imposée modulo $2\nu\Op$ dont l'énergie respecte la borne $12$. Le critère ne conclut que si ces énumérations sont exhaustives. Une recherche plafonnée ou une recherche à un seuil inférieur à $1057/200$ ne donne pas de verdict négatif.
+
+\begin{remarque}
+Les méthodes de~\cite{Sak26} (inégalité tensorielle et minima projectifs) demandent une structure de produit tensoriel sur l'anneau des entiers de $\Q(\sqrt{-23})$. Elles ne s'appliquent, parmi les classes de $S$, qu'à la classe principale et à celles de support $\{3\}$.
+\end{remarque}
+
+\section{L'énumération certifiante}\label{sec:certifiant}
+
+\subsection{Données et principe}
+Pour un idéal $I$ et un côté donnés, un script PARI/GP produit des données entières : une matrice de Gram $A$ de la projection courte, mise à l'échelle par un entier $D_A$ ; une matrice de Gram $B$ du réseau $2\nu\Op$ de la fibre, mise à l'échelle par un entier $D_B$ ; une matrice entière $T_n$ et un entier $d>0$ qui décrivent les relèvements. Les deux matrices de Gram sont réduites (BKZ par blocs de $20$), et la transformation finale est contrôlée : elle est unimodulaire et l'identité de changement de base est exacte. Pour $u,y\in\Z^{44}$, on pose $a(u)=u^{\mathsf T}Au$ et $w=d\,y+T_nu$. Le vecteur du réseau associé à $(u,y)$ a pour norme
+\begin{equation}\label{eq:normeuy}
+N=\frac12\Bigl(\frac{u^{\mathsf T}Au}{D_A}+\frac{w^{\mathsf T}Bw}{D_B\,d^2}\Bigr).
+\end{equation}
+Pour $P_{139}$, $(D_A,D_B,d)=(139,1,278)$ ; pour $P_{599}$, $(D_A,D_B,d)=(599,1,1198)$.
+
+Soient $B_A$ un rationnel positif et $S$ un entier positif (ici $B_A=1057/200$ et $S=12$). On dit que $u$ est \emph{normalisé} si $u\ne0$ et si sa dernière coordonnée non nulle est positive. On pose
+\begin{align*}
+\Uc&=\{u\ \text{normalisé}:\ a(u)\le D_A\,B_A\},\\
+\Tc&=\{(u,y):\ u\in\Uc,\ y\in\Z^{44},\ a(u)\,D_Bd^2+D_A\,w^{\mathsf T}Bw\le S\,D_AD_Bd^2\}.
+\end{align*}
+Avec $B_A=1057/200$ et $S=12$, $\Tc$ est l'ensemble des vecteurs de norme au plus $6$ dont la projection courte est non nulle et d'énergie au plus $1057/200$, au signe près. Le changement $(u,y)\mapsto(-u,-y)$ conserve les deux énergies : la normalisation ne perd rien. Par le théorème~\ref{thm:critere}, si $\Tc=\emptyset$ pour les deux côtés, le réseau n'a aucun vecteur non nul de norme au plus $6$.
+
+Le programme \texttt{Rang88CertZ} (Java) énumère $\Uc$ par la méthode de Fincke--Pohst~\cite{FP85}, puis, pour chaque $u\in\Uc$, les $y$ tels que $(u,y)\in\Tc$. Il se distingue d'un énumérateur flottant ordinaire par les points suivants.
+\begin{itemize}
+\item La décomposition $G=\sum_id_iT_i^2$ de chaque forme est calculée en rationnels exacts, et l'identité est vérifiée exactement à l'exécution.
+\item Les sommes partielles qui donnent les centres sont des entiers exacts, en virgule fixe de pas $2^{-40}$ dans les exécutions décrites ici, de type \texttt{long} à débordement détecté. L'erreur de troncature est bornée exactement par une somme entière.
+\item Les seules opérations flottantes sont le minorant d'énergie et le rayon. Chacune est suivie du passage au voisin flottant extérieur, de sorte qu'une branche n'est coupée que si un minorant certifié de son énergie dépasse un majorant certifié du budget.
+\item Chaque feuille est recontrôlée en entiers exacts.
+\item L'arbre est découpé en tâches par la même récursion. Chaque tâche terminée laisse un \emph{reçu} d'une ligne dans un fichier de reprise (checkpoint), avec ses compteurs. Le bilan final n'imprime \texttt{COUVERTURE\_COMPLETE} que si chaque tâche du catalogue a un résultat.
+\end{itemize}
+
+\subsection{Ce que la preuve de non-omission établit}
+Le modèle de la machine est le suivant.
+\begin{enumerate}[label=\textup{(M\arabic*)}]
+\item Les opérations sur les \texttt{double} et la conversion d'un \texttt{long} en \texttt{double} rendent l'arrondi au plus proche de la norme IEEE~754 ; \texttt{Math.sqrt} rend le \texttt{double} le plus proche de la racine exacte.
+\item Les méthodes entières dites exactes rendent le résultat exact ou lèvent une exception ; les classes \texttt{BigInteger} et \texttt{BigDecimal} sont exactes.
+\item Les pannes matérielles et les altérations de fichiers sont hors du modèle.
+\end{enumerate}
+
+\begin{theoreme}[non-omission]\label{thm:nonomission}
+On suppose \textup{(M1)} et \textup{(M2)}. Si une exécution de \texttt{Rang88CertZ} se termine avec le code $0$ et la ligne \texttt{COUVERTURE\_COMPLETE}, alors, sous l'hypothèse d'intégrité du fichier de reprise :
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item $A$ et $B$ sont définies positives ;
+\item si aucun compteur n'a débordé (hypothèse de représentabilité), le compteur \texttt{COMPTE\_U} est égal à $|\Uc|$ ;
+\item sous la même hypothèse de représentabilité, le compteur \texttt{TOTAL\_TOUCHES} est égal à $|\Tc|$.
+\end{enumerate}
+\st{démontré sous M1--M3 ; preuve relue une fois par un second assistant, dans une portée limitée}
+\end{theoreme}
+
+\begin{corollaire}[absence de touche, sans hypothèse sur les compteurs]\label{cor:touche}
+On suppose \textup{(M1)} et \textup{(M2)}. Soit une exécution de \texttt{Rang88CertZ} en mode \texttt{run}, avec un fichier de reprise neuf et sans récepteur de test, terminée avec le code $0$ et la ligne \texttt{COUVERTURE\_COMPLETE}. Si le répertoire du fichier de reprise ne contient aucun fichier de touche, et si aucun n'en a été retiré, alors $\Tc=\emptyset$.
+\st{repose sur Z1--Z8 ; liaison au code relue par un second assistant}
+\end{corollaire}
+
+\begin{proof}[Esquisse]
+Par Z1 à Z8, tout élément de $\Tc$ est une feuille admissible d'une tâche du catalogue, et le catalogue est une partition de l'arbre non coupé. Avec un fichier de reprise neuf, aucun reçu antérieur n'est chargé : le bilan n'est construit qu'à partir des tâches de ce lancement, et la ligne \texttt{COUVERTURE\_COMPLETE} n'est imprimée que si chacune a rendu un résultat. Une feuille admissible provoque, sans condition sur la valeur d'un compteur, l'écriture d'une ligne dans le fichier de touche voisin du fichier de reprise ; ce fichier est créé au besoin, et une erreur d'écriture lève une exception, qui remonte jusqu'au code de sortie $2$. Donc, si $\Tc\ne\emptyset$, ou bien un fichier de touche existe, ou bien le code de sortie n'est pas $0$. La liaison ligne à ligne avec le source est donnée dans le dépôt qui accompagne la note.
+\end{proof}
+
+La preuve complète est dans le dépôt qui accompagne la note ; elle est liée au source par une table qui associe chaque étape du code à un lemme. Nous n'en donnons ici que la structure.
+
+\begin{center}\small
+\begin{tabular}{l>{\raggedright\arraybackslash}p{11.6cm}}
+\toprule
+lemme & contenu \\
+\midrule
+L1 & Décomposition $G=\sum_id_iT_i^2$ en rationnels exacts, vérifiée à l'exécution ; $G$ est définie positive. \\
+L2 & Encadrement d'un rationnel par deux \texttt{double}, par comparaisons exactes. \\
+L3 & Voisins flottants extérieurs : le résultat exact d'une opération est encadré par le prédécesseur et le successeur du résultat arrondi. \\
+Z1 & Virgule fixe : l'écart entre le centre exact et le centre entier est borné par la somme des valeurs absolues des coordonnées déjà fixées. \\
+Z2 & Le cache des sommes partielles entières est exact à chaque nœud (invariant de récurrence). \\
+Z3 & Les budgets flottants majorent les budgets exacts, côté court et dans la fibre. \\
+Z5 & Le minorant d'énergie transmis de nœud en nœud minore l'énergie exacte ; une branche coupée ne contient aucun vecteur admissible. \\
+Z4 & La plage entière parcourue à chaque niveau contient toutes les valeurs admissibles ; la division entière est exacte. \\
+Z6 & La normalisation de signe retire exactement le vecteur nul et les opposés. \\
+Z7 & Les tâches du catalogue forment une partition de l'arbre non coupé. \\
+Z8 & Les feuilles sont testées en entiers exacts : un couple est compté si et seulement s'il est dans $\Tc$. \\
+Z9 & Tout débordement entier qui pourrait fausser une décision lève une exception ; une exception donne le code de sortie $2$, sans \texttt{COUVERTURE\_COMPLETE}. \\
+Z10 & Fichier de reprise : liaison aux paramètres, au catalogue, aux entrées et aux classes ; relecture ; bilan. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Les lemmes L1 à L3 viennent d'un premier programme certifiant, à intervalles de flottants, plus lent. Il a certifié six tâches isolées de $P_{139}$, sans touche, et n'a pas été mené à son terme.
+
+\emph{Validation} \CONS. Le programme a été exécuté sur des cas de réponse connue. Sur $\Lz$, c'est-à-dire pour $I=\OO_L$, les deux côtés donnent $403\,876$ projections courtes, soit $4\,004+399\,872$, valeurs obtenues auparavant par d'autres programmes, et aucune touche. Sur l'idéal rejeté $P_{461}$, au seuil $7/2$, il trouve $697$ projections et $2$ touches de norme $6$. Un harnais compare, sur $5\,400$ formes aléatoires de dimension $2$ à $4$, l'énumération à une recherche exhaustive en entiers : $16\,250$ contrôles, aucun échec. Un arrêt brutal suivi d'une reprise redonne les mêmes totaux. Ces validations portent sur des cas finis. Elles ne remplacent pas la preuve et ne disent rien de $P_{139}$ ni de $P_{599}$.
+
+\subsection{Relecture de la preuve}
+La preuve a été rédigée avec l'assistant qui a écrit le code, puis relue une fois par le second assistant. Cette relecture a conclu favorablement, dans une portée limitée : le mécanisme de non-omission Z1--Z8, sous (M1) et (M2), et les refus de domaine. Elle ne vaut pas certification d'un résultat final, et elle a formulé quatre réserves.
+\begin{itemize}
+\item \emph{Z9.} Les compteurs locaux ne détectent pas leur propre débordement. Le comptage exact demande une hypothèse de représentabilité, ou des incréments contrôlés.
+\item \emph{Z10.} Une couverture complète qui s'appuie sur des reçus relus ne prouve pas, à elle seule, que les tâches correspondantes ont été exécutées : le chargeur contrôle la syntaxe, les indices et les doublons, et ne rejoue rien. Un fichier fabriqué passerait la reprise. L'hypothèse d'intégrité de la preuve exclut ce cas ; elle doit être documentée.
+\item \emph{Écritures.} L'écriture d'un reçu n'est pas bouclée jusqu'à épuisement du tampon, et le verrou est interne à la machine virtuelle ; l'unicité de l'écrivain n'est pas garantie entre processus.
+\item \emph{Identité.} Le programme calcule l'empreinte des fichiers de classes relus, non celle des octets chargés en mémoire. L'identité des fichiers, le raccord géométrique et le résultat final sont trois points distincts ; aucun n'est certifié par cette relecture.
+\end{itemize}
+En particulier, la relecture de Z1--Z8 ne couvre pas à elle seule l'exactitude des compteurs affirmée par les points (2) et (3) du théorème~\ref{thm:nonomission}. L'absence de débordement, l'exactitude des compteurs et la détection d'un témoin sont trois propositions distinctes ; seule la troisième sert à la conclusion $\Tc=\emptyset$.
+
+\subsection{Hypothèses H1 à H4, et ce qui n'est pas établi}\label{subsec:hyp}
+L'énoncé « aucun vecteur non nul de norme au plus $6$ » pour un candidat est \emph{assisté par calcul}. Il repose sur le théorème~\ref{thm:critere}, sur le théorème~\ref{thm:nonomission}, sur le raccord exact entre les fichiers d'entrée et le réseau, et sur les hypothèses suivantes.
+\begin{enumerate}[label=\textup{(H\arabic*)}]
+\item \emph{Machine.} Les machines virtuelles Java utilisées exécutent les classes selon leur spécification, compilateur à la volée compris : ce sont (M1) et (M2). Deux environnements interviennent : OpenJDK 11.0.16.1 sous Windows pour les premières exécutions, OpenJDK~21 sous Linux pour les réplications. Nous ne certifions aucune de ces deux implémentations.
+\item \emph{Matériel.} Aucune faute matérielle ou de mémoire n'est survenue pendant les exécutions.
+\item \emph{Intégrité documentaire.} Les journaux sont la sortie authentique des exécutions ; les octets des classes chargées et des entrées lues sont ceux dont les exécutions ont imprimé l'empreinte.
+\item \emph{Reprise (propre au côté~1 de $P_{599}$).} Les $21\,459$ reçus relus au moment de la reprise ont été écrits par le premier lancement du même programme, chacun après l'exécution complète de sa tâche.
+\end{enumerate}
+
+Certaines de ces réserves sont levées pour les exécutions concernées, par une lecture du source, des journaux et des reçus \st{contrôles exacts sur les fichiers}.
+\begin{itemize}
+\item \emph{Z9.} Aucun compteur n'entre dans une décision d'énumération. L'absence de touche ne dépend d'aucun compteur : toute touche crée un fichier ou lève une exception, et aucun fichier de touche n'existe. Les totaux imprimés sont exacts dès lors qu'aucun compteur n'a subi $2^{63}$ incréments, ce que la durée des exécutions rend invraisemblable ; c'est un argument heuristique, sans borne démontrée. La conclusion sur le minimum n'en dépend pas.
+\item \emph{Z10 et écritures, sans reprise.} Pour $P_{139}$ et pour le côté~2 de $P_{599}$, chaque côté a été exécuté en un seul lancement. Le fichier de reprise n'a été ouvert qu'en écriture, et le bilan ne dépend d'aucun reçu relu. Les reçus ont été vérifiés comme témoins : format, permutation des indices, sommes égales aux totaux, empreinte finale. Les réplications de $P_{139}$ et de $P_{599}$ sur le second ordinateur sont elles aussi sans reprise, pour les quatre côtés : la conclusion peut s'appuyer sur ces exécutions neuves, où H4 n'intervient pas.
+\item \emph{Identité.} Une recompilation du source hors du dépôt, avec le même compilateur, redonne les classes octet pour octet.
+\end{itemize}
+
+Ne sont \emph{pas} établis :
+\begin{itemize}
+\item la validité de la preuve au-delà de la relecture limitée ci-dessus ;
+\item H1 ; une exécution par une implantation indépendante réduirait le risque d'une erreur commune à la preuve et au programme, et aucune n'a été faite ;
+\item H2 et H3 : les réplications sur un second ordinateur les étayent, sans les démontrer.
+\end{itemize}
+\emph{Réplications.} Pour chacun des deux réseaux, les deux côtés ont été exécutés une seconde fois, sur un second ordinateur, sous un autre système et une autre version de la machine virtuelle (OpenJDK~21), en un seul lancement sans reprise ; les reçus sont identiques octet pour octet à ceux de la première exécution, et aucune divergence n'a été observée dans les résultats comparés. Ces réplications renforcent les contrôles de cohérence entre exécutions, sans démontrer H2 ni H3. Pour $P_{599}$, le côté~1 de la première exécution avait été repris ; le rejeu complet des $21\,459$ tâches d'avant reprise a reproduit leurs reçus octet pour octet, et la conclusion s'appuie de toute façon sur les exécutions sans reprise, où H4 n'intervient pas.
+Les reçus sont déterministes. Une réplication doit donc reproduire, à l'octet près, l'empreinte des reçus triés par indice.
+
+\section{Résultats}\label{sec:resultats}
+
+On note $P_p$ un idéal premier de $\Z[\zeta]$ au-dessus du nombre premier $p$, et $X_p=(P_p,\beta_0/\nu)$ le réseau idéal unimodulaire qu'il porte (proposition~\ref{prop:S}). Les idéaux premiers au-dessus de $p$ sont conjugués sous $\Gal(L/\Q)$ : les réseaux $X_p$ correspondants sont isométriques, et forment une seule orbite de $S$. Un énoncé sur le minimum de $X_p$ vaut donc pour toute cette orbite. Si $p\equiv1\pmod{115}$, $P_p=(p,\zeta-r)$ est de degré $1$ et $q=p$. Si $p\equiv24$ ou $91\pmod{115}$, $P_p$ est de degré $2$ et $q=p^2$ ; sa classe est fixée par $\sigma_{24}$, resp.\ $\sigma_{91}$.
+
+\subsection{Rejets démontrés}\label{subsec:rejets}
+
+Un \emph{témoin} de non-extrémalité est un vecteur entier $x$, dans une $\Z$-base explicite de l'idéal, tel que $x^{\mathsf T}Gx=6$, où $G$ est la matrice de Gram exacte du réseau.
+
+\begin{proposition}\label{prop:rejets}
+Pour chacun des huit idéaux du tableau~\ref{tab:rejets}, le réseau $X_p$ contient un vecteur de norme $6$. Il n'est donc pas extrémal, et aucun réseau de son orbite ne l'est. Son minimum, au plus $6$, n'est pas déterminé. \st{démontré, sans GRH}
+\end{proposition}
+
+\begin{table}[ht]
+\caption{Rejets. Le rejet est démontré, sans GRH. La colonne « orbite » est sous GRH pour les composantes $331$ et $45\,013$, sans GRH pour la composante $3$ (\S\ref{subsec:classes}). Recherche : « GP, $7/2$ » désigne le filtre PARI/GP au seuil $7/2$, « Java » un énumérateur Java non certifiant, « CertZ » le programme du \S\ref{sec:certifiant}. Les empreintes SHA-256 des fichiers témoins sont abrégées.}\label{tab:rejets}
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llllll}
+\toprule
+idéal & $q$ & orbite (support, taille) & recherche & témoin & norme \\
+\midrule
+$P_{461}=(461,\zeta-5)$ & $461$ & $\{3,331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{d41592a8\dots} & $6$ \\
+$P_{691}=(691,\zeta-4)$ & $691$ & $\{331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{f3cf48f3\dots} & $6$ \\
+$P_{1151}=(1151,\zeta-6)$ & $1\,151$ & $\{331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{a5705522\dots} & $6$ \\
+$P_{1381}=(1381,\zeta-21)$ & $1\,381$ & $\{3,331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{4a45c630\dots} & $6$ \\
+$P_{1471}$ (degré $2$) & $1471^2$ & $\{45\,013\}$, $44$ & Java & contrôle exact & $6$ \\
+$P_{829}$ (degré $2$) & $829^2$ & $\{331\}$, $22$ & CertZ & \texttt{52222d1c\dots} & $6$ \\
+$P_{1289}$ (degré $2$) & $1289^2$ & $\{3,331\}$, $44$ & CertZ & \texttt{4c5f7602\dots} & $6$ \\
+$P_{1979}$ (degré $2$) & $1979^2$ & $\{3,331\}$, $44$ & CertZ & \texttt{71d980e2\dots} & $6$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}[Justification]
+Pour les sept idéaux autres que $P_{1471}$, un fichier témoin contient le polynôme minimal de $c$, $\beta_0$, $\nu$, $\alpha$, une $\Z$-base de l'idéal (matrice $88\times88$ dans la base des puissances de $\zeta$), la matrice de Gram, le vecteur $x$ et son écriture dans $L$. Un programme de vérification, qui n'utilise ni calcul de groupe de classes ni donnée de session, recontrôle exactement : que la base engendre un idéal entier de $\Z[\zeta]$, stable par $\zeta$, contenant $p$ et de l'indice attendu ($p$ ou $p^2$) ; que $\alpha=\beta_0/\nu$ ; que la matrice de Gram, recalculée, est entière, paire, de déterminant $1$ et définie positive ; que $x$ est entier et que $x^{\mathsf T}Gx=6$. Les sept journaux portent la mention « témoin valide, norme $6$ ». Pour $P_{1471}=(1471,\zeta^2+879\zeta+948)$, le vecteur a été trouvé par un énumérateur Java non certifiant, puis contrôlé indépendamment, sans PARI/GP ni Java : matrice de Gram reconstruite paire, définie positive, de déterminant $1$, et $\Tr(\alpha z\bar z)=6$.
+\end{proof}
+
+Pour les trois derniers idéaux, la touche se décompose selon~\eqref{eq:normeuy} en une énergie courte et une énergie de fibre de somme $12$ :
+\[
+\frac{3161}{829}+\frac{22\,505\,692}{1658^2},\qquad \frac{5683}{1289}+\frac{50\,451\,460}{2578^2},\qquad \frac{9260}{1979}+\frac{114\,687\,008}{3958^2}.
+\]
+Ces trois touches ont été obtenues en moins de cinq minutes chacune, par le programme et les paramètres utilisés pour les deux candidats \CONS.
+
+\begin{remarque}
+Le filtre PARI/GP utilisé pour les quatre premiers idéaux est une recherche plafonnée, à un seuil inférieur à $1057/200$. Il fournit des témoins, qui sont exacts. Une absence de témoin dans ses sorties ne prouve rien : au seuil $3$, ce filtre n'avait rien trouvé pour $P_{1471}$, qui est pourtant rejeté. Pour $P_{2531}$, de degré $1$, le filtre a été interrompu par sa limite de temps ; il n'y a aucune décision. La distinction deux à deux des quatre orbites de taille $88$ du tableau n'est pas établie ici.
+\end{remarque}
+
+\subsection{Les deux candidats}\label{subsec:candidats}
+
+Les deux idéaux suivants sont de degré résiduel $2$, avec $p\equiv24\pmod{115}$ :
+\[
+P_{139}=(139,\ \zeta^2+\zeta+77),\qquad P_{599}=(599,\ \zeta^2+87\zeta+322).
+\]
+On a $\bar P_{139}=(139,\zeta^2+65\zeta+65)\ne P_{139}$ et $\bar P_{599}=(599,\zeta^2+523\zeta+426)\ne P_{599}$. Les normes absolues sont $q=19\,321$ et $q=358\,801$.
+
+\begin{proposition}[candidat $P_{139}$]\label{prop:P139}
+Soit $X=X_{139}$.
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item $X$ est un réseau pair unimodulaire défini positif de rang $88$. \DEM
+\item $X$ contient un vecteur de norme $8$. \DEM
+\item $X$ ne contient aucun vecteur non nul de norme au plus $6$. \st{assisté par calcul : H1--H3}
+\end{enumerate}
+Statut d'ensemble : minimum $\ge8$ assisté par calcul, deux exécutions sur deux ordinateurs (reçus identiques).
+\end{proposition}
+
+\begin{proof}[Justification]
+(1) Contrôle exact, par un programme Python en entiers et en rationnels, sans PARI/GP : la base est celle d'un idéal de $\Z[\zeta]$ d'indice $139^2$, égal à $P_{139}$ ; la matrice de Gram, recalculée à partir de $\alpha$, est entière, paire, de déterminant $1$, et ses $88$ mineurs principaux dominants sont positifs. Le même programme recontrôle le recollement (proposition~\ref{prop:recollement}) et le lien entre les fichiers d'entrée du programme certifiant et le réseau, pour les deux côtés : $43$ contrôles, aucun échec. Ce raccord a aussi été relu par un second assistant.
+
+(2) Une recherche légère donne un couple $(u,y)$ d'énergies $398/139$ et $1\,015\,256/278^2$, de somme $16$. Le vecteur correspondant, reconstruit dans la base de l'idéal, a des coordonnées entières et vérifie $x^{\mathsf T}Gx=8$, en entiers exacts.
+
+(3) Le programme \texttt{Rang88CertZ} a été exécuté sur les deux côtés, avec $B_A=1057/200$ et $S=12$, du 10 au 11 octobre 2026, sur $6$ fils. Chaque côté a fait l'objet d'un seul lancement, sans reprise.
+\begin{center}\small
+\begin{tabular}{lrrrrl}
+\toprule
+côté & tâches & durée & $|\Uc|$ imprimé & touches & fin \\
+\midrule
+$1$ & $48\,227$ & $14\,562$ s & $42\,957\,972$ & $0$ & couverture complète, code $0$ \\
+$2$ & $61\,174$ & $15\,856$ s & $42\,957\,972$ & $0$ & couverture complète, code $0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Par le corollaire~\ref{cor:touche}, sous H1--H3, $\Tc=\emptyset$ pour les deux côtés : les exécutions sont sans reprise et leurs répertoires de sortie ne contiennent aucun fichier de touche. Le théorème~\ref{thm:critere} donne alors (3). Les empreintes des reçus triés commencent par \texttt{c99dcf87} (côté~1) et \texttt{8ab1f40a} (côté~2).
+\end{proof}
+
+\emph{Réplication de $P_{139}$.} Le même programme, sur les mêmes entrées, a été exécuté une seconde fois, sur un second ordinateur, sous Linux et Java~21 (la première exécution était sous Windows et Java~11), avec $8$ fils au lieu de $6$, sans reprise : $48\,227$ et $61\,174$ tâches, aucune touche. Les reçus triés par indice ont les mêmes empreintes SHA-256 que ceux de la première exécution (\texttt{c99dcf87\dots5122} et \texttt{8ab1f40a\dots daf7}). Les deux exécutions partagent le code source et les fichiers de classes : ce n'est pas une implantation indépendante.
+
+\begin{proposition}[candidat $P_{599}$]\label{prop:P599}
+Soit $X=X_{599}$.
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item $X$ est un réseau pair unimodulaire défini positif de rang $88$. \DEM
+\item $X$ contient un vecteur de norme $8$. \DEM
+\item $X$ ne contient aucun vecteur non nul de norme au plus $6$. \st{assisté par calcul : H1--H3}
+\end{enumerate}
+Statut d'ensemble : minimum $\ge8$ assisté par calcul, deux exécutions sur deux ordinateurs (reçus identiques). L'hypothèse H4 sur les reçus repris du côté~1 de la première exécution n'est pas nécessaire (voir ci-dessous).
+\end{proposition}
+
+\begin{proof}[Justification]
+(1) Même contrôle exact que pour $P_{139}$ : $47$ contrôles, aucun échec, pour les deux côtés. Ce raccord a aussi été relu par un second assistant.
+
+(2) Un couple $(u,y)$ d'énergies $1376/599$ et $19\,666\,368/1198^2$, de somme $16$, donne un vecteur de coordonnées entières tel que $x^{\mathsf T}Gx=8$.
+
+(3) Première exécution, sur le premier ordinateur :
+\begin{center}\small
+\begin{tabular}{l>{\raggedright\arraybackslash}p{4.4cm}rrr>{\raggedright\arraybackslash}p{2.7cm}}
+\toprule
+côté & lancements & tâches & $|\Uc|$ imprimé & touches & fin \\
+\midrule
+$1$ & deux : $6$ fils, arrêt forcé après environ $20\,350$ s ; puis $10$ fils, $19\,765$ s & $59\,255$ & $185\,794\,630$ & $0$ & couverture complète, code $0$ \\
+$2$ & un seul : $10$ fils, $34\,114$ s & $74\,398$ & $185\,794\,630$ & $0$ & couverture complète, code $0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Le côté~2 n'a pas de reprise : sous H1--H3, $\Tc=\emptyset$ pour ce côté. Le côté~1 a été repris : le second lancement a relu $21\,459$ reçus et exécuté $37\,796$ tâches. Sous H1--H4, $\Tc=\emptyset$ pour ce côté. La réplication décrite plus bas donne la même conclusion sans H4 : ses deux côtés sont sans reprise, et le corollaire~\ref{cor:touche} s'y applique : l'inventaire complet du répertoire de sortie, pris après la fin du calcul, ne contient aucun fichier de touche. Les empreintes des reçus triés commencent par \texttt{f3cf379a} (côté~1) et \texttt{b9c93a83} (côté~2).
+\end{proof}
+
+\emph{Sur l'hypothèse H4.} Un contrôle exact des fichiers établit les points suivants. Le fichier relu à la reprise est, octet pour octet, le début du fichier final ; une copie prise avant la reprise a la même empreinte. L'arrêt forcé n'a laissé aucune ligne tronquée. Les $21\,459$ indices repris et les $37\,796$ indices exécutés ensuite sont disjoints, et leur réunion est exactement l'ensemble des $59\,255$ tâches. Ce contrôle n'établit pas que les reçus repris ont été produits par le même programme, ni même par une exécution : le second lancement les a acceptés après un contrôle de forme. Plusieurs concordances soutiennent H4 sans la démontrer \CONS{} : le journal du premier lancement ; la chronologie ; l'accord, à chaque point de veille, entre les totaux annoncés et les sommes des reçus déjà écrits ; l'ordre des lignes, compatible avec une file à $6$ puis à $10$ fils ; l'égalité de $|\Uc|$ et de son histogramme avec ceux d'un balayage antérieur par un autre programme, non certifiant ; enfin le rejeu de $200$ tâches tirées au hasard parmi les $21\,459$, dont les reçus sont identiques octet pour octet. Ce sondage porte sur $0{,}93\,\%$ des tâches ; il ne détecterait pas une altération isolée.
+
+\emph{Rejeu des tâches reprises de $P_{599}$.} Les $21\,459$ tâches exécutées avant l'interruption ont été rejouées intégralement, avec les mêmes classes et les mêmes entrées, sur un checkpoint séparé ($14\,564$~s, aucune touche). Les $21\,459$ reçus sont identiques octet pour octet à ceux du checkpoint d'avant reprise et à ceux du checkpoint final. L'hypothèse H4 n'est donc plus nécessaire.
+
+\emph{Réplication de $P_{599}$.} Le balayage complet a été refait sur le second ordinateur (Linux, OpenJDK~21, $14$ fils), avec les mêmes classes compilées et les mêmes fichiers d'entrée, en un seul lancement sans reprise : côté~1 en $26\,212$~s, côté~2 en $25\,956$~s, codes de sortie nuls, aucune touche. Les catalogues de tâches sont identiques octet pour octet à ceux de la première exécution. Les empreintes canoniques des reçus (reçus triés par indice, sans en-tête) sont identiques pour les deux côtés : $59\,255$ et $74\,398$ reçus. Les empreintes ont été calculées deux fois, par deux programmes distincts. L'énoncé (3) reste assisté par calcul : la réplication renforce les contrôles de cohérence entre exécutions, sans démontrer H2 ni H3 ; les deux machines ont exécuté le même programme, et elle ne dit rien d'une omission qui lui serait propre.
+
+\begin{remarque}
+Avant ces exécutions, un énumérateur flottant non certifiant avait balayé les deux côtés des deux candidats sans trouver de touche, avec les mêmes valeurs de $|\Uc|$ \CONS. Pour chacun des deux candidats, le groupe engendré par $-\zeta$ et par l'isométrie $\sigma_{24}$-semi-linéaire que donne la proposition~\ref{prop:S} montre que $|\Aut(X)|\ge460$. Le groupe d'automorphismes et la perfection n'ont pas été étudiés.
+\end{remarque}
+
+\subsection{Survivants partiels d'un filtre}\label{subsec:survivants}
+
+Les nombres premiers $p\equiv24\pmod{115}$ donnent des idéaux de degré $2$ dont la classe est fixée par $\sigma_{24}$, donc de support contenu dans $\{3,331\}$. En dehors des orbites de $\Lz$ et de $\LS$, les classes de ce type forment $30$ orbites : $15$ de support $\{331\}$ et $15$ de support $\{3,331\}$ (tableau~\ref{tab:orbites}). Neuf cas ont été examinés : $p=139$, $599$, $829$, $1289$, $1979$, $3359$, $4049$, $4969$ et $5659$. D'après un calcul par \texttt{bnfinit}, ils sont dans neuf orbites distinctes \GRH. Les nombres premiers $p\equiv114\pmod{115}$ ne donnent rien de plus : leur classe est fixée par la conjugaison complexe, donc triviale.
+
+Pour les quatre derniers, un filtre a été appliqué : le programme \texttt{Rang88CertZ} sur le côté~1 seulement, avec arrêt à la première touche, pendant une durée bornée (une heure sur $4$ fils, puis $55$ minutes sur $6$ fils).
+
+\begin{table}[ht]
+\caption{Survivants partiels du filtre, côté~1 seulement. Statut : constaté. Aucune conclusion sur le minimum. La colonne « orbite » est sous GRH.}\label{tab:survivants}
+\centering\small
+\begin{tabular}{llrrr}
+\toprule
+idéal & orbite (support, taille) & reçus / tâches du côté~1 & part des tâches & touches \\
+\midrule
+$P_{3359}$ & $\{331\}$, $22$ & $3\,981$ / $109\,662$ & $3{,}6\,\%$ & $0$ \\
+$P_{4049}$ & $\{3,331\}$, $44$ & $4\,173$ / $77\,819$ & $5{,}4\,\%$ & $0$ \\
+$P_{4969}$ & $\{3,331\}$, $44$ & $3\,716$ / $97\,270$ & $3{,}8\,\%$ & $0$ \\
+$P_{5659}$ & $\{331\}$, $22$ & $4\,201$ / $132\,743$ & $3{,}2\,\%$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ces quatre idéaux sont des \emph{survivants partiels}, et rien de plus. La couverture est de quelques pour cent d'un seul côté, et les tâches ne sont pas de taille égale. Les trois rejets de la même famille sont tombés après $302\,298$, $354\,888$ et $432\,358$ projections courtes ; au premier passage, les quatre survivants en avaient parcouru dix à quinze millions chacun sans touche. C'est un indice, sans valeur de preuve. On ne sait rien du minimum de ces quatre réseaux.
+
+\subsection{Classes de \texorpdfstring{$P_{139}$}{P139} et de \texorpdfstring{$P_{599}$}{P599} sans GRH ; non-isométrie}\label{subsec:classes}
+
+\emph{Localisation sous GRH.} La composante en $p$ d'une classe $[P]$ se lit dans le corps fixe $K$ du noyau de $\chi_p$ : la norme $\Nm_{L/K}$ induit un isomorphisme sur la composante $\chi_p$, car le degré $[L:K]$ est inversible modulo $p$. On lit donc la composante $3$ dans $\Cl(F)\cong\Z/3$, certifié sans GRH, et les composantes $331$ et $45\,013$ dans $\Cl(K_{22})\cong\Z/662$ et $\Cl(K_{44})\cong\Z/45\,013$, calculés par \texttt{bnfinit} \GRH. Les supports et les tailles d'orbite des tableaux~\ref{tab:rejets} et~\ref{tab:survivants} viennent de ce calcul. Pour $P_{139}$ il donne le support $\{3,331\}$ et une orbite de taille $44$ ; pour $P_{599}$, le support $\{331\}$ et une orbite de taille $22$.
+
+Les deux propositions suivantes ne dépendent pas de GRH. Soit $K=K_{22}=\Q(\theta)$, avec $\theta=\zeta+\zeta^{22}+\zeta^{24}+\zeta^{68}$, corps fixe de $\langle\sigma_{22}\rangle$ ; c'est un corps CM de degré $22$, dont le groupe des unités est de rang $10$ et dont les seules racines de l'unité sont $\pm1$.
+
+\begin{proposition}\label{prop:classeP139}
+L'idéal $P_{139}^3$ n'est pas principal dans $L$. \st{démontré, sans GRH}
+\end{proposition}
+
+\begin{proposition}\label{prop:classeP599}
+Pour tout entier $m$ premier à $331$, l'idéal $P_{599}^m$ n'est pas principal dans $L$. L'ordre de $[P_{599}]$ est donc divisible par $331$. De plus la composante $3$ de $[P_{599}]$ est nulle. \st{démontré, sans GRH}
+\end{proposition}
+
+\begin{proof}[Preuve des propositions~\ref{prop:classeP139} et~\ref{prop:classeP599}]
+Soit $p\in\{139,599\}$, $P=P_p$ et $\q=P\cap K$. Un certificat, vérifié par un programme Python en arithmétique exacte, sans PARI/GP, établit les faits suivants ($24$ contrôles pour $p=139$, $37$ pour $p=599$, aucun échec).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item Le polynôme minimal de $\theta$ est de degré $22$ et a $22$ racines simples modulo $p$ ; $\q$ est de degré $1$, $P$ est de degré $2$ sur $\q$, et $\Nm_{L/K}(P)=\q^2$.
+\item Un entier algébrique explicite $\gamma\in K$ vérifie $(\gamma)=\q^{331}$. Les éléments $\xi_a=\sin(\pi a/23)/\sin(\pi/23)$, $2\le a\le11$, sont des unités de $K$.
+\item Pour trois nombres premiers $\ell\equiv1\pmod{331\cdot115}$, on forme la matrice des logarithmes discrets modulo $331$ des images de $\xi_2,\dots,\xi_{11},\gamma$ dans les corps résiduels de degré $1$ au-dessus de $\ell$. Les dix colonnes d'unités sont de rang $10$, et la matrice entière est de rang $11$.
+\end{enumerate}
+Soient $E$ le groupe des unités de $K$ et $U'=\langle-1,\xi_2,\dots,\xi_{11}\rangle$. Pour un premier $\mathfrak l$ de degré $1$ au-dessus de $\ell$, soit $\lambda_{\mathfrak l}$ le morphisme de réduction à valeurs dans $\F_\ell^\times/(\F_\ell^\times)^{331}\cong\F_{331}$ ; il est nul sur les puissances $331$-ièmes et sur $\pm1$.
+
+\emph{Étape 1 : $U'$ est d'indice fini $k$ dans $E$, et $331\nmid k$.} Si $\prod\xi_a^{n_a}=\pm\eta^{331}$ avec $\eta\in E$, alors $\sum n_a\lambda_{\mathfrak l}(\xi_a)=0$ pour tout $\mathfrak l$, donc $331$ divise chaque $n_a$, par le rang $10$. Une relation multiplicative primitive entre les $\xi_a$ contredirait ceci : $U'$ est de rang $10$, donc d'indice fini. Si $331$ divisait $k$, il existerait $\varepsilon\in E\smallsetminus U'$ avec $\varepsilon^{331}\in U'$ ; alors $\varepsilon^{331}=\pm\eta'^{331}$ avec $\eta'\in U'$, donc $\varepsilon/\eta'$ serait une racine de l'unité de $K$, soit $\pm1$, et $\varepsilon\in U'$.
+
+\emph{Étape 2 : pour $m$ premier à $331$, $\q^{2m}$ n'est pas principal.} Sinon $\q^{2m}=(\delta)$, et $(\gamma^{2m})=\q^{662m}=(\delta^{331})$, soit $\gamma^{2m}=\varepsilon\delta^{331}$ avec $\varepsilon\in E$. Aux $\ell$ utilisés, $\delta$ est une unité locale. Alors $2mk\,\lambda_{\mathfrak l}(\gamma)=\lambda_{\mathfrak l}(\varepsilon^k)$ pour tout $\mathfrak l$, avec $\varepsilon^k\in U'$ : la colonne de $\gamma$ serait dans l'espace des colonnes d'unités, puisque $2mk$ est inversible modulo $331$. Le rang $11$ l'interdit.
+
+\emph{Étape 3.} Si $P^m=(\beta)$, alors $\Nm_{L/K}(\beta)$ engendre $\Nm_{L/K}(P)^m=\q^{2m}$. Donc $P^m$ n'est pas principal. Pour $p=599$, c'est la première assertion de la proposition~\ref{prop:classeP599}. Pour $p=139$, nous n'utilisons que le cas $m=3$, qui est la proposition~\ref{prop:classeP139}.
+
+\emph{Composante $3$ de $[P_{599}]$.} L'élément $s=\sum_{a=1}^{22}\bigl(\frac a{23}\bigr)\zeta^{5a}$ vérifie $s^2=-23$, et $599=24^2+23$. L'élément $\pi=24-s$ est dans $P_{599}$, donc $P_{599}\cap\OO_F=(\pi)$ est principal et $\Nm_{L/F}(P_{599})=(\pi^2)$. Le $3$-sous-groupe de Sylow de $\Cl(L)$ est d'ordre $3$ (proposition~\ref{prop:hmoins}), et $\Cl(F)\cong\Z/3$. L'extension des idéaux $j\colon\Cl(F)\to\Cl(L)$ est injective, car $\Nm_{L/F}\circ j$ est la multiplication par $44$ ; son image est donc ce sous-groupe de Sylow. Écrivons $[P_{599}]=j(a)+c'$, avec $c'$ d'ordre premier à $3$. Alors $0=\Nm_{L/F}([P_{599}])=44a+\Nm_{L/F}(c')$. Or $\Nm_{L/F}(c')$ est d'ordre premier à $3$ dans un groupe d'ordre $3$, donc nul ; d'où $a=0$.
+\end{proof}
+
+\begin{remarque}[ce qui reste sous GRH, et ce qui a été relu]\label{rem:classes}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item Pour $P_{139}$, l'idéal $P_{139}\cap\OO_F$ n'est pas principal ($4\cdot139$ n'est pas de la forme $a^2+23b^2$), donc l'ordre de $[P_{139}]$ est divisible par $3$. Avec la proposition~\ref{prop:classeP139}, cet ordre est divisible par $331$ ou par $45\,013$. La composante $45\,013$ est nulle, par l'argument du point~(b) : $139\equiv24\pmod{115}$, donc $\sigma_{24}$ est la substitution de Frobenius de $139$ et fixe $P_{139}$, alors que $24$ n'est pas dans le noyau de $\chi_{45\,013}$. L'ordre de $[P_{139}]$ divise donc $993=3\cdot331$, il est divisible par $3$ et distinct de $3$ : il vaut $993$, et le support est $\{3,331\}$. Le stabilisateur de la classe est l'intersection des noyaux de $\chi_3$ et de $\chi_{331}$, soit $\{1,24\}$ ($22$ et $68$ sont congrus à $-1$ modulo $23$, qui n'est pas un carré) : l'orbite est de taille $44$. Ces trois faits sont donc acquis sans GRH, modulo les propositions~\ref{prop:hmoins} et~\ref{prop:car}. Savoir \emph{laquelle} des $15$ orbites de ce support est celle de $P_{139}$ reste sous GRH.
+\item Pour $P_{599}$, la composante $45\,013$ est nulle : $\sigma_{24}$ est la substitution de Frobenius de $599$ et fixe $P_{599}$, et $24$ n'est pas dans le noyau $\{1,91\}$ de $\chi_{45\,013}$ (proposition~\ref{prop:car}). Avec les propositions~\ref{prop:hmoins}, \ref{prop:car} et~\ref{prop:classeP599}, $[P_{599}]$ est d'ordre $331$, de support $\{331\}$, d'orbite de taille $22$, sans GRH. Savoir \emph{laquelle} des $15$ orbites de ce support est celle de $P_{599}$ reste sous GRH.
+\item Les certificats de classe de $P_{139}$ et de $P_{599}$ ont été relus par un second assistant, dans cette seule portée : « $P^m$ n'est pas principal » pour les $m$ indiqués. Le calcul de la composante $3$ et l'ordre exact $331$ dans $L$ reposent sur les propositions~\ref{prop:hmoins} et~\ref{prop:car}.
+\end{enumerate}
+\end{remarque}
+
+Les énoncés cités de~\cite{Sak26} sont les suivants.
+\begin{enumerate}[label=\textup{(S\arabic*)}]
+\item $\Lz$ et $\LS$ sont de minimum $8$ \cite[\S5, prop.~5.5]{Sak26}. C'est une prépublication.
+\item $\Lz\cong(\OO_L,\beta_0)$ (certificat entier, \S\ref{subsec:sakamoto}), et $\LS$ est le réseau idéal de $J\OO_L$, avec $[J\OO_L]^3=1$ (proposition~\ref{prop:L0LS}).
+\end{enumerate}
+
+\begin{proposition}[non-isométrie]\label{prop:noniso}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item Ni $X_{139}$ ni $X_{599}$ n'est isométrique à $\Lz$ ou à $\LS$.
+\item Les classes $[P_{139}]$ et $[P_{599}]$ ne sont pas conjuguées sous $\Gal(L/\Q)$. Si l'un au moins des réseaux $X_{139}$, $X_{599}$ est de minimum $8$, alors $X_{139}\not\cong X_{599}$.
+\end{enumerate}
+\st{démontré, sans GRH, modulo (S1), (S2) et le théorème~\ref{thm:isometrie}}
+\end{proposition}
+
+\begin{proof}
+(a) Soit $X$ l'un des deux réseaux, porté par $P$. Si $\min X\le6$, c'est immédiat par (S1). Sinon $\min X=8$ (propositions~\ref{prop:P139} et~\ref{prop:P599}, point 2), et $X$, $\Lz$, $\LS$ sont trois réseaux idéaux unimodulaires de minimum au moins $8$ sur $L$. Par le théorème~\ref{thm:isometrie}, une isométrie de $X$ avec $\Lz$ ou $\LS$ donnerait $a$ et $\lambda\in L^\times$ tels que $\lambda\sigma_a(P)$ soit $\OO_L$, $J\OO_L$ ou son conjugué. Alors $[\sigma_a(P)]^3=1$, donc $[P]^3=1$, ce que contredisent les propositions~\ref{prop:classeP139} et~\ref{prop:classeP599}.
+
+(b) L'ordre de $[P_{139}]$ est divisible par $3$ (remarque~\ref{rem:classes}), celui de $[P_{599}]$ ne l'est pas, et deux classes conjuguées ont le même ordre. Si un seul des deux réseaux est de minimum $8$, ils diffèrent par leur minimum ; si les deux le sont, le théorème~\ref{thm:isometrie} s'applique.
+\end{proof}
+
+La preuve de (a) n'utilise pas l'énoncé assisté sur le minimum : elle vaut que $X$ soit de minimum $8$ ou non.
+
+\begin{remarque}[une preuve plus courte de (b), sans le nombre de classes de $L$]\label{rem:normeF}
+Soit $F=\Q(\sqrt{-23})\subset L$. Comme $L/\Q$ est abélienne, $\Nm_{L/F}(\sigma(I))=\sigma|_F(\Nm_{L/F}(I))$ pour tout $\sigma\in\Gal(L/\Q)$, et la norme d'un idéal principal est principale : le caractère principal ou non de $\Nm_{L/F}(I)$ ne dépend que de l'orbite galoisienne de la classe de $I$. On a $\Cl(F)\cong\Z/3$ : les formes réduites de discriminant $-23$ sont $(1,1,6)$, $(2,\pm1,3)$.
+\begin{itemize}
+\item $139$ est décomposé dans $F$ et de degré résiduel $2$ dans $L$ ; donc $\Nm_{L/F}(P_{139})=\mathfrak p_{139}^2$. Un générateur de $\mathfrak p_{139}$ serait $(a+b\sqrt{-23})/2$ avec $a^2+23b^2=556$ ; pour $|b|\le4$, $556-23b^2$ vaut $556$, $533$, $464$, $349$, $188$, dont aucun n'est un carré. Donc $\mathfrak p_{139}$, et avec lui $\mathfrak p_{139}^2$, n'est pas principal.
+\item $599=24^2+23$ : les deux idéaux premiers de $F$ au-dessus de $599$ sont engendrés par $24\pm\sqrt{-23}$, donc principaux, et $\Nm_{L/F}(P_{599})$ est principal.
+\end{itemize}
+Les classes $[P_{139}]$ et $[P_{599}]$ ne sont donc pas conjuguées sous $\Gal(L/\Q)$, sans utiliser $h^-(115)$ ni l'ordre exact des classes. Avec le théorème~\ref{thm:isometrie}, qui s'applique puisque les deux réseaux sont de minimum $8$, on obtient $X_{139}\not\cong X_{599}$. \DEM, sans GRH
+\end{remarque}
+
+
+\begin{theoreme}[deux réseaux extrémaux ; démonstration assistée par ordinateur]\label{thm:extremaux}
+Les réseaux explicites $X_{139}$ et $X_{599}$ sont pairs, unimodulaires, de rang $88$ et de minimum $8$ ; ils sont donc extrémaux. Ils ne sont isométriques ni entre eux, ni à $\Lz$, ni à $\LS$.
+\st{minimum : démonstration assistée par ordinateur, dans le modèle d'exécution du \S\ref{subsec:hyp} (M1, M2, H1--H3) ; non-isométrie : démontrée sans GRH}
+\end{theoreme}
+
+\begin{proof}
+Par les points 1 et 2 des propositions~\ref{prop:P139} et~\ref{prop:P599}, chacun des deux réseaux est pair, unimodulaire, défini positif, de rang $88$, et contient un vecteur de norme $8$. Soit $z\ne0$ de norme au plus $6$. Par le théorème~\ref{thm:critere}, après multiplication par une racine de l'unité et choix du signe, l'une des deux projections est non nulle et d'énergie au plus $1057/200$, l'énergie totale étant au plus $12$ ; le cas d'une projection nulle est traité par le lemme dédié. Par le raccord géométrique, ce couple appartient à l'ensemble $\Tc$ d'un côté, calculé sur les fichiers d'entrée effectivement exécutés. Par le corollaire~\ref{cor:touche}, appliqué aux quatre exécutions neuves du second ordinateur (deux réseaux, deux côtés), $\Tc=\emptyset$ : contradiction. Le minimum est donc au moins $8$, puisque le réseau est pair, et il vaut $8=2\lfloor88/24\rfloor+2$. La non-isométrie est la proposition~\ref{prop:noniso}, avec la remarque~\ref{rem:normeF}.
+\end{proof}
+
+\noindent\emph{Nouveauté.} La non-isométrie aux deux réseaux de~\cite{Sak26} est démontrée. L'absence d'autre exemple antérieur est une conclusion bibliographique, datée du 13 octobre 2026 (\S\ref{subsec:connu}) : à notre connaissance, $X_{139}$ et $X_{599}$ sont deux nouveaux exemples de réseaux extrémaux de rang $88$.
+
+\noindent\emph{Statut.} Cette démonstration est assistée par ordinateur. Elle repose sur le modèle d'exécution explicité au \S\ref{subsec:hyp} : la machine virtuelle et l'arithmétique suivent leur spécification (M1, M2, H1), aucune faute matérielle n'est survenue (H2), et les classes, entrées, sorties et observations conservées sont authentiques (H3). Ces prémisses ne sont pas une hypothèse arithmétique ; les réplications les étayent sans les démontrer. La démonstration n'utilise ni H4, ni l'exactitude des compteurs, ni GRH. Elle se compose de trois parties, chacune relue par un second assistant sur les pièces conservées :
+\begin{enumerate}[label=\textup{(\Alph*)}]
+\item \emph{le raccord géométrique} de chaque réseau aux fichiers d'entrée du programme, par contrôles exacts, y compris la surjectivité des coordonnées et l'exhaustivité des fibres par égalité des déterminants ;
+\item \emph{le lien entre la preuve et le code} : sélection complète, achèvement des tâches et bilan d'un lancement neuf ; absence de fichier de touche, établie par l'inventaire complet des répertoires de sortie pris après la fin des calculs, et par la lecture des scripts de lancement, qui ne suppriment rien ;
+\item \emph{la composition} ci-dessus.
+\end{enumerate}
+Aucun spécialiste humain n'a relu ces preuves, et aucune implantation indépendante du balayage n'a été exécutée ; ce sont des consolidations possibles, pas des conditions logiques. L'énoncé porte sur les deux réseaux explicites de la note ; il ne dit rien d'une classification, du nombre exact d'orbites extrémales, du groupe d'automorphismes ni de l'exactitude des compteurs du théorème~\ref{thm:nonomission}.
+
+\section{Questions ouvertes, méthodes et déclarations}\label{sec:fin}
+
+\subsection{Questions ouvertes}\label{subsec:questions}
+
+\begin{enumerate}[label=\textup{(Q\arabic*)}]
+\item \emph{Consolider le théorème~\ref{thm:extremaux}.} Une relecture de la preuve de non-omission par un spécialiste, une implantation indépendante du balayage, ou une minoration du minimum qui ne dépende d'aucune exécution.
+\item \emph{Nombre d'orbites de minimum $8$.} Combien des $508\,463$ orbites de $S$ sont formées de réseaux de minimum $8$ ? Ce nombre est au moins $4$ : les orbites de $\Lz$ et de $\LS$, dont le minimum $8$ est celui de~\cite{Sak26}, et celles de $X_{139}$ et de $X_{599}$, dont le minimum $8$ est le théorème~\ref{thm:extremaux} (démonstration assistée par ordinateur). Ces quatre orbites sont deux à deux distinctes : les classes $[P_{139}]$ et $[P_{599}]$ ne sont pas conjuguées entre elles (remarque~\ref{rem:normeF}), et leurs cubes ne sont pas principaux, alors que ceux des classes de $\Lz$ et de $\LS$ le sont (proposition~\ref{prop:noniso}). Un modèle probabiliste (moyenne de Siegel et loi de Poisson sur les orbites de vecteurs courts sous $\mu_L$) suggère une proportion de l'ordre de $4\,\%$ des classes. Ce modèle est une \emph{heuristique} : il n'est pas démontré. Il n'a été comparé qu'à deux cas de rang $56$, et il sous-estime l'un des deux.
+\item \emph{Les survivants partiels.} Que vaut le minimum de $X_{3359}$, $X_{4049}$, $X_{4969}$ et $X_{5659}$ ? Rien n'est connu.
+\item \emph{Le second réseau de Sakamoto.} Le critère du théorème~\ref{thm:critere} n'a pas été exécuté sur $\LS$. Un idéal premier au-dessus de $47$, de degré $4$ et de norme $47^4$, est dans l'orbite de $\LS$ (composante $3$ certifiée) ; pour cet idéal, le coût estimé est de l'ordre de dix heures par côté. Le minimum $8$ de $\LS$ repose donc, pour nous, sur~\cite{Sak26} seul.
+\item \emph{Étiquettes d'orbites sans GRH.} La localisation exacte des classes dans $\Cl(K_{22})$ et $\Cl(K_{44})$ est sous GRH. Une certification du groupe des classes de $K_{22}$, de degré $22$, lèverait GRH pour la composante $331$ ; elle n'a pas été faite.
+\item \emph{Invariants.} Le groupe d'automorphismes des deux candidats et leur perfection ne sont pas étudiés.
+\item \emph{Autres conducteurs.} Les cas $m=184$ et $m=276$, pour lesquels les réseaux idéaux unimodulaires sont pairs, et le cas $m=89$, ne sont pas traités.
+\end{enumerate}
+
+\subsection{Méthodes et statut des calculs}\label{subsec:methodes}
+Les calculs ont été faits avec PARI/GP, version 2.15.4~\cite{PARI}, avec des programmes Python en arithmétique entière et rationnelle exacte, et avec des programmes Java pour les énumérations (OpenJDK 11.0.16.1 sous Windows ; OpenJDK~21 sous Linux pour les réplications). Quatre types de calcul interviennent.
+\begin{enumerate}[label=\textup{(C\arabic*)}]
+\item \emph{Identités exactes.} Nombre de classes relatif, normes de nombres de Bernoulli généralisés, matrices de Gram, certificat d'isométrie $H\cong\Lz$, témoins de norme $6$ et de norme $8$, raccords géométriques, certificats de classes dans $K_{22}$. Ces calculs sont rejouables ; les vérificateurs n'utilisent aucun calcul de groupe de classes. Ils donnent le statut « démontré ».
+\item \emph{Groupes de classes par \texttt{bnfinit}.} Localisation des classes dans $\Cl(K_{22})$ et $\Cl(K_{44})$. Statut : « sous GRH ». La composante $3$ est lue dans $\Cl(\Q(\sqrt{-23}))$, certifié.
+\item \emph{Énumération certifiante.} Programme \texttt{Rang88CertZ} (\S\ref{sec:certifiant}). Statut : « assisté par calcul », sous H1--H3. Une touche, en revanche, est un témoin exact, rejouable seul.
+\item \emph{Recherches non certifiantes.} Réduction LLL, \texttt{qfminim} de PARI/GP sans option, filtre plafonné, énumérateur Java flottant, filtre à durée bornée. Statut : « constaté ». Un vecteur trouvé par ces moyens devient un témoin exact une fois recontrôlé ; une absence de vecteur ne prouve rien.
+\end{enumerate}
+
+\emph{Données de Sakamoto.} La matrice de Gram de $\Lz$ utilisée au \S\ref{subsec:sakamoto} provient du dépôt de données public qui accompagne~\cite{Sak26}, \url{https://github.com/RyotaroSakamoto0113/rank-88-extremal-lattice-computations}, révision \texttt{628ce2a7}, fichier \texttt{data/L0/integer\_input.txt} (SHA-256 \texttt{68af477c\dots631f}). Elle n'est pas redistribuée avec nos données : celles-ci donnent son adresse et son empreinte, et le script de vérification la lit à cet emplacement. Les fichiers ont été lus comme des données, sans exécuter le code qu'ils contiennent. L'article~\cite{Sak26} a été lu dans sa version HTML ; les constantes transcrites sont recoupées par des identités exactes. Ses démonstrations n'ont pas été relues pour cette note.
+
+\emph{Relectures.} Les points suivants ont été relus par le second assistant, Astra (OpenAI), chaque fois dans une portée limitée : le calcul de $h^-(115)$, par un calcul indépendant en entiers et en rationnels ; l'identification des caractères, le décompte des orbites, les comparaisons rationnelles et les arguments de groupe du \S\ref{sec:isometrie}, le recollement et la preuve du lemme~\ref{lem:nul} ; les deux identités matricielles qui donnent $H\cong\Lz$ ; le témoin de $P_{1471}$ ; les raccords géométriques de $P_{139}$ et de $P_{599}$ ; le mécanisme Z1--Z8 de la preuve de non-omission et sa liaison au code ; les certificats de classe de $P_{139}$ et de $P_{599}$ ; la composition du théorème~\ref{thm:extremaux}. La preuve courte de la remarque~\ref{rem:normeF} est de lui.
+
+\emph{Limites.}
+\begin{itemize}
+\item $P_{139}$ et $P_{599}$ reposent chacun sur deux exécutions complètes du même programme, sur deux machines, aux reçus identiques ; pour $P_{599}$ s'y ajoute le rejeu des $21\,459$ tâches reprises du premier lancement. Aucune implantation indépendante n'a été exécutée.
+\item La preuve de non-omission a été rédigée par l'auteur du code et contre-lue une fois, avec un avis favorable limité.
+\item Le statut de relecture des certificats de classe est précisé à la remarque~\ref{rem:classes}.
+\item Le théorème~\ref{thm:isometrie} est une preuve interne, auditée une fois.
+\item Le minimum $8$ de $\Lz$ et de $\LS$ est celui d'une prépublication. Nous ne l'avons pas redémontré.
+\item La recherche d'antériorité est partielle (\S\ref{subsec:connu}).
+\end{itemize}
+
+Les programmes, les données d'entrée, les reçus, les certificats et la preuve de non-omission sont dans un dépôt public qui accompagne la note : \url{https://github.com/Katabolanga/rang88-reseaux-ideaux}.
+
+\subsection*{Déclaration de l'auteur et usage de l'intelligence artificielle}
+L'auteur publie cette note principalement pour faire connaître des idées anciennes, qui sont les siennes, en tant qu'humain. Pour les recherches mathématiques et pour la démonstration de ses intuitions, il s'est fait aider de deux assistants : Claude Opus~5.5 (Anthropic) et Astra (OpenAI). Ils ne sont pas auteurs. Leur usage est le suivant.
+\begin{itemize}
+\item \emph{Rédaction.} Le texte a été rédigé avec Claude Opus~5.5.
+\item \emph{Démonstrations.} Les démonstrations des \S\S\ref{sec:S}--\ref{sec:recollement}, la preuve de non-omission résumée au \S\ref{sec:certifiant} et les preuves du \S\ref{subsec:classes} ont été élaborées ou mises en forme avec Claude Opus~5.5. Astra en a relu des parties, énumérées au \S\ref{subsec:methodes}, et a corrigé plusieurs points, dont la valeur de la borne de Blichfeldt en rang $22$ et la justification du seuil $1057/200$ ; la preuve courte de la remarque~\ref{rem:normeF} est de lui.
+\item \emph{Programmes et calculs.} Les programmes PARI/GP, Python et Java ont été écrits avec Claude Opus~5.5. Le premier programme certifiant, à intervalles, a été corrigé et prouvé avec Astra à partir d'une ébauche de Claude, et le programme \texttt{Rang88CertZ} en reprend des parties. Les contrôles indépendants d'Astra utilisent des programmes écrits de son côté.
+\item \emph{Bibliographie.} La lecture de~\cite{Sak26} et la recherche d'antériorité ont été faites avec les deux assistants, dans des copies publiques.
+\end{itemize}
+L'auteur assume la responsabilité scientifique de l'ensemble du contenu. Cette note n'a pas fait l'objet d'une relecture humaine spécialisée.
+
+\begin{thebibliography}{Wat12}
+
+\bibitem[BN98]{BN98}
+C.~Bachoc, G.~Nebe, \emph{Extremal lattices of minimum $8$ related to the Mathieu group $M_{22}$}, J. reine angew. Math. \textbf{494} (1998), 155--171. (Cité d'après~\cite{Sak26}.)
+
+\bibitem[Bay84]{Bay84}
+E.~Bayer-Fluckiger, \emph{Definite unimodular lattices having an automorphism of given characteristic polynomial}, Comment. Math. Helv. \textbf{59} (1984), 509--538.
+
+\bibitem[Bay99]{Bay99}
+E.~Bayer-Fluckiger, \emph{Lattices and number fields}, dans : Contemp. Math. \textbf{241}, Amer. Math. Soc., 1999, 69--84.
+
+\bibitem[Bli29]{Bli29}
+H.~F.~Blichfeldt, \emph{The minimum value of quadratic forms, and the closest packing of spheres}, Math. Ann. \textbf{101} (1929), 605--608.
+
+\bibitem[CS99]{SPLAG}
+J.~H.~Conway, N.~J.~A.~Sloane, \emph{Sphere packings, lattices and groups}, 3\textsuperscript{e}~éd., Grundlehren der math. Wiss. \textbf{290}, Springer, 1999.
+
+\bibitem[FP85]{FP85}
+U.~Fincke, M.~Pohst, \emph{Improved methods for calculating vectors of short length in a lattice, including a complexity analysis}, Math. Comp. \textbf{44} (1985), 463--471.
+
+\bibitem[Mil14]{Mil14}
+J.~C.~Miller, \emph{Class numbers of real cyclotomic fields of composite conductor}, LMS J. Comput. Math. \textbf{17} (2014), suppl.~A, 404--417, DOI 10.1112/S1461157014000382.
+
+\bibitem[Neb13]{Neb13}
+G.~Nebe, \emph{On automorphisms of extremal even unimodular lattices}, Int. J. Number Theory \textbf{9} (2013), no.~8, 1933--1959 ; prépublication arXiv 1212.0865.
+
+\bibitem[Neb16]{Neb16}
+G.~Nebe, \emph{Automorphisms of extremal unimodular lattices in dimension $72$}, J. Number Theory \textbf{161} (2016), 362--383 ; prépublication arXiv 1409.8473.
+
+\bibitem[PARI]{PARI}
+The PARI Group, \emph{PARI/GP version 2.15.4}, Univ. Bordeaux, 2023, \url{https://pari.math.u-bordeaux.fr/}.
+
+\bibitem[Sak26]{Sak26}
+R.~Sakamoto, \emph{Two extremal even unimodular lattices of rank $88$}, prépublication arXiv 2609.15633, version~1 du 14 septembre 2026, version~2 du 27 septembre 2026. Nous citons la version~2.
+
+\bibitem[Was97]{Was97}
+L.~C.~Washington, \emph{Introduction to cyclotomic fields}, 2\textsuperscript{e}~éd., Graduate Texts in Math. \textbf{83}, Springer, 1997 (théorème~4.17 : formule analytique du nombre de classes relatif ; théorème~6.10 : théorème de Stickelberger).
+
+\bibitem[Wat12]{Wat12}
+M.~Watkins, \emph{Another $80$-dimensional extremal lattice}, J. Théor. Nombres Bordeaux \textbf{24} (2012), no.~1, 237--255, DOI 10.5802/jtnb.795. (Cité d'après~\cite{Sak26}.)
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,1 @@
+NOTE: Picked up JDK_JAVA_OPTIONS: -XX:ErrorFile=/out/science/jvm_error_%p.log -XX:-UsePerfData
