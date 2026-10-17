@@ -1,0 +1,6 @@
+A : 44 x 44, entiere, symetrique ; det = 1015363647801325247649202558949559365289370960363860178934976890679097494606105699077349721
+energie < 3 : B = 416 : compte PARI = 162 ; attendu 162 : IDENTIQUE  [5 s]
+energie < 7/2 : B = 486 : compte PARI = 4878 ; attendu 4878 : IDENTIQUE  [37 s]
+energie < 4 : B = 555 : compte PARI = 92734 ; attendu 92734 : IDENTIQUE  [251 s]
+energie < 9/2 : B = 625 : compte PARI = 1260158 ; attendu 1260158 : IDENTIQUE  [1440 s]
+energie < 5 : B = 694 : compte PARI = 12651642 ; attendu 12651642 : IDENTIQUE  [5966 s]

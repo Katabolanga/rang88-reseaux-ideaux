@@ -1,0 +1,13 @@
+2026-10-15 18:31:10  attente de la fin des calculs dans /root/calcul_externe_P4969
+2026-10-16 02:57:25  plus aucun calcul : bilan
+2026-10-16 02:57:28  bilan fait ; extinction dans 15 min
+2026-10-16 02:58:08  ancien veilleur arrete par Claude : relance de P4049 cote 1 sur cette machine
+2026-10-16 02:59:22  attente de la fin des calculs dans /root/calcul_externe_P4049
+2026-10-16 07:56:49  [enchainement] veilleur d'extinction du cote 1 remplace par l'enchainement vers le cote 2
+2026-10-16 09:10:56  [enchainement] cote 1 termine : code 0 ; propre = 1
+2026-10-16 09:10:57  [enchainement] bilan du cote 1 fait (bilan_cote1_auto.log)
+2026-10-16 09:11:22  [enchainement] cote 2 lance (32 fils, garde-fou 16 h)
+2026-10-16 09:11:22  [enchainement] nouveau veilleur d'extinction lance (cote 2)
+2026-10-16 09:11:22  attente de la fin des calculs dans /root/calcul_externe_P4049
+2026-10-16 16:21:47  plus aucun calcul : bilan
+2026-10-16 16:21:50  bilan fait ; extinction dans 15 min

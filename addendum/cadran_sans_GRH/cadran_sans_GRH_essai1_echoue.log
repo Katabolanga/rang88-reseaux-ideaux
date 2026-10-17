@@ -1,0 +1,74 @@
+  ***   Warning: new maximum stack size = 4000000000 (3814.697 Mbytes).
+OK    ordre maximal de K22 certifie (nfcertify)
+  ***   at top-level: foreach(readstr(CERT),s,if(#s,eval(s)))
+  ***                         ^-------------------------------
+  *** readstr: error opening input file: `../../verification_P4969/data/P139/certificat_K22.txt'.
+OK    certificat P139 : meme polynome P22
+... skipping file 'cadran_sans_GRH.gp'
+  ***   at top-level: ...-1"),denominator(content(nfalgtobasis(nf,x)))=
+  ***                                             ^---------------------
+  *** nfalgtobasis: inconsistent variables in poltobasis, XI_2 != w.
+  *** bnfinit: Warning: increasing stack size to 16000000.
+  ***   at top-level: ...egalite exacte d'ideaux",idealhnf(nf,Mod(GAM13
+  ***                                             ^---------------------
+  *** idealhnf: inconsistent variables in nf_to_scalar_or_basis, GAMMA != w.
+OK    premiers auxiliaires : premiers, = 1 mod 331*115
+OK    88 premiers de degre 1 au-dessus des 4 premiers auxiliaires
+  ***   at top-level: ...10,i,j,0);LU=vector(10,j,lam(XI[j]));for(j=1,1
+  ***                                             ^---------------------
+  ***   in function lam: ...r("pas une unite en l"));znlog(v^PL[i][4],PL[i
+  ***                                                ^---------------------
+  *** znlog: incorrect type in Rg_to_Fl (t_POL).
+  ***   at top-level: L139=lam(GAM139)
+  ***                      ^-----------
+  ***   in function lam: ...r("pas une unite en l"));znlog(v^PL[i][4],PL[i
+  ***                                                ^---------------------
+  *** znlog: incorrect type in Rg_to_Fl (t_POL).
+  ***   at top-level: A=Mod(matconcat([U,L139~]),331)
+  ***                                    ^------------
+  *** _~: incorrect type in gtrans (t_POL).
+  ***   at top-level: ...es : rang 10 modulo 331",matrank(Mod(U,331))==
+  ***                                             ^---------------------
+  *** matrank: incorrect type in rank (t_POL).
+  ***   at top-level: ...9] : rang 11 modulo 331",matrank(A)==11)
+  ***                                             ^---------------
+  *** matrank: incorrect type in rank (t_POL).
+  ***   syntax error, unexpected end of file: CIBLES=[
+  ***                                                ^-
+  ***   syntax error, unexpected ',', expecting end of file: ["P139","a",139,1]
+  ***   ,["P599","a",599,28],["P691s
+  ***   ^----------------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ...P1151s24","b",[1151,6],7],["P1289","a",1289,14
+  ***                               ^---------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ["P3359","a",3359,4],["P3911s24","b",[3911,24]
+  ***                       ^--------------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ["P4969","a",4969,20],["P5981s24","b",[5981,16
+  ***                        ^-------------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ["P8419","a",8419,32],["P8741s24","b",[8741,22
+  ***                        ^-------------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ...9431s24","b",[9431,47],4],["P9661s24","b",[966
+  ***                               ^---------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ["P17389","a",17389,13],["P18401s24","b",[1840
+  ***                          ^-----------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ["P39239","a",39239,10],["P53269","a",53269,1]
+  ***                          ^-----------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ["P5659","a",5659,5],["P461s24","b",[461,5],1]
+  ***                       ^--------------------------
+  ***   syntax error, unexpected ',', expecting end of file: 
+  ***   ...521s24","b",[5521,34],32],["P157146581","c",[1
+  ***                               ^---------------------
+  ***   at top-level: foreach(CIBLES,C,my(nom=C[1],s=C[2],p,r,e,Q,G,
+  ***                 ^----------------------------------------------
+  *** foreach: incorrect type in foreach (t_POL).
+
+BILAN DES ETIQUETTES (c : [I]_331 = c [P139]_331 ; heure h : c dans 2^h mu_22) :
+BILAN : 4 controles, 0 echecs
+CADRAN_SANS_GRH_OK

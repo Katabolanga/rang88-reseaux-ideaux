@@ -1,0 +1,58 @@
+candidat P4969
+I_data.gp SHA-256 768ab11514b21931102c0216765a1ccd153b15ecd6da2ad90d334be75dc8c907 ; PREMIERS = [[4969, 2, 1]] ; Q = 24690961
+OK    dimensions : BASE, GRAM, AB 88 x 88 ; NU, ALPHA de degre <= 43 ; Q = 4969^2
+OK    G1 |det BASE| = 4969^2 (indice de I dans Z[zeta])
+OK    G1 zeta * I contenu dans I (I est un ideal de Z[zeta_115])
+OK    G1 I mod 4969 = (g), g unitaire de degre 2 divisant Phi_115 mod 4969
+OK    G1 g irreductible mod 4969 (discriminant non residu)
+OK    G1 4969 dans I et g(zeta) dans I : I = (4969, g(zeta)), premier de degre residuel 2
+OK    G1 I different de son conjugue (g* != g), donc I + Ibar = O_L
+      g = y^2 + 3763 y + 2809 ; g* = y^2 + 3189 y + 1493 (mod 4969)
+OK    G2 alpha reel : Tr(alpha zeta^k) = Tr(alpha zeta^-k)
+OK    G2 BASE~ H BASE = GRAM (H recalculee depuis ALPHA), entiere
+OK    G2 GRAM symetrique et paire
+OK    G2 GRAM definie positive (88 mineurs principaux dominants > 0, exact)
+OK    G2 det GRAM = 1
+      diagonale de GRAM : min 1961060, max 9447543240
+OK    G3 nu dans I (donc dans I inter Ibar = I Ibar, nu etant reel)
+OK    G3 Pm(c) = 0 dans Z[zeta], Pm unitaire de degre 44 (polynome minimal de c = zeta + 1/zeta)
+OK    G3 N_{L+/Q}(nu) = 4969^2 = N(I) : (nu) O_L = I Ibar
+OK    G4 pour les 88 vecteurs de base z de I : z + zbar = a(c), z - zbar = e b(c), (b ; a) = colonne de AB
+OK    G4 |det AB| = 2^44 * 4969^2
+OK    G5 AB~ diag(QB, QA) AB / 2 = GRAM : N(z) = (Lambda(a) + Lambda'(b)) / 2 sur tout I
+OK    G5 QA (denominateur commun 4969) definie positive, det = 1/4969^2
+OK    G5 QB (denominateur commun 4969) definie positive, det = 1/4969^2
+      SHA-256 8dc23c789f708c15cf80655f2a5d850220045478e90f2309706e8dfb18e6a881  cote1_A.gram
+      SHA-256 8c0b1e6c12729bd923c28f9a470a44f90280be99c74d72c92d0996b959325de3  cote1_B.gram
+      SHA-256 7d129a86a13284892b79c761624050a73b5b3b39d70315b2454cc9f907bc6167  cote1_T.mat
+      SHA-256 fc597b1fd56afe634d4a21680fe083553dd99be061210d9431236ba70facfc08  cote1_meta.txt
+      SHA-256 ca19dde50ccc6ee71c0a885220f28db1fb37974f84bbad2f3cbd7aedc1cbe71b  cote1_bases.gp
+OK    G6 cote 1 : les 4 empreintes d'entrees imprimees par chacun des 1 journaux d'execution (premiere_execution/cote1_20261015_181730.stdout.log) = fichiers actuels
+OK    G6 cote 1 : R^-1 [[Hf, Hl], [0, Hc]] entiere et |det| egaux : meme reseau M (bijection I <-> (u, y) dans Z^44 x Z^44)
+OK    G6 cote 1 : A.gram = DA Hc~ QC Hc (DA = 4969)
+OK    G6 cote 1 : B.gram = DB Hf~ QF Hf (DB = 1)
+OK    G6 cote 1 : Hf Tn = d Hl (d = 9938) : coordonnees de fibre du relevement = Tn u / d
+OK    G6 cote 1 : reseau de fibre Hf Z^44 = 2 nu O+ (meme reseau colonne)
+      SHA-256 b1eee75525b0ea555ff4a4854f2f84fbc254ab9868d1546e6aefc4f88fbbb5c4  cote2_A.gram
+      SHA-256 10d69aa40cba951983605e372af77fb14b9803723c901732af75294aef8e86a6  cote2_B.gram
+      SHA-256 cf12d00691e66d063c35f717d65b31f5e2c6bd9c82e46a3e5315a2450a4f753c  cote2_T.mat
+      SHA-256 fc597b1fd56afe634d4a21680fe083553dd99be061210d9431236ba70facfc08  cote2_meta.txt
+      SHA-256 3f91265f4e1765b9d68aa9c3c66b1b782b9620cd1475c3adbd794459f41c51cd  cote2_bases.gp
+OK    G6 cote 2 : les 4 empreintes d'entrees imprimees par chacun des 1 journaux d'execution (premiere_execution/cote2_20261015_181339.stdout.log) = fichiers actuels
+OK    G6 cote 2 : R^-1 [[Hf, Hl], [0, Hc]] entiere et |det| egaux : meme reseau M (bijection I <-> (u, y) dans Z^44 x Z^44)
+OK    G6 cote 2 : A.gram = DA Hc~ QC Hc (DA = 4969)
+OK    G6 cote 2 : B.gram = DB Hf~ QF Hf (DB = 1)
+OK    G6 cote 2 : Hf Tn = d Hl (d = 9938) : coordonnees de fibre du relevement = Tn u / d
+OK    G6 cote 2 : reseau de fibre Hf Z^44 = 2 nu O+ (meme reseau colonne)
+OK    G7 (6 - 1057/200)^2 < 45/88, soit 6 (1 - sqrt(5/352)) < 1057/200 ; et 3*6/4 <= 1057/200
+OK    G8 rotation zeta sur les coordonnees de I : matrice entiere, Rot~ GRAM Rot = GRAM
+      vecteur 0 : N = 15693157882 ; max |f| = 15297009099.3355 >= N sqrt(5/352) = 1870354868.4514
+      vecteur 1 : N = 409048560898 ; max |f| = 408988010799.2151 >= N sqrt(5/352) = 48751562500.1238
+      vecteur 2 : N = 91217256648 ; max |f| = 89842407570.5096 >= N sqrt(5/352) = 10871530213.4352
+OK    G8 sur 3 vecteurs : Lambda(a_k) + Lambda'(b_k) = 2N, somme a cinq termes nulle, Parseval, max |f| >= N sqrt(5/352)
+OK    G9 le point (u, y) fourni est dans I : coordonnees entieres dans BASE
+OK    G9 x~ GRAM x = 8 : vecteur de norme 8 exhibe (min <= 8)
+      x (base de I) = [-57, -64, -38, -25, 4, 3, 18, -4, 25, 0, 1, -8, 14, 2, 10, 23, 19, 35, 19, 27, -20, -21, -47, -14, -8, 20, 7, -10, 0, 5, -3, -25, -10, -16, 9, 2, 14, 20, 23, 5, -7, -27, -23, -11, 14, 22, 27, 11, 24, 17, 14, 5, -1, -5, 5, 27, 7, 32, 12, 14, -30, -25, -41, -16, -17, 7, 10, -12, 6, 4, 14, -16, -14, -31, 9, 12, 11, 5, 5, -11, -3, 12, -18, -25, -9, 13, -1, 11]
+      z (puissances de zeta, degre 0..87) = [-38, 15, 25, 27, 19, -44, 3, 0, 3, 14, -31, 25, 24, 12, 7, -54, -6, 6, -1, 22, -27, 15, 11, -47, 14, -24, 26, 35, -32, 31, -19, 8, 20, -38, 33, -7, 19, 32, -36, 18, -20, -7, 16, -29, 23, -12, -38, 29, -10, 34, -5, -47, 18, -14, 33, -1, -23, 38, 3, 29, -12, -41, 21, 3, 33, -8, -25, 24, -11, -25, -17, -8, 47, 16, -14, -23, -25, 26, -6, -11, -2, 5, 51, 3, -16, -25, -16, 36]
+BILAN : 37 controles, 0 echecs
+FIN_OK

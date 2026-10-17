@@ -1,0 +1,454 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english,french]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[a4paper,textwidth=15.4cm,textheight=23.5cm,centering]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{babel}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{xurl}
+\usepackage{array}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+\setlist[enumerate]{leftmargin=2.2em}
+\setlist[itemize]{leftmargin=1.6em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Théorème}
+\renewcommand{\thetheorem}{\Alph{theorem}}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemme}
+\newtheorem{corollary}[proposition]{Corollaire}
+\newtheorem{question}[proposition]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{Définition}
+\newtheorem{remark}[proposition]{Remarque}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\q}{\mathfrak{q}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Nm}{N}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Stab}{Stab}
+\newcommand{\Lz}{L_{0}}
+\newcommand{\LS}{L_{S}}
+\newcommand{\st}[1]{\textup{\textsf{\small[#1]}}}
+\newcommand{\DEM}{\st{démontré}}
+\newcommand{\GRH}{\st{sous GRH}}
+\newcommand{\ASS}{\st{assisté par calcul}}
+\newcommand{\CONS}{\st{constaté}}
+\newcommand{\HEUR}{\st{heuristique}}
+\newcommand{\OUV}{\st{ouvert}}
+\input{comptes_filtres}
+\input{couts_recensement}
+\input{tableau_filtres_fr}
+
+\makeatletter
+\@namedef{subjclassname@2020}{Classification MSC 2020}
+\makeatother
+\renewcommand{\keywordsname}{Mots-clés}
+\addto\captionsfrench{\renewcommand{\tablename}{Tableau}}
+
+\title[Addendum : rang 88 sur $\Q(\zeta_{115})$]{Addendum à \guillemotleft~Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$~\guillemotright{} :\\ deux nouveaux réseaux extrémaux, un audit contradictoire\\ et les jumeaux de la couche $\sigma_{24}$}
+\author{Ivan Gauvin}
+\date{17 octobre 2026}
+\subjclass[2020]{11H06 ; 11H56, 11R18, 11R29}
+\keywords{réseaux extrémaux, réseaux unimodulaires pairs, réseaux idéaux, corps cyclotomiques, groupe des classes, énumération certifiée}
+
+\begin{document}
+
+\begin{abstract}
+Cet addendum à~\cite{Gau26} comporte trois parties. (1) Les réseaux idéaux $X_{4969}$ et $X_{4049}$, que~\cite{Gau26} classait parmi les survivants partiels d'un filtre, sont extrémaux : leur minimum $8$ est établi par la méthode assistée par ordinateur de~\cite{Gau26}, chacun de leurs quatre côtés ayant été balayé deux fois, avec des reçus identiques octet pour octet. Sans supposer GRH, leurs classes d'idéaux ne sont conjuguées ni entre elles, ni à celles de $X_{139}$, de $X_{599}$ et des deux réseaux de Sakamoto ; par le théorème d'isométrie de~\cite{Gau26}, on connaît désormais six orbites de réseaux extrémaux de rang $88$ parmi les réseaux idéaux unimodulaires sur $\Q(\zeta_{115})$. (2) L'énumération certifiante a été attaquée sous sept angles : touches prédites, mutations, recomptage indépendant, réplications, groupe témoin générique, changement de représentant et relecture par un second assistant. (3) Les $32$ orbites fixées par $\sigma_{24}$ sont portées par les puissances d'un seul idéal premier, $P_{139}^{\,k}$, et l'orbite d'un idéal explicite de cette couche peut se lire sans GRH ; le réseau $\LS$ de Sakamoto est isométrique au réseau de $P_{139}^{\,331}$. Ces orbites forment seize \emph{paires de jumeaux}, dont les deux membres diffèrent par la classe de l'idéal de Sakamoto. Des certificats de gémellité sans GRH montrent que $X_{4049}$ et $X_{599}$ sont jumeaux, comme $\Lz$ et $\LS$, alors que le jumeau de $X_{4969}$ contient un vecteur de norme $6$ : l'extrémalité n'est pas un invariant des paires de jumeaux. Des filtres lancés de nuit sur $\nfiltres$ des $\navant$ orbites non tranchées de la couche en ont rejeté $\nrejets$ et laissé $\nsurv$ survivants partiels, bien plus que ne le prévoit une heuristique naïve.
+\end{abstract}
+
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small Cet addendum reprend les notations et les cinq statuts de~\cite{Gau26} : \DEM, \GRH, \ASS, \CONS, \OUV{} ; nous y ajoutons \HEUR{} pour une heuristique probabiliste. Un énoncé \ASS{} repose sur le modèle d'exécution de~\cite[\S5.4]{Gau26} (M1, M2, H1--H3). Les références numérotées, telles que~\cite[prop.~2.5]{Gau26}, renvoient à l'original français de la prépublication, dont la numérotation est identique à celle de la version anglaise (ce point a été vérifié).}}
+\end{center}
+
+\section{Synthèse}\label{sec:summary}
+
+\begin{theorem}[six orbites extrémales]\label{thm:six}
+Les réseaux $X_{139}$, $X_{599}$, $X_{4969}$ et $X_{4049}$ sont pairs unimodulaires, de rang $88$ et de minimum $8$. Ils sont deux à deux non isométriques, et ne sont isométriques ni à $\Lz$ ni à $\LS$. Avec les réseaux de Sakamoto, ils forment six orbites deux à deux distinctes de réseaux extrémaux dans l'ensemble $S$ de~\cite{Gau26}.
+
+\st{minimum de $X_{4969}$, $X_{4049}$ : assisté par calcul (M1, M2, H1--H3), comme pour $X_{139}$, $X_{599}$ dans~\cite[th.~6.11]{Gau26} ; non-isométrie : démontrée, sans GRH, comme dans~\cite[th.~6.11]{Gau26}, par la non-conjugaison des classes et le théorème d'isométrie ; minimum de $\Lz$, $\LS$ : par~\cite{Sak26}}
+\end{theorem}
+
+\begin{theorem}[l'extrémalité n'est pas un invariant des jumeaux]\label{thm:twins}
+Dans la couche $\sigma_{24}$ de $S$ (\S\ref{sec:layer}), les paires de jumeaux $(\Lz,\LS)$ et $(X_{4049},X_{599})$ sont formées de deux réseaux extrémaux, alors que $X_{4969}$ est extrémal et que son jumeau, le réseau de l'idéal $P_{691}\sigma_{24}(P_{691})$, contient un vecteur de norme $6$.
+
+\st{relations de gémellité et vecteur de norme $6$ : démontrés, sans GRH ; minima de $X_{4969}$, $X_{4049}$, $X_{599}$ : assistés par calcul ; de $\Lz$, $\LS$ : par~\cite{Sak26}}
+\end{theorem}
+
+\begin{theorem}[le cadran sans GRH]\label{thm:dial}
+Les $32$ orbites de $S$ fixées par $\sigma_{24}$ sont celles des réseaux $X_{P_{139}^{\,k}}$, $k\in\Z/993$, et elles forment $16$ paires de jumeaux. L'orbite d'un idéal explicite de cette couche peut être déterminée sans GRH ; en particulier, les $30$ orbites non centrales sont représentées par des idéaux au-dessus des nombres premiers du tableau~\ref{tab:census}, de norme au plus $53\,269^2$.
+
+\st{démontré, sans GRH, modulo~\cite[prop.~2.2, 2.5]{Gau26}}
+\end{theorem}
+
+Le théorème~\ref{thm:six} est démontré au \S\ref{sec:new}, les théorèmes~\ref{thm:twins} et~\ref{thm:dial} au \S\ref{sec:layer} (propositions~\ref{prop:cyclic}, \ref{prop:dial} et corollaires~\ref{cor:twins}, \ref{cor:dial}). La question~(Q2) de~\cite{Gau26} est mise à jour : au moins six des $508\,463$ orbites de $S$ sont formées de réseaux extrémaux. La question~(Q3) reçoit une réponse pour deux des quatre survivants partiels.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{>{\raggedright\arraybackslash}p{8.4cm}>{\raggedright\arraybackslash}p{6.2cm}}
+\toprule
+Nouvel énoncé & Statut \\
+\midrule
+$X_{4969}$, $X_{4049}$ : pairs unimodulaires ; vecteur de norme $8$ ; sous-groupe explicite d'ordre $460$ du groupe d'automorphismes (prop.~\ref{prop:exact}) & démontré (contrôles exacts) \\
+$X_{4969}$, $X_{4049}$ : aucun vecteur non nul de norme $\le6$ (prop.~\ref{prop:sweeps}) & assisté par calcul (H1--H3) ; chaque côté exécuté deux fois, sur deux machines, reçus identiques \\
+Classes de $P_{4969}$, $P_{4049}$ : ordre $993$, stabilisateur $\langle\sigma_{24}\rangle$ ; non-conjugaison à $[P_{139}]$, à $[P_{599}]$ et entre elles (prop.~\ref{prop:classes}) & démontré, sans GRH \\
+Audit de la méthode (\S\ref{sec:audit}) & chaque point avec son propre statut \\
+La couche $\sigma_{24}$ est engendrée par $[P_{139}]$ ; $\LS\cong X_{P_{139}^{331}}$ (prop.~\ref{prop:cyclic}) & démontré, sans GRH (modulo~\cite{Sak26} pour $\LS$) \\
+Appariement des jumeaux (cor.~\ref{cor:twins}) & démontré \\
+Certificats de gémellité et de même orbite (prop.~\ref{prop:certs}) & démontré, sans GRH \\
+$X_{P_{691}\sigma_{24}(P_{691})}$ contient un vecteur de norme $6$ (prop.~\ref{prop:temoin}) & démontré, sans GRH \\
+Étiquettes et heures des $30$ orbites de la couche (prop.~\ref{prop:dial}, cor.~\ref{cor:dial}) & démontré, sans GRH \\
+Filtres de la nuit sur $\nfiltres$ orbites de la couche : $\nrejets$ rejets, $\nsurv$ survivants partiels (\S\ref{subsec:census}) & rejets démontrés, sans GRH ; survivants constatés \\
+Enrichissement des orbites symétriques en réseaux extrémaux (\S\ref{subsec:heur}) & heuristique \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Deux nouveaux réseaux extrémaux}\label{sec:new}
+
+\subsection{Les idéaux}
+Les nombres premiers $4969$ et $4049$ sont congrus à $24$ modulo $115$. Les idéaux premiers
+\[
+P_{4969}=(4969,\ \zeta^2+3763\zeta+2809),\qquad P_{4049}=(4049,\ \zeta^2+105\zeta+2084)
+\]
+sont de degré résiduel $2$, de conjugués $\bar P_{4969}=(4969,\zeta^2+3189\zeta+1493)$ et $\bar P_{4049}=(4049,\zeta^2+1669\zeta+1327)$, et de normes absolues $q=4969^2=24\,690\,961$ et $q=4049^2=16\,394\,401$. Leurs classes sont fixées par $\sigma_{24}$, la substitution de Frobenius de $p$. On pose $X_p=(P_p,\beta_0/\nu)$ comme dans~\cite[\S6]{Gau26}. Dans~\cite[\S6.3]{Gau26}, $X_{4969}$ et $X_{4049}$ figurent comme survivants partiels d'un filtre, après $3{,}8\,\%$ et $5{,}4\,\%$ des tâches d'un côté.
+
+\begin{proposition}\label{prop:exact}
+Pour $p\in\{4969,4049\}$ :
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item $X_p$ est un réseau pair unimodulaire défini positif de rang $88$, et les fichiers d'entrée du programme certifiant lui sont exactement raccordés, pour les deux côtés ;
+\item $X_p$ contient un vecteur de norme $8$ ;
+\item la multiplication $g_1$ par $-\zeta$ et une application semi-linéaire $g_2\colon u\mapsto\lambda\sigma_{24}(u)$, où $\lambda$ est une unité de $\Z[\zeta]$, engendrent un sous-groupe d'ordre $460$ de $\Aut(X_p)$, avec $g_2^2=-1$ et $g_2^{-1}g_1g_2=g_1^{139}$.
+\end{enumerate}
+\DEM
+\end{proposition}
+
+\begin{proof}[Justification]
+(1) Le vérificateur du raccord géométrique du dépôt de~\cite{Gau26}, forme générique de celui qui a servi pour $X_{139}$ et $X_{599}$~\cite[prop.~6.3, 6.4]{Gau26}, travaille en entiers et en rationnels, sans PARI/GP ; il annonce $37$ contrôles et aucun échec pour chaque $p$. Il contrôle que la base engendre exactement $P_p$ (indice $p^2$, stabilité par $\zeta$, $P_p=(p,g(\zeta))$ avec $g$ irréductible de degré $2$ modulo $p$, $P_p\ne\bar P_p$) ; que la matrice de Gram, recalculée à partir de $\alpha$, est entière, paire, de déterminant $1$ et définie positive ; que $\nu$ engendre $\Nm(P_p)$ ; les identités du recollement de~\cite[prop.~4.1]{Gau26} ; pour chaque côté, la bijection entre $P_p$ et les couples $(u,y)$ et les identités qui lient les quatre fichiers d'entrée au réseau ; enfin, que ces quatre fichiers sont ceux dont la première exécution a imprimé les empreintes. L'identité $\alpha\nu=\beta_0$, que ce vérificateur tenait pour acquise, est contrôlée par un vérificateur distinct sur les quatre réseaux $X_{139}$, $X_{599}$, $X_{4969}$, $X_{4049}$ ($8$ contrôles, aucun échec ; voir le \S\ref{subsec:review}).
+
+(2) Une courte exécution du programme certifiant sur le côté~$1$, aux bornes $B_A=29/10$ et $S=16$, arrêtée à la première touche, donne des couples $(u,y)$ d'énergies
+\[
+\frac{14\,083}{4969}+\frac{1\,300\,307\,796}{9938^2}=16\quad(p=4969),\qquad \frac{10\,194}{4049}+\frac{884\,139\,640}{8098^2}=16\quad(p=4049).
+\]
+Le vérificateur de raccord de~(1) contrôle que les vecteurs reconstruits ont des coordonnées entières dans la base de l'idéal et une norme exactement égale à $8$.
+
+(3) L'unité $\lambda$ est solution de $\alpha\lambda\bar\lambda=\sigma_{24}(\alpha)$ ; elle a été trouvée par réduction de réseau en flottants parmi des unités cyclotomiques explicites, puis contrôlée exactement. Les relations entre $g_1$ et $g_2$ et l'ordre $460$ ont été contrôlés en arithmétique exacte dans PARI/GP, puis de nouveau par deux programmes Python en entiers et en rationnels (les scripts qui accompagnent les données de $X_{139}$ et de $X_{599}$, inchangés), qui reconstruisent les matrices de Gram et les générateurs à partir de $P_p$, $\alpha$, $\lambda$ et de la base.
+\end{proof}
+
+\subsection{Les balayages certifiés}
+Le programme \texttt{Rang88CertZ} de~\cite[\S5]{Gau26}, avec les mêmes classes compilées, a été exécuté sur les deux côtés de chaque idéal, avec $B_A=1057/200$ et $S=12$, sur des machines louées à $32$ cœurs virtuels (Scaleway, Ubuntu~24.04), du 15 au 16 octobre 2026. Chaque côté a été exécuté en un seul lancement, sans reprise, puis une seconde fois sur une autre machine (tableau~\ref{tab:sweeps}). Les paramètres $(D_A,D_B,d)$ sont $(4969,1,9938)$ et $(4049,1,8098)$.
+
+\begin{table}[ht]
+\caption{Balayages certifiés de $X_{4969}$ et de $X_{4049}$. Chaque exécution : un seul lancement avec un fichier de reprise neuf, code de sortie $0$, flux d'erreur vide, couverture complète, aucune touche, aucun fichier de touche. L'empreinte canonique (SHA-256 des reçus triés par indice) est la même pour les deux exécutions de chaque côté, de même que le $|\Uc|$ imprimé et son histogramme.}\label{tab:sweeps}
+\centering\small\setlength{\tabcolsep}{2.8pt}
+\begin{tabular}{lll rr l}
+\toprule
+côté & première exécution & réplication & tâches & $|\Uc|$ imprimé & \begin{tabular}[b]{@{}l@{}}empreinte\\ canonique\end{tabular} \\
+\midrule
+$X_{4969}$, $1$ & AMS3, Java 21, $31\,240$ s & WAW1, Java 11, $31\,981$ s & $97\,270$ & $1\,544\,898\,536$ & \texttt{0226b9a5\dots} \\
+$X_{4969}$, $2$ & AMS2, Java 21, $31\,312$ s & AMS3, Java 17, $29\,948$ s & $140\,082$ & $1\,544\,898\,536$ & \texttt{f6a1aecd\dots} \\
+$X_{4049}$, $1$ & MIL1, Java 21, $47\,775$ s & AMS2, Java 21, $22\,286$ s & $77\,819$ & $1\,257\,946\,084$ & \texttt{6334d93e\dots} \\
+$X_{4049}$, $2$ & MIL1, Java 21, $48\,258$ s & AMS2, Java 21, $25\,771$ s & $87\,731$ & $1\,257\,946\,084$ & \texttt{f95f16b8\dots} \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.95\textwidth}\footnotesize
+Zones : zones de disponibilité Scaleway (Amsterdam 2 et 3, Milan 1, Varsovie 1). Java : OpenJDK 21.0.12.1, 17.0.20.1 et 11.0.32.1. Fils : $32$, sauf $15$ et $17$ pour les premières exécutions de $X_{4049}$. Durées : imprimées par le programme.
+\end{minipage}
+\end{table}
+
+Pour chacune des huit exécutions, un vérificateur en lecture seule, distinct du programme et écrit pour cet addendum, recontrôle : un seul lancement avec un fichier de reprise neuf, sélection complète, aucune reprise, les lignes \texttt{TOTAL\_TOUCHES 0} et \texttt{COUVERTURE\_COMPLETE}, le code de sortie $0$ et un flux d'erreur vide ; l'empreinte du catalogue des tâches, comparée au journal et à l'en-tête des reçus ; le format strict des reçus, la permutation de leurs indices, et \texttt{TOUCHES=0} sur chacun d'eux ; l'accord de leurs sommes, histogramme compris, avec les totaux imprimés ; l'empreinte du fichier de reçus ; l'absence de fichier de touche ; l'empreinte canonique, calculée de deux façons ; et, pour les réplications, l'égalité octet pour octet de chaque reçu avec le reçu correspondant de la première exécution. Tous les contrôles passent ($27$ à $29$ par exécution). Les quatre réplications reproduisent l'ensemble des $402\,902$ reçus, sans une seule différence, sous trois versions de la machine virtuelle Java. Les premières exécutions reproduisent aussi, octet pour octet, les reçus d'exécutions partielles antérieures sur deux autres ordinateurs ($3\,716$ reçus pour le côté~$1$ de $X_{4969}$, $8\,517$ et $4\,594$ pour les deux côtés de $X_{4049}$). Les arbres d'énumération sont grands : le seul côté~$1$ de $X_{4969}$ visite $1{,}07\cdot10^{12}$ nœuds en rang $44$ pour les projections courtes et $1{,}25\cdot10^{13}$ dans les fibres.
+
+\begin{proposition}\label{prop:sweeps}
+$X_{4969}$ et $X_{4049}$ ne contiennent aucun vecteur non nul de norme au plus $6$. \ASS
+\end{proposition}
+
+\begin{proof}
+Pour chacun des quatre côtés, le corollaire~5.2 de~\cite{Gau26} s'applique aux exécutions neuves du tableau~\ref{tab:sweeps} : code de sortie $0$, ligne \texttt{COUVERTURE\_COMPLETE}, aucun fichier de touche dans le répertoire de sortie (inventaire complet pris après la fin du calcul), et des scripts de lancement qui ne suppriment rien. Donc $\Tc=\emptyset$ pour chaque côté, sous H1--H3, et le critère~\cite[th.~4.6]{Gau26}, avec le raccord géométrique de la proposition~\ref{prop:exact}, donne l'énoncé. L'hypothèse H4 n'intervient pas.
+\end{proof}
+
+\subsection{Classes et non-isométrie, sans GRH}
+Soit $K=K_{22}=\Q(\theta)$, $\theta=\zeta+\zeta^{22}+\zeta^{24}+\zeta^{68}$, comme dans~\cite[\S6.4]{Gau26}, et soit $\q_p=P_p\cap K$ ; il est de degré $1$, et $\Nm_{L/K}(P_p)=\q_p^2$.
+
+\begin{proposition}\label{prop:classes}
+Pour $p\in\{4969,4049\}$ :
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $[P_p]$ est d'ordre $993$ ; son support est $\{3,331\}$, son stabilisateur est $\langle\sigma_{24}\rangle$, et son orbite est de taille $44$ ;
+\item $[P_p]$ n'est conjuguée sous $\Gal(L/\Q)$ ni à $[P_{139}]$, ni à $[P_{599}]$, ni à la classe de l'autre idéal.
+\end{enumerate}
+\st{démontré, sans GRH, modulo~\cite[prop.~2.2, 2.5]{Gau26}}
+\end{proposition}
+
+\begin{proof}
+Un certificat, vérifié par un programme Python en arithmétique exacte, sans PARI/GP, établit les faits suivants, avec les notations de~\cite[\S6.4]{Gau26} : un $\Gamma_p\in K$ explicite tel que $(\Gamma_p)=\q_p^{331}$, avec $\q_{4969}=(4969,\theta-4770)$, $\q_{4049}=(4049,\theta-512)$ (norme $p^{331}$, valuations aux $22$ premiers au-dessus de $p$) ; le rang $10$ des logarithmes discrets modulo $331$ des unités $\xi_2,\dots,\xi_{11}$ aux $88$ premiers de degré $1$ au-dessus de $\ell\in\{380\,651;\,1\,065\,821;\,1\,522\,601;\,2\,055\,511\}$, tous $\equiv1\pmod{331\cdot115}$ ; le rang $11$ une fois ajoutée la colonne de $\Gamma_p$ ; et, pour chacun des $22$ éléments $\tau$ de $\Gal(K/\Q)$, le rang $11$ pour $\Gamma_p/\tau(\Gamma_{p'})$, avec $p'=139$, et aussi $p'=4969$ lorsque $p=4049$. Le vérificateur annonce $39$ contrôles pour $P_{4969}$ et $49$ pour $P_{4049}$, sans échec ; ils comprennent un contrôle autonome que la base des fichiers d'entrée engendre $P_p$ (indice $p^2$).
+
+(a) Le rang $11$ et les étapes~1 à~3 de~\cite[\S6.4]{Gau26} montrent que $P_p^m$ n'est pas principal pour $m$ premier à $331$ : la composante $331$ est non nulle. Le nombre premier $p$ est $\equiv1\pmod{23}$, donc décomposé dans $F=\Q(\sqrt{-23})$, et $4p$ n'est pas de la forme $a^2+23b^2$ ($4\cdot4969=19\,876$, $4\cdot4049=16\,196$) : le premier $\mathfrak p$ de $F$ au-dessus de $p$ n'est pas principal, ni $\Nm_{L/F}(P_p)=\mathfrak p^2$, et la composante $3$ est non nulle, par l'argument de~\cite[rem.~6.8(a)]{Gau26}. La composante $45\,013$ est nulle, car $\sigma_{24}$ fixe $P_p$ et n'est pas dans le noyau de $\chi_{45\,013}$. Comme dans~\cite[rem.~6.8(a)]{Gau26}, l'ordre vaut $993$, le stabilisateur est $\ker\chi_3\cap\ker\chi_{331}=\{1,24\}$ et l'orbite est de taille $44$.
+
+(b) Si $[P_p]=\sigma[P_{p'}]$ pour un $\sigma\in\Gal(L/\Q)$, alors, en passant aux normes dans $K$, $\q_p^2\,\tau(\q_{p'})^{-2}$ serait principal, avec $\tau=\sigma|_K$, et $\Gamma_p^2/\tau(\Gamma_{p'})^2$ appartiendrait à $E\cdot K^{\times331}$ ; l'étape~1 et le rang $11$ l'interdisent, exactement comme à l'étape~2 de~\cite[\S6.4]{Gau26}. Enfin, $[P_{599}]$ a une composante $3$ nulle~\cite[prop.~6.7]{Gau26}, alors que celle de $[P_p]$ ne l'est pas.
+\end{proof}
+
+\begin{proof}[Preuve du théorème~\ref{thm:six}]
+Parité, unimodularité et vecteur de norme $8$ : proposition~\ref{prop:exact} et~\cite[prop.~6.3, 6.4]{Gau26}. Minimum $\ge8$ : proposition~\ref{prop:sweeps} et~\cite[th.~6.11]{Gau26} ; d'où le minimum $8$. Non-isométrie : les classes $[P_{139}]$, $[P_{599}]$, $[P_{4969}]$, $[P_{4049}]$ sont deux à deux non conjuguées (proposition~\ref{prop:classes} et~\cite[rem.~6.10]{Gau26}), et aucun de leurs cubes n'est trivial, alors que ceux des classes de $\Lz$ et de $\LS$ le sont~\cite[prop.~2.7]{Gau26}. Le théorème d'isométrie~\cite[th.~3.3]{Gau26} s'applique aux réseaux de minimum au moins $8$ ; les six sont de minimum $8$, et il transforme donc la non-conjugaison en non-isométrie. Comme dans~\cite[prop.~6.9(a)]{Gau26}, la non-isométrie à $\Lz$ et à $\LS$ n'a même pas besoin du minimum assisté par calcul : un réseau de minimum au plus $6$ n'est pas isométrique à un réseau de minimum $8$.
+\end{proof}
+
+\begin{remark}
+Par~\cite[rem.~2.6]{Gau26} et la proposition~\ref{prop:classes}, le sous-groupe de la proposition~\ref{prop:exact}(3) est le normalisateur tout entier du groupe des multiplications par les racines de l'unité : $|\Aut(X_{4969})|\ge460$ et $|\Aut(X_{4049})|\ge460$. Des matrices de Gram dans des bases LLL-réduites, les deux générateurs et les vecteurs de norme $8$ ont été préparés au format du \emph{Catalogue of Lattices}~\cite{NS}, comme pour $X_{139}$ et $X_{599}$.
+\end{remark}
+
+\section{Attaques contre la méthode}\label{sec:audit}
+
+Un énoncé assisté par ordinateur vaut ce que valent les attaques auxquelles il a résisté. Le 16 octobre 2026, la chaîne certifiante a été attaquée délibérément, chaque attaque visant l'une des manières dont une énumération certifiante peut échouer. Le second assistant, Astra, a conçu une partie du plan, a relu les pièces et a été chargé de chercher des failles. Le tableau~\ref{tab:audit} donne le résultat ; chaque ligne est détaillée ci-dessous.
+
+\begin{table}[ht]
+\caption{Sept attaques contre l'énumération certifiante (16--17 octobre 2026).}\label{tab:audit}
+\centering\small\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{6.1cm}>{\raggedright\arraybackslash}p{5.1cm}}
+\toprule
+mode de défaillance & attaque & résultat \\
+\midrule
+cécité à des vecteurs existants & prédire les touches à partir de témoins connus de norme $6$ et de leurs $115$ rotations, par un script PARI/GP qui ne lit aucune sortie du programme ; rejouer seulement les tâches concernées & $334$ touches prédites sur $334$ trouvées, sur $7$ réseaux rejetés et $14$ côtés, plus $22$ touches exactes d'autres orbites ; une touche à $3\cdot10^{-5}$ sous le seuil \\
+arrondis et coupures & $8$ mutations simples du source (test de feuille, budgets, arrondis extérieurs, virgule fixe, vecteur nul, signes) & $3$ tués par les tests, $1$ sans effet ; $4$ survivent à tout test fini : seule la preuve de non-omission les couvre \\
+comptage & recompter $|\Uc|$ de $X_{139}$, côté $1$, avec \texttt{qfminim} de PARI/GP & identique à $6$ seuils, dont $42\,957\,972$ à $1057/200$ \\
+machine, matériel & répliquer chaque côté de $X_{4969}$, $X_{4049}$ sur une autre machine (une autre version de Java pour $X_{4969}$) & $402\,902$ reçus, $0$ différence \\
+dépendance aux coordonnées & balayer un autre idéal de l'orbite de $X_{139}$, démontré conjugué sans GRH & $X_{P_{461}\sigma_{24}(P_{461})}\cong X_{139}$ : aucune touche, sur aucun des deux côtés \\
+comportement générique & $16$ idéaux de degré $1$, filtre avec arrêt à la première touche & $14$ rejetés en moins de $5$ minutes chacun ($3$ déjà rejetés par PARI/GP), $2$ survivants partiels \\
+angles morts de l'auteur & relecture contradictoire par un second assistant & aucune faille sérieuse de la prépublication ; deux lacunes dans les vérificateurs et un défaut dans un nouveau vérificateur, tous corrigés \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Sensibilité : touches prédites}
+Pour sept réseaux rejetés de~\cite[tableau~2]{Gau26} ($P_{691}$, $P_{1151}$, $P_{1381}$ de degré $1$ ; $P_{829}$, $P_{1289}$, $P_{1471}$, $P_{1979}$ de degré $2$), un script PARI/GP a calculé, à partir du témoin publié $z$ de norme $6$ et de ses rotations $\zeta^kz$, les couples exacts $(u,y)$ des deux côtés que le critère doit détecter, et a contrôlé sur eux les identités de~\cite[\S4]{Gau26} (moyenne nulle, les $23$ relations à cinq termes, Parseval, $\max|f|\ge N\sqrt{5/352}$). Il ne lit aucune sortie du programme Java. Chaque $u$ prédit se trouve dans exactement une tâche du catalogue, dont on vérifie ainsi qu'il forme une partition sur ces vecteurs. Les tâches contenant les $u$ prédits ont ensuite été rejouées sans arrêt à la première touche : les $334$ touches prédites ont toutes été trouvées, avec les mêmes $u$, $y$ et énergies, ainsi que $22$ autres touches, toutes de norme exactement $6$, venant d'autres orbites. Sur le côté~$1$ de $P_{1151}$, une touche prédite d'énergie courte $6083/1151\approx5{,}28497$ se trouve à $3\cdot10^{-5}$ sous le seuil $1057/200$ (et au-dessus de la valeur de Parseval $6-\sqrt{45/88}\approx5{,}28490$) ; elle est trouvée. Pour les quatre réseaux de degré~$2$, le témoin de départ avait lui-même été trouvé par un programme Java (par \texttt{Rang88CertZ} pour trois d'entre eux) ; la prédiction des $114$ autres rotations et du côté~$2$, ainsi que le contrôle exact des touches supplémentaires, n'en dépendent pas. Dans une variante au bord, où $B_A$ est fixé exactement à l'énergie de la plus haute touche prédite d'un côté, le programme de référence trouve toutes les touches, y compris celle qui est sur le bord. \CONS
+
+\subsection{Mutations}
+Huit copies du source ont été faites, chacune avec une seule substitution, et soumises à trois tests : le harnais de test du programme ($910$ contrôles), la validation de~\cite[\S5.2]{Gau26} sur $P_{461}$ au seuil $7/2$ ($697$ projections courtes, $2$ touches), et le rejeu de $12$ tâches de $X_{4969}$, comparé à des reçus de référence ; puis à la variante au bord ci-dessus. Trois mutants sont tués : le test de feuille sans égalité, un budget de fibre abaissé d'un pas, et un changement de la convention de signe. Un quatrième, qui n'exclut plus le vecteur nul au dernier niveau, est sans effet : le vecteur nul est exclu une seconde fois à la feuille. Les quatre autres coupent dès que le budget restant est nul, suppriment l'arrondi extérieur du budget restant ou du rayon, ou rétrécissent une plage entière d'une unité de $2^{-40}$ en virgule fixe. Ils passent tous les tests, même exactement au bord. Aucun test fini de ce genre ne peut les voir ; la correction des passages qu'ils modifient repose sur la seule preuve de non-omission (lemmes Z3--Z5, arrondi extérieur L3, modèle M1). Pour le premier d'entre eux, l'argument de l'auteur, une minoration du budget, ne valait pas en général ; Astra l'a remplacé par un invariant du programme, à savoir que l'énergie partielle accumulée ne dépasse jamais la borne courante (\texttt{PL}~$\le$~\texttt{borneU}) lors de tout appel atteignable, de sorte que la valeur où les deux versions diffèrent n'est jamais atteinte. Cette expérience n'affaiblit pas la preuve ; elle montre où seule la preuve protège. \CONS
+
+\subsection{Un recomptage indépendant}
+Le nombre $|\Uc|$ de projections courtes du côté~$1$ de $X_{139}$ a été recompté avec \texttt{qfminim} de PARI/GP, autre programme, dû à d'autres auteurs, sur la même matrice de Gram entière. Pour des énergies courtes inférieures à $3$, $7/2$, $4$, $9/2$ et $5$, et au plus égales à $1057/200$, il donne $162$, $4\,878$, $92\,734$, $1\,260\,158$, $12\,651\,642$ et $42\,957\,972$, exactement les valeurs imprimées par \texttt{Rang88CertZ} ; le dernier décompte a pris $11\,260$~s. \texttt{qfminim} n'est pas certifiant, mais c'est un énumérateur indépendant du code Java. \CONS
+
+\subsection{Réplications}
+Chaque côté de $X_{4969}$ et de $X_{4049}$ a été exécuté deux fois, sur des machines louées différentes, sous OpenJDK~21, 17 et 11 (tableau~\ref{tab:sweeps}). Les $402\,902$ reçus des quatre réplications sont identiques octet pour octet à ceux des premières exécutions. Avec les réplications de~\cite{Gau26}, chaque côté des quatre réseaux extrémaux du théorème~\ref{thm:six} a désormais été exécuté deux fois, avec des reçus identiques. Ces réplications étayent H2 et H3 sans les démontrer ; elles partagent le programme, et ne constituent pas une implantation indépendante.
+
+\subsection{Changement de représentant}
+L'idéal $I=P_{461}\sigma_{24}(P_{461})$, avec $P_{461}=(461,\zeta-5)$, est de norme $461^2$ et a la même orbite que $P_{139}$ (proposition~\ref{prop:certs}(c) ci-dessous, sans GRH) : $X_I$ est isométrique à $X_{139}$, mais son idéal, sa base, sa matrice de Gram, ses fichiers d'entrée et son catalogue de tâches sont tous différents. Ses deux côtés ont été balayés complètement le 16 octobre ($73\,244$ et $73\,359$ tâches, $9\,559$~s et $8\,750$~s, $16$ fils chacun, code de sortie $0$, couverture complète, aucune touche ; $27$ contrôles du vérificateur par côté). Le $|\Uc|$ imprimé vaut $143\,529\,602$ sur chaque côté, contre $42\,957\,972$ pour $X_{139}$ : un autre arbre, le même verdict. C'est une seconde démonstration, assistée par ordinateur, du minimum de $X_{139}$ (une exécution par côté). À l'inverse, les idéaux $P_{1381}\sigma_{24}(P_{1381})$, $P_{3221}\sigma_{24}(P_{3221})$ et $P_{5521}\sigma_{24}(P_{5521})$, situés dans les orbites des idéaux rejetés $P_{1289}$, $P_{1979}$ et $P_{829}$ (proposition~\ref{prop:certs}(d)), ont donné des touches en moins de neuf minutes ; on a contrôlé que les quatre vecteurs de touche (deux pour le deuxième idéal) sont de norme exactement $6$.
+
+\subsection{Un groupe témoin générique}
+Les seize plus petits nombres premiers $p\equiv1\pmod{115}$ après $461$ donnent des idéaux $(p,\zeta-r)$ de degré $1$, a priori dans des orbites génériques de taille $88$. Un filtre sur le côté~$1$ (ordinateur de l'auteur, Java~11, $8$ fils), arrêté à la première touche et plafonné à $300$~s, en a rejeté $14$, après $33$ à $941$ tâches : les trois déjà rejetés dans~\cite{Gau26} par son filtre PARI/GP, et onze nouveaux. Deux, $P_{2531}$ et $P_{11731}$, sont des survivants partiels ; pour $P_{2531}$, le filtre PARI/GP de~\cite{Gau26} s'était lui aussi arrêté sans décision. Certains rejets ont demandé environ un millier de tâches : un filtre court doit en couvrir au moins quelques milliers. \CONS
+
+\subsection{Relecture}\label{subsec:review}
+Astra (OpenAI) a fait attaquer les pièces par des agents distincts et a relu directement leurs rapports, sous empreintes figées : la preuve de non-omission et sa liaison au code (budgets nuls, conversions, dépassement par le bas, bords, débordement, cache, partition des tâches, touches ; $296$ comparaisons exactes locales, sans exécuter le programme Java) ; le théorème d'isométrie ; les raccords géométriques et les certificats de classe de $X_{4969}$ et de $X_{4049}$ ; et les pièces de leurs quatre premières exécutions (codes de sortie, flux d'erreur, archives et inventaires des répertoires de sortie, où ne figure aucun fichier de touche). Astra a fait ses propres contrôles exacts de $\alpha\nu=\beta_0$ sur les quatre réseaux et des identités de fibre sur les huit côtés. Sa conclusion : aucune faille sérieuse de la prépublication n'a été établie. Astra a signalé deux points mineurs de présentation dans la preuve de non-omission ; que le vérificateur de raccord affirmait $\alpha\nu=\beta_0$ sans le tester (l'identité est vraie, et elle est désormais testée) ; qu'un contrôle des certificats de classe n'identifiait la base à l'idéal premier qu'à travers le vérificateur de raccord (le certificat contient désormais son propre test d'indice) ; et un défaut réel dans un vérificateur écrit pendant l'audit, une identité de Newton qui comptait un terme deux fois, défaut corrigé puis relu. La relecture d'Astra ne certifie pas le minimum de $X_{4969}$ et de $X_{4049}$, et ne prétend pas le faire. Elle laisse ouvert ce que laisse ouvert~\cite[\S5.4]{Gau26} : aucune implantation indépendante de l'énumération, et H3.
+
+\section{Les jumeaux de la couche \texorpdfstring{$\sigma_{24}$}{sigma24}}\label{sec:layer}
+
+\subsection{Tous les réseaux stables par \texorpdfstring{$\sigma_{24}$}{sigma24} sont des puissances d'un seul idéal}
+Soit $\Cl(L)^{\sigma_{24}}$ le sous-groupe des classes fixées par $\sigma_{24}$. Par~\cite[prop.~2.5]{Gau26}, $\sigma_{24}$ est dans les noyaux de $\chi_3$ et de $\chi_{331}$, et non dans celui de $\chi_{45\,013}$ ; donc $\Cl(L)^{\sigma_{24}}=\Cl_3\times\Cl_{331}$, cyclique d'ordre $993$. Il contient les classes des idéaux premiers de degré~$2$ au-dessus des nombres premiers $p\equiv24\pmod{115}$, celles des idéaux $P\sigma_{24}(P)$, et celles des deux réseaux de Sakamoto. Nous identifions $\Z/993$ à $\Z/3\times\Z/331$.
+
+\begin{proposition}[couche cyclique]\label{prop:cyclic}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item La classe $[P_{139}]$ engendre $\Cl(L)^{\sigma_{24}}$ : tout élément de $S$ stable par $\sigma_{24}$ est $X_{P_{139}^k}$ pour un unique $k\in\Z/993$.
+\item Pour $a$ premier à $115$, $\sigma_a[P_{139}]^k=[P_{139}]^{\varepsilon(a)k}$, où $\varepsilon(a)=(\chi_3(a),\chi_{331}(a))$ parcourt tout le groupe $H=\{\pm1\}\times\mu_{22}$ de $(\Z/3)^\times\times(\Z/331)^\times$. Les $32$ orbites de $S$ fixées par $\sigma_{24}$ sont les orbites de $H$ sur $\Z/993$ :
+\[
+\{0\},\qquad\{331,662\},\qquad 15\ \text{orbites avec}\ 3\mid k,\ 331\nmid k,\qquad 15\ \text{orbites avec}\ 3\nmid k,\ 331\nmid k,
+\]
+de supports $\emptyset$, $\{3\}$, $\{331\}$, $\{3,331\}$ et de tailles $1$, $2$, $22$, $44$.
+\item $\Lz\cong X_{P_{139}^{0}}$ et $\LS\cong X_{P_{139}^{331}}\cong X_{P_{139}^{662}}$.
+\end{enumerate}
+\st{démontré, sans GRH ; (c) modulo~\cite[rem.~3.11, lemme~A.9]{Sak26}, via~\cite[prop.~2.7]{Gau26}}
+\end{proposition}
+
+\begin{proof}
+(a) $[P_{139}]$ est fixée par $\sigma_{24}$, substitution de Frobenius de $139$, et est d'ordre $993$~\cite[rem.~6.8(a)]{Gau26}. La bijection $S\leftrightarrow\Cl(L)$ de~\cite[prop.~2.3]{Gau26} donne la seconde assertion.
+(b) $\sigma_a$ agit sur $\Cl_p$ par $\chi_p(a)$~\cite[prop.~2.5]{Gau26}, et l'image de $\chi_{331}$ est le sous-groupe $\mu_{22}$ de $\F_{331}^\times$. Le noyau de $a\mapsto\varepsilon(a)$ est $\ker\chi_3\cap\ker\chi_{331}=\{1,24\}$, donc son image est d'ordre $88/2=44=|H|$. Le décompte des orbites s'ensuit ; il concorde avec~\cite[tableau~1]{Gau26}.
+(c) La classe principale est celle de $\Lz$. Soit $t\ne0$ la composante $3$ de $[P_{139}]$. La classe $[P_{139}]^{331}$ a une composante $331$ nulle et une composante $3$ égale à $331\,t=t$, puisque $331\equiv1\pmod3$ : elle est de support $\{3\}$, et l'unique orbite de ce support est celle de $\LS$~\cite[prop.~2.7(b)]{Gau26}. Des classes conjuguées portent des réseaux isométriques~\cite[\S2.1]{Gau26}.
+\end{proof}
+
+\subsection{Jumeaux}
+La projection $k\mapsto k\bmod331$ est équivariante. Elle envoie une orbite de support $\{3,331\}$, de taille $44$, sur une orbite de support $\{331\}$, de taille $22$, et la fibre de cette application au-dessus d'une orbite de support $\{331\}$ contient exactement $44$ classes de support $\{3,331\}$, donc exactement une orbite.
+
+\begin{corollary}[paires de jumeaux]\label{cor:twins}
+La projection induit une bijection entre les $15$ orbites de support $\{3,331\}$ et les $15$ orbites de support $\{331\}$, et apparie l'orbite principale à celle de $\LS$. Deux classes jumelles diffèrent par une classe de $3$-torsion non nulle, c'est-à-dire par la classe de l'idéal $J\OO_L$ de Sakamoto ou de son conjugué : le jumeau de $X_I$ est $X_{IJ\OO_L}$ ou $X_{I\bar J\OO_L}$. Les $32$ orbites de la couche forment $16$ paires de jumeaux, et $(\Lz,\LS)$ est la paire de jumeaux au-dessus de la classe nulle de $\Cl_{331}$. Deux classes de la couche de même support sont conjuguées si et seulement si leurs composantes $331$ le sont. \DEM
+\end{corollary}
+
+\begin{remark}[les jumeaux comme tordus]
+Par la preuve de~\cite[prop.~6.7]{Gau26}, l'extension des idéaux $j\colon\Cl(F)\to\Cl(L)$, avec $F=\Q(\sqrt{-23})$, est injective, et son image est la $3$-torsion de $\Cl(L)$. Le jumeau de $X_I$ est donc aussi $X_{I\mathfrak a\OO_L}$ ou $X_{I\bar{\mathfrak a}\OO_L}$, où $\mathfrak a=(2,(1+\sqrt{-23})/2)$ est un premier de $F$ au-dessus de $2$, qui n'est pas principal. Comme $\Nm_{L/L^+}(\mathfrak a\OO_L)=2\OO_{L^+}$, on a $X_{I\mathfrak a\OO_L}=(I\mathfrak a,\alpha/2)$ lorsque $X_I=(I,\alpha)$. Vus comme réseaux hermitiens de rang $44$ sur $\OO_F$, deux jumeaux se déduisent donc l'un de l'autre en tordant par un idéal d'ordre $3$ de $\Cl(F)$ : $I\mapsto I\otimes_{\OO_F}\mathfrak a$. Pour $I=\OO_L$, c'est le passage de $\Lz$ à $\LS$, à isométrie près~\cite[prop.~2.7]{Gau26}. \DEM
+\end{remark}
+
+\subsection{Certificats de gémellité sans GRH}
+Savoir si deux classes données de la couche sont jumelles est une question sur leurs composantes $331$, que~\cite{Gau26} ne pouvait lire que sous GRH, dans $\Cl(K_{22})\cong\Z/662$ calculé par \texttt{bnfinit}. Une réponse positive peut cependant être certifiée sans GRH.
+
+\begin{lemma}\label{lem:cert}
+Soient $I_a$, $I_b$ des idéaux de $L$ dont les classes sont fixées par $\sigma_{24}$, avec $\Nm_{L/K}(I_a)=\q_a^2$ et $\Nm_{L/K}(I_b)=\q_b^2$. S'il existe $\delta\in K^\times$ tel que $(\delta)=\q_a^2\,\tau(\q_b)^{-2}$ pour un $\tau\in\Gal(K/\Q)$, alors les composantes $331$ de $[I_a]$ et de $[I_b]$ sont conjuguées sous $\Gal(L/\Q)$.
+\end{lemma}
+
+\begin{proof}
+L'hypothèse donne $\Nm_{L/K}[I_a]=\tau\Nm_{L/K}[I_b]=\Nm_{L/K}(\tilde\tau[I_b])$ dans $\Cl(K)$, pour tout relèvement $\tilde\tau$ de $\tau$. Soit $j\colon\Cl(K)\to\Cl(L)$ l'extension des idéaux ; $j\circ\Nm_{L/K}=\sum_{g\in\Gal(L/K)}g$ agit sur $\Cl_{331}$ par $\sum_g\chi_{331}(g)=4$, puisque $\Gal(L/K)=\langle\sigma_{22}\rangle=\ker\chi_{331}$. Donc $4[I_a]_{331}=4(\tilde\tau[I_b])_{331}$, et $4$ est inversible modulo $331$.
+\end{proof}
+
+L'élément $\delta$ est trouvé par \texttt{bnfisprincipal}, sous GRH ; il est ensuite contrôlé sans aucun groupe de classes : l'ordre maximal de $K$ est certifié (\texttt{nfcertify}), $\q_a$ et $\tau(\q_b)$ sont des idéaux premiers de degré~$1$ donnés par deux générateurs, et l'égalité d'idéaux $(\delta)=\q_a^2\tau(\q_b)^{-2}$ est contrôlée exactement, ainsi que $|\Nm(\delta)|$. La composante $3$ de la classe d'un idéal $P$ de degré $1$ ou $2$ au-dessus de $p\equiv1\pmod{23}$ est nulle si et seulement si $4p=a^2+23b^2$ pour des entiers $a,b$ ; celle de $P\sigma_{24}(P)$ est le double de celle de $P$.
+
+\begin{proposition}\label{prop:certs}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $X_{4049}$ et $X_{599}$ sont jumeaux.
+\item $X_{4969}$ et $X_{P_{691}\sigma_{24}(P_{691})}$ sont jumeaux, où $P_{691}=(691,\zeta-4)$ et $\sigma_{24}(P_{691})=(691,\zeta-596)$.
+\item $P_{461}\sigma_{24}(P_{461})$ est dans l'orbite de $P_{139}$ ; donc $X_{P_{461}\sigma_{24}(P_{461})}\cong X_{139}$.
+\item $P_{1381}\sigma_{24}(P_{1381})$, $P_{3221}\sigma_{24}(P_{3221})$ et $P_{5521}\sigma_{24}(P_{5521})$ sont dans les orbites de $P_{1289}$, $P_{1979}$ et $P_{829}$.
+\end{enumerate}
+\st{démontré, sans GRH, modulo~\cite[prop.~2.2, 2.5]{Gau26}}
+\end{proposition}
+
+\begin{proof}
+Pour chaque paire, un élément $\delta$ comme dans le lemme~\ref{lem:cert} a été trouvé et contrôlé (entre $839$ et $937$ caractères comme polynôme en $\theta$), avec $\q=(p,\theta-r)$ et $r=4770$, $512$, $333$, $152$ pour $p=4969$, $4049$, $599$, $691$ ; on obtient le même $r=152$ à partir de $P_{691}$ et de $\sigma_{24}(P_{691})$, comme il se doit, puisque $\sigma_{24}\in\Gal(L/K)$. Les composantes $3$ se lisent sur $4p=a^2+23b^2$ : aucun des nombres $4\cdot139$, $4\cdot461$, $4\cdot1289$, $4\cdot1381$, $4\cdot1979$, $4\cdot3221$, $4\cdot4049$, $4\cdot4969$ n'est de cette forme, alors que $4\cdot691=44^2+23\cdot6^2$, $4\cdot829=2^2+23\cdot12^2$, $4\cdot5521=94^2+23\cdot24^2$, et $[P_{599}]$ a une composante $3$ nulle~\cite[prop.~6.7]{Gau26}. Ainsi les deux membres de chaque paire de (c) et (d) ont le même support et des composantes $331$ conjuguées, donc sont conjugués (corollaire~\ref{cor:twins}) ; dans (a) et (b), les supports sont $\{3,331\}$ et $\{331\}$, et les classes sont jumelles.
+\end{proof}
+
+\begin{proposition}\label{prop:temoin}
+Le réseau $X_I$, $I=P_{691}\sigma_{24}(P_{691})$, contient un vecteur de norme $6$. Il n'est pas extrémal. \st{démontré, sans GRH}
+\end{proposition}
+
+\begin{proof}
+Un filtre de \texttt{Rang88CertZ} sur les deux côtés de $I$ (fichiers d'entrée préparés comme pour les autres idéaux, $D_A=691$, $d=1382$), arrêté à la première touche, a trouvé dans la nuit du 16 au 17 octobre, après $195$ et $24$ tâches ($183$~s et $109$~s), les couples d'énergies
+\[
+\frac{3542}{691}+\frac{13\,129\,000}{1382^2}=12,\qquad \frac{2406}{691}+\frac{16\,268\,904}{1382^2}=12 .
+\]
+Un script PARI/GP indépendant du programme contrôle exactement que la base engendre $I$ (ses colonnes sont dans les deux idéaux premiers, et son déterminant vaut $691^2$), que la matrice de Gram recalculée à partir de $\alpha$ est entière, paire, de déterminant $1$ et définie positive, et que les deux vecteurs ont des coordonnées entières dans la base de $I$ et une norme exactement égale à $6$ ($10$ contrôles, aucun échec). Par~\cite[prop.~2.3(b)]{Gau26}, $X_I$ est l'élément de $S$ de classe $[I]$.
+\end{proof}
+
+\begin{proof}[Preuve du théorème~\ref{thm:twins}]
+$\Lz$ et $\LS$ sont jumeaux par le corollaire~\ref{cor:twins}, extrémaux par~\cite{Sak26}. $X_{4049}$ et $X_{599}$ sont jumeaux par la proposition~\ref{prop:certs}(a), extrémaux par le théorème~\ref{thm:six}. $X_{4969}$ est extrémal par le théorème~\ref{thm:six}, et son jumeau ne l'est pas, par les propositions~\ref{prop:certs}(b) et~\ref{prop:temoin}.
+\end{proof}
+
+\subsection{Le cadran}\label{subsec:dial}
+Le groupe $\F_{331}^\times/\mu_{22}$ est cyclique d'ordre $15$, engendré par la classe de $2$ : le nombre $3$ est une racine primitive modulo $331$ et $\log_32=121$ est premier à $15$. Une orbite de support $\{331\}$ ou $\{3,331\}$ est donc étiquetée par une \emph{heure} $h\in\Z/15$ : l'orbite de $[P_{139}]^k$ a pour heure $h$ lorsque $k\bmod331\in2^h\mu_{22}$. Deux jumeaux ont la même heure, et $X_{139}$ a pour heure $0$. Les plus petits exposants positifs des heures $0,1,\dots,14$ sont $1,2,4,8,16,32,7,14,28,56,13,5,10,20,19$. L'heure d'un idéal donné est un logarithme discret dans $\Cl_{331}$. Le recensement du \S\ref{subsec:census} l'a d'abord lue dans $\Cl(K_{22})$, calculé par \texttt{bnfinit} sous GRH. La proposition suivante la lit sans GRH, avec les outils des certificats de classe de~\cite[\S6.4]{Gau26} : un générateur de $\q^{331}$, les unités $\xi_2,\dots,\xi_{11}$, et des logarithmes discrets modulo $331$ en des premiers auxiliaires.
+
+\begin{proposition}[le cadran sans GRH]\label{prop:dial}
+Soit $\lambda(x)\in\F_{331}^{88}$ le vecteur des logarithmes discrets modulo $331$ d'un élément $x$ de $K$ aux $88$ premiers de degré~$1$ de $K$ au-dessus de $\ell\in\{380\,651;\ 1\,065\,821;\ 1\,522\,601;\ 2\,055\,511\}$ (les premiers auxiliaires), et soit $U$ le sous-espace engendré par $\lambda(\xi_2),\dots,\lambda(\xi_{11})$. Soit $I$ un idéal de $L$ tel que $\Nm_{L/K}(I)=\q^e$, où $\q$ est un premier de $K$ de degré~$1$, premier aux premiers auxiliaires, et $e\in\{1,2\}$ ; soit $\Gamma_\q\in K$ tel que $(\Gamma_\q)=\q^{331}$. Alors la composante $331$ de $[I]$ est $c\,[P_{139}]_{331}$, où $c\in\F_{331}$ est l'unique solution de
+\[
+e\,\lambda(\Gamma_\q)\equiv2c\,\lambda(\Gamma_{139})\pmod U .
+\]
+En particulier, si la classe de $I$ est dans la couche $\sigma_{24}$ et si $c\ne0$, l'heure de $I$ est la classe de $c$ dans $\F_{331}^\times/\mu_{22}$. \st{démontré, sans GRH, modulo~\cite[prop.~2.2, 2.5]{Gau26}}
+\end{proposition}
+
+\begin{proof}
+L'application $\lambda$ est définie sur les éléments de $K$ qui sont des unités aux premiers auxiliaires ; elle est additive et nulle sur $\pm1$ et sur les puissances $331$-ièmes. Soit $E$ le groupe des unités de $K$. Par l'étape~1 de~\cite[\S6.4]{Gau26} (rang $10$), $\langle-1,\xi_2,\dots,\xi_{11}\rangle$ est d'indice fini premier à $331$ dans $E$, donc $\lambda(E)=U$. Pour un idéal $\mathfrak a$ de $K$, premier aux premiers auxiliaires, tel que $\mathfrak a^{331}=(\Gamma_{\mathfrak a})$, posons $\varphi([\mathfrak a])=\lambda(\Gamma_{\mathfrak a})\bmod U$. Cette quantité ne dépend pas du choix de $\Gamma_{\mathfrak a}$, elle est additive, et elle est nulle sur les idéaux principaux : si $\mathfrak a=(\delta)$, alors $\Gamma_{\mathfrak a}=\varepsilon\delta^{331}$ avec $\varepsilon\in E$, et $\delta$ est une unité aux premiers auxiliaires. Comme toute classe d'idéaux contient des idéaux premiers à un ensemble fini donné de premiers, $\varphi$ est un morphisme sur les classes d'ordre divisant $331$.
+
+Soit $s=[P_{139}]_{331}$ ; elle engendre $\Cl_{331}\cong\Z/331$~\cite[rem.~6.8(a)]{Gau26}. Écrivons $[I]_{331}=c\,s$. La classe $\Nm_{L/K}[I]=[\q]^e$ est d'ordre divisant $331$, et les normes des composantes de $[I]$ d'ordre $3$ et $45\,013$ sont d'ordres premiers à $331$ ; par unicité de la décomposition primaire dans $\Cl(K)$, elles sont nulles, et $\Nm_{L/K}[I]=c\,\Nm_{L/K}(s)$. De même, $\Nm_{L/K}(s)=\Nm_{L/K}[P_{139}]=[\q_{139}]^2$. En appliquant $\varphi$, on obtient $e\,\lambda(\Gamma_\q)\equiv2c\,\lambda(\Gamma_{139})\pmod U$. Comme $\lambda(\Gamma_{139})\notin U$ (rang~$11$), $c$ est unique.
+\end{proof}
+
+\begin{corollary}\label{cor:dial}
+Pour les $40$ idéaux qui figurent dans le tableau~\ref{tab:census}, aux \S\S\ref{sec:new}--\ref{sec:layer} et dans~\cite{Gau26}, parmi lesquels ceux de $X_{139}$, $X_{599}$, $X_{4969}$, $X_{4049}$ et tous les idéaux de la proposition~\ref{prop:certs}, les heures données par la proposition~\ref{prop:dial} concordent avec celles du recensement, en particulier avec le tableau~\ref{tab:census}. L'identification des $30$ représentants du tableau~\ref{tab:census}, ainsi que les relations de gémellité et de même orbite de la proposition~\ref{prop:certs}, valent donc sans GRH ; ces dernières ont désormais deux preuves. Pour la couche, cela règle la question~(Q5) de~\cite{Gau26}. \DEM
+\end{corollary}
+
+\begin{proof}[Justification]
+Un script PARI/GP trouve chaque $\Gamma_\q$ par \texttt{bnfisprincipal} (sous GRH), puis contrôle sans calcul de groupe de classes : la maximalité de l'ordre de $K$ (\texttt{nfcertify}) ; l'égalité d'idéaux $(\Gamma_\q)=\q^{331}$, et que $p$ n'est pas un premier auxiliaire ; que les $\xi_a$ sont entiers et de norme $\pm1$ ; les rangs $10$ et $11$ modulo $331$ ; et il résout le système linéaire de la proposition~\ref{prop:dial}. Il annonce $97$ contrôles et aucun échec, pour $40$ idéaux : $36$ idéaux choisis au-dessus des nombres premiers concernés (pour un premier de degré~$2$, le premier facteur de $\Phi_{115}$ trouvé par PARI), et les quatre idéaux $P_{139}$, $P_{599}$ de~\cite{Gau26} et $P_{4969}$, $P_{4049}$ de la proposition~\ref{prop:exact}, exactement tels qu'ils y sont donnés ; les composantes $3$ se lisent sur $4p=a^2+23b^2$. Pour ces quatre idéaux, $c=1$ (par définition), $63$, $41$ et $53$ ; pour $P_{691}\sigma_{24}(P_{691})$, $c=227$. Passer à un idéal conjugué multiplie $c$ par un élément de $\mu_{22}$, sans changer l'heure : les deux paires de la proposition~\ref{prop:certs}(a), (b) ont pour heures $8$ et $13$. Les heures des $40$ idéaux coïncident avec celles qui avaient été calculées sous GRH. Un second programme, en Python, en arithmétique exacte sur les entiers et les rationnels et sans PARI/GP, recontrôle à partir du fichier de certificats, d'après une liste figée des $40$ idéaux attendus : la primalité de chaque $p$, la cohérence de sa sorte avec $e$, le lien de chaque $\q$ avec son idéal de $L$, les égalités $(\Gamma_\q)=\q^{331}$ (intégralité, norme et valuations), les unités, les rangs et les $40$ valeurs de $c$ : $186$ contrôles, aucun échec. Sa première version, dont Astra a jugé le contrat incomplet le 17 octobre (pas de test de primalité, pas de contrôle de $e$ contre la sorte, pas de liste figée des cibles, et des racines carrées flottantes dans des bornes), donnait les mêmes $40$ valeurs.
+\end{proof}
+
+\begin{figure}[ht]
+\centering
+\input{figure_cadran}
+\caption{La couche $\sigma_{24}$. Anneau intérieur : les $15$ orbites de support $\{3,331\}$ (normalisateur d'ordre $460$) ; anneau extérieur : leurs $15$ orbites jumelles, de support $\{331\}$ (normalisateur d'ordre $920$) ; centre : la paire de jumeaux $(\Lz,\LS)$. À l'extérieur : heure $h$ (en petit) et plus petit exposant $k$. Disque noir : extrémal (assisté par calcul ; \cite{Sak26} pour le centre) ; croix : un vecteur de norme $6$ (démontré) ; disque gris : survivant partiel d'un filtre (de~\cite{Gau26} ou du \S\ref{subsec:census}) ; cercle vide : non examiné. L'étiquette $p^\sigma$ désigne l'orbite de $P\sigma_{24}(P)$, $P$ premier de degré~$1$ au-dessus de $p$ ; $p$ seul, celle d'un premier de degré~$2$ au-dessus de $p$. Heures : démontrées sans GRH (corollaire~\ref{cor:dial}).}\label{fig:dial}
+\end{figure}
+
+\subsection{Le recensement de la couche}\label{subsec:census}
+Pour chacune des $30$ orbites non centrales, on a cherché un représentant de petite norme dans deux familles : les idéaux premiers de degré $2$ au-dessus de $p\equiv24\pmod{115}$, et les idéaux $P\sigma_{24}(P)$ avec $P$ de degré $1$ au-dessus de $p\equiv1\pmod{115}$ ; dans les deux cas, $\Nm(I)=p^2$. Le coût d'un balayage croît comme $\sqrt{\Nm(I)}=p$ : le rapport des valeurs de $|\Uc|$ pour $X_{4969}$ et $X_{139}$ est $35{,}96$, contre $4969/139=35{,}75$. Une recherche jusqu'à $p=300\,000$ ($574$ nombres premiers, $21$~s) atteint les $30$ orbites. Le tableau~\ref{tab:census} donne le représentant le moins coûteux de chaque orbite, par heure. La recherche a utilisé GRH pour étiqueter les idéaux ; le corollaire~\ref{cor:dial} certifie toutes les heures sans GRH. Les verdicts n'ont jamais dépendu de GRH.
+
+\begin{table}[ht]
+\caption{Les $30$ orbites non centrales de la couche $\sigma_{24}$, par heure : représentant connu le moins coûteux ($p$ signifie $\Nm(I)=p^2$ ; (a) un premier de degré $2$, (b) un idéal $P\sigma_{24}(P)$) et statut. «~ext.~» : extrémal, assisté par calcul ; «~rej.~» : vecteur de norme $6$, démontré ; «~part.~» : survivant partiel d'un filtre. Un astérisque signale les filtres de la nuit du 16 au 17 octobre (tableau~\ref{tab:filtres}).}\label{tab:census}
+\centering\small\setlength{\tabcolsep}{5pt}
+\begin{tabular}{rr ll ll}
+\toprule
+& & \multicolumn{2}{c}{support $\{3,331\}$ (anneau intérieur)} & \multicolumn{2}{c}{support $\{331\}$ (anneau extérieur)} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+$h$ & $k$ & représentant & statut & représentant & statut \\
+\midrule
+$0$ & $1$ & $139$ (a) & ext.\ ($X_{139}$) & $53\,269$ (a) & part.* \\
+$1$ & $2$ & $18\,401$ (b) & rej.* & $9\,661$ (b) & part.* \\
+$2$ & $4$ & $9\,431$ (b) & part.* & $3\,359$ (a) & part. \\
+$3$ & $8$ & $3\,911$ (b) & part.* & $9\,109$ (a) & part.* \\
+$4$ & $16$ & $1\,979$ (a) & rej. & $15\,319$ (a) & part.* \\
+$5$ & $32$ & $8\,419$ (a) & part.* & $829$ (a) & rej. \\
+$6$ & $7$ & $6\,211$ (b) & part.* & $1\,151$ (b) & part.* \\
+$7$ & $14$ & $1\,289$ (a) & rej. & $23\,599$ (a) & part.* \\
+$8$ & $28$ & $4\,049$ (a) & ext.\ ($X_{4049}$) & $599$ (a) & ext.\ ($X_{599}$) \\
+$9$ & $56$ & $7\,591$ (b) & part.* & $33\,581$ (b) & part.* \\
+$10$ & $13$ & $17\,389$ (a) & part.* & $8\,741$ (b) & part.* \\
+$11$ & $5$ & $5\,981$ (b) & rej.* & $4\,831$ (b) & part.\ ($5\,659$ (a)); part.* \\
+$12$ & $10$ & $2\,531$ (b) & rej.* & $39\,239$ (a) & rej.* \\
+$13$ & $20$ & $4\,969$ (a) & ext.\ ($X_{4969}$) & $691$ (b) & rej.\ (prop.~\ref{prop:temoin}) \\
+$14$ & $19$ & $8\,971$ (b) & part.* & $14\,951$ (b) & part.* \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Une recherche complémentaire, portant sur les idéaux premiers de degré~$1$ dont la classe a une composante $45\,013$ nulle (environ un premier sur $45\,013$ ; coût $\sqrt p$ seulement, puisque $\Nm(P)=p$), a été menée jusqu'à $p\approx1{,}13\cdot10^9$ ($648\,833$ nombres premiers $p\equiv1\pmod{115}$, quatre tranches, environ $69$ heures de calcul au total) ; elle teste la nullité de la composante $45\,013$ dans $\Cl(K_{44})$, sous GRH. Elle a trouvé $9$ premiers de la couche, et n'améliore qu'une orbite : l'heure $10$ de l'anneau intérieur, par un premier au-dessus de $p=157\,146\,581$, de coût $\sqrt p\approx12\,536$ au lieu de $17\,389$. Pour ce premier, l'étiquette $c=318$ et l'heure sont certifiées par la proposition~\ref{prop:dial} ($e=1$), mais la nullité de la composante $45\,013$ reste sous GRH.
+
+\emph{Filtres de la nuit.} Dans la nuit du 16 au 17 octobre, le programme \texttt{Rang88CertZ} a été lancé comme filtre sur les représentants, au tableau~\ref{tab:census}, de $\nfiltres$ des $\navant$ orbites non tranchées (toutes sauf celle de $P_{3359}$, survivant partiel d'un filtre de~\cite{Gau26} avec ce même représentant), sur l'ordinateur de l'auteur : les deux côtés en parallèle, $5$ fils chacun, arrêt à la première touche et plafond de $12$ minutes. Chaque touche a été vérifiée exactement par un script PARI/GP qui n'utilise que les coordonnées $(u,y)$ de la touche : la base engendre l'idéal (à conjugaison galoisienne près pour un premier de degré~$2$, ce qui ne change pas l'orbite), la matrice de Gram recalculée à partir de $\alpha$ est entière, paire, unimodulaire et définie positive, et le vecteur a des coordonnées entières et la norme $6$. Un rejet n'est compté que si cette vérification réussit entièrement (code de sortie, sentinelle finale, nombre complet de contrôles, aucune erreur). Le tableau~\ref{tab:filtres} donne le résultat : $\nrejets$ orbites sont rejetées, ce qui est démontré sans GRH, et $\nsurv$ sont des survivants partiels, sur lesquels rien n'est démontré. Chaque filtre survivant a parcouru de $\projminfr$ à $\projmaxfr$ millions de projections courtes, les deux côtés réunis ; dans~\cite[\S6.3]{Gau26}, les rejets de la même famille étaient survenus après $0{,}30$ à $0{,}43$ million de projections courtes du côté~$1$. \CONS
+
+\begin{table}[ht]
+\caption{Filtres de la nuit du 16 au 17 octobre, par coût croissant. Projections : millions de projections courtes parcourues, les deux côtés réunis. Pour un rejet, les énergies de la touche (courte et de fibre ; somme $12$), et le côté où elle est survenue.}\label{tab:filtres}
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rl l l r r l}
+\toprule
+$h$ & anneau & idéal & verdict & projections & durée (s) & énergies de la touche \\
+\midrule
+\lignesfiltresfr
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Une heuristique : la symétrie protège l'extrémalité}\label{subsec:heur}
+L'heuristique de~\cite[(Q2)]{Gau26} (moyenne de Siegel, loi de Poisson sur les orbites de vecteurs courts) donne à un réseau dont le normalisateur de $\langle\zeta\rangle$ est d'ordre $230$ une probabilité d'environ $4{,}4\,\%$ d'être extrémal. Si les vecteurs de norme $\le6$ sont répartis comme dans un réseau sans symétrie supplémentaire, un normalisateur d'ordre $230m$ divise par $m$ le nombre de leurs orbites, et la probabilité devient environ $0{,}044^{1/m}$ : $21\,\%$ pour l'anneau intérieur ($m=2$) et $46\,\%$ pour l'anneau extérieur ($m=4$). \HEUR
+
+Avant les filtres du \S\ref{subsec:census}, les données étaient maigres mais suggestives. Dans l'anneau intérieur, trois des cinq orbites tranchées sont extrémales ; dans l'anneau extérieur, une sur trois ; parmi les orbites génériques de taille $88$, aucun des quinze idéaux de degré $1$ tranchés ne l'est (les quatre rejets de~\cite{Gau26} et les onze nouveaux rejets du groupe témoin). Avec ces probabilités, les $22$ orbites de la couche alors non tranchées contiendraient environ $10\times0{,}21+12\times0{,}46\approx7{,}6$ réseaux extrémaux supplémentaires. \HEUR
+
+Les filtres du \S\ref{subsec:census} en donnent une première mise à l'épreuve. Si l'heuristique était juste, et si un filtre de cette force attrapait tout réseau non extrémal, environ $79\,\%$ des orbites intérieures et $54\,\%$ des orbites extérieures filtrées auraient été rejetées. En fait, $\nrejint$ des $\nfiltint$ orbites intérieures et $\nrejext$ des $\nfiltext$ orbites extérieures l'ont été, alors que les filtres de~\cite{Gau26} et du \S\ref{sec:audit} avaient rejeté $15$ des $17$ idéaux génériques de degré~$1$ qu'ils examinaient. \CONS
+
+Sous ces deux hypothèses, et si les orbites se comportaient indépendamment avec ces probabilités communes, un écart au moins aussi grand aurait une probabilité d'environ $\probintfr\,\%$ pour l'anneau intérieur et $\probextfr\,\%$ pour l'anneau extérieur (loi binomiale). Ce nombre ne mesure pas la probabilité que les hypothèses soient fausses : il dit seulement qu'un tel écart serait rare si elles étaient justes, et une fluctuation sur un petit échantillon n'est pas exclue. Deux explications sont possibles, sans exclure une fluctuation ni des dépendances entre orbites : les réseaux extrémaux seraient plus fréquents dans la couche que ne le prévoit l'heuristique, ou les vecteurs courts de ses réseaux non extrémaux seraient plus difficiles à atteindre pour un filtre. De plus, si le nombre de projections courtes croît comme $p$, comme le suggère la comparaison de $X_{139}$ et de $X_{4969}$, un filtre de durée fixe, qui en parcourt de $\projminfr$ à $\projmaxfr$ millions (tableau~\ref{tab:filtres}), en couvre une fraction qui décroît comme $1/p$ : la survie des orbites les plus chères dit moins. Seuls des balayages complets peuvent trancher. \HEUR
+
+Avec les représentants du tableau~\ref{tab:census}, un coût de $0{,}0035\,p$ heures d'une machine louée à $32$ cœurs pour une exécution complète des deux côtés (étalonné sur $X_{4969}$), un rejet rapide pour un réseau non extrémal et deux exécutions pour un réseau extrémal, le coût attendu de ce recensement était d'environ $\coutavant$ heures avant les filtres du \S\ref{subsec:census}. Pour les $\nouvertes$ orbites encore ouvertes, il est d'environ $\coutheur$ heures avec les mêmes probabilités, et d'environ $\couttous$ heures si elles sont toutes extrémales. Au-delà de la couche, les $1\,023$ orbites fixées par $\sigma_{91}$ (support $\{45\,013\}$, normalisateur d'ordre $460$) en contiendraient environ deux cents, et les $507\,408$ orbites génériques, à $4{,}4\,\%$, plus de vingt mille. Ces nombres ne sont pas des résultats : le modèle n'a été comparé qu'à deux cas de rang $56$, et il a sous-estimé l'un d'eux. Ils disent où chercher. \HEUR
+
+\section{Perspectives}\label{sec:outlook}
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item \emph{Le recensement de la couche.} Des $\navant$ orbites non tranchées avant les filtres du \S\ref{subsec:census}, $\nrejets$ sont maintenant rejetées. Les $\nouvertes$ autres peuvent être tranchées par la même chaîne : chacune demande un balayage complet, interrompu à la première touche pour un réseau non extrémal, et deux exécutions pour un réseau extrémal ; la moins chère, celle de $P_{1151}\sigma_{24}(P_{1151})$, prendrait environ quatre heures d'une machine louée à $32$ cœurs par exécution. Par~\cite[rem.~2.6]{Gau26}, chaque nouveau réseau extrémal de la couche a, dans son groupe d'automorphismes, un normalisateur de $\langle\zeta\rangle$ d'ordre $460$ ou $920$.
+\item \emph{Jumeaux.} Le théorème~\ref{thm:twins} montre que l'extrémalité n'est pas un invariant des jumeaux. Quatre paires de jumeaux sont maintenant tranchées : deux paires de réseaux extrémaux, $(\Lz,\LS)$ et $(X_{4049},X_{599})$ ; une paire de réseaux non extrémaux, à l'heure $12$ ($P_{2531}\sigma_{24}(P_{2531})$ et $P_{39239}$, rejetés par les filtres du \S\ref{subsec:census}) ; et la paire discordante du théorème~\ref{thm:twins}. Savoir si l'extrémalité est \emph{corrélée} entre jumeaux reste ouvert. Les filtres laissent cinq paires dont un membre est rejeté et l'autre survivant partiel : le membre intérieur est rejeté aux heures $1$, $4$, $7$ et $11$, le membre extérieur à l'heure $5$. Le jumeau de $X_{139}$, $P_{53269}$, a survécu à un filtre qui n'a couvert qu'une petite fraction de son énumération. Des balayages complets de ces survivants montreraient si les paires discordantes sont fréquentes.
+\item \emph{La couche $\sigma_{91}$.} La proposition~\ref{prop:cyclic} a un analogue pour les classes fixées par $\sigma_{91}$ : elles forment le groupe cyclique $\Cl_{45\,013}$, avec $1\,023$ orbites non triviales de taille $44$. Son recensement demande des représentants peu coûteux, que fournirait une recherche du type de celle du \S\ref{subsec:census}.
+\item \emph{Consolidation.} Une implantation indépendante de l'énumération reste la principale étape manquante (question~(Q1) de~\cite{Gau26}) ; le recomptage du \S\ref{sec:audit} par \texttt{qfminim} est un premier pas, non certifiant, dans cette direction.
+\end{enumerate}
+
+\section*{Données, méthodes et déclarations}
+\emph{Données.} Les fichiers d'entrée, reçus, journaux, vérificateurs et certificats de cet addendum seront ajoutés au dépôt public de~\cite{Gau26}, dans les dossiers \texttt{verification\_P4969}, \texttt{verification\_P4049}, \texttt{calcul\_externe\_resultats\_20261015}, \texttt{contre\_audit\_20261016} et \texttt{addendum} (certificats de gémellité, étiquettes sans GRH, filtres du \S\ref{subsec:census}). Les calculs ont utilisé PARI/GP 2.15.4, Python~3 en arithmétique exacte sur les entiers et les rationnels, et Java (OpenJDK 11, 17 et 21). Les balayages ont tourné sur des instances Scaleway POP2-HC-32C-64G louées.
+
+\emph{Usage de l'intelligence artificielle.} Comme pour~\cite{Gau26}, l'auteur s'est fait aider de deux assistants, Claude Opus~5.5 (Anthropic) et Astra (OpenAI), qui ne sont pas auteurs. Le texte, les programmes et les certificats ont été rédigés, et les calculs conduits, avec Claude Opus~5.5. Astra a conçu une partie du plan d'audit, a fait attaquer et relu les pièces énumérées au \S\ref{subsec:review}, et a trouvé les défauts qui y sont signalés. Le 17 octobre, Astra a aussi lu, sans les exécuter, l'argument de la proposition~\ref{prop:dial} avec ses deux vérificateurs, ainsi que le lanceur, le vérificateur de témoins et l'audit des filtres du \S\ref{subsec:census}. Astra a confirmé l'argument, a exigé l'hypothèse que $\q$ soit premier aux premiers auxiliaires, et a trouvé des lacunes dans le contrat du premier vérificateur Python (pas de test de primalité, pas de contrôle de $e$ contre la sorte, pas de liste figée des cibles, des racines carrées flottantes), un défaut du premier lanceur, qui consignait une touche comme un rejet quel que soit le résultat de la vérification exacte, et un contrat trop large du vérificateur de témoins, désormais restreint aux deux formes d'idéaux employées. Tout a été corrigé, et chaque rejet a été revérifié. Astra a aussi lu, sans les exécuter, les certificats de gémellité et de même orbite et le témoin de norme $6$ de $P_{691}\sigma_{24}(P_{691})$ : aucun défaut mathématique n'a été trouvé dans la chaîne positive du théorème~\ref{thm:twins}, et Astra a demandé l'export des quatre éléments $\delta$ des certificats de même orbite, ce qui a été fait. Le recensement et les autres résultats du \S\ref{sec:layer} n'ont pas été relus par Astra.
+
+L'auteur assume la responsabilité scientifique de l'ensemble du contenu. Cet addendum n'a pas fait l'objet d'une relecture humaine spécialisée.
+
+\begin{thebibliography}{NS}
+\bibitem[Gau26]{Gau26}
+I.~Gauvin, \emph{Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}, prépublication, 15 octobre 2026 (identifiant arXiv à venir) ; version anglaise : \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}. Dépôt : \url{https://github.com/Katabolanga/rang88-reseaux-ideaux}.
+
+\bibitem[NS]{NS}
+G.~Nebe, N.~J.~A.~Sloane, \emph{A Catalogue of Lattices}, \url{https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/}.
+
+\bibitem[Sak26]{Sak26}
+R.~Sakamoto, \emph{Two extremal even unimodular lattices of rank $88$}, prépublication arXiv 2609.15633, version~2 du 27 septembre 2026.
+\end{thebibliography}
+
+\end{document}

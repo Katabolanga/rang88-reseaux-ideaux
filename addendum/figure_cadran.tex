@@ -1,0 +1,32 @@
+% figure_cadran.tex -- le cadran de la couche sigma24 (commun aux versions anglaise et francaise). Claude, 17 octobre 2026.
+% Statuts : ext = extremal (assiste par ordinateur ; [Sak26] au centre) ; rej = vecteur de norme 6 (demontre) ;
+%           par = survivant partiel d'un filtre ; une = non examine.  Heure h : orbite de [P139]^k avec k mod 331 dans 2^h mu_22.
+\begin{tikzpicture}[
+  ext/.style={circle,fill=black,inner sep=2.2pt},
+  rej/.style={cross out,draw=black,thick,inner sep=2.4pt},
+  par/.style={circle,draw=black,fill=black!35,inner sep=2.2pt},
+  une/.style={circle,draw=black!55,inner sep=2.2pt},
+  lab/.style={font=\tiny,inner sep=1.2pt}]
+\def\ri{2.3}\def\ro{3.6}
+\draw[black!20] (0,0) circle (\ri);
+\draw[black!20] (0,0) circle (\ro);
+\foreach \h/\k in {0/1,1/2,2/4,3/8,4/16,5/32,6/7,7/14,8/28,9/56,10/13,11/5,12/10,13/20,14/19} {
+  \pgfmathsetmacro{\a}{90-24*\h}
+  \node[font=\scriptsize] at (\a:4.62) {$\k$};
+  \node[font=\tiny,black!55] at (\a:4.17) {$\h$};
+}
+% anneau interieur : support {3,331}
+\foreach \h/\s/\l in {0/ext/X_{139},1/rej/18401^{\sigma},2/par/9431^{\sigma},3/par/3911^{\sigma},4/rej/1979,5/par/8419,6/par/6211^{\sigma},7/rej/1289,8/ext/X_{4049},9/par/7591^{\sigma},10/par/17389,11/rej/5981^{\sigma},12/rej/2531^{\sigma},13/ext/X_{4969},14/par/8971^{\sigma}} {
+  \pgfmathsetmacro{\a}{90-24*\h}
+  \node[\s] at (\a:\ri) {};
+  \node[lab,anchor=\a] at (\a:\ri-0.2) {$\l$};
+}
+% anneau exterieur : support {331}
+\foreach \h/\s/\l in {0/par/53269,1/par/9661^{\sigma},2/par/3359,3/par/9109,4/par/15319,5/rej/829,6/par/1151^{\sigma},7/par/23599,8/ext/X_{599},9/par/33581^{\sigma},10/par/8741^{\sigma},11/par/4831^{\sigma},12/rej/39239,13/rej/691^{\sigma},14/par/14951^{\sigma}} {
+  \pgfmathsetmacro{\a}{90-24*\h}
+  \node[\s] at (\a:\ro) {};
+  \node[lab,anchor=\a] at (\a:\ro-0.2) {$\l$};
+}
+\node[ext] at (-0.3,0) {}; \node[ext] at (0.3,0) {};
+\node[font=\scriptsize] at (0,-0.45) {$\Lz\ \ \LS$};
+\end{tikzpicture}

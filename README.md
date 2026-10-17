@@ -4,6 +4,32 @@ Données, programmes et vérifications qui accompagnent la note **« Réseaux id
 
 Le dépôt est autoportant : avec PARI/GP 2.15, Python ≥ 3.9 (bibliothèque standard seulement) et, pour les essais facultatifs, Java 11 ou plus, on peut rejouer toutes les vérifications exactes de la note, sauf les deux qui lisent la matrice de Gram de L₀ publiée par R. Sakamoto : ce fichier n'est pas redistribué et doit être téléchargé à part (`externe/LISEZMOI.md`). Les balayages certifiants eux-mêmes (plusieurs heures par côté) ne sont pas relancés par les vérificateurs : leurs reçus, journaux et catalogues sont fournis et contrôlés exactement ; la commande pour les refaire est dans `REPRODUIRE.md`.
 
+## Version 1.1 (17 octobre 2026) : addendum
+
+L'**addendum** est dans `addendum/addendum_en.pdf` (14 p.) et `addendum/addendum_fr.pdf` (15 p.), avec ses sources dans `addendum/`. Il apporte trois résultats.
+
+- **Théorème A, six réseaux extrémaux.** Soit P₄₉₆₉ = (4969, ζ² + 3763ζ + 2809) et P₄₀₄₉ = (4049, ζ² + 105ζ + 2084). Les réseaux X₄₉₆₉ et X₄₀₄₉ sont pairs, unimodulaires, de rang 88 et de minimum 8. Avec X₁₃₉, X₅₉₉, L₀ et L_S, la famille contient donc au moins six réseaux extrémaux, deux à deux non isométriques.
+  - Le minimum est assisté par calcul (M1, M2, H1–H3). Chaque côté a été balayé deux fois sur deux machines louées, avec des reçus identiques à l'octet.
+  - La non-isométrie est démontrée, sans GRH.
+- **Théorème B.** L'extrémalité n'est pas un invariant des paires de jumeaux de la couche σ₂₄. (X₄₀₄₉, X₅₉₉) est une paire extrémale, comme (L₀, L_S) ; en revanche, le jumeau de X₄₉₆₉ contient un vecteur de norme 6. Les relations de jumeaux et ce vecteur sont démontrés, sans GRH.
+- **Théorème C, le cadran de la couche σ₂₄ sans GRH.** L'orbite d'un idéal de la couche se lit sur des résidus de puissance 331-ième.
+
+| Énoncé de l'addendum | Statut | Dossier | Commande | Résultat attendu |
+|---|---|---|---|---|
+| X₄₉₆₉, X₄₀₄₉ : pairs, unimodulaires, définis positifs ; raccord exact des entrées ; vecteur de norme 8 (prop. 2.1) | démontré | `verification_P4969/`, `verification_P4049/` | `python3 -I code/verification/verifier_raccord.py P4969` (depuis le dossier ; idem pour P4049) | `BILAN : 37 controles, 0 echecs`, `FIN_OK` |
+| Classes non conjuguées, donc non-isométrie (prop. 2.3) | démontré, sans GRH | idem | `python3 -I code/verification/verifier_non_isometrie_P4969_v2.py` (idem pour P4049) | code de sortie 0 |
+| Minimum 8 de X₄₉₆₉ et X₄₀₄₉ : balayages complets et répliqués (§ 2.2) | assisté par calcul (M1, M2, H1–H3) | `calcul_externe_resultats_20261015/` | voir le `LISEZMOI.md` du dossier | 27 contrôles et 0 échec par exécution ; empreintes canoniques égales deux à deux |
+| Fiches au format du catalogue de Nebe et Sloane (X₁₃₉, X₅₉₉, X₄₉₆₉, X₄₀₄₉) ; sous-groupes d'ordre 460 et 920 | démontré (contrôles exacts) | `catalogue/` | `python3 -I verify_std.py X139.std X599.std X4969.std X4049.std` ; `python3 verify_construction.py X139 X599 X4969 X4049` | `all checks passed` ; `all reconstructions agree with the .std files` |
+| Jumeaux et même orbite (prop. 4.5) | démontré, sans GRH | `addendum/certificats_jumeaux/` | `gp -q jumeaux_K22.gp < /dev/null` ; `gp -q meme_orbite_K22.gp < /dev/null` | certificats OK, code de sortie 0 |
+| Cadran sans GRH (prop. 4.7, cor. 4.8, th. C) | démontré, sans GRH | `addendum/cadran_sans_GRH/` | `gp -q cadran_sans_GRH.gp < /dev/null` ; `python3 -I verifier_cadran.py` | `CADRAN_SANS_GRH_OK` (97) ; `CADRAN_VERIFIE_SANS_PARI` (186) |
+| Attaques contre la méthode (§ 3) | constaté | `contre_audit_20261016/` | voir le `LISEZMOI.md` du dossier | bilans C1–C4 |
+
+**Pièces à venir, dans la version 1.2 :**
+- les témoins de norme 6 et l'audit des quatre rejets des filtres du § 4.5 (tableau 4) ;
+- les exécutions lourdes du contre-audit (mutants, rejeu prédictif).
+
+**Chemins absolus.** Quelques scripts déjà exécutés contiennent, sur une seule ligne d'affectation, un chemin absolu du poste de l'auteur. Les `LISEZMOI` de leurs dossiers les indiquent. Ces scripts sont publiés à l'identique ; avant de les relancer, remplacer ce chemin par un chemin local.
+
 ## Ce que dit la note, et comment le vérifier
 
 Statuts de la note (§ 1.3) : **démontré** (preuve complète, ou identité exacte rejouable) ; **sous GRH** (dépend de `bnfinit`) ; **assisté par calcul** (démontré sous des hypothèses nommées sur une exécution : M1, M2, H1–H3) ; **constaté** (sortie de programme sans valeur de preuve) ; **ouvert**. Les commandes se lancent depuis la racine du dépôt ; `py` désigne `python -I`, `gp` désigne `gp -q -D parisize=400000000 … < /dev/null`. Les sorties réelles sont dans `verification/RESULTATS.md`.
@@ -42,6 +68,11 @@ data/               corps/, P139/, P599/, rejets/, L0/, validation/ ; formats : 
 externe/            LISEZMOI.md : où placer le fichier de R. Sakamoto (non redistribué)
 preuve/             PREUVE_NON_OMISSION.md, LIAISON_PREUVE_CODE.md
 verification/       RESULTATS.md : sorties réelles des vérifications rejouées depuis ce dépôt
+addendum/           addendum (anglais, français ; sources, PDF), certificats de jumelage et du cadran sans GRH (version 1.1)
+catalogue/          fiches .std au format du catalogue de Nebe et Sloane, constructions, vérificateurs (version 1.1)
+verification_P4969/, verification_P4049/   raccord exact et non-isométrie de X₄₉₆₉ et X₄₀₄₉ (version 1.1)
+calcul_externe_resultats_20261015/        balayages certifiés de X₄₉₆₉, X₄₀₄₉ et leurs réplications (version 1.1)
+contre_audit_20261016/                    contre-audit du 16 octobre : bilans et scripts (version 1.1)
 ```
 
 ## Fichiers conservés tels quels

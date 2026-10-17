@@ -1,0 +1,228 @@
+verifier_cadran.py : SHA-256 78e58e390c244a57d91d23e6e7698e593041d839399204857ad78b861436747f
+certificat_K22.txt : SHA-256 4ad7bbfdd9fc171d4657513ec8a60810703a1d68e00c0c5d001a8fee574eb09d
+cadran_sans_GRH_certificats.txt : SHA-256 8d89444666db99f4431ffff005df288bf1f8482be373c413c947edd72dfda466
+OK    P22 unitaire de degre 22, a coefficients entiers
+OK    40 ideaux lus dans le certificat du cadran
+OK    Phi_115 de degre 88, unitaire
+OK    P22(theta) = 0 dans Z[zeta_115], theta = zeta + zeta^22 + zeta^24 + zeta^68
+OK    {1,22,24,68} sous-groupe de (Z/115)^* (K = Fix<sigma_22>)
+OK    22 classes de (Z/115)^* modulo <22>
+OK    xi_2 entier algebrique de norme +-1 (unite de K)
+OK    xi_3 entier algebrique de norme +-1 (unite de K)
+OK    xi_4 entier algebrique de norme +-1 (unite de K)
+OK    xi_5 entier algebrique de norme +-1 (unite de K)
+OK    xi_6 entier algebrique de norme +-1 (unite de K)
+OK    xi_7 entier algebrique de norme +-1 (unite de K)
+OK    xi_8 entier algebrique de norme +-1 (unite de K)
+OK    xi_9 entier algebrique de norme +-1 (unite de K)
+OK    xi_10 entier algebrique de norme +-1 (unite de K)
+OK    xi_11 entier algebrique de norme +-1 (unite de K)
+OK    premiers auxiliaires premiers (divisions d'essai jusqu'a la racine), = 1 mod 331*115
+OK    denominateurs des pieces premiers aux premiers auxiliaires
+OK    88 premiers de degre 1 de K au-dessus des 4 premiers auxiliaires
+OK    unites : rang 10 modulo 331 (indice de <-1, xi_a> dans E premier a 331, etape 1 de la note)
+OK    [unites | Gamma_139] : rang 11 modulo 331
+OK    Gamma_139 : entier algebrique, |N| = 139^331, (Gamma_139) = q_139^331, q_139 = (139, theta - 0)
+OK    P139 : lien avec l'ideal de L (sorte a, lien 77,1) et theta mod P = 0 ; 22 racines simples de P22 mod p
+OK    P139 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P139 : systeme mod 331 compatible
+OK    P139 : c = 1 (PARI : 1), heure 0, support {3,331}
+OK    P599 : lien avec l'ideal de L (sorte a, lien 151,11) et theta mod P = 98 ; 22 racines simples de P22 mod p
+OK    P599 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P599 : systeme mod 331 compatible
+OK    P599 : c = 71 (PARI : 71), heure 8, support {331}
+OK    P691s24 : lien avec l'ideal de L (sorte b, lien 4) et theta mod P = 152 ; 22 racines simples de P22 mod p
+OK    P691s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P691s24 : systeme mod 331 compatible
+OK    P691s24 : c = 227 (PARI : 227), heure 13, support {331}
+OK    P829 : lien avec l'ideal de L (sorte a, lien 608,7) et theta mod P = 230 ; 22 racines simples de P22 mod p
+OK    P829 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P829 : systeme mod 331 compatible
+OK    P829 : c = 199 (PARI : 199), heure 5, support {331}
+OK    P1151s24 : lien avec l'ideal de L (sorte b, lien 6) et theta mod P = 76 ; 22 racines simples de P22 mod p
+OK    P1151s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P1151s24 : systeme mod 331 compatible
+OK    P1151s24 : c = 67 (PARI : 67), heure 6, support {331}
+OK    P1289 : lien avec l'ideal de L (sorte a, lien 278,45) et theta mod P = 843 ; 22 racines simples de P22 mod p
+OK    P1289 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P1289 : systeme mod 331 compatible
+OK    P1289 : c = 134 (PARI : 134), heure 7, support {3,331}
+OK    P1979 : lien avec l'ideal de L (sorte a, lien 1590,113) et theta mod P = 535 ; 22 racines simples de P22 mod p
+OK    P1979 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P1979 : systeme mod 331 compatible
+OK    P1979 : c = 314 (PARI : 314), heure 4, support {3,331}
+OK    P2531s24 : lien avec l'ideal de L (sorte b, lien 12) et theta mod P = 1625 ; 22 racines simples de P22 mod p
+OK    P2531s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P2531s24 : systeme mod 331 compatible
+OK    P2531s24 : c = 186 (PARI : 186), heure 12, support {3,331}
+OK    P3359 : lien avec l'ideal de L (sorte a, lien 417,17) et theta mod P = 971 ; 22 racines simples de P22 mod p
+OK    P3359 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P3359 : systeme mod 331 compatible
+OK    P3359 : c = 87 (PARI : 87), heure 2, support {331}
+OK    P3911s24 : lien avec l'ideal de L (sorte b, lien 24) et theta mod P = 1706 ; 22 racines simples de P22 mod p
+OK    P3911s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P3911s24 : systeme mod 331 compatible
+OK    P3911s24 : c = 70 (PARI : 70), heure 3, support {3,331}
+OK    P4049 : lien avec l'ideal de L (sorte a, lien 3312,49) et theta mod P = 2430 ; 22 racines simples de P22 mod p
+OK    P4049 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P4049 : systeme mod 331 compatible
+OK    P4049 : c = 86 (PARI : 86), heure 8, support {3,331}
+OK    P4831s24 : lien avec l'ideal de L (sorte b, lien 39) et theta mod P = 660 ; 22 racines simples de P22 mod p
+OK    P4831s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P4831s24 : systeme mod 331 compatible
+OK    P4831s24 : c = 93 (PARI : 93), heure 11, support {331}
+OK    P4969 : lien avec l'ideal de L (sorte a, lien 4453,87) et theta mod P = 1398 ; 22 racines simples de P22 mod p
+OK    P4969 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P4969 : systeme mod 331 compatible
+OK    P4969 : c = 233 (PARI : 233), heure 13, support {3,331}
+OK    P5981s24 : lien avec l'ideal de L (sorte b, lien 16) et theta mod P = 4786 ; 22 racines simples de P22 mod p
+OK    P5981s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P5981s24 : systeme mod 331 compatible
+OK    P5981s24 : c = 305 (PARI : 305), heure 11, support {3,331}
+OK    P6211s24 : lien avec l'ideal de L (sorte b, lien 9) et theta mod P = 321 ; 22 racines simples de P22 mod p
+OK    P6211s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P6211s24 : systeme mod 331 compatible
+OK    P6211s24 : c = 115 (PARI : 115), heure 6, support {3,331}
+OK    P7591s24 : lien avec l'ideal de L (sorte b, lien 52) et theta mod P = 6533 ; 22 racines simples de P22 mod p
+OK    P7591s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P7591s24 : systeme mod 331 compatible
+OK    P7591s24 : c = 172 (PARI : 172), heure 9, support {3,331}
+OK    P8419 : lien avec l'ideal de L (sorte a, lien 3986,162) et theta mod P = 3216 ; 22 racines simples de P22 mod p
+OK    P8419 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P8419 : systeme mod 331 compatible
+OK    P8419 : c = 132 (PARI : 132), heure 5, support {3,331}
+OK    P8741s24 : lien avec l'ideal de L (sorte b, lien 226) et theta mod P = 8242 ; 22 racines simples de P22 mod p
+OK    P8741s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P8741s24 : systeme mod 331 compatible
+OK    P8741s24 : c = 31 (PARI : 31), heure 10, support {331}
+OK    P8971s24 : lien avec l'ideal de L (sorte b, lien 177) et theta mod P = 8349 ; 22 racines simples de P22 mod p
+OK    P8971s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P8971s24 : systeme mod 331 compatible
+OK    P8971s24 : c = 291 (PARI : 291), heure 14, support {3,331}
+OK    P9109 : lien avec l'ideal de L (sorte a, lien 7113,220) et theta mod P = 5204 ; 22 racines simples de P22 mod p
+OK    P9109 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P9109 : systeme mod 331 compatible
+OK    P9109 : c = 323 (PARI : 323), heure 3, support {331}
+OK    P9431s24 : lien avec l'ideal de L (sorte b, lien 47) et theta mod P = 5944 ; 22 racines simples de P22 mod p
+OK    P9431s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P9431s24 : systeme mod 331 compatible
+OK    P9431s24 : c = 273 (PARI : 273), heure 2, support {3,331}
+OK    P9661s24 : lien avec l'ideal de L (sorte b, lien 19) et theta mod P = 6349 ; 22 racines simples de P22 mod p
+OK    P9661s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P9661s24 : systeme mod 331 compatible
+OK    P9661s24 : c = 329 (PARI : 329), heure 1, support {331}
+OK    P14951s24 : lien avec l'ideal de L (sorte b, lien 2) et theta mod P = 882 ; 22 racines simples de P22 mod p
+OK    P14951s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P14951s24 : systeme mod 331 compatible
+OK    P14951s24 : c = 82 (PARI : 82), heure 14, support {331}
+OK    P15319 : lien avec l'ideal de L (sorte a, lien 5477,616) et theta mod P = 6571 ; 22 racines simples de P22 mod p
+OK    P15319 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P15319 : systeme mod 331 compatible
+OK    P15319 : c = 232 (PARI : 232), heure 4, support {331}
+OK    P17389 : lien avec l'ideal de L (sorte a, lien 2818,133) et theta mod P = 11634 ; 22 racines simples de P22 mod p
+OK    P17389 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P17389 : systeme mod 331 compatible
+OK    P17389 : c = 252 (PARI : 252), heure 10, support {3,331}
+OK    P18401s24 : lien avec l'ideal de L (sorte b, lien 22) et theta mod P = 5943 ; 22 racines simples de P22 mod p
+OK    P18401s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P18401s24 : systeme mod 331 compatible
+OK    P18401s24 : c = 122 (PARI : 122), heure 1, support {3,331}
+OK    P23599 : lien avec l'ideal de L (sorte a, lien 5901,256) et theta mod P = 4261 ; 22 racines simples de P22 mod p
+OK    P23599 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P23599 : systeme mod 331 compatible
+OK    P23599 : c = 203 (PARI : 203), heure 7, support {331}
+OK    P33581s24 : lien avec l'ideal de L (sorte b, lien 83) et theta mod P = 7147 ; 22 racines simples de P22 mod p
+OK    P33581s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P33581s24 : systeme mod 331 compatible
+OK    P33581s24 : c = 56 (PARI : 56), heure 9, support {331}
+OK    P39239 : lien avec l'ideal de L (sorte a, lien 33686,553) et theta mod P = 37054 ; 22 racines simples de P22 mod p
+OK    P39239 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P39239 : systeme mod 331 compatible
+OK    P39239 : c = 239 (PARI : 239), heure 12, support {331}
+OK    P53269 : lien avec l'ideal de L (sorte a, lien 26354,688) et theta mod P = 28037 ; 22 racines simples de P22 mod p
+OK    P53269 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P53269 : systeme mod 331 compatible
+OK    P53269 : c = 180 (PARI : 180), heure 0, support {331}
+OK    P5659 : lien avec l'ideal de L (sorte a, lien 3008,500) et theta mod P = 2454 ; 22 racines simples de P22 mod p
+OK    P5659 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P5659 : systeme mod 331 compatible
+OK    P5659 : c = 39 (PARI : 39), heure 11, support {331}
+OK    P461s24 : lien avec l'ideal de L (sorte b, lien 5) et theta mod P = 0 ; 22 racines simples de P22 mod p
+OK    P461s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P461s24 : systeme mod 331 compatible
+OK    P461s24 : c = 330 (PARI : 330), heure 0, support {3,331}
+OK    P1381s24 : lien avec l'ideal de L (sorte b, lien 21) et theta mod P = 382 ; 22 racines simples de P22 mod p
+OK    P1381s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P1381s24 : systeme mod 331 compatible
+OK    P1381s24 : c = 43 (PARI : 43), heure 7, support {3,331}
+OK    P3221s24 : lien avec l'ideal de L (sorte b, lien 20) et theta mod P = 2959 ; 22 racines simples de P22 mod p
+OK    P3221s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P3221s24 : systeme mod 331 compatible
+OK    P3221s24 : c = 307 (PARI : 307), heure 4, support {3,331}
+OK    P5521s24 : lien avec l'ideal de L (sorte b, lien 34) et theta mod P = 2652 ; 22 racines simples de P22 mod p
+OK    P5521s24 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P5521s24 : systeme mod 331 compatible
+OK    P5521s24 : c = 72 (PARI : 72), heure 5, support {331}
+OK    P157146581 : lien avec l'ideal de L (sorte c, lien 890366) et theta mod P = 13746445 ; 22 racines simples de P22 mod p
+OK    P157146581 : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P157146581 : systeme mod 331 compatible
+OK    P157146581 : c = 318 (PARI : 318), heure 10, support {3,331}
+OK    P139pub : lien avec l'ideal de L (sorte A, lien 77,1) et theta mod P = 0 ; 22 racines simples de P22 mod p
+OK    P139pub : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P139pub : systeme mod 331 compatible
+OK    P139pub : c = 1 (PARI : 1), heure 0, support {3,331}
+OK    P599pub : lien avec l'ideal de L (sorte A, lien 322,87) et theta mod P = 333 ; 22 racines simples de P22 mod p
+OK    P599pub : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P599pub : systeme mod 331 compatible
+OK    P599pub : c = 63 (PARI : 63), heure 8, support {331}
+OK    P4969pub : lien avec l'ideal de L (sorte A, lien 2809,3763) et theta mod P = 4770 ; 22 racines simples de P22 mod p
+OK    P4969pub : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P4969pub : systeme mod 331 compatible
+OK    P4969pub : c = 41 (PARI : 41), heure 13, support {3,331}
+OK    P4049pub : lien avec l'ideal de L (sorte A, lien 2084,105) et theta mod P = 512 ; 22 racines simples de P22 mod p
+OK    P4049pub : (Gamma) = q^331 (entier, |N| = p^331, valuations 331 et 0)
+OK    P4049pub : systeme mod 331 compatible
+OK    P4049pub : c = 53 (PARI : 53), heure 8, support {3,331}
+
+  P139         p = 139        c =   1  heure  0  support {3,331}
+  P599         p = 599        c =  71  heure  8  support {331}
+  P691s24      p = 691        c = 227  heure 13  support {331}
+  P829         p = 829        c = 199  heure  5  support {331}
+  P1151s24     p = 1151       c =  67  heure  6  support {331}
+  P1289        p = 1289       c = 134  heure  7  support {3,331}
+  P1979        p = 1979       c = 314  heure  4  support {3,331}
+  P2531s24     p = 2531       c = 186  heure 12  support {3,331}
+  P3359        p = 3359       c =  87  heure  2  support {331}
+  P3911s24     p = 3911       c =  70  heure  3  support {3,331}
+  P4049        p = 4049       c =  86  heure  8  support {3,331}
+  P4831s24     p = 4831       c =  93  heure 11  support {331}
+  P4969        p = 4969       c = 233  heure 13  support {3,331}
+  P5981s24     p = 5981       c = 305  heure 11  support {3,331}
+  P6211s24     p = 6211       c = 115  heure  6  support {3,331}
+  P7591s24     p = 7591       c = 172  heure  9  support {3,331}
+  P8419        p = 8419       c = 132  heure  5  support {3,331}
+  P8741s24     p = 8741       c =  31  heure 10  support {331}
+  P8971s24     p = 8971       c = 291  heure 14  support {3,331}
+  P9109        p = 9109       c = 323  heure  3  support {331}
+  P9431s24     p = 9431       c = 273  heure  2  support {3,331}
+  P9661s24     p = 9661       c = 329  heure  1  support {331}
+  P14951s24    p = 14951      c =  82  heure 14  support {331}
+  P15319       p = 15319      c = 232  heure  4  support {331}
+  P17389       p = 17389      c = 252  heure 10  support {3,331}
+  P18401s24    p = 18401      c = 122  heure  1  support {3,331}
+  P23599       p = 23599      c = 203  heure  7  support {331}
+  P33581s24    p = 33581      c =  56  heure  9  support {331}
+  P39239       p = 39239      c = 239  heure 12  support {331}
+  P53269       p = 53269      c = 180  heure  0  support {331}
+  P5659        p = 5659       c =  39  heure 11  support {331}
+  P461s24      p = 461        c = 330  heure  0  support {3,331}
+  P1381s24     p = 1381       c =  43  heure  7  support {3,331}
+  P3221s24     p = 3221       c = 307  heure  4  support {3,331}
+  P5521s24     p = 5521       c =  72  heure  5  support {331}
+  P157146581   p = 157146581  c = 318  heure 10  support {3,331}
+  P139pub      p = 139        c =   1  heure  0  support {3,331}
+  P599pub      p = 599        c =  63  heure  8  support {331}
+  P4969pub     p = 4969       c =  41  heure 13  support {3,331}
+  P4049pub     p = 4049       c =  53  heure  8  support {3,331}
+BILAN : 182 controles (attendus 182), 0 echecs
+CADRAN_VERIFIE_SANS_PARI

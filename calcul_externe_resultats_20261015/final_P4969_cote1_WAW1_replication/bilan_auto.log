@@ -1,0 +1,15 @@
+Bilan P4969 -- 2026-10-16 15:27:11 -- rang88-p4969-repl-cote1 -- 32 processeurs -- openjdk version "11.0.32.1" 2026-08-18
+== cote 1 : journal run_P4969_cote1/cote1_20261016_063226.stdout.log ; code Java 0
+CATALOGUE_SHA256 6ff951520f324d202a4b9c5eb608886bc9514e0df7e53e58a405020ec10710b4 ; TOTAL_TACHES 97270
+SELECTION 97270/97270 ; A_FAIRE 97270 ; DEJA_AU_CHECKPOINT 0
+CHECKPOINT_SHA256 4f7531ccd4329cab3303ea78f5b64236868efd4fed4148f8a710d3925706a68b ; run_P4969_cote1/cote1.ckpt
+TACHES_TERMINEES 97270/97270
+TOTAL_TOUCHES 0
+COUVERTURE_COMPLETE 97270/97270 ; CATALOGUE 6ff951520f324d202a4b9c5eb608886bc9514e0df7e53e58a405020ec10710b4
+FIN [31981 s]
+   empreinte canonique : run_P4969_cote1/cote1.ckpt : 97270 recus (total annonce 97270, indices 0..n-1 complets) ; touches 0 ; empreinte canonique 0226b9a51c01ceab49e90822d2b433550e601921e77ded187056bf130f58caf6
+== cote 2 : non lance sur cette machine
+== comparaison du cote 1 aux recus du poste d'Ivan (taches communes) :
+recus nouveaux : 97270 ; reference : 3716 ; communs : 3716 ; differents : 0 ; absents de la reference : 0
+COMPARAISON_OK
+-rw-r--r-- 1 root root 8694052 Oct 16 15:27 resultats_P4969_rang88-p4969-repl-cote1_20261016_1527.tar.gz

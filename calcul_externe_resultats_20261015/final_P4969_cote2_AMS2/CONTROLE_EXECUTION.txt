@@ -1,0 +1,29 @@
+OK    E1 un seul journal de lancement (1 trouve(s))
+OK    E1 CHECKPOINT nouveau
+OK    E1 SELECTION 140082/140082 ; A_FAIRE 140082 ; DEJA_AU_CHECKPOINT 0
+OK    E1 EXECUTEES_CE_LANCEMENT 140082 ; REPRISES_DU_CHECKPOINT 0
+OK    E1 TACHES_TERMINEES 140082/140082
+OK    E1 TOTAL_TOUCHES 0
+OK    E1 COUVERTURE_COMPLETE 140082/140082
+OK    E1 ligne FIN
+OK    E1 aucune ligne ERREUR / TOUCHE / ARRET / REPRISE / Exception
+OK    E1 code de sortie 0
+OK    E1 stderr vide
+OK    E2 SHA du catalogue = valeur attendue 94ff3cfa...
+OK    E2 CATALOGUE_SHA256 du journal = SHA du fichier ; TOTAL_TACHES 140082
+OK    E2 en-tete des recus : catalogue et total
+OK    E3 fichier de recus termine par LF
+OK    E3 140082 lignes de recu au format strict (140082 lues)
+OK    E3 indices = permutation de 0..140081
+OK    E3 TOUCHES = 0 dans chaque recu
+OK    E4 somme des U = COMPTE_U du journal (1544898536)
+OK    E4 somme des CVP = CVP du journal (1544898536)
+OK    E4 somme des NA + 168616 noeuds de generation = NOEUDS court (997656661042)
+OK    E4 chaque recu : CVP = U, somme de HIST = U, NA >= 1
+OK    E4 somme des NB = NOEUDS fibre (11922702980640)
+OK    E4 somme des HIST des recus = histogramme du journal (32 cases) ; total HIST = somme des U
+OK    E5 SHA du fichier de recus = CHECKPOINT_SHA256 du journal
+OK    E5 aucun fichier .touches dans le repertoire
+OK    E6 empreinte canonique (deux calculs) f6a1aecde0370db843c86bb33ccd2eb9cc6688811c93488810f7cf443139e736
+BILAN : 27 controles, 0 echecs ; |U| = 1544898536 ; empreinte canonique f6a1aecde0370db843c86bb33ccd2eb9cc6688811c93488810f7cf443139e736
+CONTROLE_OK

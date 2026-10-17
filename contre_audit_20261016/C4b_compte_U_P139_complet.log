@@ -1,0 +1,3 @@
+A : 44 x 44, entiere, symetrique ; B = floor(139 * 1057/200) = 734 ; debut
+energie <= 1057/200 : B = 734 : compte PARI = 42957972 ; attendu 42957972 : IDENTIQUE  [11260 s]
+FIN_C4B

@@ -1,0 +1,24 @@
+Bilan P4969 -- 2026-10-16 11:21:35 -- rang88-p4969-cote1 -- 32 processeurs -- openjdk version "21.0.12.1" 2026-08-18
+== cote 1 : journal run_P4969_cote1/cote1_20261015_181730.stdout.log ; code Java 0
+CATALOGUE_SHA256 6ff951520f324d202a4b9c5eb608886bc9514e0df7e53e58a405020ec10710b4 ; TOTAL_TACHES 97270
+SELECTION 97270/97270 ; A_FAIRE 97270 ; DEJA_AU_CHECKPOINT 0
+CHECKPOINT_SHA256 3a1611b153152e3e12174eb30ee8d1bed2ee83b23d5df9eacff933469085330d ; run_P4969_cote1/cote1.ckpt
+TACHES_TERMINEES 97270/97270
+TOTAL_TOUCHES 0
+COUVERTURE_COMPLETE 97270/97270 ; CATALOGUE 6ff951520f324d202a4b9c5eb608886bc9514e0df7e53e58a405020ec10710b4
+FIN [31240 s]
+   empreinte canonique : run_P4969_cote1/cote1.ckpt : 97270 recus (total annonce 97270, indices 0..n-1 complets) ; touches 0 ; empreinte canonique 0226b9a51c01ceab49e90822d2b433550e601921e77ded187056bf130f58caf6
+== cote 2 : journal run_P4969_cote2/cote2_20261016_030202.stdout.log ; code Java 0
+CATALOGUE_SHA256 94ff3cfa1bcf5f7a06bc6ddc442a891d6ab2474d7e5fd9635ee0efd54cac8f96 ; TOTAL_TACHES 140082
+SELECTION 140082/140082 ; A_FAIRE 140082 ; DEJA_AU_CHECKPOINT 0
+CHECKPOINT_SHA256 33466e6cbc2b70e241c8a52edf2265bb69a92b1bef108d56dea8e9df799f1f9a ; run_P4969_cote2/cote2.ckpt
+TACHES_TERMINEES 140082/140082
+TOTAL_TOUCHES 0
+COUVERTURE_COMPLETE 140082/140082 ; CATALOGUE 94ff3cfa1bcf5f7a06bc6ddc442a891d6ab2474d7e5fd9635ee0efd54cac8f96
+FIN [29948 s]
+   empreinte canonique : run_P4969_cote2/cote2.ckpt : 140082 recus (total annonce 140082, indices 0..n-1 complets) ; touches 0 ; empreinte canonique f6a1aecde0370db843c86bb33ccd2eb9cc6688811c93488810f7cf443139e736
+== comparaison du cote 1 aux recus du poste d'Ivan (taches communes) :
+recus nouveaux : 97270 ; reference : 3716 ; communs : 3716 ; differents : 0 ; absents de la reference : 0
+COMPARAISON_OK
+-rw-r--r-- 1 root root  8693769 Oct 16 02:59 resultats_P4969_rang88-p4969-cote1_20261016_0259.tar.gz
+-rw-r--r-- 1 root root 19249291 Oct 16 11:21 resultats_P4969_rang88-p4969-cote1_20261016_1121.tar.gz

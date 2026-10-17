@@ -1,0 +1,7 @@
+K22 : Cl = [662] (GRH) ; disc = [-1, 1; 5, 11; 23, 21]  [0 s]
+RACINE : theta = 4770 mod P4969
+classe de q4969 dans Cl(K22) (GRH) : [138]
+classe de q139 (GRH) : [294] ; classes de ses 22 conjugues (GRH) : [294, 602, 60, 466, 196, 208, 454, 572, 90, 110, 552, 350, 312, 622, 40, 194, 468, 166, 496, 82, 368, 580]
+INDICATIF (GRH) : classe de q4969 parmi celles des conjugues de q139 : NON
+generateur de q4969^331 trouve ; norme = 4969^331  [0 s]
+ecrit recherche_classe/C_k22_certificat_P4969.txt  [0 s]

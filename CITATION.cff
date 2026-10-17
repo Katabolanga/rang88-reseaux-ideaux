@@ -5,12 +5,14 @@ type: dataset
 authors:
   - family-names: Gauvin
     given-names: Ivan
-version: "1.0"
-date-released: "2026-10-15"
+version: "1.1"
+date-released: "2026-10-17"
 abstract: >-
   Données et vérificateurs qui accompagnent la note « Réseaux idéaux pairs unimodulaires de rang 88 sur Q(ζ₁₁₅) » :
   h⁻(115) et orbites galoisiennes, certificat d'isométrie H ≅ L₀, témoins de norme 6, programme certifiant Rang88CertZ
-  et preuve de non-omission, entrées et reçus des exécutions pour les réseaux X₁₃₉ et X₅₉₉, certificats de classe.
+  et preuve de non-omission, entrées et reçus des exécutions pour les réseaux X₁₃₉ et X₅₉₉, certificats de classe ;
+  version 1.1 (17 octobre 2026) : addendum (X₄₉₆₉ et X₄₀₄₉ extrémaux, jumeaux de la couche σ₂₄, cadran sans GRH),
+  balayages certifiés et réplications, fiches au format du catalogue de Nebe et Sloane.
   Claude Opus 5.5 (Anthropic) et Astra (OpenAI) ont assisté l'auteur ; ils ne sont pas auteurs.
 keywords:
   - réseaux idéaux

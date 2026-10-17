@@ -1,0 +1,3 @@
+3221 java -Xmx4g -DstopTouche=1 -Dveille=600 -DDmax=16 -Dseuil=0.2 -Dckpt=run_P4049_cote1/cote1.ckpt -Dcat=run_P4049_cote1/cote1.taches -cp 
+3270 java -Xmx4g -DstopTouche=1 -Dveille=600 -DDmax=16 -Dseuil=0.2 -Dckpt=run_P4049_cote2/cote2.ckpt -Dcat=run_P4049_cote2/cote2.taches -cp 
+Suivi : bash etat.sh ; bilan final : bash bilan.sh

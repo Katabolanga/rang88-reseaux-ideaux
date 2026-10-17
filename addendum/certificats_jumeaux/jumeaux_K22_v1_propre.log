@@ -1,0 +1,8 @@
+P22 = polynome minimal de theta (degre 22) ; charpoly(theta) = P22^4
+nfinit : disc(K) = [-1, 1; 5, 11; 23, 21] ; nfcertify = [] (liste vide : ordre maximal certifie)
+theta mod P : P4969 -> 4770 ; P4049 -> 512 ; P599 -> 333 ; P691 = (691, zeta - 4) -> 152 ; sigma24(P691) = (691, zeta - 596) -> 152
+Gal(K/Q) : 22 automorphismes
+bnfinit (SOUS GRH, recherche seulement) : Cl(K) = [662]  [0 s]
+q4969 / q691 : tau numero 5 ; delta trouve (hauteur 877 chiffres) ; N(delta) = 24690961/477481 ; verification sans GRH : OK
+q4049 / q599 : tau numero 17 ; delta trouve (hauteur 883 chiffres) ; N(delta) = 16394401/358801 ; verification sans GRH : OK
+FIN  [0 s]

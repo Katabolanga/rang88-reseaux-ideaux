@@ -1,0 +1,13 @@
+p =   139 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : non => composante 3 de [P_p] non nulle
+p =   461 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : non => composante 3 de [P_p] non nulle
+p =  1289 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : non => composante 3 de [P_p] non nulle
+p =  1381 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : non => composante 3 de [P_p] non nulle
+p =  1979 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : non => composante 3 de [P_p] non nulle
+p =  3221 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : non => composante 3 de [P_p] non nulle
+p =   829 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : [2, 12] => composante 3 de [P_p] NULLE
+p =  5521 : p mod 23 = 1 ; 4p = a^2 + 23 b^2 : [94, 24] => composante 3 de [P_p] NULLE
+q139 ~ q461 (s24) : tau numero 21 ; (delta) = q_a^2 tau(q_b)^-2 VERIFIE sans GRH (delta : 839 chiffres)
+q1289 ~ q1381 (s24) : tau numero 6 ; (delta) = q_a^2 tau(q_b)^-2 VERIFIE sans GRH (delta : 892 chiffres)
+q1979 ~ q3221 (s24) : tau numero 14 ; (delta) = q_a^2 tau(q_b)^-2 VERIFIE sans GRH (delta : 933 chiffres)
+q829 ~ q5521 (s24) : tau numero 7 ; (delta) = q_a^2 tau(q_b)^-2 VERIFIE sans GRH (delta : 937 chiffres)
+BILAN : 4 certificats sur 4

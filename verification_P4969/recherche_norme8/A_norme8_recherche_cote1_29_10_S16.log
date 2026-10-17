@@ -1,0 +1,21 @@
+Rang88CertZ run : java_P4969/cote1 ; mode=run|n=44|BA=29/10|S=16|DA=4969|DB=1|d=9938|F=40|D=6|Dmax=16|seuil=0.2 ; 8 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 11.0.16.1 ; Windows 11 amd64 ; processeurs 16 ; PID 2492 ; Fri Oct 16 07:56:34 CEST 2026
+  ENTREES SHA-256 : A 8dc23c789f708c15cf80655f2a5d850220045478e90f2309706e8dfb18e6a881 ; B 8c0b1e6c12729bd923c28f9a470a44f90280be99c74d72c92d0996b959325de3 ; T 7d129a86a13284892b79c761624050a73b5b3b39d70315b2454cc9f907bc6167 ; meta fc597b1fd56afe634d4a21680fe083553dd99be061210d9431236ba70facfc08
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=2187f77341958cca2849c5010d8e943c9afe3e2afd5eb8fc386eddb0384b615d|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 993.8 , max dL = 11839.0 , max |q| ~ 0.5071374271475632 ; fibre : min dL = 1.7952553243325826 , max dL = 20.0 , max |q| ~ 0.5 ; B_U(court) = 14410.1
+  6311 taches certifiees (8726 noeuds de generation) ; niv37:4368 niv36:188 niv35:221 niv34:254 niv33:278 niv32:269 niv31:241 niv30:188 niv29:138 niv28:98 niv27:68
+CATALOGUE_SHA256 83af4ad145430de48ad3adcaec04da29ca55cdd4a98c826af8d3ccc64c26a00f ; TOTAL_TACHES 6311
+CHECKPOINT nouveau : ../verification_P4969/recherche_norme8/cote1_29_10_S16.ckpt
+SELECTION 6311/6311 ; A_FAIRE 6311 ; DEJA_AU_CHECKPOINT 0
+TOUCHE court=14083/4969 fibre(num)=1300307796/(1*9938^2) u=[0, -1, -2, 1, -5, -2, 0, 1, 3, -3, 0, 4, 1, 0, -1, -1, -1, 0, -3, -1, -2, -1, -1, -2, 0, 0, 0, -1, -1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] y=[-1, 1, -1, -3, 0, 5, 1, -1, -4, -4, 2, 2, -1, -2, 5, 3, -2, 1, 0, 1, -4, 1, 2, -7, -2, 5, -1, -4, 0, 5, -5, 3, 6, -2, -3, 4, 0, -4, -1, -6, -2, 5, -3, -3]
+TOUCHE court=14404/4969 fibre(num)=1293927600/(1*9938^2) u=[-1, 1, 1, 0, 0, 0, 1, 1, 0, -1, 0, -1, -1, 0, -1, 1, 0, -1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] y=[3, 0, -2, 2, -1, -2, 0, 0, -2, 0, -3, -3, -2, 3, 0, -2, 0, 0, -3, -3, 1, 1, 0, 3, 4, 1, 2, 0, 0, -1, 2, 2, -1, -2, 1, 1, 0, 1, 1, -1, 0, -1, -2, 1]
+ARRET_SUR_TOUCHE : 6239 taches non executees (temoin positif trouve ; aucune conclusion negative)
+CHECKPOINT_SHA256 67b536afd058584dc14d3701b7ec848cf5dc8a32db62e118a82f24f66e862787 ; ../verification_P4969/recherche_norme8/cote1_29_10_S16.ckpt
+EXECUTEES_CE_LANCEMENT 72 ; REPRISES_DU_CHECKPOINT 0
+TACHES_TERMINEES 72/6311
+COMPTE_U (au signe pres, energie courte <= 29/10) 157 ; histogramme [2.2,2.3):1 [2.3,2.4):1 [2.4,2.5):8 [2.5,2.6):9 [2.6,2.7):24 [2.7,2.8):40 [2.8,2.9):74 
+NOEUDS court 960636 ; fibre 138640271 ; CVP 157
+TOTAL_TOUCHES 2
+COUVERTURE_PARTIELLE 72/6311 : AUCUNE CONCLUSION GLOBALE
+FIN [4 s]

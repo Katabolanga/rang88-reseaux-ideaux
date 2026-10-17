@@ -1,0 +1,9 @@
+M0 | T1 ok | T2 ok (U=697 touches=2 ) | T3 ok | SURVIVANT |  temoin : source de reference recompile
+M1 | T1 ECHEC | T2 ECHEC (U=697 touches=0 ) | T3 ok | TUE |  feuille : egalite exclue (on raterait les vecteurs de norme exactement 6)
+M2 | T1 ok | T2 ok (U=697 touches=2 ) | T3 ok | SURVIVANT |  elagage : branche coupee des que le budget restant vaut 0
+M3 | T1 ok | T2 ok (U=697 touches=2 ) | T3 ok | SURVIVANT |  arrondi exterieur supprime sur le budget restant
+M4 | T1 ok | T2 ok (U=697 touches=2 ) | T3 ok | SURVIVANT |  plage entiere retrecie d'une unite
+M5 | T1 ok | T2 ok (U=697 touches=2 ) | T3 ok | SURVIVANT |  arrondi exterieur supprime sur le rayon
+M6 | T1 ECHEC | T2 ECHEC (U=697 touches=0 ) | T3 ECHEC | TUE |  budget de fibre diminue d'un cran
+M7 | T1 ok | T2 ok (U=697 touches=2 ) | T3 ok | SURVIVANT |  normalisation de signe cassee (vecteur nul non exclu au dernier niveau)
+M8 | T1 ECHEC | T2 ok (U=697 touches=2 ) | T3 ECHEC | TUE |  EQUIVALENT attendu : on garde l'autre signe (symetrie u -> -u) ; ne doit PAS etre detecte par les comptes, mais les recus (ordre, histogramme) peuvent differer

@@ -1,0 +1,15 @@
+Bilan P4049 -- 2026-10-16 09:10:56 -- rang88-p4969-cote2 -- 32 processeurs -- openjdk version "21.0.12.1" 2026-08-18
+== cote 1 : journal run_P4049_cote1/cote1_20261016_025907.stdout.log ; code Java 0
+CATALOGUE_SHA256 370bf006fd701b7c5fbb942abdd8b312d7d57f37efbe4a46a83fa2a239b85566 ; TOTAL_TACHES 77819
+SELECTION 77819/77819 ; A_FAIRE 77819 ; DEJA_AU_CHECKPOINT 0
+CHECKPOINT_SHA256 f2c2fb1cecb227758bfd8de42b7580162db8c3911ddc8aade006bc6e713f86f0 ; run_P4049_cote1/cote1.ckpt
+TACHES_TERMINEES 77819/77819
+TOTAL_TOUCHES 0
+COUVERTURE_COMPLETE 77819/77819 ; CATALOGUE 370bf006fd701b7c5fbb942abdd8b312d7d57f37efbe4a46a83fa2a239b85566
+FIN [22286 s]
+   empreinte canonique : run_P4049_cote1/cote1.ckpt : 77819 recus (total annonce 77819, indices 0..n-1 complets) ; touches 0 ; empreinte canonique 6334d93e44b7712e1eee274e1b8cfa27f5842c96dc983fe6db695e2e65207455
+== cote 2 : non lance sur cette machine
+== comparaison du cote 1 a la reference ref/P4049_cote1_poste_ivan.ckpt (taches communes) :
+recus nouveaux : 77819 ; reference : 8517 ; communs : 8517 ; differents : 0 ; absents de la reference : 0
+COMPARAISON_OK
+-rw-r--r-- 1 root root 6511289 Oct 16 09:10 resultats_P4049_rang88-p4969-cote2_20261016_0910.tar.gz

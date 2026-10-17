@@ -1,0 +1,62 @@
+source : verifier_non_isometrie_P4049_v2.py SHA-256 f1dba070e166052cbbb81658869537555c917398c50a9ef60db5d39431a696a7 (v2 : C1 autonome par l'indice |det BASE| = p^2, demande d'Astra du 16 oct.)
+certificat : data/P139/certificat_K22.txt SHA-256 4ad7bbfdd9fc171d4657513ec8a60810703a1d68e00c0c5d001a8fee574eb09d
+certificat : data/P4969/certificat_K22.txt SHA-256 d3efb7f56453ce0f832cff91a0cf990988824bd6001f2d8a4f6e0088c495659c
+certificat : data/P4049/certificat_K22.txt SHA-256 59c1794af981434f2f0e0457eea51c6f6f6fba8691a63aa348a6a800e43fdea1
+OK    meme polynome P22 dans les trois certificats
+OK    P22 unitaire de degre 22
+      denominateur commun des pieces : 28657
+OK    Phi_115 de degre 88, unitaire
+OK    (C1) P22(theta) = 0 dans Z[zeta_115], theta = zeta + zeta^22 + zeta^24 + zeta^68
+OK    (C1) {1,22,24,68} est un sous-groupe de (Z/115)^* (K = Fix<sigma_22>, de degre 22)
+OK    P139 : BASE de I_data.gp 88 x 88
+OK    P139 : I mod 139 = (g), g facteur de degre 2 de Phi_115 mod 139 (P de degre residuel 2)
+OK    P139 : |det BASE| = 139^2 : BASE engendre exactement (p, g(zeta)) (C1 autonome, sans recours a G1)
+OK    P139 : theta mod P dans F_139 (q = P inter K de degre 1, f(P/q) = 2, N_{L/K}(P) = q^2)
+OK    P139 : RACINE du certificat (0) = image de theta modulo P (0)
+OK    P139 : P22 a 22 racines simples modulo 139 (139 totalement decompose dans K)
+OK    P4969 : BASE de I_data.gp 88 x 88
+OK    P4969 : I mod 4969 = (g), g facteur de degre 2 de Phi_115 mod 4969 (P de degre residuel 2)
+OK    P4969 : |det BASE| = 4969^2 : BASE engendre exactement (p, g(zeta)) (C1 autonome, sans recours a G1)
+OK    P4969 : theta mod P dans F_4969 (q = P inter K de degre 1, f(P/q) = 2, N_{L/K}(P) = q^2)
+OK    P4969 : RACINE du certificat (4770) = image de theta modulo P (4770)
+OK    P4969 : P22 a 22 racines simples modulo 4969 (4969 totalement decompose dans K)
+OK    P4049 : BASE de I_data.gp 88 x 88
+OK    P4049 : I mod 4049 = (g), g facteur de degre 2 de Phi_115 mod 4049 (P de degre residuel 2)
+OK    P4049 : |det BASE| = 4049^2 : BASE engendre exactement (p, g(zeta)) (C1 autonome, sans recours a G1)
+OK    P4049 : theta mod P dans F_4049 (q = P inter K de degre 1, f(P/q) = 2, N_{L/K}(P) = q^2)
+OK    P4049 : RACINE du certificat (512) = image de theta modulo P (512)
+OK    P4049 : P22 a 22 racines simples modulo 4049 (4049 totalement decompose dans K)
+OK    (C2) XI_2 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_3 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_4 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_5 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_6 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_7 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_8 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_9 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_10 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_11 entier algebrique de norme +-1 (unite de K)
+OK    (C2) GAMMA_139 entier algebrique, |N(GAMMA_139)| = 139^331
+OK    (C2) v(GAMMA_139) = 331 en q_139 = (139, theta - 0) et 0 aux 21 autres premiers : (GAMMA_139) = q_139^331
+OK    (C2) GAMMA_4969 entier algebrique, |N(GAMMA_4969)| = 4969^331
+OK    (C2) v(GAMMA_4969) = 331 en q_4969 = (4969, theta - 4770) et 0 aux 21 autres premiers : (GAMMA_4969) = q_4969^331
+OK    (C2) GAMMA_4049 entier algebrique, |N(GAMMA_4049)| = 4049^331
+OK    (C2) v(GAMMA_4049) = 331 en q_4049 = (4049, theta - 512) et 0 aux 21 autres premiers : (GAMMA_4049) = q_4049^331
+OK    22 classes de (Z/115)^* modulo <22> : les 22 elements tau_b de Gal(K/Q)
+      premiers l utilises : [380651, 1065821, 1522601, 2055511] ; 88 lignes (22 premiers de K au-dessus de chaque l)
+OK    (C3) les 10 unites XI_a sont independantes modulo les puissances 331-iemes (rang 10)
+OK    (C3) GAMMA_4049 n'est pas dans <unites> . K^{*331} (rang 11) : [P4049]^3 != 1
+OK    (C3) rappel : GAMMA_139 n'est pas dans <unites> . K^{*331} (rang 11)
+OK    (C3) rappel : GAMMA_4969 n'est pas dans <unites> . K^{*331} (rang 11)
+      cible 139 : rangs de [unites | c_b] pour les 22 tau_b : [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
+OK    (C4) cible 139 : pour chacun des 22 tau dans Gal(K/Q), GAMMA_4049 / tau(GAMMA_139) n'est pas dans <unites> . K^{*331} (rang 11)
+      cible 4969 : rangs de [unites | c_b] pour les 22 tau_b : [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
+OK    (C4) cible 4969 : pour chacun des 22 tau dans Gal(K/Q), GAMMA_4049 / tau(GAMMA_4969) n'est pas dans <unites> . K^{*331} (rang 11)
+OK    (C5) 4049 = 1 mod 23 : 4049 est decompose dans F = Q(sqrt(-23))
+OK    (C5) 4*4049 = 16196 n'est pas de la forme a^2 + 23 b^2 : le premier de F au-dessus de 4049 n'est pas principal
+OK    (C5) rappel (note, rem. 6.11) : 599 = 24^2 + 23, N_{L/F}(P599) est principal
+BILAN : 49 controles, 0 echecs
+CONCLUSION (SANS GRH) : [P4049] n'est conjugue sous Gal(L/Q) ni a la classe principale, ni aux classes de 3-torsion,
+  ni a [P139], ni a [P599], ni a [P4969]. Avec le theoreme d'isometrie : X_4049 n'est isometrique ni a L0, ni a LS,
+  ni a X_139, ni a X_599, ni a X_4969.
+code de sortie 0

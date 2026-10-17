@@ -1,0 +1,145 @@
+  ***   Warning: new maximum stack size = 4000000000 (3814.697 Mbytes).
+OK    ordre maximal de K22 certifie (nfcertify)
+OK    certificat P139 : meme polynome P22
+OK    xi_2 entier algebrique de norme +-1
+OK    xi_3 entier algebrique de norme +-1
+OK    xi_4 entier algebrique de norme +-1
+OK    xi_5 entier algebrique de norme +-1
+OK    xi_6 entier algebrique de norme +-1
+OK    xi_7 entier algebrique de norme +-1
+OK    xi_8 entier algebrique de norme +-1
+OK    xi_9 entier algebrique de norme +-1
+OK    xi_10 entier algebrique de norme +-1
+OK    xi_11 entier algebrique de norme +-1
+  *** bnfinit: Warning: increasing stack size to 16000000.
+OK    Gamma_139 : (Gamma_139) = q_139^331, egalite exacte d'ideaux
+OK    premiers auxiliaires : premiers, = 1 mod 331*115
+OK    88 premiers de degre 1 au-dessus des 4 premiers auxiliaires
+OK    unites : rang 10 modulo 331
+OK    [unites | Gamma_139] : rang 11 modulo 331
+OK    P139 : (Gamma_q) = q^331 exactement, q = (139, theta - 0)
+OK    P139 : c = 1 (non nul), heure SANS GRH = 0 ; heure de R1 (GRH) = 0 ; support {3,331}
+  *** bnfisprincipal: Warning: increasing stack size to 32000000.
+OK    P599 : (Gamma_q) = q^331 exactement, q = (599, theta - 98)
+OK    P599 : c = 71 (non nul), heure SANS GRH = 8 ; heure de R1 (GRH) = 8 ; support {331}
+OK    P691s24 : (Gamma_q) = q^331 exactement, q = (691, theta - 152)
+OK    P691s24 : c = 227 (non nul), heure SANS GRH = 13 ; heure de R1 (GRH) = 13 ; support {331}
+OK    P829 : (Gamma_q) = q^331 exactement, q = (829, theta - 230)
+OK    P829 : c = 199 (non nul), heure SANS GRH = 5 ; heure de R1 (GRH) = 5 ; support {331}
+OK    P1151s24 : (Gamma_q) = q^331 exactement, q = (1151, theta - 76)
+OK    P1151s24 : c = 67 (non nul), heure SANS GRH = 6 ; heure de R1 (GRH) = 6 ; support {331}
+OK    P1289 : (Gamma_q) = q^331 exactement, q = (1289, theta - 843)
+OK    P1289 : c = 134 (non nul), heure SANS GRH = 7 ; heure de R1 (GRH) = 7 ; support {3,331}
+OK    P1979 : (Gamma_q) = q^331 exactement, q = (1979, theta - 535)
+OK    P1979 : c = 314 (non nul), heure SANS GRH = 4 ; heure de R1 (GRH) = 4 ; support {3,331}
+OK    P2531s24 : (Gamma_q) = q^331 exactement, q = (2531, theta - 1625)
+OK    P2531s24 : c = 186 (non nul), heure SANS GRH = 12 ; heure de R1 (GRH) = 12 ; support {3,331}
+OK    P3359 : (Gamma_q) = q^331 exactement, q = (3359, theta - 971)
+OK    P3359 : c = 87 (non nul), heure SANS GRH = 2 ; heure de R1 (GRH) = 2 ; support {331}
+OK    P3911s24 : (Gamma_q) = q^331 exactement, q = (3911, theta - 1706)
+OK    P3911s24 : c = 70 (non nul), heure SANS GRH = 3 ; heure de R1 (GRH) = 3 ; support {3,331}
+OK    P4049 : (Gamma_q) = q^331 exactement, q = (4049, theta - 2430)
+OK    P4049 : c = 86 (non nul), heure SANS GRH = 8 ; heure de R1 (GRH) = 8 ; support {3,331}
+OK    P4831s24 : (Gamma_q) = q^331 exactement, q = (4831, theta - 660)
+OK    P4831s24 : c = 93 (non nul), heure SANS GRH = 11 ; heure de R1 (GRH) = 11 ; support {331}
+OK    P4969 : (Gamma_q) = q^331 exactement, q = (4969, theta - 1398)
+OK    P4969 : c = 233 (non nul), heure SANS GRH = 13 ; heure de R1 (GRH) = 13 ; support {3,331}
+OK    P5981s24 : (Gamma_q) = q^331 exactement, q = (5981, theta - 4786)
+OK    P5981s24 : c = 305 (non nul), heure SANS GRH = 11 ; heure de R1 (GRH) = 11 ; support {3,331}
+OK    P6211s24 : (Gamma_q) = q^331 exactement, q = (6211, theta - 321)
+OK    P6211s24 : c = 115 (non nul), heure SANS GRH = 6 ; heure de R1 (GRH) = 6 ; support {3,331}
+OK    P7591s24 : (Gamma_q) = q^331 exactement, q = (7591, theta - 6533)
+OK    P7591s24 : c = 172 (non nul), heure SANS GRH = 9 ; heure de R1 (GRH) = 9 ; support {3,331}
+OK    P8419 : (Gamma_q) = q^331 exactement, q = (8419, theta - 3216)
+OK    P8419 : c = 132 (non nul), heure SANS GRH = 5 ; heure de R1 (GRH) = 5 ; support {3,331}
+OK    P8741s24 : (Gamma_q) = q^331 exactement, q = (8741, theta - 8242)
+OK    P8741s24 : c = 31 (non nul), heure SANS GRH = 10 ; heure de R1 (GRH) = 10 ; support {331}
+OK    P8971s24 : (Gamma_q) = q^331 exactement, q = (8971, theta - 8349)
+OK    P8971s24 : c = 291 (non nul), heure SANS GRH = 14 ; heure de R1 (GRH) = 14 ; support {3,331}
+OK    P9109 : (Gamma_q) = q^331 exactement, q = (9109, theta - 5204)
+OK    P9109 : c = 323 (non nul), heure SANS GRH = 3 ; heure de R1 (GRH) = 3 ; support {331}
+OK    P9431s24 : (Gamma_q) = q^331 exactement, q = (9431, theta - 5944)
+OK    P9431s24 : c = 273 (non nul), heure SANS GRH = 2 ; heure de R1 (GRH) = 2 ; support {3,331}
+OK    P9661s24 : (Gamma_q) = q^331 exactement, q = (9661, theta - 6349)
+OK    P9661s24 : c = 329 (non nul), heure SANS GRH = 1 ; heure de R1 (GRH) = 1 ; support {331}
+OK    P14951s24 : (Gamma_q) = q^331 exactement, q = (14951, theta - 882)
+OK    P14951s24 : c = 82 (non nul), heure SANS GRH = 14 ; heure de R1 (GRH) = 14 ; support {331}
+OK    P15319 : (Gamma_q) = q^331 exactement, q = (15319, theta - 6571)
+OK    P15319 : c = 232 (non nul), heure SANS GRH = 4 ; heure de R1 (GRH) = 4 ; support {331}
+  *** bnfisprincipal: Warning: increasing stack size to 64000000.
+OK    P17389 : (Gamma_q) = q^331 exactement, q = (17389, theta - 11634)
+OK    P17389 : c = 252 (non nul), heure SANS GRH = 10 ; heure de R1 (GRH) = 10 ; support {3,331}
+OK    P18401s24 : (Gamma_q) = q^331 exactement, q = (18401, theta - 5943)
+OK    P18401s24 : c = 122 (non nul), heure SANS GRH = 1 ; heure de R1 (GRH) = 1 ; support {3,331}
+OK    P23599 : (Gamma_q) = q^331 exactement, q = (23599, theta - 4261)
+OK    P23599 : c = 203 (non nul), heure SANS GRH = 7 ; heure de R1 (GRH) = 7 ; support {331}
+OK    P33581s24 : (Gamma_q) = q^331 exactement, q = (33581, theta - 7147)
+OK    P33581s24 : c = 56 (non nul), heure SANS GRH = 9 ; heure de R1 (GRH) = 9 ; support {331}
+OK    P39239 : (Gamma_q) = q^331 exactement, q = (39239, theta - 37054)
+OK    P39239 : c = 239 (non nul), heure SANS GRH = 12 ; heure de R1 (GRH) = 12 ; support {331}
+OK    P53269 : (Gamma_q) = q^331 exactement, q = (53269, theta - 28037)
+OK    P53269 : c = 180 (non nul), heure SANS GRH = 0 ; heure de R1 (GRH) = 0 ; support {331}
+OK    P5659 : (Gamma_q) = q^331 exactement, q = (5659, theta - 2454)
+OK    P5659 : c = 39 (non nul), heure SANS GRH = 11 ; heure de R1 (GRH) = 11 ; support {331}
+OK    P461s24 : (Gamma_q) = q^331 exactement, q = (461, theta - 0)
+OK    P461s24 : c = 330 (non nul), heure SANS GRH = 0 ; heure de R1 (GRH) = 0 ; support {3,331}
+OK    P1381s24 : (Gamma_q) = q^331 exactement, q = (1381, theta - 382)
+OK    P1381s24 : c = 43 (non nul), heure SANS GRH = 7 ; heure de R1 (GRH) = 7 ; support {3,331}
+OK    P3221s24 : (Gamma_q) = q^331 exactement, q = (3221, theta - 2959)
+OK    P3221s24 : c = 307 (non nul), heure SANS GRH = 4 ; heure de R1 (GRH) = 4 ; support {3,331}
+OK    P5521s24 : (Gamma_q) = q^331 exactement, q = (5521, theta - 2652)
+OK    P5521s24 : c = 72 (non nul), heure SANS GRH = 5 ; heure de R1 (GRH) = 5 ; support {331}
+OK    P157146581 : (Gamma_q) = q^331 exactement, q = (157146581, theta - 13746445)
+OK    P157146581 : c = 318 (non nul), heure SANS GRH = 10 ; heure de R1 (GRH) = 10 ; support {3,331}
+OK    P139pub : (Gamma_q) = q^331 exactement, q = (139, theta - 0)
+OK    P139pub : c = 1 (non nul), heure SANS GRH = 0 ; heure de R1 (GRH) = 0 ; support {3,331}
+OK    P599pub : (Gamma_q) = q^331 exactement, q = (599, theta - 333)
+OK    P599pub : c = 63 (non nul), heure SANS GRH = 8 ; heure de R1 (GRH) = 8 ; support {331}
+OK    P4969pub : (Gamma_q) = q^331 exactement, q = (4969, theta - 4770)
+OK    P4969pub : c = 41 (non nul), heure SANS GRH = 13 ; heure de R1 (GRH) = 13 ; support {3,331}
+OK    P4049pub : (Gamma_q) = q^331 exactement, q = (4049, theta - 512)
+OK    P4049pub : c = 53 (non nul), heure SANS GRH = 8 ; heure de R1 (GRH) = 8 ; support {3,331}
+
+BILAN DES ETIQUETTES (c : [I]_331 = c [P139]_331 ; heure h : c dans 2^h mu_22) :
+  P139         p = 139        support {3,331}  c =   1  heure  0   (R1 sous GRH :  0)
+  P599         p = 599        support {331}    c =  71  heure  8   (R1 sous GRH :  8)
+  P691s24      p = 691        support {331}    c = 227  heure 13   (R1 sous GRH : 13)
+  P829         p = 829        support {331}    c = 199  heure  5   (R1 sous GRH :  5)
+  P1151s24     p = 1151       support {331}    c =  67  heure  6   (R1 sous GRH :  6)
+  P1289        p = 1289       support {3,331}  c = 134  heure  7   (R1 sous GRH :  7)
+  P1979        p = 1979       support {3,331}  c = 314  heure  4   (R1 sous GRH :  4)
+  P2531s24     p = 2531       support {3,331}  c = 186  heure 12   (R1 sous GRH : 12)
+  P3359        p = 3359       support {331}    c =  87  heure  2   (R1 sous GRH :  2)
+  P3911s24     p = 3911       support {3,331}  c =  70  heure  3   (R1 sous GRH :  3)
+  P4049        p = 4049       support {3,331}  c =  86  heure  8   (R1 sous GRH :  8)
+  P4831s24     p = 4831       support {331}    c =  93  heure 11   (R1 sous GRH : 11)
+  P4969        p = 4969       support {3,331}  c = 233  heure 13   (R1 sous GRH : 13)
+  P5981s24     p = 5981       support {3,331}  c = 305  heure 11   (R1 sous GRH : 11)
+  P6211s24     p = 6211       support {3,331}  c = 115  heure  6   (R1 sous GRH :  6)
+  P7591s24     p = 7591       support {3,331}  c = 172  heure  9   (R1 sous GRH :  9)
+  P8419        p = 8419       support {3,331}  c = 132  heure  5   (R1 sous GRH :  5)
+  P8741s24     p = 8741       support {331}    c =  31  heure 10   (R1 sous GRH : 10)
+  P8971s24     p = 8971       support {3,331}  c = 291  heure 14   (R1 sous GRH : 14)
+  P9109        p = 9109       support {331}    c = 323  heure  3   (R1 sous GRH :  3)
+  P9431s24     p = 9431       support {3,331}  c = 273  heure  2   (R1 sous GRH :  2)
+  P9661s24     p = 9661       support {331}    c = 329  heure  1   (R1 sous GRH :  1)
+  P14951s24    p = 14951      support {331}    c =  82  heure 14   (R1 sous GRH : 14)
+  P15319       p = 15319      support {331}    c = 232  heure  4   (R1 sous GRH :  4)
+  P17389       p = 17389      support {3,331}  c = 252  heure 10   (R1 sous GRH : 10)
+  P18401s24    p = 18401      support {3,331}  c = 122  heure  1   (R1 sous GRH :  1)
+  P23599       p = 23599      support {331}    c = 203  heure  7   (R1 sous GRH :  7)
+  P33581s24    p = 33581      support {331}    c =  56  heure  9   (R1 sous GRH :  9)
+  P39239       p = 39239      support {331}    c = 239  heure 12   (R1 sous GRH : 12)
+  P53269       p = 53269      support {331}    c = 180  heure  0   (R1 sous GRH :  0)
+  P5659        p = 5659       support {331}    c =  39  heure 11   (R1 sous GRH : 11)
+  P461s24      p = 461        support {3,331}  c = 330  heure  0   (R1 sous GRH :  0)
+  P1381s24     p = 1381       support {3,331}  c =  43  heure  7   (R1 sous GRH :  7)
+  P3221s24     p = 3221       support {3,331}  c = 307  heure  4   (R1 sous GRH :  4)
+  P5521s24     p = 5521       support {331}    c =  72  heure  5   (R1 sous GRH :  5)
+  P157146581   p = 157146581  support {3,331}  c = 318  heure 10   (R1 sous GRH : 10)
+  P139pub      p = 139        support {3,331}  c =   1  heure  0   (R1 sous GRH :  0)
+  P599pub      p = 599        support {331}    c =  63  heure  8   (R1 sous GRH :  8)
+  P4969pub     p = 4969       support {3,331}  c =  41  heure 13   (R1 sous GRH : 13)
+  P4049pub     p = 4049       support {3,331}  c =  53  heure  8   (R1 sous GRH :  8)
+BILAN : 97 controles (attendus 97), 0 echecs ; 40 cibles traitees sur 40
+CADRAN_SANS_GRH_OK

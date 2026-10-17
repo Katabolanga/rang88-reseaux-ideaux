@@ -1,0 +1,11 @@
+2026-10-15 18:31:13  attente de la fin des calculs dans /root/calcul_externe_P4969
+2026-10-16 02:59:29  plus aucun calcul : bilan
+2026-10-16 02:59:31  bilan fait ; extinction dans 15 min
+2026-10-16 03:01:05  ancien veilleur arrete par Claude : replication de P4969 cote 2 sous OpenJDK 17 sur cette machine
+2026-10-16 03:02:17  attente de la fin des calculs dans /root/calcul_externe_P4969
+2026-10-16 11:09:29  [enchainement P461s24] veilleur d'extinction de P4969 remplace par l'enchainement vers P461s24
+2026-10-16 11:21:35  [enchainement P461s24] P4969 cote 2 termine : code 0 ; propre = 1
+2026-10-16 11:21:38  [enchainement P461s24] bilan P4969 fait (bilan_replication_cote2_auto.log)
+2026-10-16 11:21:58  [enchainement P461s24] P461s24 lance (2 cotes, 16 fils chacun)
+2026-10-16 14:01:18  [enchainement P461s24] P461s24 termine ; bilan_P461s24.txt ecrit
+2026-10-16 14:01:18  [enchainement P461s24] extinction dans 15 min

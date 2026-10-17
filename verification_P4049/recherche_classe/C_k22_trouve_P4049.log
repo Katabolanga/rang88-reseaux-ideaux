@@ -1,0 +1,9 @@
+K22 : Cl = [662] (GRH) ; disc = [-1, 1; 5, 11; 23, 21]  [0 s]
+RACINE : theta = 512 mod P4049
+classe de q4049 dans Cl(K22) (GRH) : [356]
+classe de q139 (GRH) : [294] ; classes de ses 22 conjugues (GRH) : [294, 602, 60, 466, 196, 208, 454, 572, 90, 110, 552, 350, 312, 622, 40, 194, 468, 166, 496, 82, 368, 580]
+INDICATIF (GRH) : classe de q4049 parmi celles des conjugues de q139 : NON
+classes des 22 conjugues de q4969 (GRH) : [138, 188, 474, 570, 92, 584, 78, 282, 380, 538, 124, 448, 214, 346, 316, 10, 652, 186, 476, 52, 524, 610]
+INDICATIF (GRH) : classe de q4049 parmi celles des conjugues de q4969 : NON
+generateur de q4049^331 trouve ; norme = 4049^331  [0 s]
+ecrit recherche_classe/C_k22_certificat_P4049.txt  [0 s]

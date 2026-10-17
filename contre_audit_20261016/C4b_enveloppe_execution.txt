@@ -1,0 +1,11 @@
+# Enveloppe shell de l'execution C4b (v1), telle que captee par la tache de fond de Claude b9xjxu0ng, 16 oct. 2026.
+# Commande : cd contre_audit_20261016 && date '+%T debut' && timeout 36000 gp -q -D parisize=200000000 C4b_compte_U_P139_complet.gp < /dev/null > C4b_compte_U_P139_complet.log 2>&1; echo "code $?"; date '+%T fin'; cat C4b_compte_U_P139_complet.log
+# Le code ci-dessous est celui de timeout enveloppant gp ; c'est une capture de l'auteur, pas une capture independante.
+11:07:40 debut
+code 0
+14:23:23 fin
+A : 44 x 44, entiere, symetrique ; B = floor(139 * 1057/200) = 734 ; debut
+energie <= 1057/200 : B = 734 : compte PARI = 42957972 ; attendu 42957972 : IDENTIQUE  [11260 s]
+FIN_C4B
+
+[exited with code 0]
