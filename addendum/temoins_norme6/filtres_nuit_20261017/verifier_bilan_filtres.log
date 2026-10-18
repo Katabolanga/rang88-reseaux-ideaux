@@ -1,0 +1,8 @@
+OK    F1 : audit de reference AUDIT_REJETS_20261017_044917.txt, SHA-256 7d3c6722f24f123b0500fb1741eb3c5b5b014d875e638e70682b6a87f01f66cf, cite par comptes_filtres.tex et couts_recensement.tex ; 4 rejets demontres
+OK    F2 : BILAN_FILTRES.txt : 21 filtres distincts, 4 rejets (ceux de l'audit), 17 survivants partiels
+OK    F3 : 42 journaux, codes de sortie et fichiers de recus ; touches des 4 rejets concordantes (journal, fichier, bilan)
+OK    F4 : 21 lignes recalculees = addendum/tableau_filtres_en.tex (octet pour octet)
+OK    F4 : 21 lignes recalculees = addendum/tableau_filtres_fr.tex (octet pour octet)
+OK    F5 : macros recalculees = addendum/comptes_filtres.tex (21 filtres ; 4 rejets, 3 int. et 1 ext. ; 17 survivants ; projections 4.3 a 10.9 millions)
+BILAN : 6 controles (attendus 6), 0 echecs
+BILAN_FILTRES_CONFORME

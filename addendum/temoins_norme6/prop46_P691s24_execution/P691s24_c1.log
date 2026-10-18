@@ -1,0 +1,20 @@
+Rang88CertZ run : java_P691s24/cote1 ; mode=run|n=44|BA=1057/200|S=12|DA=691|DB=1|d=1382|F=40|D=6|Dmax=16|seuil=0.2 ; 4 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 11.0.16.1 ; Windows 11 amd64 ; processeurs 16 ; PID 2732 ; Sat Oct 17 00:17:28 CEST 2026
+  ENTREES SHA-256 : A 7f86058650ed5d1e014ebd8b76ece2790a59c4b53ec8726b56a641a522b20af2 ; B 7953b19500ae70856779302394be1b2b4f1bb76261b1223616bcc44ed37162a3 ; T 69b9fd30a61b74b20f821719718e564155abdc88dbebe865aa8ad972eb525dae ; meta a8214fe165610c0203fb589713aebeeee517340e73c00f2d9d0ad7c9e3fb3ae4
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=bd6ddac6e6421c2f6626a220c94ba4590286f425f8390063ee33f25b591ec072|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 132.88461538461536 , max dL = 1650.0 , max |q| ~ 0.4999944327802879 ; fibre : min dL = 1.675151515151515 , max dL = 16.0 , max |q| ~ 0.5043414028968627 ; B_U(court) = 3651.9350000000004
+  99433 taches certifiees (121554 noeuds de generation) ; niv37:32588 niv36:1520 niv35:2638 niv34:3993 niv33:5610 niv32:7064 niv31:8560 niv30:9202 niv29:9625 niv28:9117 niv27:9516
+CATALOGUE_SHA256 c9bb045414729d9744865d9588c9b6371e2bf967e45a4d96d7588d3dfcd73027 ; TOTAL_TACHES 99433
+CHECKPOINT nouveau : ../../relecture_astra/recens30/tinv/P691s24_c1.ckpt
+SELECTION 99433/99433 ; A_FAIRE 99433 ; DEJA_AU_CHECKPOINT 0
+TOUCHE court=3542/691 fibre(num)=13129000/(1*1382^2) u=[0, 2, 0, -1, 1, -1, -2, 2, -2, 0, 0, -1, 2, -1, 1, 0, 1, 1, -1, 0, 1, 0, 0, -1, 0, 0, 0, 1, 0, 1, -1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] y=[-4, -1, 1, -1, -2, -1, 0, -1, -4, -2, 0, 0, 2, 1, 5, -1, 3, 2, -3, 2, -1, 1, 0, -2, -3, -1, 0, -2, 2, 2, -1, 0, 1, -1, -5, -1, -1, -2, 0, 1, -1, 1, 1, 1]
+ARRET_SUR_TOUCHE : 99238 taches non executees (temoin positif trouve ; aucune conclusion negative)
+CHECKPOINT_SHA256 50357322b92d8b1bd1d0f5ccc76952eae94b0d28c3913fc6a8c14d568ce3e4cf ; ../../relecture_astra/recens30/tinv/P691s24_c1.ckpt
+EXECUTEES_CE_LANCEMENT 195 ; REPRISES_DU_CHECKPOINT 0
+TACHES_TERMINEES 195/99433
+COMPTE_U (au signe pres, energie courte <= 1057/200) 579613 ; histogramme [2.3,2.4):1 [2.5,2.6):2 [2.6,2.7):3 [2.7,2.8):5 [2.8,2.9):13 [2.9,3.0):16 [3.0,3.1):37 [3.1,3.2):45 [3.2,3.3):87 [3.3,3.4):172 [3.4,3.5):226 [3.5,3.6):361 [3.6,3.7):541 [3.7,3.8):832 [3.8,3.9):1175 [3.9,4.0):1861 [4.0,4.1):2784 [4.1,4.2):4124 [4.2,4.3):5817 [4.3,4.4):8468 [4.4,4.5):12355 [4.5,4.6):17487 [4.6,4.7):24504 [4.7,4.8):34502 [4.8,4.9):47556 [4.9,5.0):65709 [5.0,5.1):90177 [5.1,5.2):123728 [5.2,5.3):137025 
+NOEUDS court 116418147 ; fibre 6936367326 ; CVP 579613
+TOTAL_TOUCHES 1
+COUVERTURE_PARTIELLE 195/99433 : AUCUNE CONCLUSION GLOBALE
+FIN [183 s]

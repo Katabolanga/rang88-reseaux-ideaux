@@ -1,0 +1,14 @@
+  ***   Warning: new maximum stack size = 2000000000 (1907.349 Mbytes).
+OK    PREMIERS = [[5981, 16], [5981, 5092]]
+OK    forme de la liste couverte par ce verificateur : (A) un premier de degre 2 seul, ou (B) P et sigma_24(P) de degre 1, racines reduites modulo p, distinctes, r2 = r1^24
+OK    chaque colonne de BASE est dans le premier [5981, 16] (degre 1)
+OK    chaque colonne de BASE est dans le premier [5981, 5092] (degre 1)
+OK    BASE 88 x 88 entiere et |det BASE| = N(I) = 35772361 : BASE engendre exactement I
+OK    GRAM recalculee depuis ALPHA = GRAM du fichier
+OK    GRAM entiere, paire, de determinant 1
+OK    GRAM definie positive (88 pivots de Gauss > 0)
+OK    cote 1, touche 1 : x entier dans BASE et x~ GRAM x = 6 (norme 6)
+      x = [-2543, 265, -350, -190, 222, 326, 385, 159, 25, -53, -113, 82, -137, -116, -197, -47, 86, 322, 260, 9, -215, -462, -311, -162, 254, 280, 295, 123, 36, 43, -16, 94, -174, -214, -229, -17, 124, 364, 215, -67, -199, -417, -188, -80, 200, 182, 168, 78, 118, 129, 56, 87, -239, -246, -226, 44, 148, 325, 153, -145, -173, -313, -87, -5, 130, 58, 94, 32, 203, 218, 74, 81, -305, -269, -172, 72, 352, 440, 235, 183, -152, 234, -208, 1, 3, 80, -112, 222]
+OK    au moins une touche verifiee
+BILAN : 10 controles (attendus 10), 0 echecs
+TEMOIN_NORME6_OK

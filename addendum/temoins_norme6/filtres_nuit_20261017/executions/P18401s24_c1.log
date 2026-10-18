@@ -1,0 +1,11 @@
+Rang88CertZ run : java_P18401s24/cote1 ; mode=run|n=44|BA=1057/200|S=12|DA=18401|DB=1|d=36802|F=40|D=6|Dmax=16|seuil=0.2 ; 5 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 11.0.16.1 ; Windows 11 amd64 ; processeurs 16 ; PID 36168 ; Sat Oct 17 04:02:51 CEST 2026
+  ENTREES SHA-256 : A 6c19d4702f69c25fe31eb0d606162f04c7f5f89ea6595ac324ea2696ca30ad6c ; B 526ef608f7f8c077570e593255c945b16410239eb3422bcdd151fa274cef1556 ; T 532df55e43efd651153ff379bae071b23c017a76e4c31b5fd386077405bf0ec5 ; meta b9f5f6b71b0b1763859a3b6fb3ec484e05ec54513d4bf934e3adba91546917ac
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=7901eed87e801f0e5b23f6f585662fde12bdbb1d69f4d3899110e19822c2a2be|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 3680.2 , max dL = 35498.0 , max |q| ~ 0.503153167377878 ; fibre : min dL = 1.9110972633328138 , max dL = 20.0 , max |q| ~ 0.5085842820418656 ; B_U(court) = 97249.285
+  140603 taches certifiees (167978 noeuds de generation) ; niv37:31347 niv36:1619 niv35:2872 niv34:4372 niv33:6452 niv32:9092 niv31:11764 niv30:14094 niv29:17399 niv28:19502 niv27:22090
+CATALOGUE_SHA256 8328ef20b1c92f3179d08d9e1d813932434e67c306469aefbebb3b60765bfd9b ; TOTAL_TACHES 140603
+CHECKPOINT nouveau : ../../relecture_astra/recens30/filtres_1017/P18401s24_c1.ckpt
+SELECTION 140603/140603 ; A_FAIRE 140603 ; DEJA_AU_CHECKPOINT 0
+TOUCHE court=85506/18401 fibre(num)=9959062824/(1*36802^2) u=[-3, 0, -2, -1, 2, 0, 0, -1, 1, -1, 1, -2, 2, 2, 0, 0, 0, 0, 2, 0, 0, 1, -1, -1, 0, 0, 0, 0, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] y=[0, -5, -2, -1, 1, 3, 2, 2, 1, 2, -1, 1, 2, -1, -2, 0, -1, 0, -1, 1, 1, -1, 3, 1, -2, -2, 0, -3, -1, -2, 5, 2, 2, 2, -1, 0, 0, -4, 2, -1, 2, 0, 5, -1]

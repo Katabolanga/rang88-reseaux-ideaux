@@ -1,0 +1,10 @@
+Rang88CertZ run : java_P18401s24/cote2 ; mode=run|n=44|BA=1057/200|S=12|DA=18401|DB=1|d=36802|F=40|D=6|Dmax=16|seuil=0.2 ; 5 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 11.0.16.1 ; Windows 11 amd64 ; processeurs 16 ; PID 28144 ; Sat Oct 17 04:02:51 CEST 2026
+  ENTREES SHA-256 : A 1536875e070e336fabd462fe65405ebd02a9dfc23902f0db2bbfce9e7c768929 ; B 01bd1e89f98881cf88af619e5fac1d25c0b45601fa8925d1c036ccb0eafbbf34 ; T 65f86a35bcc837eda64c8ea48a9f0a92fc7850b2bbafa674117ed6289d9df5e3 ; meta b9f5f6b71b0b1763859a3b6fb3ec484e05ec54513d4bf934e3adba91546917ac
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=18d4d73579345374a256d8eab6f32746c9f4bfe4c0e14299e1269f69b8bd14c2|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 3680.2 , max dL = 35498.0 , max |q| ~ 0.5089453521557753 ; fibre : min dL = 1.609710224166211 , max dL = 20.0 , max |q| ~ 0.5 ; B_U(court) = 97249.285
+  164259 taches certifiees (196430 noeuds de generation) ; niv37:37342 niv36:1908 niv35:3228 niv34:5448 niv33:8689 niv32:12069 niv31:14847 niv30:17630 niv29:19996 niv28:20398 niv27:22704
+CATALOGUE_SHA256 e8def750c9c4fcc5e601be47d64bf175dbb50bca17aa66635526b14ca9cc7d45 ; TOTAL_TACHES 164259
+CHECKPOINT nouveau : ../../relecture_astra/recens30/filtres_1017/P18401s24_c2.ckpt
+SELECTION 164259/164259 ; A_FAIRE 164259 ; DEJA_AU_CHECKPOINT 0

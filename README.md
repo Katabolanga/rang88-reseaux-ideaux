@@ -4,29 +4,39 @@ Données, programmes et vérifications qui accompagnent la note **« Réseaux id
 
 Le dépôt est autoportant : avec PARI/GP 2.15, Python ≥ 3.9 (bibliothèque standard seulement) et, pour les essais facultatifs, Java 11 ou plus, on peut rejouer toutes les vérifications exactes de la note, sauf les deux qui lisent la matrice de Gram de L₀ publiée par R. Sakamoto : ce fichier n'est pas redistribué et doit être téléchargé à part (`externe/LISEZMOI.md`). Les balayages certifiants eux-mêmes (plusieurs heures par côté) ne sont pas relancés par les vérificateurs : leurs reçus, journaux et catalogues sont fournis et contrôlés exactement ; la commande pour les refaire est dans `REPRODUIRE.md`.
 
+## Version 1.2 (18 octobre 2026) : témoins de norme 6 de l'addendum
+
+La version 1.2 publie les pièces annoncées dans la version 1.1, et une pièce qui manquait. Tout est dans `addendum/temoins_norme6/` (voir son `LISEZMOI.md`).
+- **Les quatre rejets des filtres du § 4.5 de l'addendum (tableau 4).** Leurs témoins de norme 6 ; le bilan des 21 filtres, l'audit des rejets du 17 octobre et les journaux des filtres.
+- **Le témoin de norme 6 de la proposition 4.6 de l'addendum.** Le réseau de I = P₆₉₁σ₂₄(P₆₉₁), jumeau de X₄₉₆₉, contient un vecteur de norme 6 ; le théorème B en dépend. Ce témoin n'était pas public dans la version 1.1, et il n'y était pas annoncé.
+- **Deux vérificateurs autonomes** de ces cinq témoins, l'un en PARI/GP, l'autre en Python sans PARI. Ils reconstruisent une base de l'idéal à partir de ses deux générateurs, et la matrice de Gram à partir de α seul.
+- **Une précision de statut** (ci-dessous) : la non-isométrie entre deux réseaux candidats est démontrée sans GRH, mais elle suppose le minimum 8, assisté par calcul, d'au moins un des deux réseaux comparés.
+
+Les textes de la note et de l'addendum (`.tex`, `.pdf`) sont inchangés ; leurs corrections iront dans une version 2 sur arXiv.
+
 ## Version 1.1 (17 octobre 2026) : addendum
 
 L'**addendum** est dans `addendum/addendum_en.pdf` (14 p.) et `addendum/addendum_fr.pdf` (15 p.), avec ses sources dans `addendum/`. Il apporte trois résultats.
 
 - **Théorème A, six réseaux extrémaux.** Soit P₄₉₆₉ = (4969, ζ² + 3763ζ + 2809) et P₄₀₄₉ = (4049, ζ² + 105ζ + 2084). Les réseaux X₄₉₆₉ et X₄₀₄₉ sont pairs, unimodulaires, de rang 88 et de minimum 8. Avec X₁₃₉, X₅₉₉, L₀ et L_S, la famille contient donc au moins six réseaux extrémaux, deux à deux non isométriques.
   - Le minimum est assisté par calcul (M1, M2, H1–H3). Chaque côté a été balayé deux fois sur deux machines louées, avec des reçus identiques à l'octet.
-  - La non-isométrie est démontrée, sans GRH.
-- **Théorème B.** L'extrémalité n'est pas un invariant des paires de jumeaux de la couche σ₂₄. (X₄₀₄₉, X₅₉₉) est une paire extrémale, comme (L₀, L_S) ; en revanche, le jumeau de X₄₉₆₉ contient un vecteur de norme 6. Les relations de jumeaux et ce vecteur sont démontrés, sans GRH.
+  - La non-isométrie est démontrée sans GRH, sous le minimum 8 assisté par calcul de X₄₉₆₉ ou X₄₀₄₉. En effet, la non-conjugaison des classes est démontrée sans GRH, mais le théorème d'isométrie qui la transforme en non-isométrie demande le minimum 8 d'au moins un des deux réseaux comparés ; pour X₁₃₉ et X₅₉₉, ce minimum est lui aussi assisté par calcul. La non-isométrie à L₀ et à L_S ne dépend pas de ce minimum assisté : un réseau de minimum au plus 6 n'est pas isométrique à un réseau de minimum 8, et le minimum 8 de L₀ et de L_S est établi par Sakamoto.
+- **Théorème B.** L'extrémalité n'est pas un invariant des paires de jumeaux de la couche σ₂₄. (X₄₀₄₉, X₅₉₉) est une paire extrémale, comme (L₀, L_S) ; en revanche, le jumeau de X₄₉₆₉ contient un vecteur de norme 6. Les relations de jumeaux et ce vecteur sont démontrés, sans GRH ; le vecteur est publié depuis la version 1.2 (`addendum/temoins_norme6/`).
 - **Théorème C, le cadran de la couche σ₂₄ sans GRH.** L'orbite d'un idéal de la couche se lit sur des résidus de puissance 331-ième.
 
 | Énoncé de l'addendum | Statut | Dossier | Commande | Résultat attendu |
 |---|---|---|---|---|
 | X₄₉₆₉, X₄₀₄₉ : pairs, unimodulaires, définis positifs ; raccord exact des entrées ; vecteur de norme 8 (prop. 2.1) | démontré | `verification_P4969/`, `verification_P4049/` | `python3 -I code/verification/verifier_raccord.py P4969` (depuis le dossier ; idem pour P4049) | `BILAN : 37 controles, 0 echecs`, `FIN_OK` |
-| Classes non conjuguées, donc non-isométrie (prop. 2.3) | démontré, sans GRH | idem | `python3 -I code/verification/verifier_non_isometrie_P4969_v2.py` (idem pour P4049) | code de sortie 0 |
+| Classes non conjuguées (prop. 2.3), donc non-isométrie (th. A) | non-conjugaison : démontrée, sans GRH ; non-isométrie : démontrée sans GRH sous le minimum 8 assisté par calcul de X₄₉₆₉ ou X₄₀₄₉ (le théorème d'isométrie demande le minimum 8 d'au moins un des deux réseaux comparés) ; à L₀ et L_S : sans ce minimum assisté | idem | `python3 -I code/verification/verifier_non_isometrie_P4969_v2.py` (idem pour P4049) | code de sortie 0 |
 | Minimum 8 de X₄₉₆₉ et X₄₀₄₉ : balayages complets et répliqués (§ 2.2) | assisté par calcul (M1, M2, H1–H3) | `calcul_externe_resultats_20261015/` | voir le `LISEZMOI.md` du dossier | 27 contrôles et 0 échec par exécution ; empreintes canoniques égales deux à deux |
 | Fiches au format du catalogue de Nebe et Sloane (X₁₃₉, X₅₉₉, X₄₉₆₉, X₄₀₄₉) ; sous-groupes d'ordre 460 et 920 | démontré (contrôles exacts) | `catalogue/` | `python3 -I verify_std.py X139.std X599.std X4969.std X4049.std` ; `python3 verify_construction.py X139 X599 X4969 X4049` | `all checks passed` ; `all reconstructions agree with the .std files` |
 | Jumeaux et même orbite (prop. 4.5) | démontré, sans GRH | `addendum/certificats_jumeaux/` | `gp -q jumeaux_K22.gp < /dev/null` ; `gp -q meme_orbite_K22.gp < /dev/null` | certificats OK, code de sortie 0 |
 | Cadran sans GRH (prop. 4.7, cor. 4.8, th. C) | démontré, sans GRH | `addendum/cadran_sans_GRH/` | `gp -q cadran_sans_GRH.gp < /dev/null` ; `python3 -I verifier_cadran.py` | `CADRAN_SANS_GRH_OK` (97) ; `CADRAN_VERIFIE_SANS_PARI` (186) |
 | Attaques contre la méthode (§ 3) | constaté | `contre_audit_20261016/` | voir le `LISEZMOI.md` du dossier | bilans C1–C4 |
+| Quatre rejets des filtres (§ 4.5, tableau 4) ; vecteur de norme 6 du jumeau de X₄₉₆₉, réseau de P₆₉₁σ₂₄(P₆₉₁) (prop. 4.6, th. B) (version 1.2) | démontré, sans GRH | `addendum/temoins_norme6/` | `gp -q -D parisize=400000000 addendum/temoins_norme6/verifier_temoins_norme6.gp < /dev/null` ; `python3 -I addendum/temoins_norme6/verifier_temoins_norme6.py` (depuis la racine) | `TEMOINS_NORME6_ADDENDUM_OK` (69 contrôles) ; `TEMOINS_NORME6_VERIFIES_SANS_PARI` (75 contrôles) ; 5 témoins valides sur 5 ; code de sortie 0 |
+| Bilan des 21 filtres de la nuit du 16 au 17 octobre (§ 4.5) : 4 rejets, 17 survivants partiels ; tableau 4 et comptes (version 1.2) | rejets : démontrés (ligne précédente) ; survivants : constaté | `addendum/temoins_norme6/filtres_nuit_20261017/` | `python3 -I addendum/temoins_norme6/filtres_nuit_20261017/verifier_bilan_filtres.py` (depuis la racine) | `BILAN_FILTRES_CONFORME` (6 contrôles) ; tableau 4 recalculé octet pour octet ; code de sortie 0 |
 
-**Pièces à venir, dans la version 1.2 :**
-- les témoins de norme 6 et l'audit des quatre rejets des filtres du § 4.5 (tableau 4) ;
-- les exécutions lourdes du contre-audit (mutants, rejeu prédictif).
+**Pièces à venir, dans une version ultérieure (1.3) :** les exécutions lourdes du contre-audit (mutants, rejeu prédictif). Elles font environ 264 Mo, surtout des catalogues de tâches régénérables, et doivent être allégées avant publication.
 
 **Chemins absolus.** Quelques scripts déjà exécutés contiennent, sur une seule ligne d'affectation, un chemin absolu du poste de l'auteur. Les `LISEZMOI` de leurs dossiers les indiquent. Ces scripts sont publiés à l'identique ; avant de les relancer, remplacer ce chemin par un chemin local.
 
@@ -69,6 +79,7 @@ externe/            LISEZMOI.md : où placer le fichier de R. Sakamoto (non redi
 preuve/             PREUVE_NON_OMISSION.md, LIAISON_PREUVE_CODE.md
 verification/       RESULTATS.md : sorties réelles des vérifications rejouées depuis ce dépôt
 addendum/           addendum (anglais, français ; sources, PDF), certificats de jumelage et du cadran sans GRH (version 1.1)
+addendum/temoins_norme6/   témoins de norme 6 du tableau 4 et de la prop. 4.6, vérificateurs GP et Python, bilan et journaux des 21 filtres (version 1.2)
 catalogue/          fiches .std au format du catalogue de Nebe et Sloane, constructions, vérificateurs (version 1.1)
 verification_P4969/, verification_P4049/   raccord exact et non-isométrie de X₄₉₆₉ et X₄₀₄₉ (version 1.1)
 calcul_externe_resultats_20261015/        balayages certifiés de X₄₉₆₉, X₄₀₄₉ et leurs réplications (version 1.1)
@@ -90,6 +101,12 @@ Pour ne pas altérer les preuves, plusieurs fichiers sont des copies octet pour 
 
 Aucune formalisation n'est fournie. Les énoncés finis suivants s'y prêteraient (par exemple en Lean, avec des certificats vérifiés par calcul) : les identités matricielles entières (unimodularité, parité et définie-positivité des matrices de Gram ; P G Pᵀ = G_H ; témoins xᵀGx = 6 et 8) ; le calcul exact de h⁻(115) et des normes de B₁,χ ; le décompte des orbites ; les certificats de classe dans K₂₂ (rangs de matrices modulo 331) ; l'arithmétique du seuil 1057/200. La non-omission du programme certifiant relève d'une vérification de programme, beaucoup plus lourde.
 
+## Historique des versions
+
+- **1.0** (15 octobre 2026, commit `f20d0bd`) : note, programmes, données et vérifications.
+- **1.1** (17 octobre 2026, commit `89d8679`) : addendum (X₄₉₆₉ et X₄₀₄₉ extrémaux, jumeaux de la couche σ₂₄, cadran sans GRH), balayages certifiés et réplications, fiches au format du catalogue de Nebe et Sloane, contre-audit du 16 octobre.
+- **1.2** (18 octobre 2026) : témoins de norme 6 des quatre rejets du tableau 4 et de la prop. 4.6 de l'addendum, avec leurs vérificateurs en PARI/GP et en Python ; bilan, audit et journaux des 21 filtres ; précision, dans ce README, du statut de la non-isométrie. Les textes de la note et de l'addendum sont inchangés.
+
 ## Attribution
 
 Auteur : **Ivan Gauvin**, seul responsable scientifique. Claude Opus 5.5 (Anthropic) et Astra (OpenAI) ont assisté l'auteur ; ils ne sont pas auteurs. Leur usage est déclaré à la fin de la note. La matrice de Gram de L₀ et les réseaux L₀ et L_S sont dus à R. Sakamoto (arXiv:2609.15633, v2).
@@ -106,6 +123,8 @@ The repository is self-contained, except for R. Sakamoto's Gram matrix of L₀, 
 
 What can be checked (commands from the repository root; real outputs in `verification/RESULTATS.md`): h⁻(115) = 44 697 909 and the 508 463 Galois orbits (two independent exact computations, PARI/GP and Python); the integer isometry certificate H ≅ L₀; the eight norm-6 witnesses (two independent checkers); the exact link between the certifying program's input files and the lattices X₁₃₉, X₅₉₉, with a norm-8 vector; the receipts, logs and task catalogues of the certifying enumeration `Rang88CertZ`, run twice on two computers (Windows/OpenJDK 11 and Linux/OpenJDK 21) with byte-identical sorted receipts, the reference runs being fresh runs without resume and without any touch file; the class certificates in K₂₂ (without GRH); the GRH-dependent orbit labels; and the regeneration of all input files, byte for byte. The non-omission proof of the program is in `preuve/`, linked line by line to the source.
 
-Status: the minimum 8 of X₁₃₉ and X₅₉₉ is a **computer-assisted proof** under the explicit execution model M1, M2, H1–H3 of the note; non-isometry is proved without GRH. No independent implementation of the enumeration has been run, and no human specialist has reviewed the proofs.
+Status: the minimum 8 of X₁₃₉ and X₅₉₉ is a **computer-assisted proof** under the explicit execution model M1, M2, H1–H3 of the note. Non-isometry is proved without GRH, given the minimum 8 of at least one of the two lattices compared, which the isometry theorem requires; non-isometry to L₀ and L_S does not depend on the computer-assisted minimum. No independent implementation of the enumeration has been run, and no human specialist has reviewed the proofs.
+
+Version 1.1 (October 17, 2026) adds the addendum (X₄₉₆₉ and X₄₀₄₉, twins of the σ₂₄-layer, the dial without GRH) and its data. Version 1.2 (October 18, 2026) adds the norm-6 witnesses of the addendum: the four filter rejections of Table 4, and Proposition 4.6, on which Theorem B relies. They come with a PARI/GP checker and a PARI-free Python checker, in `addendum/temoins_norme6/`.
 
 Author: Ivan Gauvin. Claude Opus 5.5 (Anthropic) and Astra (OpenAI) assisted the author; they are not authors. **Licences:** MIT for the programs in `code/` (`LICENSE`); CC BY 4.0 for the article, data, proofs, verification results and documentation (`LICENSE-CC-BY-4.0.md`); public address of the repository: https://github.com/Katabolanga/rang88-reseaux-ideaux.

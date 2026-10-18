@@ -1,0 +1,22 @@
+# date | ideal | orbite (sous GRH) | verdict | details | temoin exact
+2026-10-17 01:11:58 | P1151s24 | {331} h6 o331=7 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 722 s ; cote 1 : 435/74027 recus ; cote 2 : 714/101373 recus ; | -
+2026-10-17 01:13:21 | P2531s24 | {3,331} h12 o331=10 | REJETE (vecteur de norme 6) | 71 s ; cote 1 : 13/102277 recus ; cote 2 : 14/113576 recus, TOUCHE court=11913/2531 fibre(num)=186878916/(1*5062^2) ; | TEMOIN_NORME6_OK
+2026-10-17 01:25:37 | P3911s24 | {3,331} h3 o331=8 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 723 s ; cote 1 : 276/121190 recus ; cote 2 : 258/117140 recus ; | -
+2026-10-17 01:37:50 | P4831s24 | {331} h11 o331=5 (orbite de P5659) | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 722 s ; cote 1 : 391/128958 recus ; cote 2 : 272/118905 recus ; | -
+2026-10-17 01:43:17 | P5981s24 | {3,331} h11 o331=5 | REJETE (vecteur de norme 6) | 315 s ; cote 1 : 98/113783 recus, TOUCHE court=28185/5981 fibre(num)=1042775388/(1*11962^2) ; cote 2 : 56/106166 recus ; | TEMOIN_NORME6_OK
+2026-10-17 01:55:28 | P6211s24 | {3,331} h6 o331=7 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 720 s ; cote 1 : 228/125722 recus ; cote 2 : 213/144542 recus ; | -
+2026-10-17 02:08:11 | P7591s24 | {3,331} h9 o331=56 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 722 s ; cote 1 : 161/136860 recus ; cote 2 : 168/145973 recus ; | -
+2026-10-17 02:20:46 | P8419 | {3,331} h5 o331=32 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 721 s ; cote 1 : 234/160143 recus ; cote 2 : 185/122470 recus ; | -
+2026-10-17 02:33:20 | P8741s24 | {331} h10 o331=13 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 721 s ; cote 1 : 196/146891 recus ; cote 2 : 157/144637 recus ; | -
+2026-10-17 02:45:56 | P8971s24 | {3,331} h14 o331=19 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 720 s ; cote 1 : 257/170309 recus ; cote 2 : 177/142126 recus ; | -
+2026-10-17 02:58:33 | P9109 | {331} h3 o331=8 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 721 s ; cote 1 : 268/156830 recus ; cote 2 : 191/141983 recus ; | -
+2026-10-17 03:11:12 | P9431s24 | {3,331} h2 o331=4 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 724 s ; cote 1 : 158/128785 recus ; cote 2 : 211/177954 recus ; | -
+2026-10-17 03:23:55 | P9661s24 | {331} h1 o331=2 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 720 s ; cote 1 : 185/174587 recus ; cote 2 : 202/158684 recus ; | -
+2026-10-17 03:36:59 | P14951s24 | {331} h14 o331=19 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 723 s ; cote 1 : 103/137100 recus ; cote 2 : 172/161132 recus ; | -
+2026-10-17 03:49:39 | P15319 | {331} h4 o331=16 (jumeau de P1979, rejete) | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 720 s ; cote 1 : 159/145257 recus ; cote 2 : 139/146724 recus ; | -
+2026-10-17 04:02:14 | P17389 | {3,331} h10 o331=13 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 721 s ; cote 1 : 124/180623 recus ; cote 2 : 123/179678 recus ; | -
+2026-10-17 04:04:44 | P18401s24 | {3,331} h1 o331=2 | REJETE (vecteur de norme 6 ; temoin exact valide) | 101 s ; cote 1 : 13/140603 recus, TOUCHE court=85506/18401 fibre(num)=9959062824/(1*36802^2) ; cote 2 : 12/164259 recus ; | TEMOIN_NORME6_OK (code 0, 1 touche(s), bilan complet)
+2026-10-17 04:17:17 | P23599 | {331} h7 o331=14 (jumeau de P1289, rejete) | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 720 s ; cote 1 : 94/184017 recus ; cote 2 : 107/203685 recus ; | -
+2026-10-17 04:29:51 | P33581s24 | {331} h9 o331=56 | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 720 s ; cote 1 : 61/196370 recus ; cote 2 : 61/216441 recus ; | -
+2026-10-17 04:36:00 | P39239 | {331} h12 o331=10 | REJETE (vecteur de norme 6 ; temoin exact valide) | 335 s ; cote 1 : 20/202297 recus ; cote 2 : 15/178967 recus, TOUCHE court=164472/39239 fibre(num)=48090690576/(1*78478^2) ; | TEMOIN_NORME6_OK (code 0, 1 touche(s), bilan complet)
+2026-10-17 04:48:46 | P53269 | {331} h0 o331=1 (jumeau de X139, extremal) | SURVIVANT PARTIEL (plafond 720 s, 2 x 5 fils) | 730 s ; cote 1 : 26/160581 recus ; cote 2 : 52/214694 recus ; | -

@@ -1,0 +1,87 @@
+== P2531s24 (addendum/temoins_norme6/temoin_P2531s24.gp, SHA-256 87e7adff9575811ccad876e45793ce046717643ec4a5829f5a4c4568a8ce59c0)
+OK    P2531s24 A1 : NOM, PREMIERS = [[2531, 12], [2531, 483]], NORME_ABS_I = p^2, NORME = 6, COTES = [2], 1 temoin(s)
+OK    P2531s24 A2 : I = (2531, y^2 + 2036*y + 734) = P sigma_24(P), P = (2531, zeta - 12) de degre 1
+OK    P2531s24 A3 : base C (p, p zeta, GEN zeta^j), triangulaire, |det C| = p^2 ; le module engendre est stable par zeta : C engendre I
+OK    P2531s24 B1 : PM et BETA0 lus dans data/corps, PM(zeta + 1/zeta) = 0, ALPHA * NU = BETA0 dans Q[x]/PM
+OK    P2531s24 B2 : Gram G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P2531s24 B3 : det G = 1
+OK    P2531s24 B4 : G definie positive (88 mineurs principaux > 0)
+OK    P2531s24 C1, temoin 1 : z entier non nul, dans I (coordonnees entieres dans C), w~ G w = 6
+OK    P2531s24 C2, temoin 1 : Tr(alpha z zbar) = 6 (sans base)
+OK    P2531s24 C3, temoin 1 (cote 2) : energies courte 11913/2531 et de fibre 18459/2531 retrouvees (f = Tr(alpha z^2) = 3273/2531)
+OK    P2531s24 E1, temoin 1 : X = ligne « x = [...] » du journal du 17 octobre (filtres_nuit_20261017/temoin_P2531s24.audit_20261017_044917.log)
+OK    P2531s24 D1 : BASE entiere, |det BASE| = p^2, colonnes dans I (BASE engendre I)
+OK    P2531s24 D2 : GRAM du fichier = BASE~ H BASE
+OK    P2531s24 D3, temoin 1 : Z = BASE X et X~ GRAM X = 6
+   P2531s24 : TEMOIN VALIDE (reseau pair unimodulaire de rang 88 avec un vecteur de norme 6 : NON extremal)
+== P5981s24 (addendum/temoins_norme6/temoin_P5981s24.gp, SHA-256 afc0762476e6a26c1035243ce8d0ecbd08dafccdab5a4fcb14f192763f0def8b)
+OK    P5981s24 A1 : NOM, PREMIERS = [[5981, 16], [5981, 5092]], NORME_ABS_I = p^2, NORME = 6, COTES = [1], 1 temoin(s)
+OK    P5981s24 A2 : I = (5981, y^2 + 873*y + 3719) = P sigma_24(P), P = (5981, zeta - 16) de degre 1
+OK    P5981s24 A3 : base C (p, p zeta, GEN zeta^j), triangulaire, |det C| = p^2 ; le module engendre est stable par zeta : C engendre I
+OK    P5981s24 B1 : PM et BETA0 lus dans data/corps, PM(zeta + 1/zeta) = 0, ALPHA * NU = BETA0 dans Q[x]/PM
+OK    P5981s24 B2 : Gram G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P5981s24 B3 : det G = 1
+OK    P5981s24 B4 : G definie positive (88 mineurs principaux > 0)
+OK    P5981s24 C1, temoin 1 : z entier non nul, dans I (coordonnees entieres dans C), w~ G w = 6
+OK    P5981s24 C2, temoin 1 : Tr(alpha z zbar) = 6 (sans base)
+OK    P5981s24 C3, temoin 1 (cote 1) : energies courte 28185/5981 et de fibre 43587/5981 retrouvees (f = Tr(alpha z^2) = -7701/5981)
+OK    P5981s24 E1, temoin 1 : X = ligne « x = [...] » du journal du 17 octobre (filtres_nuit_20261017/temoin_P5981s24.audit_20261017_044917.log)
+OK    P5981s24 D1 : BASE entiere, |det BASE| = p^2, colonnes dans I (BASE engendre I)
+OK    P5981s24 D2 : GRAM du fichier = BASE~ H BASE
+OK    P5981s24 D3, temoin 1 : Z = BASE X et X~ GRAM X = 6
+   P5981s24 : TEMOIN VALIDE (reseau pair unimodulaire de rang 88 avec un vecteur de norme 6 : NON extremal)
+== P18401s24 (addendum/temoins_norme6/temoin_P18401s24.gp, SHA-256 8bae45f1ac662c315d8f8b47099ffc81f01ecd75ac17487f6b029766baedfb76)
+OK    P18401s24 A1 : NOM, PREMIERS = [[18401, 22], [18401, 8441]], NORME_ABS_I = p^2, NORME = 6, COTES = [1], 1 temoin(s)
+OK    P18401s24 A2 : I = (18401, y^2 + 9938*y + 1692) = P sigma_24(P), P = (18401, zeta - 22) de degre 1
+OK    P18401s24 A3 : base C (p, p zeta, GEN zeta^j), triangulaire, |det C| = p^2 ; le module engendre est stable par zeta : C engendre I
+OK    P18401s24 B1 : PM et BETA0 lus dans data/corps, PM(zeta + 1/zeta) = 0, ALPHA * NU = BETA0 dans Q[x]/PM
+OK    P18401s24 B2 : Gram G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P18401s24 B3 : det G = 1
+OK    P18401s24 B4 : G definie positive (88 mineurs principaux > 0)
+OK    P18401s24 C1, temoin 1 : z entier non nul, dans I (coordonnees entieres dans C), w~ G w = 6
+OK    P18401s24 C2, temoin 1 : Tr(alpha z zbar) = 6 (sans base)
+OK    P18401s24 C3, temoin 1 (cote 1) : energies courte 85506/18401 et de fibre 135306/18401 retrouvees (f = Tr(alpha z^2) = -24900/18401)
+OK    P18401s24 E1, temoin 1 : X = ligne « x = [...] » du journal du 17 octobre (filtres_nuit_20261017/temoin_P18401s24.audit_20261017_044917.log)
+OK    P18401s24 D1 : BASE entiere, |det BASE| = p^2, colonnes dans I (BASE engendre I)
+OK    P18401s24 D2 : GRAM du fichier = BASE~ H BASE
+OK    P18401s24 D3, temoin 1 : Z = BASE X et X~ GRAM X = 6
+   P18401s24 : TEMOIN VALIDE (reseau pair unimodulaire de rang 88 avec un vecteur de norme 6 : NON extremal)
+== P39239 (addendum/temoins_norme6/temoin_P39239.gp, SHA-256 3de5b60efc1a8358d4d6da0387951cfb8f4f5ca045ff735bfd2d8c4e99a812bc)
+OK    P39239 A1 : NOM, PREMIERS = [[39239, 2, 1]], NORME_ABS_I = p^2, NORME = 6, COTES = [2], 1 temoin(s)
+OK    P39239 A2 : I = (39239, y^2 + 1632*y + 23778) est un premier de degre 2 au-dessus de 39239
+OK    P39239 A3 : base C (p, p zeta, GEN zeta^j), triangulaire, |det C| = p^2 ; le module engendre est stable par zeta : C engendre I
+OK    P39239 B1 : PM et BETA0 lus dans data/corps, PM(zeta + 1/zeta) = 0, ALPHA * NU = BETA0 dans Q[x]/PM
+OK    P39239 B2 : Gram G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P39239 B3 : det G = 1
+OK    P39239 B4 : G definie positive (88 mineurs principaux > 0)
+OK    P39239 C1, temoin 1 : z entier non nul, dans I (coordonnees entieres dans C), w~ G w = 6
+OK    P39239 C2, temoin 1 : Tr(alpha z zbar) = 6 (sans base)
+OK    P39239 C3, temoin 1 (cote 2) : energies courte 164472/39239 et de fibre 306396/39239 retrouvees (f = Tr(alpha z^2) = 70962/39239)
+OK    P39239 E1, temoin 1 : X = ligne « x = [...] » du journal du 17 octobre (filtres_nuit_20261017/temoin_P39239.audit_20261017_044917.log)
+OK    P39239 D1 : BASE entiere, |det BASE| = p^2, colonnes dans I (BASE engendre I)
+OK    P39239 D2 : GRAM du fichier = BASE~ H BASE
+OK    P39239 D3, temoin 1 : Z = BASE X et X~ GRAM X = 6
+   P39239 : TEMOIN VALIDE (reseau pair unimodulaire de rang 88 avec un vecteur de norme 6 : NON extremal)
+== P691s24 (addendum/temoins_norme6/temoin_P691s24.gp, SHA-256 579f3750b7c5e92e27f60adc0cb0739dc5439d5d7c12340c99504982707e2908)
+OK    P691s24 A1 : NOM, PREMIERS = [[691, 4], [691, 596]], NORME_ABS_I = p^2, NORME = 6, COTES = [1, 2], 2 temoin(s)
+OK    P691s24 A2 : I = (691, y^2 + 91*y + 311) = P sigma_24(P), P = (691, zeta - 4) de degre 1
+OK    P691s24 A3 : base C (p, p zeta, GEN zeta^j), triangulaire, |det C| = p^2 ; le module engendre est stable par zeta : C engendre I
+OK    P691s24 B1 : PM et BETA0 lus dans data/corps, PM(zeta + 1/zeta) = 0, ALPHA * NU = BETA0 dans Q[x]/PM
+OK    P691s24 B2 : Gram G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P691s24 B3 : det G = 1
+OK    P691s24 B4 : G definie positive (88 mineurs principaux > 0)
+OK    P691s24 C1, temoin 1 : z entier non nul, dans I (coordonnees entieres dans C), w~ G w = 6
+OK    P691s24 C2, temoin 1 : Tr(alpha z zbar) = 6 (sans base)
+OK    P691s24 C3, temoin 1 (cote 1) : energies courte 3542/691 et de fibre 4750/691 retrouvees (f = Tr(alpha z^2) = -604/691)
+OK    P691s24 E1, temoin 1 : X = ligne « x = [...] » du journal du 17 octobre (prop46_P691s24_execution/temoin_P691s24.log)
+OK    P691s24 C1, temoin 2 : z entier non nul, dans I (coordonnees entieres dans C), w~ G w = 6
+OK    P691s24 C2, temoin 2 : Tr(alpha z zbar) = 6 (sans base)
+OK    P691s24 C3, temoin 2 (cote 2) : energies courte 2406/691 et de fibre 5886/691 retrouvees (f = Tr(alpha z^2) = 1740/691)
+OK    P691s24 E1, temoin 2 : X = ligne « x = [...] » du journal du 17 octobre (prop46_P691s24_execution/temoin_P691s24.log)
+OK    P691s24 D1 : BASE entiere, |det BASE| = p^2, colonnes dans I (BASE engendre I)
+OK    P691s24 D2 : GRAM du fichier = BASE~ H BASE
+OK    P691s24 D3, temoin 1 : Z = BASE X et X~ GRAM X = 6
+OK    P691s24 D3, temoin 2 : Z = BASE X et X~ GRAM X = 6
+   P691s24 : TEMOIN VALIDE (reseau pair unimodulaire de rang 88 avec un vecteur de norme 6 : NON extremal)
+BILAN : 75 controles (attendus 75), 0 echecs ; 5 temoins valides sur 5 fichiers
+TEMOINS_NORME6_VERIFIES_SANS_PARI

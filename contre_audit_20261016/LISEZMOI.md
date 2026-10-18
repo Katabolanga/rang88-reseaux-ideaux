@@ -12,7 +12,7 @@ Ce dossier est l'attaque délibérée de la chaîne certifiante, menée le 16 oc
 
 ## Pièces à venir
 
-Ces pièces arriveront dans la version 1.2 du dépôt ; elles sont trop lourdes pour cette version.
+Ces pièces ne sont pas dans les versions 1.1 et 1.2 du dépôt : elles sont trop lourdes en l'état, surtout à cause des catalogues de tâches régénérables, et une partie de leurs fichiers contient des chemins absolus du poste de l'auteur. Elles sont prévues pour une version ultérieure (1.3), allégées.
 - `mut/`, environ 100 Mo : les sources des huit mutants et leurs exécutions.
 - `C3/`, environ 164 Mo : les exécutions de prédiction et de rejeu.
 

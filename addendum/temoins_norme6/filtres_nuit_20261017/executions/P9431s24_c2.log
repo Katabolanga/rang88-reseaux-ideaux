@@ -1,0 +1,11 @@
+Rang88CertZ run : java_P9431s24/cote2 ; mode=run|n=44|BA=1057/200|S=12|DA=9431|DB=1|d=18862|F=40|D=6|Dmax=16|seuil=0.2 ; 5 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 11.0.16.1 ; Windows 11 amd64 ; processeurs 16 ; PID 30660 ; Sat Oct 17 02:58:57 CEST 2026
+  ENTREES SHA-256 : A 727fa8dd752fd2fdc5030a785bdd6a3f8bf36bb41e8f78286036a15802652c1f ; B eb38f45e7e833af4232e93e21ddd5784bd8cb1012ef6f570886c525c9868d90f ; T 0a951a6ad0a075473fe8382109405401e2639ac8ffd22b080d119e78496ac5be ; meta 6f34e69077cafa9da815aba0be3e1b9618bba2c8880b72cc0368cd70dec72396
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=e97a6ffde078aeceee5a44a1f0fc439b63b35cfabb31412d782e5a3f55c4ceb6|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 1571.8333333333333 , max dL = 20045.39238436791 , max |q| ~ 0.5062909582805659 ; fibre : min dL = 1.7415417812091438 , max dL = 20.0 , max |q| ~ 0.5 ; B_U(court) = 49842.83500000001
+  177954 taches certifiees (213898 noeuds de generation) ; niv37:42477 niv36:2232 niv35:4123 niv34:6657 niv33:9548 niv32:12771 niv31:16491 niv30:18845 niv29:20280 niv28:20751 niv27:23779
+CATALOGUE_SHA256 c5e3338f80c50c688fd9708ebe62b908a2545b9b4d57745e68b79ff45add1ce8 ; TOTAL_TACHES 177954
+CHECKPOINT nouveau : ../../relecture_astra/recens30/filtres_1017/P9431s24_c2.ckpt
+SELECTION 177954/177954 ; A_FAIRE 177954 ; DEJA_AU_CHECKPOINT 0
+  [veille] taches terminees 140/177954 (+0 reprises ; 5 en cours) ; u(terminees) 2878759 ; cvp 2878759 ; noeuds A ~254948013 B ~25203611770 ; touches 0 [602 s]

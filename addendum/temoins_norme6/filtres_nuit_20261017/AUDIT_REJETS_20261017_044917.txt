@@ -1,0 +1,7 @@
+# audit des rejets du bilan, 2026-10-17 04:49:12 : nom | code | derniere ligne | bilan complet | touches verifiees | erreurs GP | verdict
+P18401s24 | 0 | TEMOIN_NORME6_OK | 1 | 1 | 0 | REJET DEMONTRE (temoin exact valide)
+P2531s24 | 0 | TEMOIN_NORME6_OK | 1 | 1 | 0 | REJET DEMONTRE (temoin exact valide)
+P39239 | 0 | TEMOIN_NORME6_OK | 1 | 1 | 0 | REJET DEMONTRE (temoin exact valide)
+P5981s24 | 0 | TEMOIN_NORME6_OK | 1 | 1 | 0 | REJET DEMONTRE (temoin exact valide)
+BILAN_AUDIT : 4 rejets au bilan, 4 demontres par un temoin exact valide
+AUDIT_TOUS_REJETS_VALIDES
