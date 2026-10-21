@@ -76,7 +76,7 @@
 Soit $L=\Q(\zeta_{115})$, de degré $88$. Nous étudions l'ensemble $S$ des classes de réseaux idéaux unimodulaires $(I,\Tr_{L/\Q}(\alpha x\bar y))$ sur $L$ ; ces réseaux sont pairs. Nous montrons que $S$ est en bijection avec le groupe des classes de $L$, qui est cyclique d'ordre $h^-(115)=44\,697\,909=3\cdot331\cdot45\,013$, et que $S$ se répartit en $508\,463$ orbites galoisiennes. Les deux réseaux extrémaux de Sakamoto, $\Lz$ et $\LS$, occupent l'orbite principale et l'unique orbite de $3$-torsion non triviale. Nous démontrons que deux réseaux idéaux de minimum au moins $8$ sur $L$ sont isométriques si et seulement si leurs classes sont conjuguées sous $\Gal(L/\Q)$. Nous étendons aux idéaux non principaux un recollement en deux formes de rang $44$ et nous en tirons, par une inégalité de type Parseval, un critère d'extrémalité fini. Les orbites de huit idéaux premiers sont rejetées par des vecteurs explicites de norme $6$. Pour deux idéaux premiers de degré $2$, $P_{139}$ et $P_{599}$, les réseaux qu'ils portent sont extrémaux : leur minimum $8$ est établi par une démonstration assistée par ordinateur, dont le modèle d'exécution est explicité et dont les calculs ont été répliqués sur un second ordinateur. Ils ne sont isométriques ni entre eux ni à $\Lz$ et $\LS$, sans GRH. À notre connaissance, après vérification bibliographique au 13 octobre 2026, ce sont deux nouveaux exemples de réseaux extrémaux de rang $88$.
 
 \medskip
-\noindent\textsc{Abstract.} \foreignlanguage{english}{Let $L=\Q(\zeta_{115})$. We study the set $S$ of classes of unimodular ideal lattices over $L$; they are even of rank $88$. We show that $S$ is in bijection with the class group of $L$, which is cyclic of order $h^-(115)=44\,697\,909$, and splits into $508\,463$ Galois orbits; Sakamoto's two extremal lattices lie in the principal orbit and in the unique non-trivial $3$-torsion orbit. We prove that two ideal lattices over $L$ with minimum at least $8$ are isometric if and only if their classes are Galois conjugate. We extend a gluing construction to non-principal ideals and derive a finite extremality criterion from a Parseval-type inequality. The orbits of eight prime ideals are rejected by explicit vectors of norm $6$. For two prime ideals of degree $2$, above $139$ and $599$, the lattices they carry are extremal: their minimum $8$ is established by a computer-assisted proof, with an explicit execution model and computations replicated on a second computer. They are isometric neither to each other nor to Sakamoto's lattices, unconditionally. To our knowledge, after a literature check as of October 13, 2026, they are two new examples of extremal lattices of rank $88$.}
+\noindent\textsc{Abstract.} \foreignlanguage{english}{Let $L=\Q(\zeta_{115})$. We study the set $S$ of classes of unimodular ideal lattices over $L$; they are even of rank $88$. We show that $S$ is in bijection with the class group of $L$, which is cyclic of order $h^-(115)=44\,697\,909$, and splits into $508\,463$ Galois orbits; Sakamoto's two extremal lattices lie in the principal orbit and in the unique non-trivial $3$-torsion orbit. We prove that two ideal lattices over $L$ with minimum at least $8$ are isometric if and only if their classes are Galois conjugate. We extend a gluing construction to non-principal ideals and derive a finite extremality criterion from a Parseval-type inequality. The orbits of eight prime ideals are rejected by explicit vectors of norm $6$. For two prime ideals of degree $2$, above $139$ and $599$, the lattices they carry are extremal: their minimum $8$ is established by a computer-assisted proof, with an explicit execution model and computations replicated on a second computer. They are isometric neither to each other nor to Sakamoto's lattices, without assuming GRH. To our knowledge, after a literature check as of October 13, 2026, they are two new examples of extremal lattices of rank $88$.}
 \end{abstract}
 
 \maketitle
@@ -715,7 +715,17 @@ Le côté~2 n'a pas de reprise : sous H1--H3, $\Tc=\emptyset$ pour ce côté. Le
 \emph{Réplication de $P_{599}$.} Le balayage complet a été refait sur le second ordinateur (Linux, OpenJDK~21, $14$ fils), avec les mêmes classes compilées et les mêmes fichiers d'entrée, en un seul lancement sans reprise : côté~1 en $26\,212$~s, côté~2 en $25\,956$~s, codes de sortie nuls, aucune touche. Les catalogues de tâches sont identiques octet pour octet à ceux de la première exécution. Les empreintes canoniques des reçus (reçus triés par indice, sans en-tête) sont identiques pour les deux côtés : $59\,255$ et $74\,398$ reçus. Les empreintes ont été calculées deux fois, par deux programmes distincts. L'énoncé (3) reste assisté par calcul : la réplication renforce les contrôles de cohérence entre exécutions, sans démontrer H2 ni H3 ; les deux machines ont exécuté le même programme, et elle ne dit rien d'une omission qui lui serait propre.
 
 \begin{remarque}
-Avant ces exécutions, un énumérateur flottant non certifiant avait balayé les deux côtés des deux candidats sans trouver de touche, avec les mêmes valeurs de $|\Uc|$ \CONS. Pour chacun des deux candidats, le groupe engendré par $-\zeta$ et par l'isométrie $\sigma_{24}$-semi-linéaire que donne la proposition~\ref{prop:S} montre que $|\Aut(X)|\ge460$. Le groupe d'automorphismes et la perfection n'ont pas été étudiés.
+Avant ces exécutions, un énumérateur flottant non certifiant avait balayé les deux côtés des deux candidats sans trouver de touche, avec les mêmes valeurs de $|\Uc|$ \CONS. Par la remarque~\ref{rem:normalisateur}, le tableau~\ref{tab:orbites}
+et la remarque~\ref{rem:classes}, les normalisateurs du groupe des
+multiplications $\langle\zeta\rangle$ dans $\Aut(X_{139})$ et
+$\Aut(X_{599})$ sont d'ordres $460$ et $920$, respectivement.
+En particulier,
+\[
+|\Aut(X_{139})|\ge460,\qquad |\Aut(X_{599})|\ge920.
+\]
+Des générateurs explicites de ces deux normalisateurs ont été construits
+et contrôlés en arithmétique exacte. Les groupes d'automorphismes
+complets n'ont pas été déterminés ; la perfection n'a pas été étudiée.
 \end{remarque}
 
 \subsection{Survivants partiels d'un filtre}\label{subsec:survivants}
@@ -842,7 +852,9 @@ Aucun spécialiste humain n'a relu ces preuves, et aucune implantation indépend
 \item \emph{Les survivants partiels.} Que vaut le minimum de $X_{3359}$, $X_{4049}$, $X_{4969}$ et $X_{5659}$ ? Rien n'est connu.
 \item \emph{Le second réseau de Sakamoto.} Le critère du théorème~\ref{thm:critere} n'a pas été exécuté sur $\LS$. Un idéal premier au-dessus de $47$, de degré $4$ et de norme $47^4$, est dans l'orbite de $\LS$ (composante $3$ certifiée) ; pour cet idéal, le coût estimé est de l'ordre de dix heures par côté. Le minimum $8$ de $\LS$ repose donc, pour nous, sur~\cite{Sak26} seul.
 \item \emph{Étiquettes d'orbites sans GRH.} La localisation exacte des classes dans $\Cl(K_{22})$ et $\Cl(K_{44})$ est sous GRH. Une certification du groupe des classes de $K_{22}$, de degré $22$, lèverait GRH pour la composante $331$ ; elle n'a pas été faite.
-\item \emph{Invariants.} Le groupe d'automorphismes des deux candidats et leur perfection ne sont pas étudiés.
+\item \emph{Invariants.} Les groupes d'automorphismes complets de
+$X_{139}$ et de $X_{599}$ n'ont pas été déterminés ;
+leur perfection n'a pas été étudiée.
 \item \emph{Autres conducteurs.} Les cas $m=184$ et $m=276$, pour lesquels les réseaux idéaux unimodulaires sont pairs, et le cas $m=89$, ne sont pas traités.
 \end{enumerate}
 

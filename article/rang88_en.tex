@@ -1,0 +1,932 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[a4paper,textwidth=15cm,textheight=23.5cm,centering]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{xurl}
+
+\usepackage{array}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+\setlist[enumerate]{leftmargin=2.2em}
+\setlist[itemize]{leftmargin=1.6em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\Op}{\mathcal{O}^{+}}
+\newcommand{\Dif}{\mathfrak{D}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Tc}{\mathcal{T}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Nm}{N}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Stab}{Stab}
+\newcommand{\Clp}{\Cl^{+}}
+\newcommand{\Up}{U^{+}}
+\newcommand{\Upp}{U^{+}_{\gg0}}
+\newcommand{\Lz}{L_{0}}
+\newcommand{\LS}{L_{S}}
+\newcommand{\Trp}{\Tr^{+}}
+\newcommand{\st}[1]{\textup{\textsf{\small[#1]}}}
+\newcommand{\DEM}{\st{proved}}
+\newcommand{\GRH}{\st{under GRH}}
+\newcommand{\ASS}{\st{computer-assisted}}
+\newcommand{\CONS}{\st{observed}}
+\newcommand{\OUV}{\st{open}}
+
+\title[Ideal lattices of rank 88 over $\Q(\zeta_{115})$]{Even unimodular ideal lattices of rank $88$\\ over $\Q(\zeta_{115})$}
+\author{Ivan Gauvin}
+\date{October 15, 2026}
+\subjclass[2020]{Primary 11H06; Secondary 11H56, 11R18, 11R29, 11E12}
+\keywords{ideal lattices, even unimodular lattices, extremal lattices, cyclotomic fields, class group, certified enumeration}
+
+\begin{document}
+
+\begin{abstract}
+Let $L=\Q(\zeta_{115})$, of degree $88$. We study the set $S$ of classes of unimodular ideal lattices $(I,\Tr_{L/\Q}(\alpha x\bar y))$ over $L$; these lattices are even. We show that $S$ is in bijection with the class group of $L$, which is cyclic of order $h^-(115)=44\,697\,909=3\cdot331\cdot45\,013$, and that $S$ splits into $508\,463$ Galois orbits. Sakamoto's two extremal lattices, $\Lz$ and $\LS$, occupy the principal orbit and the unique non-trivial $3$-torsion orbit. We prove that two ideal lattices over $L$ with minimum at least $8$ are isometric if and only if their classes are conjugate under $\Gal(L/\Q)$. We extend to non-principal ideals a gluing into two forms of rank $44$, and we derive from it, by a Parseval-type inequality, a finite extremality criterion. The orbits of eight prime ideals are rejected by explicit vectors of norm $6$. For two prime ideals of degree $2$, $P_{139}$ and $P_{599}$, the lattices they carry are extremal: their minimum $8$ is established by a computer-assisted proof, whose execution model is made explicit and whose computations were replicated on a second computer. They are isometric neither to each other nor to $\Lz$ and $\LS$, without assuming GRH. To our knowledge, after a literature check as of October 13, 2026, these are two new examples of extremal lattices of rank $88$.
+\end{abstract}
+
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small This is an English translation of the original French text, which follows it in the same document. Each statement carries its status: \DEM, \GRH, \ASS, \CONS{} or \OUV{} (definitions in \S\ref{subsec:statuts}). Caveats are gathered in \S\S\ref{subsec:hyp} and~\ref{subsec:methodes}.}}
+\end{center}
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{Context}
+An even unimodular lattice of rank $n$ has minimum at most $2\lfloor n/24\rfloor+2$; it is called \emph{extremal} if its minimum attains this value. This is the bound of Mallows, Odlyzko and Sloane, recalled in the introduction of~\cite{Sak26}. In rank $88$, an extremal lattice is therefore an even unimodular lattice of minimum $8$.
+
+According to the introduction of~\cite{Sak26}, no extremal lattice of rank greater than $80$ was known before that preprint; for rank $80$, it cites~\cite{BN98,Wat12}. Sakamoto~\cite{Sak26} constructs two non-isometric extremal lattices of rank $88$, denoted there by $L$ and $L_0$; we denote the first by $\LS$ and the second by $\Lz$. They are Hermitian tensor products over $\Q(\sqrt{-23})$: $\LS=E\otimes J$ and $\Lz=E\otimes J_0$, where $E$ is the ring of integers of $\Q(\sqrt{-23},\zeta_5)$, $J=(47,\zeta_{23}-21)$ is a non-principal ideal of $\Q(\zeta_{23})$ and $J_0$ is a principal ideal of $\Q(\zeta_{23})$. The first version of~\cite{Sak26}, dated September 14, 2026, contains only $\LS$; $\Lz$ appears in the second version, dated September 27, 2026. By~\cite[Rem.~3.11]{Sak26}, these two lattices are ideal lattices over $\Q(\zeta_{115})$, carried by $J\OO_L$ and by the principal ideal $J_0\OO_L$. By~\cite[Thm.~A.10]{Sak26}, their automorphism groups have orders $1\,457\,280$ and $2\,914\,560$. Remark~5.6 of~\cite{Sak26} states that the tensor construction yields only these two isometry classes, and that it is not a classification of the extremal lattices of rank~$88$.
+
+The lattice $H=(\OO_L,\Tr_{L/\Q}(\beta_0z\bar z))$, for an explicit $\beta_0\in\Q(\zeta_{115})^+$ (see the notation below), is isometric to $\Lz$ (\S\ref{subsec:sakamoto}). The lattice $H$ is therefore not new: Sakamoto has priority. The extremality of $\Lz$ is that of~\cite[Prop.~5.5]{Sak26}; we have not re-proved it.
+
+The present note starts from the following observation: $\Lz$ and $\LS$ are two elements of a finite set $S$, namely the set of classes of unimodular ideal lattices over $L=\Q(\zeta_{115})$. It describes $S$ and looks for those of its elements that have minimum $8$.
+
+\subsection{Content of the note}
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item \emph{The set $S$} (\S\ref{sec:S}). Every unimodular ideal lattice over $L$ is even. The set $S$ is in bijection with $\Cl(L)$, which is cyclic of order $44\,697\,909=3\cdot331\cdot45\,013$. It has $508\,463$ orbits under $\Gal(L/\Q)$, of sizes $1$, $2$, $22$, $44$ and $88$. The lattice $\Lz$ is the principal orbit and $\LS$ the unique non-trivial $3$-torsion orbit.
+\item \emph{Isometry theorem} (\S\ref{sec:isometrie}). Two ideal lattices of minimum $\ge8$ over $L$ are isometric if and only if their classes in $S$ are conjugate under $\Gal(L/\Q)$.
+\item \emph{Gluing and criterion} (\S\ref{sec:recollement}). For an integral ideal $I$ coprime to $\bar I$, the lattice $(I,b_\alpha)$ embeds into a sum of two forms of rank $44$. A Parseval lemma gives an extremality criterion: it suffices to examine the projections of energy at most $1057/200$.
+\item \emph{Certified enumeration} (\S\ref{sec:certifiant}). A program applies this criterion. A non-omission proof describes its scope, under an explicit model of the machine.
+\item \emph{Results} (\S\ref{sec:resultats}). Eight prime ideals give non-extremal lattices, by an explicit vector of norm~$6$. Two prime ideals of degree~$2$, $P_{139}$ and $P_{599}$, carry two new extremal lattices, to our knowledge as of October 13, 2026, isometric neither to each other nor to Sakamoto's lattices; the minimum is established by a computer-assisted proof (Theorem~\ref{thm:extremaux}). Four other ideals are partial survivors of a filter, with no conclusion.
+\end{enumerate}
+
+The minimum $8$ of $X_{139}$ and $X_{599}$ is established by a computer-assisted proof (Theorem~\ref{thm:extremaux}): a program, whose non-omission is proved in an explicit model of the machine (\S\ref{sec:certifiant}), went through both sides of the criterion of \S\ref{sec:recollement} without finding a short vector. Each sweep was executed twice, on two different computers, under two operating systems and two versions of Java, and the receipts of the two executions are identical byte for byte. The non-isometry is proved without GRH.
+
+\subsection{Statuses}\label{subsec:statuts}
+We use five statuses.
+\begin{itemize}
+\item \DEM{}: complete proof in the text, or exact replayable identity (integer witness, certificate), if needed together with a published result cited by name.
+\item \GRH{}: depends on a class group or unit group computation by \texttt{bnfinit} of PARI/GP.
+\item \ASS{}: proved under named hypotheses bearing on an execution of a program (machine, hardware, integrity of the logs). These hypotheses are H1 to H4 (\S\ref{subsec:hyp}).
+\item \CONS{}: program output without proof value.
+\item \OUV{}: not established.
+\end{itemize}
+
+\begin{center}\small\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{>{\raggedright\arraybackslash}p{7.3cm}>{\raggedright\arraybackslash}p{6.9cm}}
+\toprule
+Statement & Status \\
+\midrule
+$h^-(115)=44\,697\,909$; $\Cl(L)$ cyclic; $\Clp(L^+)\cong\Z/2$ (Prop.~\ref{prop:hmoins}, \ref{prop:S}) & proved (analytic formula in exact arithmetic; $h^+=1$ by~\cite{Mil14}) \\
+Evenness; bijection $S\leftrightarrow\Cl(L)$ (Prop.~\ref{prop:pair}, \ref{prop:S}) & proved \\
+Galois action; $508\,463$ orbits (Prop.~\ref{prop:car}, Table~\ref{tab:orbites}) & proved (Stickelberger relation, exact norms, Burnside's formula) \\
+$H\cong\Lz$ & proved (integer certificate); Sakamoto has priority \\
+Extremality of $\Lz$ and $\LS$ & \cite[Prop.~5.5 and \S5]{Sak26}; not re-proved here \\
+Position of $\Lz$ and $\LS$ in $S$ (Prop.~\ref{prop:L0LS}) & proved, modulo the ideal description and Lemma~A.9 of~\cite{Sak26} \\
+Lemmas~\ref{lem:syl23} and~\ref{lem:syl5}; Thm.~\ref{thm:isometrie}; Cor.~\ref{cor:bijection} & proved (internal proof, reviewed by a second assistant, see the final declaration) \\
+Prop.~\ref{prop:recollement}; Lemmas~\ref{lem:A}, \ref{lem:parseval}, \ref{lem:nul}; Thm.~\ref{thm:critere} & proved \\
+Thm.~\ref{thm:nonomission} (non-omission of the program) & proved under the machine model M1--M3; reviewed by a second assistant, within a limited scope \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\begin{tabular}{>{\raggedright\arraybackslash}p{7.3cm}>{\raggedright\arraybackslash}p{6.9cm}}
+\toprule
+Statement & Status \\
+\midrule
+Non-extremality for $P_{461}$, $P_{691}$, $P_{1151}$, $P_{1381}$, $P_{1471}$, $P_{829}$, $P_{1289}$, $P_{1979}$ (Table~\ref{tab:rejets}) & proved, without GRH (exact witnesses of norm $6$) \\
+Location of these classes in $\Cl(L)$ & $3$-component: without GRH; $331$- and $45\,013$-components: under GRH \\
+$P_{139}$, $P_{599}$: even unimodular lattices; vector of norm $8$ & proved (exact checks) \\
+$P_{139}$: no non-zero vector of norm $\le6$ & minimum $\ge8$ computer-assisted (H1--H3); two complete executions on two computers, identical receipts \\
+$P_{599}$: no non-zero vector of norm $\le6$ & minimum $\ge8$ computer-assisted (H1--H3); two complete executions on two computers, identical receipts \\
+$[P_{139}]^3\neq1$; the order of $[P_{599}]$ is divisible by $331$ (Prop.~\ref{prop:classeP139}, \ref{prop:classeP599}) & proved, without GRH \\
+Neither $P_{139}$ nor $P_{599}$ is isometric to $\Lz$ or to $\LS$ (Prop.~\ref{prop:noniso}) & proved, modulo~\cite{Sak26} and Thm.~\ref{thm:isometrie}; does not depend on the computer-assisted statement \\
+Extremality of $X_{139}$ and $X_{599}$; non-isometry to each other, to $\Lz$ and to $\LS$ (Thm.~\ref{thm:extremaux}) & minimum: computer-assisted proof (M1, M2, H1--H3); non-isometry: proved, without GRH (Rem.~\ref{rem:normeF}) \\
+Exact label of the orbits of $P_{139}$ and $P_{599}$ & under GRH (details in \S\ref{subsec:classes}) \\
+$P_{3359}$, $P_{4049}$, $P_{4969}$, $P_{5659}$ (Table~\ref{tab:survivants}) & observed: partial survivors of a filter; no conclusion \\
+Number of orbits of minimum $8$ in $S$ & open; between $4$ and $508\,463$: the orbits of $\Lz$ and $\LS$ (minimum by~\cite{Sak26}) and those of $X_{139}$ and $X_{599}$ (Thm.~\ref{thm:extremaux}), pairwise distinct \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{What is taken from the literature and what is specific to this work}\label{subsec:connu}
+\emph{Taken from the literature.} The lattices $\Lz$ and $\LS$, their extremality, their description as ideal lattices over $\Q(\zeta_{115})$ and their automorphism groups are due to Sakamoto~\cite{Sak26}. The automatic evenness of a unimodular ideal lattice when $L/L^+$ is unramified at the finite places is classical~\cite{Bay84,Bay99}. The parametrization of ideal lattices by ideal classes and by a quotient of units is that of Nebe~\cite[Rem.~4.4]{Neb16}; Nebe~\cite[Lemma~4.3, Thm.~4.5]{Neb16} also uses the direction ``conjugate, hence isometric'' of Theorem~\ref{thm:isometrie}. The equality $h(\Q(\zeta_{115})^+)=1$ is due to Miller~\cite{Mil14}. The analytic formula for the relative class number and the Stickelberger relation are classical~\cite{Was97}. The gluing of lattices is classical~\cite[Ch.~4]{SPLAG}. Blichfeldt's bound~\cite{Bli29} is used for the isometry theorem.
+
+\emph{Specific to this work.} The computation of $h^-(115)$ as used here, the description of $S$ and of its orbits (\S\ref{sec:S}); the isometry theorem for $m=115$, whose proof does not use Kronecker's theorem (\S\ref{sec:isometrie}); the gluing for a non-principal ideal, the Parseval lemma and the criterion (\S\ref{sec:recollement}); the certifying program and its non-omission proof (\S\ref{sec:certifiant}); the rejections, the two candidates and their classes (\S\ref{sec:resultats}). The integer isometry certificate $H\cong\Lz$ is also part of this work; the lattice itself is Sakamoto's.
+
+\emph{Prior-art search.} A literature search was carried out in October 2026: arXiv, the record and the text of~\cite{Sak26} (version~2 of September 27, 2026), the computation repository of its author, the catalogue of Nebe and Sloane (explicitly incomplete), keyword searches in academic sources. The only other explicit object of rank $88$ that was found has a Gram matrix whose diagonal contains $6$: it has a vector of norm $6$ and is not extremal. No other explicit example of an extremal lattice of rank $88$ was identified. To our knowledge, as of October 13, 2026, $X_{139}$ and $X_{599}$ are therefore two new examples; this is the result of a dated search, not a proof of priority over unpublished or unindexed work.
+
+\subsection*{Outline}
+Section~\ref{sec:S} describes $S$. Section~\ref{sec:isometrie} proves the isometry theorem. Section~\ref{sec:recollement} establishes the gluing, the Parseval lemma and the criterion. Section~\ref{sec:certifiant} presents the certified enumeration and its hypotheses. Section~\ref{sec:resultats} gives the results. Section~\ref{sec:fin} gathers the open questions, the methods and the declaration on the use of artificial intelligence.
+
+\subsection*{Notation}
+We set $\zeta=\zeta_{115}$, $L=\Q(\zeta)$, of degree $88$, $L^+=\Q(c)$ with $c=\zeta+\zeta^{-1}$, and $\Op=\Z[c]$, the ring of integers of $L^+$. We denote by $x\mapsto\bar x$ complex conjugation, $\Nm=\Nm_{L/L^+}$, $\Trp=\Tr_{L^+/\Q}$, $\Dif$ the different of $L^+$, $U_L$ and $\Up$ the unit groups of $L$ and of $L^+$, $\Upp$ the group of totally positive units of $L^+$, and $\mu_L$ the group of roots of unity of $L$, of order $230$. For $a$ prime to $115$, $\sigma_a$ is the automorphism $\zeta\mapsto\zeta^a$. We set $e=\zeta-\zeta^{-1}$; we have $e^2=c^2-4$. We write $T=\Q(\zeta_{23})$ and $F=\Q(\sqrt{-23})$, subfields of $L$.
+
+An \emph{ideal lattice} is a pair $X=(I,\alpha)$, where $I$ is a fractional ideal of $L$ and $\alpha\in L^+$ is totally positive ($\alpha\gg0$), endowed with the form $b_\alpha(x,y)=\Tr_{L/\Q}(\alpha x\bar y)$. The \emph{norm} of a vector $z$ is $b_\alpha(z,z)$. We fix a totally positive element $\beta_0\in L^+$ such that $\beta_0\Dif=\Op$; it is written out in full in the data accompanying the note (\S\ref{subsec:methodes}), where these two properties are checked exactly. We set $H=(\OO_L,\beta_0)$.
+
+\section{The set of unimodular ideal lattices over \texorpdfstring{$\Q(\zeta_{115})$}{Q(zeta115)}}\label{sec:S}
+
+\subsection{Evenness and unimodularity}
+
+\begin{proposition}\label{prop:pair}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item The extension $L/L^+$ is unramified at the finite places, $e$ is a unit, and $\Dif_L=\Dif\,\OO_L$.
+\item The lattice $(I,\alpha)$ is unimodular if and only if $\alpha\,\Nm(I)\,\Dif=\Op$.
+\item Every unimodular ideal lattice over $L$ is even.
+\end{enumerate}
+\DEM
+\end{proposition}
+
+\begin{proof}
+(a) We have $\OO_L=\Op[\zeta]$, and $\zeta$ is a root of $X^2-cX+1$; the relative different is therefore generated by $e=\zeta-\zeta^{-1}=-\zeta^{-1}(1-\zeta^2)$. Since $\zeta^2$ is a primitive root of unity of order $115$, which is not a prime power, $1-\zeta^2$ is a unit. By transitivity, $\Dif_L=\Dif\,\OO_L$.
+(b) The dual of $I$ for $b_\alpha$ is $(\alpha\bar I\Dif_L)^{-1}$. Hence $(I,\alpha)$ is unimodular if and only if $\alpha I\bar I\Dif_L=\OO_L$, that is, $\alpha\Nm(I)\Dif\,\OO_L=\OO_L$; we conclude by the injectivity of the extension of ideals from $L^+$ to $L$.
+(c) For $z\in I$, we have $z\bar z\in I\bar I\cap L^+=\Nm(I)$, hence $\alpha z\bar z\in\Dif^{-1}$ and $b_\alpha(z,z)=2\Trp(\alpha z\bar z)\in2\Z$.
+\end{proof}
+
+Let $S$ be the set of unimodular ideal lattices $(I,\alpha)$ over $L$, modulo the relation $(I,\alpha)\sim(xI,\alpha/(x\bar x))$, $x\in L^\times$. The map $z\mapsto xz$ is an isometry from $(I,\alpha)$ onto $(xI,\alpha/(x\bar x))$. The group $\Gal(L/\Q)$ acts on $S$ by $\sigma_a(I,\alpha)=(\sigma_aI,\sigma_a\alpha)$, and $z\mapsto\sigma_a(z)$ is an isometry from $(I,\alpha)$ onto $\sigma_a(I,\alpha)$. Two elements of $S$ that are conjugate under $\Gal(L/\Q)$ are therefore isometric.
+
+\subsection{Class number}
+
+\begin{proposition}\label{prop:hmoins}
+We have $h^-(115)=44\,697\,909=3\cdot331\cdot45\,013$ and $h(L^+)=1$. Consequently $h(L)=44\,697\,909$ is squarefree, and
+\[
+\Cl(L)\cong\Z/3\times\Z/331\times\Z/45\,013
+\]
+is cyclic. \DEM
+\end{proposition}
+
+\begin{proof}
+The analytic formula for the relative class number reads $h^-=Q\,w\prod_{\chi}\bigl(-\tfrac12B_{1,\chi^*}\bigr)$, where the product runs over the odd characters modulo $115$, $\chi^*$ is the associated primitive character, $Q=2$ is the Hasse index and $w=230$ (\cite[Thm.~4.17]{Was97}). The product was evaluated in exact arithmetic in $\Q(\zeta_{44})$ and equals $44\,697\,909$. A second, independent computation, in integers and rationals, without any class group computation, gives the same value (\S\ref{subsec:methodes}). The same program recovers $h^-(87)=1\,536$, $h^-(65)=64$ and $h^-(85)=6\,205$. The equality $h(L^+)=1$ is due to Miller~\cite[Thm.~1.1]{Mil14}, without GRH. An abelian group of squarefree order is cyclic.
+\end{proof}
+
+\subsection{Structure of \texorpdfstring{$S$}{S}}
+Let $\Nm^+\colon\Cl(L)\to\Clp(L^+)$, $[I]\mapsto[\Nm(I)]$, with values in the narrow class group of $L^+$.
+
+\begin{proposition}\label{prop:S}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item The map $\Nm^+$ is trivial, $\Clp(L^+)\cong\Z/2$, $[\Upp:(\Up)^2]=2$ and $\Nm(U_L)=\Upp$.
+\item The map $(I,\alpha)\mapsto[I]$ is a bijection from $S$ onto $\Cl(L)$, compatible with the action of $\Gal(L/\Q)$. In particular $|S|=44\,697\,909$: each ideal class carries exactly one unimodular ideal lattice, up to equivalence.
+\item For an ideal $I$, let $\nu\gg0$ be a generator of $\Nm(I)$. Then $(I,\beta_0/\nu)$ represents the element of $S$ with image $[I]$.
+\end{enumerate}
+\DEM
+\end{proposition}
+
+\begin{proof}
+(a) The exact sequence of signs gives $|\Clp(L^+)|=h(L^+)\,[\Upp:(\Up)^2]$, which is a power of $2$ since $h(L^+)=1$. Since $\Cl(L)$ has odd order (Proposition~\ref{prop:hmoins}), its image under $\Nm^+$ is trivial. On the other hand, $L/L^+$ is unramified at the finite places and ramified at the infinite places; $L$ is therefore contained in the narrow Hilbert class field of $L^+$, and Artin reciprocity gives $\Clp(L^+)/\Nm^+(\Cl(L))\cong\Gal(L/L^+)$. Hence $|\Clp(L^+)|=2$ and $[\Upp:(\Up)^2]=2$.
+
+The element $1-\zeta$ is a unit, and $-\zeta=(1-\zeta)/(1-\bar\zeta)$ generates $\mu_L$: it is not a square in $\mu_L$. Hence $1-\zeta\notin\mu_L\Up$, the Hasse index equals $2$~\cite[Thm.~4.12, Cor.~4.13]{Was97}, and $\Nm(U_L)=(\Up)^2\cup(2-c)(\Up)^2$ with $2-c=\Nm(1-\zeta)$. If $2-c$ were a square $u^2$ in $\Up$, the unit $(1-\zeta)/u$ would have absolute value $1$ at every place, hence would be a root of unity, and $1-\zeta$ would lie in $\mu_L\Up$. Thus $[\Nm(U_L):(\Up)^2]=2$. Since $\Nm(U_L)\subset\Upp$, we have $\Nm(U_L)=\Upp$.
+
+(b) By Proposition~\ref{prop:pair}~(b), $(I,\alpha)\in S$ if and only if $\Nm(I)\Dif=(\alpha^{-1})$ with $\alpha^{-1}\gg0$. The image of $S$ is therefore the set of classes $[I]$ such that $\Nm^+([I])=[\Dif]^{-1}$ in $\Clp(L^+)$. Now $[\Dif]$ is trivial in $\Clp(L^+)$, since $\beta_0\Dif=\Op$ with $\beta_0\gg0$, and $\Nm^+$ is trivial. The image is therefore the whole of $\Cl(L)$. For fixed $I$, the suitable $\alpha$ form a class $\alpha_0\Upp$, and $(I,\alpha)\sim(I,\alpha')$ if and only if there exists $x\in U_L$ with $\alpha'=\alpha/(x\bar x)$. The fibers are therefore principal homogeneous spaces under $\Upp/\Nm(U_L)$, a group which is trivial by (a). The compatibility with the Galois action is immediate.
+
+(c) The generator $\nu$ exists because $\Nm^+$ is trivial, and $(\beta_0/\nu)\Nm(I)\Dif=\beta_0\Dif=\Op$.
+\end{proof}
+
+\begin{remark}
+The parametrization by ideal classes and by $\Upp/\Nm(U_L)$ is that of Remark~4.4 of Nebe~\cite{Neb16}. For $m=115$, the fiber over each class has only one element; over the principal class, it is $H$. The Gram matrices constructed for this note are checked exactly: they are integral, even and of determinant $1$.
+\end{remark}
+
+\subsection{Galois action and orbits}
+
+\begin{proposition}\label{prop:car}
+For $p\in\{3,331,45\,013\}$, let $\Cl_p$ be the subgroup of order $p$ of $\Cl(L)$. The group $\Gal(L/\Q)$ acts on $\Cl_p\cong\F_p$ through an odd character $\chi_p$ with values in $\F_p^\times$, whose order and kernel are as follows; the last column gives the size of the orbits on $\Cl_p\smallsetminus\{0\}$.
+\begin{center}\small
+\begin{tabular}{rr>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{4.2cm}r}
+\toprule
+$p$ & order & kernel of $\chi_p$ & fixed field of the kernel & orbit size \\
+\midrule
+$3$ & $2$ & kernel of the Legendre symbol modulo $23$, of order $44$ & $F=\Q(\sqrt{-23})$ & $2$ \\
+$331$ & $22$ & $\{1,22,24,68\}=\langle\sigma_{22}\rangle$ & $K_{22}$, of degree $22$ & $22$ \\
+$45\,013$ & $44$ & $\{1,91\}=\langle\sigma_{91}\rangle$ & $K_{44}=\Q(\zeta_5,\zeta_{23}+\zeta_{23}^{-1})$ & $44$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Complex conjugation acts by $-1$ on $\Cl(L)$. \DEM
+\end{proposition}
+
+\begin{proof}
+Since $p$ does not divide $88$, the Sylow $p$-subgroup of $\Cl(L)$ decomposes into isotypic components under $\Gal(L/\Q)$; here it has order $p$, hence equals a single component, associated with a character $\chi_p$. Complex conjugation acts by $-1$: for every class $[I]$, $[I][\bar I]$ is the image in $\Cl(L)$ of $[\Nm(I)]\in\Cl(L^+)=1$. The character $\chi_p$ is therefore odd. It is identified by the Stickelberger relation and by the analytic formula~\cite[Thm.~4.17 and Thm.~6.10]{Was97}: for each of the six rational conjugacy classes of odd characters modulo $115$, the norm of $\frac12B_{1,\chi^*}$ was computed exactly. The Euler factors of the three imprimitive classes have norms $1$, $2$ and $2$; they introduce no factor $3$, $331$ or $45\,013$. For each $p$, exactly one class has a norm divisible by $p$, and the valuation there equals $1$. These exact computations were checked independently (\S\ref{subsec:methodes}). The automorphisms $\sigma_{24}$ and $\sigma_{91}$ have order $2$: $\sigma_{24}$ conjugates $\zeta_5$ and fixes $\zeta_{23}$, $\sigma_{91}$ fixes $\zeta_5$ and conjugates $\zeta_{23}$.
+\end{proof}
+
+Let us call the \emph{support} of a class the set of the $p$ for which its component in $\Cl_p$ is non-zero. The stabilizer of a class is the intersection of the kernels of the $\chi_p$, $p$ in the support. All classes with the same support therefore have orbits of the same size, and the following count results; it was also recounted with Burnside's formula.
+
+\begin{table}[ht]
+\caption{Orbits of $\Gal(L/\Q)$ in $S\cong\Cl(L)$, by support. Status: proved.}\label{tab:orbites}
+\centering\small
+\begin{tabular}{lrrrl}
+\toprule
+support & classes & orbit size & orbits & stabilizer \\
+\midrule
+$\emptyset$ (principal class) & $1$ & $1$ & $1$ & $\Gal(L/\Q)$ \\
+$\{3\}$ & $2$ & $2$ & $1$ & of order $44$ \\
+$\{331\}$ & $330$ & $22$ & $15$ & $\langle\sigma_{22}\rangle$, of order $4$ \\
+$\{3,331\}$ & $660$ & $44$ & $15$ & $\langle\sigma_{24}\rangle$ \\
+$\{45\,013\}$ & $45\,012$ & $44$ & $1\,023$ & $\langle\sigma_{91}\rangle$ \\
+$\{3,45\,013\}$ & $90\,024$ & $88$ & $1\,023$ & trivial \\
+$\{331,45\,013\}$ & $14\,853\,960$ & $88$ & $168\,795$ & trivial \\
+$\{3,331,45\,013\}$ & $29\,707\,920$ & $88$ & $337\,590$ & trivial \\
+\midrule
+total & $44\,697\,909$ & & $508\,463$ & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+There are therefore $1\,053$ orbits with non-trivial stabilizer outside the first two rows. The number $508\,463$ is that of all the orbits of $S$; the number of those that consist of lattices of minimum $8$ is not known.
+
+\begin{remark}[normalizer of $\langle\zeta\rangle$]\label{rem:normalisateur}
+For $X\in S$, the automorphisms of $X$ that normalize the group $\langle\zeta\rangle$ of multiplications are the maps $z\mapsto\lambda\sigma_a(z)$ with $\sigma_a\in\Stab(X)$, and $\lambda$ is determined by $a$ up to $\mu_L$. This group therefore has order $230\cdot|\Stab(X)|$, that is, $20\,240$, $10\,120$, $920$, $460$ or $230$ for the orbits of size $1$, $2$, $22$, $44$ or $88$. Indeed, such an automorphism $\psi$ satisfies $\psi\zeta\psi^{-1}=\zeta^a$ for some $a$ prime to $115$; as in step~3 of the proof of Theorem~\ref{thm:isometrie}, $\psi(z)=\lambda\sigma_a(z)$ with $\lambda\sigma_a(I)=I$ and $\alpha\lambda\bar\lambda=\sigma_a(\alpha)$, hence $\sigma_a\in\Stab(X)$. Conversely, for $\sigma_a\in\Stab(X)$, the relation $\sigma_a(I,\alpha)\sim(I,\alpha)$ provides such a $\lambda$. Two choices of $\lambda$ for the same $a$ differ by a unit $u$ such that $u\bar u=1$, of absolute value $1$ at every place: by Kronecker's theorem, $u\in\mu_L$. \DEM
+\end{remark}
+
+\subsection{Position of Sakamoto's two lattices}\label{subsec:sakamoto}
+
+The isometry $H\cong\Lz$ is established by a certificate: an integer matrix $P$ of size $88$, of determinant $-1$, satisfies $PGP^{\mathsf T}=G_H$, where $G$ is the Gram matrix of $\Lz$ published in the data repository of~\cite{Sak26} (\S\ref{subsec:methodes}) and $G_H=(\Tr_{L/\Q}(\beta_0\zeta^{i-j}))$. A second integer identity, $QG_{\mathrm{art}}Q^{\mathsf T}=G$ with $\det Q=1$, shows that $G$ is the Gram matrix of the construction of~\cite[\S5.4]{Sak26} in an explicit basis. These two identities were verified in exact arithmetic by two programs, then by a third one, written independently (\S\ref{subsec:methodes}). Status of $H\cong\Lz$: \DEM, without GRH. This certificate says nothing about the minimum.
+
+\begin{proposition}\label{prop:L0LS}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item The class of $\Lz$ in $S$ is the principal class, whose orbit has size $1$.
+\item The class of $\LS$ in $S$ has support $\{3\}$. It forms the unique orbit with this support, of size $2$.
+\end{enumerate}
+\st{proved, modulo~\cite[Rem.~3.11 and Lemma~A.9]{Sak26}}
+\end{proposition}
+
+\begin{proof}
+(a) follows from $H\cong\Lz$ and $H=(\OO_L,\beta_0)$.
+(b) By~\cite[Rem.~3.11]{Sak26}, $\LS$ is the ideal lattice of $J\OO_L$. This ideal is not principal: if it were, $\LS$ and $\Lz$ would have the same Steinitz class as modules over the ring of integers of $F$, which contradicts~\cite[Lemma~A.9]{Sak26}. Its class is $3$-torsion, because $J$ is an ideal of $T=\Q(\zeta_{23})$ and $\Cl(T)\cong\Z/3$~\cite{Sak26}. It therefore has order $3$. The subgroup of order $3$ of $\Cl(L)$ has two non-zero elements, which are exchanged by complex conjugation (Proposition~\ref{prop:car}).
+\end{proof}
+
+\begin{remark}\label{rem:nonlibre}
+For every automorphism $t$ of $\LS$ with characteristic polynomial $\Phi_{115}$, $\LS$ is not a free $\Z[t]$-module. Indeed, such a free module would be isometric to a lattice $(\OO_L,\gamma)$, hence to $H\cong\Lz$ by Proposition~\ref{prop:S}, which contradicts~\cite[Thm.~A.10]{Sak26}. \st{proved, modulo~\cite[Thm.~A.10]{Sak26}}
+\end{remark}
+
+\section{The isometry theorem}\label{sec:isometrie}
+
+For an integer $n$, we denote by $\gamma_n$ Hermite's constant. Blichfeldt's bound~\cite{Bli29} reads $\gamma_n\le B_n=\frac2\pi\,\Gamma\bigl(2+\frac n2\bigr)^{2/n}$. We have $B_{22}\approx3.9174$ and $B_{44}\approx6.6471$. We only use the strict rational upper bounds
+\begin{equation}\label{eq:blichfeldt}
+\gamma_{22}<\frac{126}{31},\qquad \gamma_{44}<\frac{210}{31},
+\end{equation}
+which follow from $\pi>31/10$, $12!<(63/10)^{11}$ and $23!<(21/2)^{22}$.
+
+\begin{lemma}[Sylow $23$]\label{lem:syl23}
+Let $X$ be an even unimodular lattice of rank $88$ and minimum at least $8$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item Every automorphism of order $23$ of $X$ has no non-zero fixed point.
+\item The Sylow $23$-subgroups of $\Aut(X)$ have order at most $23$. In particular, the subgroups of order $23$ of $\Aut(X)$ are conjugate.
+\end{enumerate}
+\DEM
+\end{lemma}
+
+\begin{proof}
+(a) Let $t\in\Aut(X)$ be of order $23$. Its characteristic polynomial is $\Phi_{23}^{z}(x-1)^{88-22z}$ with $1\le z\le4$. Let $F_t$ be the fixed lattice of $t$, of rank $88-22z$, and $F_t^\perp$ its orthogonal complement, of rank $22z$; $F_t^\perp$ is a $\Z[\zeta_{23}]$-module of rank $z$. Since $X$ is unimodular, the discriminant groups of $F_t$ and of $F_t^\perp$ are isomorphic; this group is annihilated by $1-t$, hence isomorphic to $\F_{23}^{\,s}$ with $s\le z$ (a classical result on the type of an automorphism of prime order, see~\cite{Neb13}). The lattices $F_t$ and $F_t^\perp$ have minimum at least $8$ and determinant $23^s$.
+\begin{itemize}
+\item If $z=1$, $F_t^\perp$ has rank $22$ and determinant $23^s$, $s\le1$. Its Hermite invariant is at least $8/23^{1/22}$, which exceeds $126/31$ since $(8\cdot31/126)^{22}>23$. This contradicts~\eqref{eq:blichfeldt}.
+\item If $z=2$, $F_t$ has rank $44$ and determinant $23^s$, $s\le2$. Its Hermite invariant is at least $8/23^{2/44}$, which exceeds $210/31$ since $(8\cdot31/210)^{44}>23^2$. Contradiction.
+\item If $z=3$, $F_t$ has rank $22$ and determinant $23^s$, $s\le3$. Its Hermite invariant is at least $8/23^{3/22}$, which exceeds $126/31$ since $(8\cdot31/126)^{22}>23^3$. Contradiction.
+\end{itemize}
+Hence $z=4$: $t$ has no non-zero fixed point.
+
+(b) A $23$-group of order greater than $23$ contains a subgroup of order $23^2$, cyclic or isomorphic to $C_{23}\times C_{23}$. An element of order $529$ is impossible in $\Aut(X)$, since $\varphi(529)=506>88$. A subgroup $C_{23}\times C_{23}$ would act on $X\otimes\Q$ without trivial constituent, by (a); each of its irreducible constituents would have dimension $22$, with a kernel of order $23$, and a non-trivial element of this kernel would have non-zero fixed points, which contradicts (a). The subgroups of order $23$ are therefore Sylow subgroups, and they are conjugate.
+\end{proof}
+
+\begin{lemma}[Sylow $5$ in the centralizer]\label{lem:syl5}
+Let $X=(I,\alpha)$ be an ideal lattice over $L$, and let $P_X=\langle\zeta^5\rangle\subset\Aut(X)$ be the group of order $23$ of multiplications by the powers of $\zeta^5$. Let $C$ be the centralizer of $P_X$ in $\Aut(X)$. The subgroups of order $5$ of $C$ are conjugate in $C$. \DEM
+\end{lemma}
+
+\begin{proof}
+Every $g\in C$ commutes with multiplication by $\zeta^5$, which generates $T=\Q(\zeta_{23})$: $g$ is $T$-linear on $X\otimes\Q=L\cong T^4$. The polynomial $\Phi_5$ is irreducible over $T$, since $\Q(\zeta_5)\cap T=\Q$; hence $T[x]/(x^5-1)\cong T\times T(\zeta_5)$. If $g\in C$ has order $5$, the $T[g]$-module $T^4$ contains a factor $T(\zeta_5)$, of dimension $4$: it is equal to it, and $g$ has no non-zero fixed point. A subgroup $C_5\times C_5$ of $C$ would act on $T^4$ through non-trivial irreducible constituents, of dimension $4$ and with a kernel of order $5$; there is room for only one constituent, and the action would not be faithful. An element of order $25$ of $C$ would require a constituent of dimension $[T(\zeta_{25}):T]=20>4$. The Sylow $5$-subgroups of the finite group $C$ therefore have order $5$, and the subgroups of order $5$ of $C$ are conjugate in $C$.
+\end{proof}
+
+\begin{theorem}[isometry]\label{thm:isometrie}
+Let $X_1=(I_1,\alpha_1)$ and $X_2=(I_2,\alpha_2)$ be two unimodular ideal lattices over $L=\Q(\zeta_{115})$, of minimum at least $8$. Then $X_1\cong X_2$ if and only if the classes of $X_1$ and of $X_2$ in $S$ are conjugate under $\Gal(L/\Q)$. \DEM
+\end{theorem}
+
+\begin{proof}
+The ``if'' direction follows from the isometries $z\mapsto xz$ and $z\mapsto\sigma_a(z)$. Conversely, let $\psi\colon X_1\to X_2$ be an isometry, and let $\tau_j\in\Aut(X_j)$ be multiplication by $\zeta$. The lattices $X_1$ and $X_2$ are even (Proposition~\ref{prop:pair}), so Lemma~\ref{lem:syl23} applies to $X_2$.
+
+\emph{Step 1.} The group $\psi\langle\tau_1^5\rangle\psi^{-1}$ is a subgroup of order $23$ of $\Aut(X_2)$. By Lemma~\ref{lem:syl23}, it is conjugate to $P_2=\langle\tau_2^5\rangle$. After composing $\psi$ on the left with an automorphism of $X_2$, we may assume $\psi\langle\tau_1^5\rangle\psi^{-1}=P_2$.
+
+\emph{Step 2.} The group $\psi\langle\tau_1^{23}\rangle\psi^{-1}$ has order $5$ and commutes with $P_2$, since $\tau_1^{23}$ commutes with $\tau_1^5$. By Lemma~\ref{lem:syl5} applied to $X_2$, there exists $g$ in the centralizer of $P_2$ such that $g\psi\langle\tau_1^{23}\rangle\psi^{-1}g^{-1}=\langle\tau_2^{23}\rangle$. Set $\psi'=g\psi$. Since $g$ centralizes $P_2$, we still have $\psi'\langle\tau_1^5\rangle\psi'^{-1}=P_2$.
+
+\emph{Step 3.} The group $\langle\tau_j\rangle$ is generated by $\tau_j^5$ and $\tau_j^{23}$. Hence $\psi'\langle\tau_1\rangle\psi'^{-1}=\langle\tau_2\rangle$, and $\psi'\tau_1\psi'^{-1}=\tau_2^{a}$ for some $a$ prime to $115$. The $\Q$-linear extension of $\psi'$ to $L$ satisfies $\psi'(\zeta z)=\zeta^a\psi'(z)$; it is therefore $\sigma_a$-semilinear: $\psi'(z)=\lambda\sigma_a(z)$ with $\lambda=\psi'(1)\in L^\times$. It follows that $\lambda\sigma_a(I_1)=I_2$ and $\Tr_{L/\Q}(\alpha_2\lambda\bar\lambda\,\sigma_a(z\bar w))=\Tr_{L/\Q}(\alpha_1z\bar w)$ for all $z,w$, hence $\alpha_2\lambda\bar\lambda=\sigma_a(\alpha_1)$. Thus $(I_2,\alpha_2)\sim\sigma_a(I_1,\alpha_1)$.
+\end{proof}
+
+\begin{remark}
+Here $115=5\cdot23$ and the two Sylow arguments suffice: the proof uses neither Kronecker's theorem nor the class group. The rational comparisons of~\eqref{eq:blichfeldt}, the details on the $23$-groups and the alignment of the two Sylow subgroups were reviewed by a second assistant. The proof has not been reviewed by a specialist.
+\end{remark}
+
+\begin{corollary}\label{cor:bijection}
+The isometry classes of even unimodular lattices of rank $88$ and minimum $8$ that have an automorphism with characteristic polynomial $\Phi_{115}$ or $\Phi_{230}$ are in bijection with the orbits of $\Gal(L/\Q)$ in $S$ consisting of lattices of minimum $8$. \DEM
+\end{corollary}
+
+\begin{proof}
+Since $\Phi_{230}(x)=\Phi_{115}(-x)$, it suffices to treat $\Phi_{115}$. Let $(X,t)$ be given, with $t$ of characteristic polynomial $\Phi_{115}$; $X$ is a torsion-free module of rank $1$ over $\Z[t]\cong\OO_L$, and the choice of a non-zero vector identifies it with a fractional ideal $I$. A positive definite symmetric bilinear form on $L$ invariant under $\zeta$ is of the form $b_\alpha$, with $\alpha\in L^+$ totally positive. Thus $X\cong(I,\alpha)\in S$. Changing the vector does not change the class in $S$, and another choice of $t$ gives a conjugate class, by Theorem~\ref{thm:isometrie}. The resulting map is injective by the ``if'' direction, and surjective since multiplication by $\zeta$ is an automorphism with characteristic polynomial $\Phi_{115}$ of every $(I,\alpha)$.
+\end{proof}
+
+\begin{remark}\label{rem:autresorbites}
+The lattices $\Lz$ and $\LS$ occupy two orbits of minimum $8$, according to~\cite{Sak26}. By Theorem~\ref{thm:isometrie}, a lattice of minimum $8$ whose class has a support containing $331$ or $45\,013$ would be isometric neither to $\Lz$ nor to $\LS$. Theorem~\ref{thm:extremaux}, whose proof of the minimum is computer-assisted, raises the lower bound to four: the number of orbits of minimum $8$ lies between $4$ and $508\,463$; its exact value remains \emph{open}. The other integers $m$ such that $\varphi(m)=88$ are $89$, $178$, $184$, $230$ and $276$; $230$ gives back $115$, and the others are not treated here.
+\end{remark}
+
+\section{Gluing, Parseval lemma and extremality criterion}\label{sec:recollement}
+
+A direct enumeration of the vectors of norm at most $6$ in rank $88$ is out of reach: an estimate of the number of nodes of the Fincke--Pohst enumeration~\cite{FP85}, made on $\Lz$, gives $2.4\cdot10^{22}$ \CONS. LLL reduction does not find short vectors either: on $\Lz$, of minimum $8$, it stops at norm $16$ \CONS. This section reduces the question to enumerations in rank~$44$.
+
+\subsection{Gluing for a non-principal ideal}
+In this section, $I$ is an integral ideal of $\OO_L$ such that $I+\bar I=\OO_L$. This is the case of a prime ideal $I\ne\bar I$. We denote by $q=[\OO_L:I]$ its absolute norm, by $\nu\gg0$ a generator of $\Nm(I)$ (Proposition~\ref{prop:S}), and we set $\alpha=\beta_0/\nu$. We have $I\cap\bar I=I\bar I=\nu\OO_L$ and $\Nm_{L^+/\Q}(\nu)=q$. We define two quadratic forms on $L^+$:
+\[
+\Lambda(a)=\Trp(\alpha a^2),\qquad \Lambda'(b)=\Trp\bigl(\alpha(4-c^2)b^2\bigr).
+\]
+
+\begin{proposition}[gluing]\label{prop:recollement}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item The map $z\mapsto(a,b)=\bigl(z+\bar z,\ (z-\bar z)/e\bigr)$ is an isometry from $(I,b_\alpha)$ onto
+\[
+M_I=\bigl\{(a,b)\in\Op\times\Op:\ (a+eb)/2\in I\bigr\},\qquad \text{endowed with}\quad N(a,b)=\tfrac12\bigl(\Lambda(a)+\Lambda'(b)\bigr).
+\]
+\item In the basis $(c^{i})_{0\le i<44}$ of $\Op$, the forms $\Lambda$ and $\Lambda'$ are rational, positive definite, of determinant $1/q$. The index of $M_I$ in $\Op\times\Op$ is $2^{44}q$.
+\item For fixed $a$, the $b$ such that $(a,b)\in M_I$ form a class modulo $2\nu\Op$, or the empty set. The lattice $2\nu\Op$, endowed with $\Lambda'$, has determinant $4^{44}q$. The same statement holds with the roles of $a$ and $b$ exchanged, with $\Lambda$ on $2\nu\Op$.
+\end{enumerate}
+\DEM
+\end{proposition}
+
+\begin{proof}
+(a) For $z\in\OO_L$, $a=z+\bar z$ lies in $\OO_L\cap L^+=\Op$. The quotient $b=(z-\bar z)/e$ is real, and it is integral because $e$ is a unit (Proposition~\ref{prop:pair}). We have $z=(a+eb)/2$, so the map is injective and its image on $I$ is $M_I$. Since $\bar e=-e$ and $e^2=c^2-4$,
+\[
+z\bar z=\tfrac14(a+eb)(a-eb)=\tfrac14\bigl(a^2+(4-c^2)b^2\bigr),
+\]
+whence $b_\alpha(z,z)=2\Trp(\alpha z\bar z)=\frac12(\Lambda(a)+\Lambda'(b))$.
+
+(b) The form $\Trp(\beta_0xy)$ has determinant $1$ on $\Op$, since $\beta_0\Dif=\Op$. Multiplying the multiplier by $1/\nu$ multiplies the determinant by $\Nm_{L^+/\Q}(\nu)^{-1}=1/q$. Finally $4-c^2=-e^2$ is a totally positive unit, of norm $1$. For the index: since $e=2\zeta-c$, we have $a+eb=(a-cb)+2\zeta b$, so $(a+eb)/2\in\OO_L$ is equivalent to $a\equiv cb\pmod{2\Op}$. The image of $\OO_L$ thus has index $2^{44}$ in $\Op\times\Op$, and $M_I$ has index $[\OO_L:I]=q$ in it.
+
+(c) If $(a,b)$ and $(a,b')$ are in $M_I$, then $e(b-b')\in2I$. Since $b-b'$ is real and $\bar e=-e$, we also have $e(b-b')\in2\bar I$, hence $e(b-b')\in2(I\cap\bar I)=2\nu\OO_L$ and $b-b'\in2\nu\Op$. Conversely, for $x\in\Op$, $e\nu x\in I$. The determinant of $\Lambda'$ on $2\nu\Op$ is $\Nm_{L^+/\Q}(2\nu)^2/q=(2^{44}q)^2/q=4^{44}q$. The argument is the same for $a$.
+\end{proof}
+
+The corresponding matrix identity, and the index $2^{44}q$, were checked exactly for each ideal treated (\S\ref{subsec:methodes}).
+
+\subsection{Orbit of \texorpdfstring{$\zeta$}{zeta} and Parseval lemma}
+Let $z\in I$ be non-zero, of norm $N=b_\alpha(z,z)$. For $k\in\Z/115$, we denote by $(a_k,b_k)$ the image of $\zeta^kz$ and we set
+\[
+f(k)=\Tr_{L/\Q}\bigl(\alpha\,\zeta^{2k}z^2\bigr)\in\R .
+\]
+
+\begin{lemma}[zero mean]\label{lem:A}
+For every $k$, $\Lambda(a_k)=N+f(k)$ and $\Lambda'(b_k)=N-f(k)$. In particular $|f(k)|\le N$. Moreover $\sum_{k\in\Z/115}f(k)=0$ and, for every $k$,
+\begin{equation}\label{eq:R5}
+\sum_{t=0}^{4}f(k+23t)=0 .
+\end{equation}
+\DEM
+\end{lemma}
+
+\begin{proof}
+Set $z_k=\zeta^kz$; we have $z_k\bar z_k=z\bar z$. Then $a_k^2=z_k^2+\bar z_k^2+2z\bar z$ and $(4-c^2)b_k^2=-(z_k-\bar z_k)^2=-z_k^2-\bar z_k^2+2z\bar z$. Since $\Trp(\alpha(w+\bar w))=\Tr_{L/\Q}(\alpha w)$ for $w\in L$, we obtain $\Lambda(a_k)=f(k)+N$ and $\Lambda'(b_k)=-f(k)+N$. Both forms are positive, whence $|f(k)|\le N$. We have $f(k)=\sum_a\sigma_a(\alpha z^2)\,\omega^{2ak}$, where $a$ runs over $(\Z/115)^\times$ and $\omega=\exp(2i\pi/115)$. The sum over $k$ vanishes since $\sum_k\omega^{2ak}=0$. Relation~\eqref{eq:R5} comes from $\sum_{t=0}^{4}\omega^{46at}=\sum_{t=0}^{4}\exp(2i\pi\cdot2at/5)=0$, since $5$ does not divide $a$.
+\end{proof}
+
+For a non-principal ideal, $\alpha z^2$ belongs to $(\beta_0/\nu)I^2$, and $I^2/(I\bar I)=I/\bar I$ is not integral: the values $f(k)$ are not integers in general. The following lemma gives the estimate we need.
+
+\begin{lemma}[Parseval]\label{lem:parseval}
+For every non-zero $z\in I$, of norm $N$,
+\[
+\frac1{115}\sum_{k\in\Z/115}f(k)^2=\sum_{a}\sigma_a(\alpha)^2\,|\sigma_a(z)|^4\ \ge\ \frac{N^2}{88}.
+\]
+\DEM
+\end{lemma}
+
+\begin{proof}
+In the expression $f(k)=\sum_a\sigma_a(\alpha z^2)\omega^{2ak}$, the $88$ frequencies $2a$ are pairwise distinct modulo $115$. The orthogonality of the characters of $\Z/115$ gives the equality, with $|\sigma_a(\alpha z^2)|=\sigma_a(\alpha)|\sigma_a(z)|^2$. The inequality is the Cauchy--Schwarz inequality, applied to $N=\sum_a\sigma_a(\alpha)|\sigma_a(z)|^2$, a sum of $88$ terms.
+\end{proof}
+
+\begin{corollary}[threshold]\label{cor:seuil}
+Let $z\in I$ be non-zero, of norm $N$, and let $M=\max_k|f(k)|$. Then $M\ge N\sqrt{5/352}$. There therefore exists $k$ such that
+\[
+\min\bigl(\Lambda(a_k),\Lambda'(b_k)\bigr)\le N\Bigl(1-\sqrt{5/352}\Bigr).
+\]
+If $N\le6$, this minimum is at most $6-\sqrt{45/88}<1057/200$. \DEM
+\end{corollary}
+
+\begin{proof}
+Five real numbers with zero sum and absolute value at most $M$ have a sum of squares at most $4M^2$: the sum of squares is convex, and its maximum on this polytope is attained at a vertex, of the form $(M,M,-M,-M,0)$ up to permutation. By~\eqref{eq:R5}, the $115$ values of $f$ split into $23$ quintuples with zero sum. Hence $\sum_kf(k)^2\le23\cdot4M^2$, and Lemma~\ref{lem:parseval} gives $115N^2/88\le92M^2$, that is, $M^2\ge5N^2/352$. If $f(k)=-M$, then $\Lambda(a_k)=N-M$; if $f(k)=M$, then $\Lambda'(b_k)=N-M$. Finally $6\sqrt{5/352}=\sqrt{45/88}$, and $6-\sqrt{45/88}<1057/200$ is equivalent to $(143/200)^2=20\,449/40\,000<45/88$, which is true.
+\end{proof}
+
+The inequality $M\ge N/\sqrt{88}$ alone would give the threshold $6(1-1/\sqrt{88})\approx5.3604$, which is slightly worse. The numerical value of the threshold is $6-\sqrt{45/88}\approx5.2849$.
+
+\begin{lemma}[zero projections]\label{lem:nul}
+Let $z\in I$ be non-zero, of norm $N\le6$. There is at most one $k\in\Z/115$ such that $a_k=0$ or $b_k=0$. There exists $k$ such that one of the two projections $a_k$, $b_k$ is \emph{non-zero} and of energy at most $1057/200$. \DEM
+\end{lemma}
+
+\begin{proof}
+We have $a_k=0$ if and only if $\zeta^{2k}=-\bar z/z$, and $b_k=0$ if and only if $\zeta^{2k}=\bar z/z$. Since $-1\notin\langle\zeta\rangle$ and $k\mapsto\zeta^{2k}$ is injective on $\Z/115$, at most one $k$ makes a projection vanish. Let $k$ be given by Corollary~\ref{cor:seuil}. If the projection of minimal energy is non-zero, we are done. Otherwise, say $a_k=0$; then $f(k)=-N$. By~\eqref{eq:R5}, the four other terms of the quintuple of $k$ have sum $N$; one of them, $f(k')$, is at least $N/4$. Then $\Lambda'(b_{k'})=N-f(k')\le3N/4\le9/2<1057/200$, and $b_{k'}\ne0$ by uniqueness. The case $b_k=0$ is symmetric.
+\end{proof}
+
+\subsection{The criterion}
+
+\begin{theorem}[criterion]\label{thm:critere}
+The lattice $(I,b_\alpha)$ has no non-zero vector of norm at most $6$ if and only if the following two conditions are satisfied.
+\begin{enumerate}[label=\textup{(C\arabic*)}]
+\item There is no $(a,b)\in M_I$ with $a\ne0$, $\Lambda(a)\le1057/200$ and $\Lambda(a)+\Lambda'(b)\le12$.
+\item There is no $(a,b)\in M_I$ with $b\ne0$, $\Lambda'(b)\le1057/200$ and $\Lambda(a)+\Lambda'(b)\le12$.
+\end{enumerate}
+Under these conditions, the lattice, which is even, has minimum at least $8$. \DEM
+\end{theorem}
+
+\begin{proof}
+A pair excluded by (C1) or (C2) is the image of a non-zero vector of norm at most $6$ (Proposition~\ref{prop:recollement}). Conversely, if $z\ne0$ has norm at most $6$, Lemma~\ref{lem:nul} provides a rotation $\zeta^kz\in I$, of the same norm, one of whose projections is non-zero and of energy at most $1057/200$; the sum of the two energies is $2N\le12$. This rotation contradicts (C1) or (C2).
+\end{proof}
+
+We call \emph{side~1} the verification of (C1) and \emph{side~2} that of (C2). Each side requires two nested enumerations: that of the non-zero short projections $a$ (resp.\ $b$) of energy at most $1057/200$, in rank $44$; then, for each of them, that of the vectors of the prescribed class modulo $2\nu\Op$ whose energy respects the bound $12$. The criterion concludes only if these enumerations are exhaustive. A capped search, or a search at a threshold below $1057/200$, does not give a negative verdict.
+
+\begin{remark}
+The methods of~\cite{Sak26} (tensor inequality and projective minima) require a tensor product structure over the ring of integers of $\Q(\sqrt{-23})$. Among the classes of $S$, they apply only to the principal class and to those of support $\{3\}$.
+\end{remark}
+
+\section{The certified enumeration}\label{sec:certifiant}
+
+\subsection{Data and principle}
+For a given ideal $I$ and a given side, a PARI/GP script produces integer data: a Gram matrix $A$ of the short projection, scaled by an integer $D_A$; a Gram matrix $B$ of the lattice $2\nu\Op$ of the fiber, scaled by an integer $D_B$; an integer matrix $T_n$ and an integer $d>0$ which describe the lifts. The two Gram matrices are reduced (BKZ with block size $20$), and the final transformation is checked: it is unimodular and the change-of-basis identity is exact. For $u,y\in\Z^{44}$, we set $a(u)=u^{\mathsf T}Au$ and $w=d\,y+T_nu$. The lattice vector associated with $(u,y)$ has norm
+\begin{equation}\label{eq:normeuy}
+N=\frac12\Bigl(\frac{u^{\mathsf T}Au}{D_A}+\frac{w^{\mathsf T}Bw}{D_B\,d^2}\Bigr).
+\end{equation}
+For $P_{139}$, $(D_A,D_B,d)=(139,1,278)$; for $P_{599}$, $(D_A,D_B,d)=(599,1,1198)$.
+
+Let $B_A$ be a positive rational number and $S$ a positive integer (here $B_A=1057/200$ and $S=12$). We say that $u$ is \emph{normalized} if $u\ne0$ and its last non-zero coordinate is positive. We set
+\begin{align*}
+\Uc&=\{u\ \text{normalized}:\ a(u)\le D_A\,B_A\},\\
+\Tc&=\{(u,y):\ u\in\Uc,\ y\in\Z^{44},\ a(u)\,D_Bd^2+D_A\,w^{\mathsf T}Bw\le S\,D_AD_Bd^2\}.
+\end{align*}
+With $B_A=1057/200$ and $S=12$, $\Tc$ is the set of vectors of norm at most $6$ whose short projection is non-zero and of energy at most $1057/200$, up to sign. The change $(u,y)\mapsto(-u,-y)$ preserves both energies: the normalization loses nothing. By Theorem~\ref{thm:critere}, if $\Tc=\emptyset$ for both sides, the lattice has no non-zero vector of norm at most $6$.
+
+The program \texttt{Rang88CertZ} (Java) enumerates $\Uc$ by the Fincke--Pohst method~\cite{FP85}, then, for each $u\in\Uc$, the $y$ such that $(u,y)\in\Tc$. It differs from an ordinary floating-point enumerator in the following points.
+\begin{itemize}
+\item The decomposition $G=\sum_id_iT_i^2$ of each form is computed in exact rationals, and the identity is checked exactly at run time.
+\item The partial sums that give the centers are exact integers, in fixed point with step $2^{-40}$ in the executions described here, of type \texttt{long} with overflow detection. The truncation error is bounded exactly by an integer sum.
+\item The only floating-point operations are the energy lower bound and the radius. Each of them is followed by a move to the outward floating-point neighbor, so that a branch is pruned only if a certified lower bound of its energy exceeds a certified upper bound of the budget.
+\item Each leaf is rechecked in exact integers.
+\item The tree is split into tasks by the same recursion. Each completed task leaves a one-line \emph{receipt} in a checkpoint file, with its counters. The final summary prints \texttt{COUVERTURE\_COMPLETE} (``complete coverage'') only if every task of the catalogue has a result.
+\end{itemize}
+
+\subsection{What the non-omission proof establishes}
+The model of the machine is the following.
+\begin{enumerate}[label=\textup{(M\arabic*)}]
+\item The operations on \texttt{double} values and the conversion of a \texttt{long} into a \texttt{double} return the round-to-nearest result of the IEEE~754 standard; \texttt{Math.sqrt} returns the \texttt{double} closest to the exact square root.
+\item The integer methods said to be exact return the exact result or throw an exception; the classes \texttt{BigInteger} and \texttt{BigDecimal} are exact.
+\item Hardware faults and file alterations are outside the model.
+\end{enumerate}
+
+\begin{theorem}[non-omission]\label{thm:nonomission}
+Assume \textup{(M1)} and \textup{(M2)}. If an execution of \texttt{Rang88CertZ} terminates with exit code $0$ and the line \texttt{COUVERTURE\_COMPLETE}, then, under the integrity hypothesis on the checkpoint file:
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item $A$ and $B$ are positive definite;
+\item if no counter has overflowed (representability hypothesis), the counter \texttt{COMPTE\_U} (``count of $u$'') is equal to $|\Uc|$;
+\item under the same representability hypothesis, the counter \texttt{TOTAL\_TOUCHES} (``total number of hits'') is equal to $|\Tc|$.
+\end{enumerate}
+\st{proved under M1--M3; proof reviewed once by a second assistant, within a limited scope}
+\end{theorem}
+
+\begin{corollary}[absence of hits, without hypothesis on the counters]\label{cor:touche}
+Assume \textup{(M1)} and \textup{(M2)}. Consider an execution of \texttt{Rang88CertZ} in \texttt{run} mode, with a fresh checkpoint file and without test receiver, terminated with exit code $0$ and the line \texttt{COUVERTURE\_COMPLETE}. If the directory of the checkpoint file contains no hit file, and none has been removed from it, then $\Tc=\emptyset$.
+\st{relies on Z1--Z8; link to the code reviewed by a second assistant}
+\end{corollary}
+
+\begin{proof}[Sketch]
+By Z1 to Z8, every element of $\Tc$ is an admissible leaf of a task of the catalogue, and the catalogue is a partition of the unpruned tree. With a fresh checkpoint file, no earlier receipt is loaded: the summary is built only from the tasks of this launch, and the line \texttt{COUVERTURE\_COMPLETE} is printed only if each of them has returned a result. An admissible leaf causes, with no condition on the value of a counter, a line to be written in the hit file located next to the checkpoint file; this file is created if needed, and a write error throws an exception, which propagates up to exit code $2$. Hence, if $\Tc\ne\emptyset$, either a hit file exists or the exit code is not $0$. The line-by-line link with the source is given in the repository accompanying the note.
+\end{proof}
+
+The complete proof is in the repository accompanying the note; it is linked to the source by a table that associates each step of the code with a lemma. We only give its structure here.
+
+\begin{center}\small
+\begin{tabular}{l>{\raggedright\arraybackslash}p{11.6cm}}
+\toprule
+lemma & content \\
+\midrule
+L1 & Decomposition $G=\sum_id_iT_i^2$ in exact rationals, checked at run time; $G$ is positive definite. \\
+L2 & Enclosure of a rational number between two \texttt{double} values, by exact comparisons. \\
+L3 & Outward floating-point neighbors: the exact result of an operation is enclosed between the predecessor and the successor of the rounded result. \\
+Z1 & Fixed point: the gap between the exact center and the integer center is bounded by the sum of the absolute values of the coordinates already fixed. \\
+Z2 & The cache of integer partial sums is exact at every node (induction invariant). \\
+Z3 & The floating-point budgets bound the exact budgets from above, on the short side and in the fiber. \\
+Z5 & The energy lower bound passed from node to node bounds the exact energy from below; a pruned branch contains no admissible vector. \\
+Z4 & The integer range scanned at each level contains all admissible values; the integer division is exact. \\
+Z6 & The sign normalization removes exactly the zero vector and the opposites. \\
+Z7 & The tasks of the catalogue form a partition of the unpruned tree. \\
+Z8 & The leaves are tested in exact integers: a pair is counted if and only if it lies in $\Tc$. \\
+Z9 & Every integer overflow that could distort a decision throws an exception; an exception gives exit code $2$, without \texttt{COUVERTURE\_COMPLETE}. \\
+Z10 & Checkpoint file: binding to the parameters, the catalogue, the inputs and the classes; rereading; summary. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Lemmas L1 to L3 come from a first certifying program, based on floating-point intervals, which is slower. It certified six isolated tasks of $P_{139}$, without any hit, and was not run to completion.
+
+\emph{Validation} \CONS. The program was run on cases with a known answer. On $\Lz$, that is, for $I=\OO_L$, the two sides give $403\,876$ short projections, namely $4\,004+399\,872$, values obtained earlier by other programs, and no hit. On the rejected ideal $P_{461}$, at threshold $7/2$, it finds $697$ projections and $2$ hits of norm $6$. A test harness compares, on $5\,400$ random forms of dimension $2$ to $4$, the enumeration with an exhaustive search in integers: $16\,250$ checks, no failure. A hard stop followed by a resumption gives the same totals. These validations concern finite cases. They do not replace the proof and say nothing about $P_{139}$ or $P_{599}$.
+
+\subsection{Review of the proof}
+The proof was written with the assistant that wrote the code, then reviewed once by the second assistant. This review concluded favorably, within a limited scope: the non-omission mechanism Z1--Z8, under (M1) and (M2), and the domain refusals. It does not amount to a certification of a final result, and it formulated four reservations.
+\begin{itemize}
+\item \emph{Z9.} The local counters do not detect their own overflow. Exact counting requires a representability hypothesis, or checked increments.
+\item \emph{Z10.} A complete coverage that relies on reread receipts does not prove, by itself, that the corresponding tasks were executed: the loader checks the syntax, the indices and the duplicates, and replays nothing. A fabricated file would pass the resumption. The integrity hypothesis of the proof excludes this case; it must be documented.
+\item \emph{Writes.} The writing of a receipt is not looped until the buffer is exhausted, and the lock is internal to the virtual machine; the uniqueness of the writer is not guaranteed across processes.
+\item \emph{Identity.} The program computes the hash of the class files as reread from disk, not that of the bytes loaded into memory. The identity of the files, the geometric link and the final result are three distinct points; none of them is certified by this review.
+\end{itemize}
+In particular, the review of Z1--Z8 does not by itself cover the exactness of the counters asserted by points (2) and (3) of Theorem~\ref{thm:nonomission}. The absence of overflow, the exactness of the counters and the detection of a witness are three distinct propositions; only the third one is used for the conclusion $\Tc=\emptyset$.
+
+\subsection{Hypotheses H1 to H4, and what is not established}\label{subsec:hyp}
+The statement ``no non-zero vector of norm at most $6$'' for a candidate is \emph{computer-assisted}. It relies on Theorem~\ref{thm:critere}, on Theorem~\ref{thm:nonomission}, on the exact link between the input files and the lattice, and on the following hypotheses.
+\begin{enumerate}[label=\textup{(H\arabic*)}]
+\item \emph{Machine.} The Java virtual machines used execute the classes according to their specification, just-in-time compiler included: these are (M1) and (M2). Two environments are involved: OpenJDK 11.0.16.1 under Windows for the first executions, OpenJDK~21 under Linux for the replications. We certify neither of these two implementations.
+\item \emph{Hardware.} No hardware or memory fault occurred during the executions.
+\item \emph{Documentary integrity.} The logs are the authentic output of the executions; the bytes of the loaded classes and of the inputs read are those whose hashes the executions printed.
+\item \emph{Resumption (specific to side~1 of $P_{599}$).} The $21\,459$ receipts reread at the resumption were written by the first launch of the same program, each after the complete execution of its task.
+\end{enumerate}
+
+Some of these reservations are lifted for the executions concerned, by a reading of the source, of the logs and of the receipts \st{exact checks on the files}.
+\begin{itemize}
+\item \emph{Z9.} No counter enters an enumeration decision. The absence of hits depends on no counter: every hit creates a file or throws an exception, and no hit file exists. The printed totals are exact as long as no counter has undergone $2^{63}$ increments, which the duration of the executions makes implausible; this is a heuristic argument, without a proved bound. The conclusion on the minimum does not depend on it.
+\item \emph{Z10 and writes, without resumption.} For $P_{139}$ and for side~2 of $P_{599}$, each side was executed in a single launch. The checkpoint file was opened for writing only, and the summary depends on no reread receipt. The receipts were checked as witnesses: format, permutation of the indices, sums equal to the totals, final hash. The replications of $P_{139}$ and of $P_{599}$ on the second computer are also without resumption, for all four sides: the conclusion can rely on these fresh executions, in which H4 plays no role.
+\item \emph{Identity.} A recompilation of the source outside the repository, with the same compiler, gives back the classes byte for byte.
+\end{itemize}
+
+The following are \emph{not} established:
+\begin{itemize}
+\item the validity of the proof beyond the limited review above;
+\item H1; an execution by an independent implementation would reduce the risk of an error common to the proof and to the program, and none has been made;
+\item H2 and H3: the replications on a second computer support them, without proving them.
+\end{itemize}
+\emph{Replications.} For each of the two lattices, both sides were executed a second time, on a second computer, under another operating system and another version of the virtual machine (OpenJDK~21), in a single launch without resumption; the receipts are identical byte for byte to those of the first execution, and no divergence was observed in the compared results. These replications strengthen the consistency checks between executions, without proving H2 or H3. For $P_{599}$, side~1 of the first execution had been resumed; the complete replay of the $21\,459$ tasks executed before the resumption reproduced their receipts byte for byte, and the conclusion relies in any case on the executions without resumption, in which H4 plays no role.
+The receipts are deterministic. A replication must therefore reproduce, byte for byte, the hash of the receipts sorted by index.
+
+\section{Results}\label{sec:resultats}
+
+We denote by $P_p$ a prime ideal of $\Z[\zeta]$ above the prime number $p$, and by $X_p=(P_p,\beta_0/\nu)$ the unimodular ideal lattice that it carries (Proposition~\ref{prop:S}). The prime ideals above $p$ are conjugate under $\Gal(L/\Q)$: the corresponding lattices $X_p$ are isometric, and form a single orbit of $S$. A statement on the minimum of $X_p$ therefore holds for this whole orbit. If $p\equiv1\pmod{115}$, $P_p=(p,\zeta-r)$ has degree $1$ and $q=p$. If $p\equiv24$ or $91\pmod{115}$, $P_p$ has degree $2$ and $q=p^2$; its class is fixed by $\sigma_{24}$, resp.\ $\sigma_{91}$.
+
+\subsection{Proved rejections}\label{subsec:rejets}
+
+A \emph{witness} of non-extremality is an integer vector $x$, in an explicit $\Z$-basis of the ideal, such that $x^{\mathsf T}Gx=6$, where $G$ is the exact Gram matrix of the lattice.
+
+\begin{proposition}\label{prop:rejets}
+For each of the eight ideals of Table~\ref{tab:rejets}, the lattice $X_p$ contains a vector of norm $6$. It is therefore not extremal, and no lattice of its orbit is. Its minimum, which is at most $6$, is not determined. \st{proved, without GRH}
+\end{proposition}
+
+\begin{table}[ht]
+\caption{Rejections. The rejection is proved, without GRH. The ``orbit'' column is under GRH for the $331$- and $45\,013$-components, without GRH for the $3$-component (\S\ref{subsec:classes}). Search: ``GP, $7/2$'' denotes the PARI/GP filter at threshold $7/2$, ``Java'' a non-certifying Java enumerator, ``CertZ'' the program of \S\ref{sec:certifiant}. The SHA-256 hashes of the witness files are abbreviated.}\label{tab:rejets}
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llllll}
+\toprule
+ideal & $q$ & orbit (support, size) & search & witness & norm \\
+\midrule
+$P_{461}=(461,\zeta-5)$ & $461$ & $\{3,331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{d41592a8\dots} & $6$ \\
+$P_{691}=(691,\zeta-4)$ & $691$ & $\{331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{f3cf48f3\dots} & $6$ \\
+$P_{1151}=(1151,\zeta-6)$ & $1\,151$ & $\{331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{a5705522\dots} & $6$ \\
+$P_{1381}=(1381,\zeta-21)$ & $1\,381$ & $\{3,331,45\,013\}$, $88$ & GP, $7/2$ & \texttt{4a45c630\dots} & $6$ \\
+$P_{1471}$ (degree $2$) & $1471^2$ & $\{45\,013\}$, $44$ & Java & exact check & $6$ \\
+$P_{829}$ (degree $2$) & $829^2$ & $\{331\}$, $22$ & CertZ & \texttt{52222d1c\dots} & $6$ \\
+$P_{1289}$ (degree $2$) & $1289^2$ & $\{3,331\}$, $44$ & CertZ & \texttt{4c5f7602\dots} & $6$ \\
+$P_{1979}$ (degree $2$) & $1979^2$ & $\{3,331\}$, $44$ & CertZ & \texttt{71d980e2\dots} & $6$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}[Justification]
+For the seven ideals other than $P_{1471}$, a witness file contains the minimal polynomial of $c$, $\beta_0$, $\nu$, $\alpha$, a $\Z$-basis of the ideal ($88\times88$ matrix in the basis of the powers of $\zeta$), the Gram matrix, the vector $x$ and its expression in $L$. A verification program, which uses neither class group computations nor session data, rechecks exactly: that the basis generates an integral ideal of $\Z[\zeta]$, stable under $\zeta$, containing $p$ and of the expected index ($p$ or $p^2$); that $\alpha=\beta_0/\nu$; that the Gram matrix, recomputed, is integral, even, of determinant $1$ and positive definite; that $x$ is integral and that $x^{\mathsf T}Gx=6$. The seven logs carry the mention ``t\'emoin valide, norme $6$'' (valid witness, norm $6$). For $P_{1471}=(1471,\zeta^2+879\zeta+948)$, the vector was found by a non-certifying Java enumerator, then checked independently, without PARI/GP or Java: the reconstructed Gram matrix is even, positive definite, of determinant $1$, and $\Tr(\alpha z\bar z)=6$.
+\end{proof}
+
+For the last three ideals, the hit decomposes according to~\eqref{eq:normeuy} into a short energy and a fiber energy with sum $12$:
+\[
+\frac{3161}{829}+\frac{22\,505\,692}{1658^2},\qquad \frac{5683}{1289}+\frac{50\,451\,460}{2578^2},\qquad \frac{9260}{1979}+\frac{114\,687\,008}{3958^2}.
+\]
+These three hits were obtained in less than five minutes each, by the program and with the parameters used for the two candidates \CONS.
+
+\begin{remark}
+The PARI/GP filter used for the first four ideals is a capped search, at a threshold below $1057/200$. It provides witnesses, which are exact. An absence of witness in its outputs proves nothing: at threshold $3$, this filter had found nothing for $P_{1471}$, which is nevertheless rejected. For $P_{2531}$, of degree $1$, the filter was interrupted by its time limit; there is no decision. That the four orbits of size $88$ in the table are pairwise distinct is not established here.
+\end{remark}
+
+\subsection{The two candidates}\label{subsec:candidats}
+
+The following two ideals have residue degree $2$, with $p\equiv24\pmod{115}$:
+\[
+P_{139}=(139,\ \zeta^2+\zeta+77),\qquad P_{599}=(599,\ \zeta^2+87\zeta+322).
+\]
+We have $\bar P_{139}=(139,\zeta^2+65\zeta+65)\ne P_{139}$ and $\bar P_{599}=(599,\zeta^2+523\zeta+426)\ne P_{599}$. The absolute norms are $q=19\,321$ and $q=358\,801$.
+
+\begin{proposition}[candidate $P_{139}$]\label{prop:P139}
+Let $X=X_{139}$.
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item $X$ is a positive definite even unimodular lattice of rank $88$. \DEM
+\item $X$ contains a vector of norm $8$. \DEM
+\item $X$ contains no non-zero vector of norm at most $6$. \st{computer-assisted: H1--H3}
+\end{enumerate}
+Overall status: minimum $\ge8$ computer-assisted, two executions on two computers (identical receipts).
+\end{proposition}
+
+\begin{proof}[Justification]
+(1) Exact check, by a Python program in integers and rationals, without PARI/GP: the basis is that of an ideal of $\Z[\zeta]$ of index $139^2$, equal to $P_{139}$; the Gram matrix, recomputed from $\alpha$, is integral, even, of determinant $1$, and its $88$ leading principal minors are positive. The same program rechecks the gluing (Proposition~\ref{prop:recollement}) and the link between the input files of the certifying program and the lattice, for both sides: $43$ checks, no failure. This link was also reviewed by a second assistant.
+
+(2) A light search gives a pair $(u,y)$ with energies $398/139$ and $1\,015\,256/278^2$, of sum $16$. The corresponding vector, reconstructed in the basis of the ideal, has integer coordinates and satisfies $x^{\mathsf T}Gx=8$, in exact integers.
+
+(3) The program \texttt{Rang88CertZ} was run on both sides, with $B_A=1057/200$ and $S=12$, from October 10 to 11, 2026, on $6$ threads. Each side was run in a single launch, without resumption.
+\begin{center}\small
+\begin{tabular}{lrrrrl}
+\toprule
+side & tasks & duration & printed $|\Uc|$ & hits & end \\
+\midrule
+$1$ & $48\,227$ & $14\,562$ s & $42\,957\,972$ & $0$ & complete coverage, code $0$ \\
+$2$ & $61\,174$ & $15\,856$ s & $42\,957\,972$ & $0$ & complete coverage, code $0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+By Corollary~\ref{cor:touche}, under H1--H3, $\Tc=\emptyset$ for both sides: the executions are without resumption and their output directories contain no hit file. Theorem~\ref{thm:critere} then gives (3). The hashes of the sorted receipts begin with \texttt{c99dcf87} (side~1) and \texttt{8ab1f40a} (side~2).
+\end{proof}
+
+\emph{Replication of $P_{139}$.} The same program, on the same inputs, was executed a second time, on a second computer, under Linux and Java~21 (the first execution was under Windows and Java~11), with $8$ threads instead of $6$, without resumption: $48\,227$ and $61\,174$ tasks, no hit. The receipts sorted by index have the same SHA-256 hashes as those of the first execution (\texttt{c99dcf87\dots5122} and \texttt{8ab1f40a\dots daf7}). The two executions share the source code and the class files: this is not an independent implementation.
+
+\begin{proposition}[candidate $P_{599}$]\label{prop:P599}
+Let $X=X_{599}$.
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item $X$ is a positive definite even unimodular lattice of rank $88$. \DEM
+\item $X$ contains a vector of norm $8$. \DEM
+\item $X$ contains no non-zero vector of norm at most $6$. \st{computer-assisted: H1--H3}
+\end{enumerate}
+Overall status: minimum $\ge8$ computer-assisted, two executions on two computers (identical receipts). Hypothesis H4 on the resumed receipts of side~1 of the first execution is not needed (see below).
+\end{proposition}
+
+\begin{proof}[Justification]
+(1) Same exact check as for $P_{139}$: $47$ checks, no failure, for both sides. This link was also reviewed by a second assistant.
+
+(2) A pair $(u,y)$ with energies $1376/599$ and $19\,666\,368/1198^2$, of sum $16$, gives a vector with integer coordinates such that $x^{\mathsf T}Gx=8$.
+
+(3) First execution, on the first computer:
+\begin{center}\small
+\begin{tabular}{l>{\raggedright\arraybackslash}p{4.4cm}rrr>{\raggedright\arraybackslash}p{2.7cm}}
+\toprule
+side & launches & tasks & printed $|\Uc|$ & hits & end \\
+\midrule
+$1$ & two: $6$ threads, forced stop after about $20\,350$ s; then $10$ threads, $19\,765$ s & $59\,255$ & $185\,794\,630$ & $0$ & complete coverage, code $0$ \\
+$2$ & one: $10$ threads, $34\,114$ s & $74\,398$ & $185\,794\,630$ & $0$ & complete coverage, code $0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Side~2 has no resumption: under H1--H3, $\Tc=\emptyset$ for this side. Side~1 was resumed: the second launch reread $21\,459$ receipts and executed $37\,796$ tasks. Under H1--H4, $\Tc=\emptyset$ for this side. The replication described below gives the same conclusion without H4: both of its sides are without resumption, and Corollary~\ref{cor:touche} applies to them: the complete inventory of the output directory, taken after the end of the computation, contains no hit file. The hashes of the sorted receipts begin with \texttt{f3cf379a} (side~1) and \texttt{b9c93a83} (side~2).
+\end{proof}
+
+\emph{On hypothesis H4.} An exact check of the files establishes the following points. The file reread at the resumption is, byte for byte, the beginning of the final file; a copy taken before the resumption has the same hash. The forced stop left no truncated line. The $21\,459$ resumed indices and the $37\,796$ indices executed afterwards are disjoint, and their union is exactly the set of the $59\,255$ tasks. This check does not establish that the resumed receipts were produced by the same program, nor even by an execution: the second launch accepted them after a format check. Several concordances support H4 without proving it \CONS: the log of the first launch; the chronology; the agreement, at each periodic progress report, between the announced totals and the sums of the receipts already written; the order of the lines, compatible with a queue served by $6$ then by $10$ threads; the equality of $|\Uc|$ and of its histogram with those of an earlier sweep by another, non-certifying, program; finally the replay of $200$ tasks drawn at random among the $21\,459$, whose receipts are identical byte for byte. This sample covers $0.93\%$ of the tasks; it would not detect an isolated alteration.
+
+\emph{Replay of the resumed tasks of $P_{599}$.} The $21\,459$ tasks executed before the interruption were replayed in full, with the same classes and the same inputs, on a separate checkpoint ($14\,564$~s, no hit). The $21\,459$ receipts are identical byte for byte to those of the checkpoint taken before the resumption and to those of the final checkpoint. Hypothesis H4 is therefore no longer needed.
+
+\emph{Replication of $P_{599}$.} The complete sweep was redone on the second computer (Linux, OpenJDK~21, $14$ threads), with the same compiled classes and the same input files, in a single launch without resumption: side~1 in $26\,212$~s, side~2 in $25\,956$~s, exit codes zero, no hit. The task catalogues are identical byte for byte to those of the first execution. The canonical hashes of the receipts (receipts sorted by index, without header) are identical for both sides: $59\,255$ and $74\,398$ receipts. The hashes were computed twice, by two distinct programs. Statement (3) remains computer-assisted: the replication strengthens the consistency checks between executions, without proving H2 or H3; both machines executed the same program, and it says nothing about an omission specific to that program.
+
+\begin{remark}
+Before these executions, a non-certifying floating-point enumerator had swept both sides of the two candidates without finding any hit, with the same values of $|\Uc|$ \CONS. By Remark~\ref{rem:normalisateur}, Table~\ref{tab:orbites}
+and Remark~\ref{rem:classes}, the normalizers of the group of
+multiplications $\langle\zeta\rangle$ in $\Aut(X_{139})$ and
+$\Aut(X_{599})$ have orders $460$ and $920$, respectively.
+In particular,
+\[
+|\Aut(X_{139})|\ge460,\qquad |\Aut(X_{599})|\ge920.
+\]
+Explicit generators of these two normalizers have been constructed
+and checked in exact arithmetic. The full automorphism groups
+have not been determined; perfection has not been studied.
+\end{remark}
+
+\subsection{Partial survivors of a filter}\label{subsec:survivants}
+
+The primes $p\equiv24\pmod{115}$ give ideals of degree $2$ whose class is fixed by $\sigma_{24}$, hence with support contained in $\{3,331\}$. Apart from the orbits of $\Lz$ and of $\LS$, the classes of this type form $30$ orbits: $15$ of support $\{331\}$ and $15$ of support $\{3,331\}$ (Table~\ref{tab:orbites}). Nine cases were examined: $p=139$, $599$, $829$, $1289$, $1979$, $3359$, $4049$, $4969$ and $5659$. According to a computation by \texttt{bnfinit}, they lie in nine distinct orbits \GRH. The primes $p\equiv114\pmod{115}$ give nothing more: their class is fixed by complex conjugation, hence trivial.
+
+For the last four, a filter was applied: the program \texttt{Rang88CertZ} on side~1 only, with a stop at the first hit, for a bounded duration (one hour on $4$ threads, then $55$ minutes on $6$ threads).
+
+\begin{table}[ht]
+\caption{Partial survivors of the filter, side~1 only. Status: observed. No conclusion on the minimum. The ``orbit'' column is under GRH.}\label{tab:survivants}
+\centering\small
+\begin{tabular}{llrrr}
+\toprule
+ideal & orbit (support, size) & receipts / tasks of side~1 & share of the tasks & hits \\
+\midrule
+$P_{3359}$ & $\{331\}$, $22$ & $3\,981$ / $109\,662$ & $3.6\%$ & $0$ \\
+$P_{4049}$ & $\{3,331\}$, $44$ & $4\,173$ / $77\,819$ & $5.4\%$ & $0$ \\
+$P_{4969}$ & $\{3,331\}$, $44$ & $3\,716$ / $97\,270$ & $3.8\%$ & $0$ \\
+$P_{5659}$ & $\{331\}$, $22$ & $4\,201$ / $132\,743$ & $3.2\%$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These four ideals are \emph{partial survivors}, and nothing more. The coverage is a few percent of a single side, and the tasks are not of equal size. The three rejections of the same family occurred after $302\,298$, $354\,888$ and $432\,358$ short projections; in the first pass, the four survivors had each gone through ten to fifteen million of them without a hit. This is an indication, without proof value. Nothing is known about the minimum of these four lattices.
+
+\subsection{Classes of \texorpdfstring{$P_{139}$}{P139} and of \texorpdfstring{$P_{599}$}{P599} without GRH; non-isometry}\label{subsec:classes}
+
+\emph{Localization under GRH.} The $p$-component of a class $[P]$ can be read in the fixed field $K$ of the kernel of $\chi_p$: the norm $\Nm_{L/K}$ induces an isomorphism on the $\chi_p$-component, because the degree $[L:K]$ is invertible modulo $p$. We therefore read the $3$-component in $\Cl(F)\cong\Z/3$, certified without GRH, and the $331$- and $45\,013$-components in $\Cl(K_{22})\cong\Z/662$ and $\Cl(K_{44})\cong\Z/45\,013$, computed by \texttt{bnfinit} \GRH. The supports and orbit sizes of Tables~\ref{tab:rejets} and~\ref{tab:survivants} come from this computation. For $P_{139}$, it gives the support $\{3,331\}$ and an orbit of size $44$; for $P_{599}$, the support $\{331\}$ and an orbit of size $22$.
+
+The following two propositions do not depend on GRH. Let $K=K_{22}=\Q(\theta)$, with $\theta=\zeta+\zeta^{22}+\zeta^{24}+\zeta^{68}$, the fixed field of $\langle\sigma_{22}\rangle$; it is a CM field of degree $22$, whose unit group has rank $10$ and whose only roots of unity are $\pm1$.
+
+\begin{proposition}\label{prop:classeP139}
+The ideal $P_{139}^3$ is not principal in $L$. \st{proved, without GRH}
+\end{proposition}
+
+\begin{proposition}\label{prop:classeP599}
+For every integer $m$ prime to $331$, the ideal $P_{599}^m$ is not principal in $L$. The order of $[P_{599}]$ is therefore divisible by $331$. Moreover, the $3$-component of $[P_{599}]$ is zero. \st{proved, without GRH}
+\end{proposition}
+
+\begin{proof}[Proof of Propositions~\ref{prop:classeP139} and~\ref{prop:classeP599}]
+Let $p\in\{139,599\}$, $P=P_p$ and $\q=P\cap K$. A certificate, verified by a Python program in exact arithmetic, without PARI/GP, establishes the following facts ($24$ checks for $p=139$, $37$ for $p=599$, no failure).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The minimal polynomial of $\theta$ has degree $22$ and has $22$ simple roots modulo $p$; $\q$ has degree $1$, $P$ has degree $2$ over $\q$, and $\Nm_{L/K}(P)=\q^2$.
+\item An explicit algebraic integer $\gamma\in K$ satisfies $(\gamma)=\q^{331}$. The elements $\xi_a=\sin(\pi a/23)/\sin(\pi/23)$, $2\le a\le11$, are units of $K$.
+\item For three primes $\ell\equiv1\pmod{331\cdot115}$, we form the matrix of the discrete logarithms modulo $331$ of the images of $\xi_2,\dots,\xi_{11},\gamma$ in the residue fields of degree $1$ above $\ell$. The ten unit columns have rank $10$, and the whole matrix has rank $11$.
+\end{enumerate}
+Let $E$ be the unit group of $K$ and $U'=\langle-1,\xi_2,\dots,\xi_{11}\rangle$. For a prime $\mathfrak l$ of degree $1$ above $\ell$, let $\lambda_{\mathfrak l}$ be the reduction morphism with values in $\F_\ell^\times/(\F_\ell^\times)^{331}\cong\F_{331}$; it vanishes on the $331$st powers and on $\pm1$.
+
+\emph{Step 1: $U'$ has finite index $k$ in $E$, and $331\nmid k$.} If $\prod\xi_a^{n_a}=\pm\eta^{331}$ with $\eta\in E$, then $\sum n_a\lambda_{\mathfrak l}(\xi_a)=0$ for every $\mathfrak l$, hence $331$ divides each $n_a$, by the rank $10$. A primitive multiplicative relation among the $\xi_a$ would contradict this: $U'$ has rank $10$, hence finite index. If $331$ divided $k$, there would exist $\varepsilon\in E\smallsetminus U'$ with $\varepsilon^{331}\in U'$; then $\varepsilon^{331}=\pm\eta'^{331}$ with $\eta'\in U'$, so $\varepsilon/\eta'$ would be a root of unity of $K$, that is, $\pm1$, and $\varepsilon\in U'$.
+
+\emph{Step 2: for $m$ prime to $331$, $\q^{2m}$ is not principal.} Otherwise $\q^{2m}=(\delta)$, and $(\gamma^{2m})=\q^{662m}=(\delta^{331})$, that is, $\gamma^{2m}=\varepsilon\delta^{331}$ with $\varepsilon\in E$. At the $\ell$ used, $\delta$ is a local unit. Then $2mk\,\lambda_{\mathfrak l}(\gamma)=\lambda_{\mathfrak l}(\varepsilon^k)$ for every $\mathfrak l$, with $\varepsilon^k\in U'$: the column of $\gamma$ would lie in the span of the unit columns, since $2mk$ is invertible modulo $331$. The rank $11$ forbids this.
+
+\emph{Step 3.} If $P^m=(\beta)$, then $\Nm_{L/K}(\beta)$ generates $\Nm_{L/K}(P)^m=\q^{2m}$. Hence $P^m$ is not principal. For $p=599$, this is the first assertion of Proposition~\ref{prop:classeP599}. For $p=139$, we only use the case $m=3$, which is Proposition~\ref{prop:classeP139}.
+
+\emph{The $3$-component of $[P_{599}]$.} The element $s=\sum_{a=1}^{22}\bigl(\frac a{23}\bigr)\zeta^{5a}$ satisfies $s^2=-23$, and $599=24^2+23$. The element $\pi=24-s$ lies in $P_{599}$, so $P_{599}\cap\OO_F=(\pi)$ is principal and $\Nm_{L/F}(P_{599})=(\pi^2)$. The Sylow $3$-subgroup of $\Cl(L)$ has order $3$ (Proposition~\ref{prop:hmoins}), and $\Cl(F)\cong\Z/3$. The extension of ideals $j\colon\Cl(F)\to\Cl(L)$ is injective, since $\Nm_{L/F}\circ j$ is multiplication by $44$; its image is therefore this Sylow subgroup. Write $[P_{599}]=j(a)+c'$, with $c'$ of order prime to $3$. Then $0=\Nm_{L/F}([P_{599}])=44a+\Nm_{L/F}(c')$. Now $\Nm_{L/F}(c')$ has order prime to $3$ in a group of order $3$, hence is zero; therefore $a=0$.
+\end{proof}
+
+\begin{remark}[what remains under GRH, and what has been reviewed]\label{rem:classes}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item For $P_{139}$, the ideal $P_{139}\cap\OO_F$ is not principal ($4\cdot139$ is not of the form $a^2+23b^2$), so the order of $[P_{139}]$ is divisible by $3$. With Proposition~\ref{prop:classeP139}, this order is divisible by $331$ or by $45\,013$. The $45\,013$-component is zero, by the argument of point~(b): $139\equiv24\pmod{115}$, so $\sigma_{24}$ is the Frobenius substitution of $139$ and fixes $P_{139}$, whereas $24$ is not in the kernel of $\chi_{45\,013}$. The order of $[P_{139}]$ therefore divides $993=3\cdot331$; it is divisible by $3$ and different from $3$: it equals $993$, and the support is $\{3,331\}$. The stabilizer of the class is the intersection of the kernels of $\chi_3$ and of $\chi_{331}$, namely $\{1,24\}$ ($22$ and $68$ are congruent to $-1$ modulo $23$, which is not a square): the orbit has size $44$. These three facts are therefore obtained without GRH, modulo Propositions~\ref{prop:hmoins} and~\ref{prop:car}. \emph{Which} of the $15$ orbits of this support is that of $P_{139}$ remains under GRH.
+\item For $P_{599}$, the $45\,013$-component is zero: $\sigma_{24}$ is the Frobenius substitution of $599$ and fixes $P_{599}$, and $24$ is not in the kernel $\{1,91\}$ of $\chi_{45\,013}$ (Proposition~\ref{prop:car}). With Propositions~\ref{prop:hmoins}, \ref{prop:car} and~\ref{prop:classeP599}, $[P_{599}]$ has order $331$, support $\{331\}$ and an orbit of size $22$, without GRH. \emph{Which} of the $15$ orbits of this support is that of $P_{599}$ remains under GRH.
+\item The class certificates of $P_{139}$ and of $P_{599}$ were reviewed by a second assistant, within this scope only: ``$P^m$ is not principal'' for the indicated $m$. The computation of the $3$-component and the exact order $331$ in $L$ rely on Propositions~\ref{prop:hmoins} and~\ref{prop:car}.
+\end{enumerate}
+\end{remark}
+
+The statements cited from~\cite{Sak26} are the following.
+\begin{enumerate}[label=\textup{(S\arabic*)}]
+\item $\Lz$ and $\LS$ have minimum $8$ \cite[\S5, Prop.~5.5]{Sak26}. This is a preprint.
+\item $\Lz\cong(\OO_L,\beta_0)$ (integer certificate, \S\ref{subsec:sakamoto}), and $\LS$ is the ideal lattice of $J\OO_L$, with $[J\OO_L]^3=1$ (Proposition~\ref{prop:L0LS}).
+\end{enumerate}
+
+\begin{proposition}[non-isometry]\label{prop:noniso}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item Neither $X_{139}$ nor $X_{599}$ is isometric to $\Lz$ or to $\LS$.
+\item The classes $[P_{139}]$ and $[P_{599}]$ are not conjugate under $\Gal(L/\Q)$. If at least one of the lattices $X_{139}$, $X_{599}$ has minimum $8$, then $X_{139}\not\cong X_{599}$.
+\end{enumerate}
+\st{proved, without GRH, modulo (S1), (S2) and Theorem~\ref{thm:isometrie}}
+\end{proposition}
+
+\begin{proof}
+(a) Let $X$ be one of the two lattices, carried by $P$. If $\min X\le6$, the claim is immediate by (S1). Otherwise $\min X=8$ (Propositions~\ref{prop:P139} and~\ref{prop:P599}, point 2), and $X$, $\Lz$, $\LS$ are three unimodular ideal lattices of minimum at least $8$ over $L$. By Theorem~\ref{thm:isometrie}, an isometry of $X$ with $\Lz$ or $\LS$ would give $a$ and $\lambda\in L^\times$ such that $\lambda\sigma_a(P)$ is $\OO_L$, $J\OO_L$ or its conjugate. Then $[\sigma_a(P)]^3=1$, hence $[P]^3=1$, which contradicts Propositions~\ref{prop:classeP139} and~\ref{prop:classeP599}.
+
+(b) The order of $[P_{139}]$ is divisible by $3$ (Remark~\ref{rem:classes}), that of $[P_{599}]$ is not, and two conjugate classes have the same order. If only one of the two lattices has minimum $8$, they differ by their minimum; if both do, Theorem~\ref{thm:isometrie} applies.
+\end{proof}
+
+The proof of (a) does not use the computer-assisted statement on the minimum: it holds whether or not $X$ has minimum $8$.
+
+\begin{remark}[a shorter proof of (b), without the class number of $L$]\label{rem:normeF}
+Let $F=\Q(\sqrt{-23})\subset L$. Since $L/\Q$ is abelian, $\Nm_{L/F}(\sigma(I))=\sigma|_F(\Nm_{L/F}(I))$ for every $\sigma\in\Gal(L/\Q)$, and the norm of a principal ideal is principal: whether $\Nm_{L/F}(I)$ is principal or not depends only on the Galois orbit of the class of $I$. We have $\Cl(F)\cong\Z/3$: the reduced forms of discriminant $-23$ are $(1,1,6)$, $(2,\pm1,3)$.
+\begin{itemize}
+\item $139$ splits in $F$ and has residue degree $2$ in $L$; hence $\Nm_{L/F}(P_{139})=\mathfrak p_{139}^2$. A generator of $\mathfrak p_{139}$ would be $(a+b\sqrt{-23})/2$ with $a^2+23b^2=556$; for $|b|\le4$, $556-23b^2$ takes the values $556$, $533$, $464$, $349$, $188$, none of which is a square. Hence $\mathfrak p_{139}$, and with it $\mathfrak p_{139}^2$, is not principal.
+\item $599=24^2+23$: the two prime ideals of $F$ above $599$ are generated by $24\pm\sqrt{-23}$, hence principal, and $\Nm_{L/F}(P_{599})$ is principal.
+\end{itemize}
+The classes $[P_{139}]$ and $[P_{599}]$ are therefore not conjugate under $\Gal(L/\Q)$, without using $h^-(115)$ or the exact order of the classes. With Theorem~\ref{thm:isometrie}, which applies since both lattices have minimum $8$, we obtain $X_{139}\not\cong X_{599}$. \DEM, without GRH
+\end{remark}
+
+
+\begin{theorem}[two extremal lattices; computer-assisted proof]\label{thm:extremaux}
+The explicit lattices $X_{139}$ and $X_{599}$ are even, unimodular, of rank $88$ and of minimum $8$; they are therefore extremal. They are isometric neither to each other, nor to $\Lz$, nor to $\LS$.
+\st{minimum: computer-assisted proof, in the execution model of \S\ref{subsec:hyp} (M1, M2, H1--H3); non-isometry: proved without GRH}
+\end{theorem}
+
+\begin{proof}
+By points 1 and 2 of Propositions~\ref{prop:P139} and~\ref{prop:P599}, each of the two lattices is even, unimodular, positive definite, of rank $88$, and contains a vector of norm $8$. Let $z\ne0$ be of norm at most $6$. By Theorem~\ref{thm:critere}, after multiplication by a root of unity and choice of sign, one of the two projections is non-zero and of energy at most $1057/200$, the total energy being at most $12$; the case of a zero projection is handled by the dedicated lemma. By the geometric link, this pair belongs to the set $\Tc$ of one side, computed on the input files actually executed. By Corollary~\ref{cor:touche}, applied to the four fresh executions of the second computer (two lattices, two sides), $\Tc=\emptyset$: a contradiction. The minimum is therefore at least $8$, since the lattice is even, and it equals $8=2\lfloor88/24\rfloor+2$. The non-isometry is Proposition~\ref{prop:noniso}, together with Remark~\ref{rem:normeF}.
+\end{proof}
+
+\noindent\emph{Novelty.} The non-isometry to the two lattices of~\cite{Sak26} is proved. The absence of any other earlier example is a bibliographic conclusion, dated October 13, 2026 (\S\ref{subsec:connu}): to our knowledge, $X_{139}$ and $X_{599}$ are two new examples of extremal lattices of rank $88$.
+
+\noindent\emph{Status.} This proof is computer-assisted. It relies on the execution model made explicit in \S\ref{subsec:hyp}: the virtual machine and the arithmetic follow their specification (M1, M2, H1), no hardware fault occurred (H2), and the classes, inputs, outputs and preserved observations are authentic (H3). These premises are not an arithmetic hypothesis; the replications support them without proving them. The proof uses neither H4, nor the exactness of the counters, nor GRH. It consists of three parts, each reviewed by a second assistant on the preserved material:
+\begin{enumerate}[label=\textup{(\Alph*)}]
+\item \emph{the geometric link} of each lattice to the input files of the program, by exact checks, including the surjectivity of the coordinates and the exhaustiveness of the fibers by equality of determinants;
+\item \emph{the link between the proof and the code}: complete selection, completion of the tasks and summary of a fresh launch; absence of hit files, established by the complete inventory of the output directories taken after the end of the computations, and by reading the launch scripts, which delete nothing;
+\item \emph{the composition} above.
+\end{enumerate}
+No human specialist has reviewed these proofs, and no independent implementation of the sweep has been run; these are possible consolidations, not logical conditions. The statement concerns the two explicit lattices of the note; it says nothing about a classification, the exact number of extremal orbits, the automorphism group, or the exactness of the counters of Theorem~\ref{thm:nonomission}.
+
+\section{Open questions, methods and declarations}\label{sec:fin}
+
+\subsection{Open questions}\label{subsec:questions}
+
+\begin{enumerate}[label=\textup{(Q\arabic*)}]
+\item \emph{Consolidate Theorem~\ref{thm:extremaux}.} A review of the non-omission proof by a specialist, an independent implementation of the sweep, or a lower bound for the minimum that does not depend on any execution.
+\item \emph{Number of orbits of minimum $8$.} How many of the $508\,463$ orbits of $S$ consist of lattices of minimum $8$? This number is at least $4$: the orbits of $\Lz$ and of $\LS$, whose minimum $8$ is that of~\cite{Sak26}, and those of $X_{139}$ and of $X_{599}$, whose minimum $8$ is Theorem~\ref{thm:extremaux} (computer-assisted proof). These four orbits are pairwise distinct: the classes $[P_{139}]$ and $[P_{599}]$ are not conjugate to each other (Remark~\ref{rem:normeF}), and their cubes are not principal, whereas those of the classes of $\Lz$ and of $\LS$ are (Proposition~\ref{prop:noniso}). A probabilistic model (Siegel mean and Poisson law on the orbits of short vectors under $\mu_L$) suggests a proportion of the order of $4\%$ of the classes. This model is a \emph{heuristic}: it is not proved. It has been compared with only two cases in rank $56$, and it underestimates one of the two.
+\item \emph{The partial survivors.} What is the minimum of $X_{3359}$, $X_{4049}$, $X_{4969}$ and $X_{5659}$? Nothing is known.
+\item \emph{Sakamoto's second lattice.} The criterion of Theorem~\ref{thm:critere} has not been run on $\LS$. A prime ideal above $47$, of degree $4$ and norm $47^4$, lies in the orbit of $\LS$ (certified $3$-component); for this ideal, the estimated cost is of the order of ten hours per side. The minimum $8$ of $\LS$ therefore rests, for us, on~\cite{Sak26} alone.
+\item \emph{Orbit labels without GRH.} The exact localization of the classes in $\Cl(K_{22})$ and $\Cl(K_{44})$ is under GRH. A certification of the class group of $K_{22}$, of degree $22$, would remove GRH for the $331$-component; it has not been carried out.
+\item \emph{Invariants.} The full automorphism groups of
+$X_{139}$ and of $X_{599}$ have not been determined;
+their perfection has not been studied.
+\item \emph{Other conductors.} The cases $m=184$ and $m=276$, for which unimodular ideal lattices are even, and the case $m=89$, are not treated.
+\end{enumerate}
+
+\subsection{Methods and status of the computations}\label{subsec:methodes}
+The computations were done with PARI/GP, version 2.15.4~\cite{PARI}, with Python programs in exact integer and rational arithmetic, and with Java programs for the enumerations (OpenJDK 11.0.16.1 under Windows; OpenJDK~21 under Linux for the replications). Four types of computation are involved.
+\begin{enumerate}[label=\textup{(C\arabic*)}]
+\item \emph{Exact identities.} Relative class number, norms of generalized Bernoulli numbers, Gram matrices, isometry certificate $H\cong\Lz$, witnesses of norm $6$ and of norm $8$, geometric links, class certificates in $K_{22}$. These computations are replayable; the verifiers use no class group computation. They give the status ``proved''.
+\item \emph{Class groups by \texttt{bnfinit}.} Localization of the classes in $\Cl(K_{22})$ and $\Cl(K_{44})$. Status: ``under GRH''. The $3$-component is read in $\Cl(\Q(\sqrt{-23}))$, which is certified.
+\item \emph{Certified enumeration.} Program \texttt{Rang88CertZ} (\S\ref{sec:certifiant}). Status: ``computer-assisted'', under H1--H3. A hit, on the other hand, is an exact witness, replayable on its own.
+\item \emph{Non-certifying searches.} LLL reduction, \texttt{qfminim} of PARI/GP without options, capped filter, floating-point Java enumerator, time-bounded filter. Status: ``observed''. A vector found by these means becomes an exact witness once rechecked; an absence of vectors proves nothing.
+\end{enumerate}
+
+\emph{Sakamoto's data.} The Gram matrix of $\Lz$ used in \S\ref{subsec:sakamoto} comes from the public data repository that accompanies~\cite{Sak26}, \url{https://github.com/RyotaroSakamoto0113/rank-88-extremal-lattice-computations}, revision \texttt{628ce2a7}, file \texttt{data/L0/integer\_input.txt} (SHA-256 \texttt{68af477c\dots631f}). It is not redistributed with our data: these give its address and its hash, and the verification script reads it at that location. The files were read as data, without executing the code they contain. The article~\cite{Sak26} was read in its HTML version; the transcribed constants are cross-checked by exact identities. Its proofs have not been reviewed for this note.
+
+\emph{Reviews.} The following points were reviewed by the second assistant, Astra (OpenAI), each time within a limited scope: the computation of $h^-(115)$, by an independent computation in integers and rationals; the identification of the characters, the orbit count, the rational comparisons and the group arguments of \S\ref{sec:isometrie}, the gluing and the proof of Lemma~\ref{lem:nul}; the two matrix identities that give $H\cong\Lz$; the witness of $P_{1471}$; the geometric links of $P_{139}$ and of $P_{599}$; the mechanism Z1--Z8 of the non-omission proof and its link to the code; the class certificates of $P_{139}$ and of $P_{599}$; the composition of Theorem~\ref{thm:extremaux}. The short proof of Remark~\ref{rem:normeF} is due to Astra.
+
+\emph{Limitations.}
+\begin{itemize}
+\item $P_{139}$ and $P_{599}$ each rest on two complete executions of the same program, on two machines, with identical receipts; for $P_{599}$, the replay of the $21\,459$ tasks resumed from the first launch is added. No independent implementation has been run.
+\item The non-omission proof was written by the author of the code and checked once, with a limited favorable opinion.
+\item The review status of the class certificates is specified in Remark~\ref{rem:classes}.
+\item Theorem~\ref{thm:isometrie} is an internal proof, audited once.
+\item The minimum $8$ of $\Lz$ and of $\LS$ is that of a preprint. We have not re-proved it.
+\item The prior-art search is partial (\S\ref{subsec:connu}).
+\end{itemize}
+
+The programs, the input data, the receipts, the certificates and the non-omission proof are in a public repository that accompanies the note: \url{https://github.com/Katabolanga/rang88-reseaux-ideaux}.
+
+\subsection*{Author's declaration and use of artificial intelligence}
+The author publishes this note mainly to make known old ideas that are the author's own, as a human being. For the mathematical research and for proving these intuitions, the author was helped by two assistants: Claude Opus~5.5 (Anthropic) and Astra (OpenAI). They are not authors. Their use is as follows.
+\begin{itemize}
+\item \emph{Writing.} The text was written with Claude Opus~5.5.
+\item \emph{Translation.} The original text of this note is in French; it follows this English version in the same document. This English translation was prepared with Claude Opus~5.5.
+\item \emph{Proofs.} The proofs of \S\S\ref{sec:S}--\ref{sec:recollement}, the non-omission proof summarized in \S\ref{sec:certifiant} and the proofs of \S\ref{subsec:classes} were developed or put into shape with Claude Opus~5.5. Astra reviewed parts of them, listed in \S\ref{subsec:methodes}, and corrected several points, among them the value of the Blichfeldt bound in rank $22$ and the justification of the threshold $1057/200$; the short proof of Remark~\ref{rem:normeF} is due to Astra.
+\item \emph{Programs and computations.} The PARI/GP, Python and Java programs were written with Claude Opus~5.5. The first certifying program, based on intervals, was corrected and proved with Astra from a draft by Claude, and the program \texttt{Rang88CertZ} reuses parts of it. Astra's independent checks use programs written on Astra's side.
+\item \emph{Bibliography.} The reading of~\cite{Sak26} and the prior-art search were done with both assistants, on public copies.
+\end{itemize}
+The author takes scientific responsibility for the entire content. This note has not been reviewed by a human specialist.
+
+\begin{thebibliography}{Wat12}
+
+\bibitem[BN98]{BN98}
+C.~Bachoc, G.~Nebe, \emph{Extremal lattices of minimum $8$ related to the Mathieu group $M_{22}$}, J. reine angew. Math. \textbf{494} (1998), 155--171. (Cited from~\cite{Sak26}.)
+
+\bibitem[Bay84]{Bay84}
+E.~Bayer-Fluckiger, \emph{Definite unimodular lattices having an automorphism of given characteristic polynomial}, Comment. Math. Helv. \textbf{59} (1984), 509--538.
+
+\bibitem[Bay99]{Bay99}
+E.~Bayer-Fluckiger, \emph{Lattices and number fields}, in: Contemp. Math. \textbf{241}, Amer. Math. Soc., 1999, 69--84.
+
+\bibitem[Bli29]{Bli29}
+H.~F.~Blichfeldt, \emph{The minimum value of quadratic forms, and the closest packing of spheres}, Math. Ann. \textbf{101} (1929), 605--608.
+
+\bibitem[CS99]{SPLAG}
+J.~H.~Conway, N.~J.~A.~Sloane, \emph{Sphere packings, lattices and groups}, 3rd~ed., Grundlehren der math. Wiss. \textbf{290}, Springer, 1999.
+
+\bibitem[FP85]{FP85}
+U.~Fincke, M.~Pohst, \emph{Improved methods for calculating vectors of short length in a lattice, including a complexity analysis}, Math. Comp. \textbf{44} (1985), 463--471.
+
+\bibitem[Mil14]{Mil14}
+J.~C.~Miller, \emph{Class numbers of real cyclotomic fields of composite conductor}, LMS J. Comput. Math. \textbf{17} (2014), suppl.~A, 404--417, DOI 10.1112/S1461157014000382.
+
+\bibitem[Neb13]{Neb13}
+G.~Nebe, \emph{On automorphisms of extremal even unimodular lattices}, Int. J. Number Theory \textbf{9} (2013), no.~8, 1933--1959; preprint arXiv 1212.0865.
+
+\bibitem[Neb16]{Neb16}
+G.~Nebe, \emph{Automorphisms of extremal unimodular lattices in dimension $72$}, J. Number Theory \textbf{161} (2016), 362--383; preprint arXiv 1409.8473.
+
+\bibitem[PARI]{PARI}
+The PARI Group, \emph{PARI/GP version 2.15.4}, Univ. Bordeaux, 2023, \url{https://pari.math.u-bordeaux.fr/}.
+
+\bibitem[Sak26]{Sak26}
+R.~Sakamoto, \emph{Two extremal even unimodular lattices of rank $88$}, preprint arXiv 2609.15633, version~1 of September 14, 2026, version~2 of September 27, 2026. We cite version~2.
+
+\bibitem[Was97]{Was97}
+L.~C.~Washington, \emph{Introduction to cyclotomic fields}, 2nd~ed., Graduate Texts in Math. \textbf{83}, Springer, 1997 (Theorem~4.17: analytic formula for the relative class number; Theorem~6.10: Stickelberger's theorem).
+
+\bibitem[Wat12]{Wat12}
+M.~Watkins, \emph{Another $80$-dimensional extremal lattice}, J. Th\'eor. Nombres Bordeaux \textbf{24} (2012), no.~1, 237--255, DOI 10.5802/jtnb.795. (Cited from~\cite{Sak26}.)
+
+\end{thebibliography}
+
+\end{document}

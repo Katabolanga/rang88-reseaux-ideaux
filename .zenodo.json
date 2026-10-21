@@ -1,0 +1,37 @@
+{
+  "title": "Even unimodular ideal lattices of rank 88 over Q(zeta_115): note, addendum, data, programs and verifications (version 1.3)",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "1.3",
+  "language": "eng",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Gauvin, Ivan"
+    }
+  ],
+  "description": "<p>Note, addendum, data, programs and verification records on even unimodular ideal lattices of rank 88 over the cyclotomic field L = Q(zeta_115). The note is given in English (article/rang88_en.pdf, a translation) and in its original French (article/rang88.pdf).</p><p><b>Note.</b> The set S of classes of unimodular ideal lattices over L is in bijection with the class group of L, which is cyclic of order h<sup>-</sup>(115) = 44 697 909; it splits into 508 463 Galois orbits. Sakamoto's two extremal lattices lie in the principal orbit and in the unique non-trivial 3-torsion orbit. Two ideal lattices over L with minimum at least 8 are isometric if and only if their classes are Galois conjugate. A gluing construction is extended to non-principal ideals, and a finite extremality criterion is derived from a Parseval-type inequality. The orbits of eight prime ideals are rejected by explicit vectors of norm 6. For two prime ideals of degree 2, above 139 and 599, the lattices X<sub>139</sub> and X<sub>599</sub> are extremal: their minimum 8 is established by a computer-assisted proof, with an explicit execution model, and the computations were replicated on a second computer. They are isometric neither to each other nor to Sakamoto's lattices, without assuming GRH.</p><p><b>Addendum (version 1.1).</b> Two further extremal lattices, X<sub>4969</sub> and X<sub>4049</sub> (computer-assisted minimum, each side swept twice on two rented machines with byte-identical receipts); extremality is not an invariant of the twin pairs of the sigma<sub>24</sub> layer; a description of the orbits of that layer without GRH.</p><p><b>Version 1.2.</b> Norm-6 witnesses of the rejections in the addendum, with two independent checkers (PARI/GP and pure Python).</p><p><b>Version 1.3.</b> English translation of the note and updated French text (status of the non-isometry without GRH; normalizers of the multiplication group of orders 460 and 920 in Aut(X<sub>139</sub>) and Aut(X<sub>599</sub>)); archive metadata. No new computation.</p><p>Status: the minimum 8 of the new lattices is computer-assisted (execution model M1, M2, H1-H3 stated in the note); it is not a formal proof. Claude Opus 5.5 (Anthropic) and Astra (OpenAI) assisted the author; they are not authors.</p>",
+  "keywords": [
+    "ideal lattices",
+    "even unimodular lattices",
+    "extremal lattices",
+    "rank 88",
+    "cyclotomic fields",
+    "certified enumeration",
+    "computer-assisted proof"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2609.15633",
+      "relation": "references",
+      "scheme": "arxiv"
+    },
+    {
+      "identifier": "https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Repository: https://github.com/Katabolanga/rang88-reseaux-ideaux. Code under MIT licence, texts and data under CC-BY-4.0 (see LICENSE and LICENSE-CC-BY-4.0.md)."
+}
