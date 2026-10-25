@@ -1,5 +1,9 @@
 # rang88-reseaux-ideaux
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23638084.svg)](https://doi.org/10.5281/zenodo.23638084)
+
+Archive Zenodo : DOI de concept (toutes les versions) [10.5281/zenodo.23638084](https://doi.org/10.5281/zenodo.23638084) ; version 1.3 (release v1.3.1 du 25 octobre 2026) : [10.5281/zenodo.23638085](https://doi.org/10.5281/zenodo.23638085).
+
 Données, programmes et vérifications qui accompagnent la note **« Réseaux idéaux pairs unimodulaires de rang 88 sur Q(ζ₁₁₅) »** d'Ivan Gauvin (15 octobre 2026), dont le texte source et le PDF sont dans `article/`. *English summary below.*
 
 Le dépôt est autoportant : avec PARI/GP 2.15, Python ≥ 3.9 (bibliothèque standard seulement) et, pour les essais facultatifs, Java 11 ou plus, on peut rejouer toutes les vérifications exactes de la note, sauf les deux qui lisent la matrice de Gram de L₀ publiée par R. Sakamoto : ce fichier n'est pas redistribué et doit être téléchargé à part (`externe/LISEZMOI.md`). Les balayages certifiants eux-mêmes (plusieurs heures par côté) ne sont pas relancés par les vérificateurs : leurs reçus, journaux et catalogues sont fournis et contrôlés exactement ; la commande pour les refaire est dans `REPRODUIRE.md`.
@@ -8,7 +12,7 @@ Le dépôt est autoportant : avec PARI/GP 2.15, Python ≥ 3.9 (bibliothèque st
 
 - **La note en anglais** : `article/rang88_en.pdf` (24 p.) et sa source `article/rang88_en.tex`. C'est une traduction ; l'original français fait foi.
 - **Le texte français mis à jour** : `article/rang88.tex` et `article/rang88.pdf` (25 p.) remplacent ceux de la version 1.0. Ce sont les textes soumis à arXiv le 15 octobre 2026, soumission que la modération d'arXiv n'a pas retenue. Changements : la non-isométrie est énoncée « sans GRH » ; les normalisateurs du groupe des multiplications dans Aut(X₁₃₉) et Aut(X₅₉₉) sont d'ordres 460 et 920. Le texte de la version 1.0 reste dans l'historique du dépôt (commit f20d0bd).
-- **L'archivage** : le fichier `.zenodo.json` décrit le dépôt pour une archive Zenodo, qui lui attribue un DOI.
+- **L'archivage** : le fichier `.zenodo.json` décrit le dépôt pour l'archive Zenodo. Archive publiée le 25 octobre 2026 (release v1.3.1, même contenu que l'étiquette v1.3) : DOI de version 10.5281/zenodo.23638085, DOI de concept 10.5281/zenodo.23638084.
 - Aucun nouveau calcul. Les données, programmes et vérifications des versions 1.0 à 1.2 sont inchangés.
 
 ## Version 1.2 (18 octobre 2026) : témoins de norme 6 de l'addendum
