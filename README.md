@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23638084.svg)](https://doi.org/10.5281/zenodo.23638084)
 
-Archive Zenodo : DOI de concept (toutes les versions) [10.5281/zenodo.23638084](https://doi.org/10.5281/zenodo.23638084) ; version 1.3 (release v1.3.1 du 25 octobre 2026) : [10.5281/zenodo.23638085](https://doi.org/10.5281/zenodo.23638085).
+Archive Zenodo : DOI de concept (toutes les versions) [10.5281/zenodo.23638084](https://doi.org/10.5281/zenodo.23638084) ; version 1.3 (release v1.3.1 du 25 octobre 2026) : [10.5281/zenodo.23638085](https://doi.org/10.5281/zenodo.23638085) ; version 1.4 (release v1.4 du 31 octobre 2026) : [10.5281/zenodo.23835418](https://doi.org/10.5281/zenodo.23835418).
 
 Données, programmes et vérifications qui accompagnent la note **« Réseaux idéaux pairs unimodulaires de rang 88 sur Q(ζ₁₁₅) »** d'Ivan Gauvin (15 octobre 2026), dont le texte source et le PDF sont dans `article/`. *English summary below.*
 
