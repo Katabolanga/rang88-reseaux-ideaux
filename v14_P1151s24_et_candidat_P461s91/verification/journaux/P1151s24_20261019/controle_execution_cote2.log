@@ -1,0 +1,32 @@
+commande : python3 -I code/outils_inchanges/controle_execution.py <copie de run_P1151s24, journaux renommes cote2_SpiraleG.*> 2 101373 fe2b7eb6d4d0218117b840ca1d7dc5353bf1e5b6c276ed7bbaede563c25ae4b4
+source : controle_execution.py SHA-256 ef419ac71be7a9349ac337447a9a6dd5d0206e5f80b15703ddda57345b39c232 (inchange, calcul_externe_resultats_20261015)
+OK    E1 un seul journal de lancement (1 trouve(s))
+OK    E1 CHECKPOINT nouveau
+OK    E1 SELECTION 101373/101373 ; A_FAIRE 101373 ; DEJA_AU_CHECKPOINT 0
+OK    E1 EXECUTEES_CE_LANCEMENT 101373 ; REPRISES_DU_CHECKPOINT 0
+OK    E1 TACHES_TERMINEES 101373/101373
+OK    E1 TOTAL_TOUCHES 0
+OK    E1 COUVERTURE_COMPLETE 101373/101373
+OK    E1 ligne FIN
+OK    E1 aucune ligne ERREUR / TOUCHE / ARRET / REPRISE / Exception
+OK    E1 code de sortie 0
+OK    E1 stderr vide
+OK    E2 SHA du catalogue = valeur attendue fe2b7eb6...
+OK    E2 CATALOGUE_SHA256 du journal = SHA du fichier ; TOTAL_TACHES 101373
+OK    E2 en-tete des recus : catalogue et total
+OK    E3 fichier de recus termine par LF
+OK    E3 101373 lignes de recu au format strict (101373 lues)
+OK    E3 indices = permutation de 0..101372
+OK    E3 TOUCHES = 0 dans chaque recu
+OK    E4 somme des U = COMPTE_U du journal (358234264)
+OK    E4 somme des CVP = CVP du journal (358234264)
+OK    E4 somme des NA + 123387 noeuds de generation = NOEUDS court (490656098592)
+OK    E4 chaque recu : CVP = U, somme de HIST = U, NA >= 1
+OK    E4 somme des NB = NOEUDS fibre (4619240241404)
+OK    E4 somme des HIST des recus = histogramme du journal (32 cases) ; total HIST = somme des U
+OK    E5 SHA du fichier de recus = CHECKPOINT_SHA256 du journal
+OK    E5 aucun fichier .touches dans le repertoire
+OK    E6 empreinte canonique (deux calculs) 32818d454ff45e5a835e894cf1f0a1411a1aba516fb6eae14ba328f96d6065da
+BILAN : 27 controles, 0 echecs ; |U| = 358234264 ; empreinte canonique 32818d454ff45e5a835e894cf1f0a1411a1aba516fb6eae14ba328f96d6065da
+CONTROLE_OK
+code de sortie 0

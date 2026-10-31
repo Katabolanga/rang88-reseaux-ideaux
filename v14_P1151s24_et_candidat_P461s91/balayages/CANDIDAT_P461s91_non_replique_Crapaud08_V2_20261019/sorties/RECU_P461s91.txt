@@ -1,0 +1,38 @@
+2026-10-19 17:09:36  DEBUT P461s91 ; lot R88_P461S91_CERT_V2_20261019 ; hote Crapaud08 ; 8 processeurs ; FILS=8 ; MAXH=24 ; reprise=1 ; ESSAI_TACHES=0
+2026-10-19 17:09:36  java : openjdk version "21.0.12.1" 2026-08-18 ; python : Python 3.12.3
+2026-10-19 17:09:37  0 OK : empreintes du lot (35 fichiers)
+2026-10-19 17:09:47  1a OK : TestCertZ, 910 controles, 0 echec, code natif 0
+2026-10-19 17:09:53  1b OK : validation P461 (697 u, 2 touches attendues, couverture 3658/3658), code natif 0
+sha256 9ac0ebef36f943c9a5776efee0b4b79fa3de6670aa3fb4e190adbc268e1471c5  java_P461s91/cote1_A.gram
+sha256 e45b0416749617c800319e1c392f117cd431816705dc2055080d3ab28dbd5319  java_P461s91/cote1_B.gram
+sha256 fdfc22a5da26bb31d9a5b3da55af010a1cea83266b8db1101c9e6b7f23c4bf68  java_P461s91/cote1_T.mat
+sha256 8502cba2b104494e8792f390a6a3b59d8fb02cc76b90ebaba5ba44ee951b2b10  java_P461s91/cote1_meta.txt
+sha256 9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8  classes/Rang88CertZ$Compteurs.class
+sha256 a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af  classes/Rang88CertZ$EnumZ.class
+sha256 b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9  classes/Rang88CertZ$FormeZ.class
+sha256 5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b  classes/Rang88CertZ$Recepteur.class
+sha256 5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3  classes/Rang88CertZ$Tache.class
+sha256 a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3  classes/Rang88CertZ$Travail.class
+sha256 35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5  classes/Rang88CertZ.class
+sha256 60aed39c3fc32a76da5e61fad04465a45a224edef1dd069cbeabf30961638fc4  classes/TestCertZ.class
+2026-10-19 17:09:53  DEBUT cote 1 (73244 taches), 8 fils, garde-fou 24 h ; journal sorties/run_P461s91_cote1/cote1_20261019_170953.stdout.log
+2026-10-19 23:43:57  FIN cote 1 : code natif Java 0 (124 = garde-fou) ; lignes TOUCHE 0 ; fichier de touche 0 ; lignes ERREUR/ARRET/Exception 0 ; stderr 0 octets
+2026-10-19 23:43:58  cote 1 : controle_execution.py code natif 1 (BILAN : 28 controles, 4 echecs ; |U| = 143529602 ; empreinte canonique db04c32e6) ; lancements 1 ; empreinte canonique db04c32e641f75bcce3739f09921e3aab27917903b4b4e36aedafae518eaa1e4 ; predictions du jumeau OK
+FIN_COTE 1 A_EXAMINER 2026-10-19 23:43:58 : complet sans touche, mais controle_execution code 1, 0 echec(s) hors E1 de reprise, lancements 1, jumeau OK, lignes ERREUR 0
+sha256 04500cd9abf5e50e48f21a7f951409920826c893378c8eb0e6b58deae16d778c  java_P461s91/cote2_A.gram
+sha256 e1c45d9bb8c35aef63ddfa34b9d416dab2c3bf552d0139f5ecf225312e06e590  java_P461s91/cote2_B.gram
+sha256 b06400da6ef322becda6b8ffd6b47fd8f356b0c4420592a23fe2e9bc11eed5e9  java_P461s91/cote2_T.mat
+sha256 8502cba2b104494e8792f390a6a3b59d8fb02cc76b90ebaba5ba44ee951b2b10  java_P461s91/cote2_meta.txt
+sha256 9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8  classes/Rang88CertZ$Compteurs.class
+sha256 a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af  classes/Rang88CertZ$EnumZ.class
+sha256 b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9  classes/Rang88CertZ$FormeZ.class
+sha256 5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b  classes/Rang88CertZ$Recepteur.class
+sha256 5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3  classes/Rang88CertZ$Tache.class
+sha256 a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3  classes/Rang88CertZ$Travail.class
+sha256 35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5  classes/Rang88CertZ.class
+sha256 60aed39c3fc32a76da5e61fad04465a45a224edef1dd069cbeabf30961638fc4  classes/TestCertZ.class
+2026-10-19 23:43:58  DEBUT cote 2 (73359 taches), 8 fils, garde-fou 24 h ; journal sorties/run_P461s91_cote2/cote2_20261019_234358.stdout.log
+2026-10-20 05:45:46  FIN cote 2 : code natif Java 0 (124 = garde-fou) ; lignes TOUCHE 0 ; fichier de touche 0 ; lignes ERREUR/ARRET/Exception 0 ; stderr 0 octets
+2026-10-20 05:45:47  cote 2 : controle_execution.py code natif 0 (BILAN : 28 controles, 0 echecs ; |U| = 143529602 ; empreinte canonique 652ef2f89) ; lancements 1 ; empreinte canonique 652ef2f89497cb0784326c1ab280b86b99febb3206749f3ee4592c4f59936d13 ; predictions du jumeau OK
+FIN_COTE 2 COMPLET 2026-10-20 05:45:47 : 73359/73359 taches, 0 touche, un seul lancement, controle_execution 100 %, catalogue 388a5734bb6ce7e5a700c8e08aaa54cae326bf787a451a1251639c5f834e0fd2, empreinte canonique 652ef2f89497cb0784326c1ab280b86b99febb3206749f3ee4592c4f59936d13
+2026-10-20 05:45:47  VERDICT : A_EXAMINER P461s91 (rendre tout tel quel, ne rien corriger) (code de sortie 4)

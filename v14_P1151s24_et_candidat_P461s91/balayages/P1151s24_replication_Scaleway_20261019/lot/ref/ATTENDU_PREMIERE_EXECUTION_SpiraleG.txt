@@ -1,0 +1,8 @@
+# Valeurs de la PREMIERE execution (SpiraleG, Windows 11, OpenJDK 11.0.16.1, 14 fils, 17 oct. 22 h 48 -> 19 oct. 1 h 06),
+# relues dans ref/SpiraleG_cote1.stdout.log, ref/SpiraleG_cote2.stdout.log et recalculees par controle_execution.py (27/27 par cote).
+# Une replication est IDENTIQUE si, pour chaque cote : code Java 0, COUVERTURE_COMPLETE n/n, TOTAL_TOUCHES 0, aucun fichier
+# *.touches, meme catalogue, et meme EMPREINTE CANONIQUE (SHA-256 des recus tries par indice, chacun suivi de LF),
+# ce qui equivaut a des recus identiques a l'octet.  Le SHA du fichier .ckpt lui-meme depend de l'ordre d'arrivee des taches
+# (donc du nombre de fils) : il n'est PAS compare.
+cote 1 : taches 74027 ; catalogue 287b1e724cb845e266356bbaed182a6c95d47f207dc7def9acf10c5d78711b8e ; COMPTE_U 358234264 ; NOEUDS court 317307888661 ; fibre 5025422805041 ; empreinte canonique 36c946d4551a6d403cfc8e8ecadabab8efa8b9090c8fe3898cdafcd04d2e32f7
+cote 2 : taches 101373 ; catalogue fe2b7eb6d4d0218117b840ca1d7dc5353bf1e5b6c276ed7bbaede563c25ae4b4 ; COMPTE_U 358234264 ; NOEUDS court 490656221979 ; fibre 4619240241404 ; empreinte canonique 32818d454ff45e5a835e894cf1f0a1411a1aba516fb6eae14ba328f96d6065da

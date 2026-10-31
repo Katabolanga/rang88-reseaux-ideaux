@@ -5,8 +5,8 @@ type: dataset
 authors:
   - family-names: Gauvin
     given-names: Ivan
-version: "1.3"
-date-released: "2026-10-22"
+version: "1.4"
+date-released: "2026-10-31"
 doi: "10.5281/zenodo.23638084"
 identifiers:
   - type: doi
@@ -24,7 +24,11 @@ abstract: >-
   version 1.2 (18 octobre 2026) : témoins de norme 6 des quatre rejets des filtres (tableau 4) et de la proposition 4.6
   de l'addendum, vérificateurs PARI/GP et Python, bilan et journaux des 21 filtres ;
   version 1.3 : traduction anglaise de la note (article/rang88_en) et texte français mis à jour
-  (non-isométrie sans GRH, normalisateurs d'ordres 460 et 920), métadonnées d'archivage Zenodo ; aucun nouveau calcul.
+  (non-isométrie sans GRH, normalisateurs d'ordres 460 et 920), métadonnées d'archivage Zenodo ; aucun nouveau calcul ;
+  version 1.4 : horodatage de X(P₁₁₅₁σ₂₄) (minimum 8 assisté par calcul, balayé deux fois sur deux machines, reçus
+  identiques ; non isométrique sans GRH aux six extrémaux connus) et du CANDIDAT X(P₄₆₁σ₉₁) (balayage exhaustif sans touche,
+  non répliqué ; minimum annoncé par les auteurs ; non-isométrie à L₀ seulement sous GRH) : constructions, entrées,
+  reçus, journaux et vérificateurs ; la note et l'addendum sont inchangés.
   Claude Opus 5.5 (Anthropic) et Astra (OpenAI) ont assisté l'auteur ; ils ne sont pas auteurs.
 keywords:
   - réseaux idéaux

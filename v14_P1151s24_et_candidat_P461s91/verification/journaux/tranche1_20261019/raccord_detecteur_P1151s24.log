@@ -1,0 +1,18 @@
+== P1151s24 : I_data = data/P1151s24/entrees/I_data.gp
+OK    P1151s24 A1 : I = P sigma_24(P), P = (1151, zeta - 6), sigma_24(P) = (1151, zeta - 605) ; p = 1 mod 115, racines primitives, exposant conforme au nom ; GEN = y^2 + 540*y + 177
+OK    P1151s24 A2 : base C construite depuis (p, GEN) : |det C| = p^2 = Q = 1324801 et C stable par zeta, donc C engendre I
+OK    P1151s24 A3 : BASE du fichier engendre le meme module (|det BASE| = Q, C^-1 BASE entiere)
+OK    P1151s24 B1 : PM = polynome minimal de zeta + 1/zeta, ALPHA * NU = BETA0 mod PM
+OK    P1151s24 B2 : G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P1151s24 B3 : det G = 1
+OK    P1151s24 B4 : G definie positive (qfsign exact)
+OK    P1151s24 B5 : GRAM du fichier = BASE~ H BASE (provenance)
+OK    P1151s24 D1 : les 8 controles de reconstruit() (commun_rang88.gp du detecteur, inchange) sont OK
+OK    P1151s24 D2 : U du detecteur 88 x 88 entiere, |det U| = 1
+OK    P1151s24 D3a : fichier Gram du detecteur de 88 lignes
+OK    P1151s24 D3 : U~ G U = Gram du detecteur (detecteur_copie/gram/P1151s24.gram)
+OK    P1151s24 D4 : W = BASE^-1 C U entiere, |det W| = 1, W~ GRAM W = Gram du detecteur
+P1151s24 : diagonale de la Gram du detecteur : min 28, max 68
+P1151s24 : 8 + 5 controles, 0 echecs
+RACCORD_DETECTEUR_OK P1151s24
+code de sortie 0

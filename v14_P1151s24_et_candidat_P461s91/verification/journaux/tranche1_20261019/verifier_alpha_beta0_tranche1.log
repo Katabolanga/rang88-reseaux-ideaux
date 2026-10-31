@@ -1,0 +1,11 @@
+donnees du corps : rang88_m115c0_data.txt SHA-256 7b71b5f176b8bdac1d1236e5e59376674012089b3fb66b72e4a9b48ddf116f3a
+OK    B1 Pm unitaire de degre 44, a coefficients entiers
+OK    B1 Tr(1) = 44 et Tr(c) = 1 (somme des zeta^k + zeta^-k sur (Z/115)^*/{+-1}, = mu(115) = 1)
+OK    B2 Tr(beta0 c^(i+j)) entiere sur la base (c^i) de O+ ; determinant = 1 (attendu +-1 : beta0 * Differente = O+)
+OK    B3 P461s91 (PREMIERS = [[461, 5], [461, 115]] ; I_data.gp SHA-256 31e138c88dac1c9d...) : ALPHA * NU = BETA0 modulo Pm
+OK    B3 P3359 (PREMIERS = [[3359, 2, 1]] ; I_data.gp SHA-256 e387f8fd7a95abfa...) : ALPHA * NU = BETA0 modulo Pm
+OK    B3 P1151s24 (PREMIERS = [[1151, 6], [1151, 605]] ; I_data.gp SHA-256 1d2b926698ec42f5...) : ALPHA * NU = BETA0 modulo Pm
+OK    B3 P4969 (PREMIERS = [[4969, 2, 1]] ; I_data.gp SHA-256 768ab11514b21931...) : ALPHA * NU = BETA0 modulo Pm
+BILAN : 7 controles, 0 echecs
+ALPHA_BETA0_OK
+code de sortie 0

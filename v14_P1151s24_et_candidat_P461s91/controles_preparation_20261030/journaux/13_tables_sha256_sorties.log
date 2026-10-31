@@ -1,0 +1,70 @@
+date : 2026-10-30 23:42:02 CET
+commande : sha256sum -c SHA256SUMS_SORTIES.txt, dans chaque dossier ou la table a ete ecrite
+== v14_P1151s24_P461s91/balayages/P1151s24_replication_Scaleway_20261019/cote1_AMS3 (table ecrite par le lanceur AVANT l'ajout du verdict au recu : un ecart sur RECU_REPLICATION_P1151s24.txt est attendu)
+sorties/AUTOTEST_OK: OK
+sorties/RECU_REPLICATION_P1151s24.txt: FAILED
+sorties/autotest/P461.ckpt: OK
+sorties/autotest/P461.ckpt.touches: OK
+sorties/autotest/P461.taches: OK
+sorties/autotest/p461.exit: OK
+sorties/autotest/p461.log: OK
+sorties/autotest/testcertz.exit: OK
+sorties/autotest/testcertz.log: OK
+sorties/run_P1151s24_cote1/CONTROLE_EXECUTION_cote1.txt: OK
+sorties/run_P1151s24_cote1/cote1.ckpt: OK
+sorties/run_P1151s24_cote1/cote1.taches: OK
+sorties/run_P1151s24_cote1/cote1_crapaud08_20261019_094423.java.exit: OK
+sorties/run_P1151s24_cote1/cote1_crapaud08_20261019_094423.stderr.log: OK
+sorties/run_P1151s24_cote1/cote1_crapaud08_20261019_094423.stdout.log: OK
+sorties/verif_empreintes_lot.txt: OK
+sha256sum: WARNING: 1 computed checksum did NOT match
+code de sortie 1
+== v14_P1151s24_P461s91/balayages/P1151s24_replication_Scaleway_20261019/cote2_AMS2 (table ecrite par le lanceur AVANT l'ajout du verdict au recu : un ecart sur RECU_REPLICATION_P1151s24.txt est attendu)
+sorties/AUTOTEST_OK: OK
+sorties/RECU_REPLICATION_P1151s24.txt: FAILED
+sorties/autotest/P461.ckpt: OK
+sorties/autotest/P461.ckpt.touches: OK
+sorties/autotest/P461.taches: OK
+sorties/autotest/p461.exit: OK
+sorties/autotest/p461.log: OK
+sorties/autotest/testcertz.exit: OK
+sorties/autotest/testcertz.log: OK
+sorties/run_P1151s24_cote2/CONTROLE_EXECUTION_cote2.txt: OK
+sorties/run_P1151s24_cote2/cote2.ckpt: OK
+sorties/run_P1151s24_cote2/cote2.taches: OK
+sorties/run_P1151s24_cote2/cote2_crapaud08_20261019_094524.java.exit: OK
+sorties/run_P1151s24_cote2/cote2_crapaud08_20261019_094524.stderr.log: OK
+sorties/run_P1151s24_cote2/cote2_crapaud08_20261019_094524.stdout.log: OK
+sorties/verif_empreintes_lot.txt: OK
+sha256sum: WARNING: 1 computed checksum did NOT match
+code de sortie 1
+== v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/sorties (table calculee en dernier par le lanceur V2)
+./AUTOTEST_OK: OK
+./RECU_P461s91.txt: OK
+./VERDICT.txt: OK
+./autotest/P461.ckpt: OK
+./autotest/P461.ckpt.touches: OK
+./autotest/P461.taches: OK
+./autotest/p461.exit: OK
+./autotest/p461.log: OK
+./autotest/testcertz.exit: OK
+./autotest/testcertz.log: OK
+./run_P461s91_cote1/CONTROLE_EXECUTION_cote1.txt: OK
+./run_P461s91_cote1/cote1.ckpt: OK
+./run_P461s91_cote1/cote1.taches: OK
+./run_P461s91_cote1/cote1_20261019_170953.java.exit: OK
+./run_P461s91_cote1/cote1_20261019_170953.stderr.log: OK
+./run_P461s91_cote1/cote1_20261019_170953.stdout.log: OK
+./run_P461s91_cote2/CONTROLE_EXECUTION_cote2.txt: OK
+./run_P461s91_cote2/cote2.ckpt: OK
+./run_P461s91_cote2/cote2.taches: OK
+./run_P461s91_cote2/cote2_20261019_234358.java.exit: OK
+./run_P461s91_cote2/cote2_20261019_234358.stderr.log: OK
+./run_P461s91_cote2/cote2_20261019_234358.stdout.log: OK
+./verif_empreintes_lot.txt: OK
+code de sortie 0
+== complement : l'ecart sur RECU_REPLICATION_P1151s24.txt vient de la seule ligne VERDICT ajoutee apres la table
+commande : head -n $((n-1)) RECU_REPLICATION_P1151s24.txt | sha256sum   (n = nombre de lignes), comparee a la ligne de SHA256SUMS_SORTIES.txt
+OK    cote1_AMS3 : recu sans sa derniere ligne (VERDICT) = f7153f6b79e0e09d7cfee1b3b67b6bfde3f27a12e825865c3ea791311900b640 = valeur de la table
+OK    cote2_AMS2 : recu sans sa derniere ligne (VERDICT) = 44c4dc22308b5e1f29492647e50a3b5238e2250e810af64a182b78f012ed5313 = valeur de la table
+code de sortie 0

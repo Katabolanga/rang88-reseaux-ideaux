@@ -1,0 +1,20 @@
+Rang88CertZ run : java_P461/cote1 ; mode=run|n=44|BA=7/2|S=12|DA=461|DB=1|d=922|F=40|D=6|Dmax=6|seuil=0.5 ; 32 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 21.0.12.1 ; Linux amd64 ; processeurs 32 ; PID 2109 ; Mon Oct 19 09:44:17 UTC 2026
+  ENTREES SHA-256 : A 6981c7bc9b86f28569ffdedae6324dc9a1c1099aa2ec3497f830a565921cb862 ; B 6ca7a2e59f076d42aed6725dc7e4b5cc578ccd55f658079a3ff3fb8bd1f2368c ; T df74875e2db5a05bb3c733020ca6b08b4493898dfdd91ca88e6854bc1cb04c4b ; meta 8502cba2b104494e8792f390a6a3b59d8fb02cc76b90ebaba5ba44ee951b2b10
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=7f34ac6bde43c264d6fe45ce86a36ef554aca48dd9635ec028286a6810508530|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 115.25 , max dL = 1132.5548617305976 , max |q| ~ 0.5039793724227164 ; fibre : min dL = 1.299506694855532 , max dL = 16.0 , max |q| ~ 0.5053482554655132 ; B_U(court) = 1613.5
+  3658 taches certifiees (5266 noeuds de generation) ; niv37:3658
+CATALOGUE_SHA256 30d7a99ff07be5bf938c52ad9a24316312e0c49001ae5b2eb13d695dfe3c010a ; TOTAL_TACHES 3658
+CHECKPOINT nouveau : sorties/autotest/P461.ckpt
+SELECTION 3658/3658 ; A_FAIRE 3658 ; DEJA_AU_CHECKPOINT 0
+TOUCHE court=1595/461 fibre(num)=7259828/(1*922^2) u=[-2, 1, -2, 0, -2, 0, 1, 0, -1, 0, 2, 1, -1, 0, 1, 2, 1, 1, 0, -1, 1, 0, 1, 1, 0, -2, 0, 0, -1, 0, -1, 1, -1, 0, 0, 0, 0, -1, 1, 0, 0, 0, 0, 0] y=[-2, -4, 2, -6, 1, -3, -1, -2, 0, 2, 0, -3, -4, 2, 4, 1, 4, 1, 0, 3, -1, 1, 0, 0, -1, 2, -2, 1, 0, -2, -1, 0, 3, 0, -1, 1, -1, 3, 1, 0, -2, -1, -2, -1]
+TOUCHE court=1579/461 fibre(num)=7289332/(1*922^2) u=[0, 3, -1, 4, -2, -2, -1, -3, 0, -1, -1, 0, 0, 1, 0, -1, 1, 1, 1, -1, 0, -1, 1, -1, -1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0] y=[0, 1, -4, 0, 1, 0, -4, 0, 3, 1, -1, 2, -3, 7, 3, 3, -2, 0, 0, 2, 4, 1, 1, 1, 1, 3, 2, 2, 2, 1, 0, 1, 1, 0, -3, -1, -1, -2, 4, 1, -2, 0, -2, 4]
+CHECKPOINT_SHA256 f61b278a9f4ad4324469f531a0975ab8398cb561277baf66b8ce56d9fdf2ce51 ; sorties/autotest/P461.ckpt
+EXECUTEES_CE_LANCEMENT 3658 ; REPRISES_DU_CHECKPOINT 0
+TACHES_TERMINEES 3658/3658
+COMPTE_U (au signe pres, energie courte <= 7/2) 697 ; histogramme [2.3,2.4):1 [2.4,2.5):2 [2.6,2.7):1 [2.7,2.8):2 [2.8,2.9):5 [2.9,3.0):14 [3.0,3.1):28 [3.1,3.2):52 [3.2,3.3):94 [3.3,3.4):152 [3.4,3.5):346 
+NOEUDS court 129313137 ; fibre 166315825 ; CVP 697
+TOTAL_TOUCHES 2
+COUVERTURE_COMPLETE 3658/3658 ; CATALOGUE 30d7a99ff07be5bf938c52ad9a24316312e0c49001ae5b2eb13d695dfe3c010a
+FIN [6 s]

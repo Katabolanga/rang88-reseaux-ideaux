@@ -1,0 +1,75 @@
+source : verifier_integrite_P1151s24.py SHA-256 2775d73cddfa4f14913088679ae172605609755cddaeaaa63ce79e114aaf3834
+OK    I1 8 classes et 11 fichiers d'entree dans r88p (8, 11)
+      9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8  classes/Rang88CertZ$Compteurs.class
+      a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af  classes/Rang88CertZ$EnumZ.class
+      b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9  classes/Rang88CertZ$FormeZ.class
+      5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b  classes/Rang88CertZ$Recepteur.class
+      5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3  classes/Rang88CertZ$Tache.class
+      a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3  classes/Rang88CertZ$Travail.class
+      35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5  classes/Rang88CertZ.class
+      60aed39c3fc32a76da5e61fad04465a45a224edef1dd069cbeabf30961638fc4  classes/TestCertZ.class
+      1d2b926698ec42f5cf6a7ec77b7886b251460067372d0d499c6bbaa76b97cbe2  java_P1151s24/I_data.gp
+      71a3fe72e37c9a33ead4aa336a63e3ce31159610b9943bc9cbfd38f260c968f1  java_P1151s24/cote1_A.gram
+      b92378f3b09c2ddbfed63a04d61ecd2d0aa242dbe081dfe790b7477fe369026c  java_P1151s24/cote1_B.gram
+      5a6e224361d33096f91fd8222a729ce2efebf195d1a389f69c4fa854f49c49fc  java_P1151s24/cote1_T.mat
+      b41d2f92edc356af45e5dd762fab0b6dbd5800963e9a8a24ed87d09102646786  java_P1151s24/cote1_bases.gp
+      3cc5a16e0231d39fd34ffb79c8046eda81b424250b95dd42ffb8fa67933d490d  java_P1151s24/cote1_meta.txt
+      525019bbbc525923212240a15e106e2c8dc5d38a0f4025660d2014010c750b58  java_P1151s24/cote2_A.gram
+      b65671c32264c15fc22d39afd1e4257cf8bb6102a88d9b61391d11f9b28522eb  java_P1151s24/cote2_B.gram
+      8a87a917006c5bf2ac7a5ba4eb0483ec3ae9b9d8c4aada99f96a849ce8dd04a2  java_P1151s24/cote2_T.mat
+      ce20971a05645e8ef7b0a092413af7b26172c4f5e69905906302901bed02c3d1  java_P1151s24/cote2_bases.gp
+      3cc5a16e0231d39fd34ffb79c8046eda81b424250b95dd42ffb8fa67933d490d  java_P1151s24/cote2_meta.txt
+OK    I1 copies de la preparation (data/P1151s24/entrees) identiques aux originaux de r88p (11 fichiers)
+OK    I1 empreintes_entrees.txt (ecrit par le lanceur le 17 oct. 22 h 48, avant le calcul) : 19 lignes, toutes egales aux fichiers actuels
+OK    I1 attendu.sha : les 8 classes = classes publiees attendues (8 lignes de classe)
+OK    I1 attendu.sha : les 4 entrees de validation java_P461 (autotest) sont intactes
+OK    I1 entrees_source.sha (11 lignes, empreintes des entrees a leur source) = fichiers actuels
+OK    I2 cote 1 : copie du journal dans la preparation identique a l'original
+OK    I2 cote 1 : un seul en-tete, mode=run|n=44|BA=1057/200|S=12|DA=1151|DB=1|d=2302|F=40|D=6|Dmax=16|seuil=0.2, 14 fils, java_P1151s24/cote1
+OK    I2 cote 1 : empreintes d'entree imprimees par Java (A, B, T, meta) = fichiers
+OK    I2 cote 1 : empreintes des 7 classes imprimees par Java = fichiers
+OK    I2 cote 1 : JVM imprimee (OpenJDK 11.0.16.1, Windows 11)
+OK    I2 cote 1 : 74027 taches certifiees annoncees ; CATALOGUE_SHA256 287b1e72... ; TOTAL_TACHES 74027
+OK    I2 cote 1 : CHECKPOINT nouveau ; SELECTION 74027/74027 ; A_FAIRE 74027 ; DEJA_AU_CHECKPOINT 0
+OK    I2 cote 1 : EXECUTEES_CE_LANCEMENT 74027 ; REPRISES_DU_CHECKPOINT 0 ; TACHES_TERMINEES 74027/74027
+OK    I2 cote 1 : TOTAL_TOUCHES 0 ; COUVERTURE_COMPLETE 74027/74027 ; CATALOGUE 287b1e72... ; ligne FIN
+OK    I2 cote 1 : aucune ligne TOUCHE / ERREUR / ARRET / REPRISE / Exception ; 78 lignes de veille, toutes « touches 0 »
+OK    I2 cote 1 : code de sortie Java = 0 ; stderr de 0 octets
+      duree imprimee cote 1 : 46971 s
+OK    I2 cote 2 : copie du journal dans la preparation identique a l'original
+OK    I2 cote 2 : un seul en-tete, mode=run|n=44|BA=1057/200|S=12|DA=1151|DB=1|d=2302|F=40|D=6|Dmax=16|seuil=0.2, 14 fils, java_P1151s24/cote2
+OK    I2 cote 2 : empreintes d'entree imprimees par Java (A, B, T, meta) = fichiers
+OK    I2 cote 2 : empreintes des 7 classes imprimees par Java = fichiers
+OK    I2 cote 2 : JVM imprimee (OpenJDK 11.0.16.1, Windows 11)
+OK    I2 cote 2 : 101373 taches certifiees annoncees ; CATALOGUE_SHA256 fe2b7eb6... ; TOTAL_TACHES 101373
+OK    I2 cote 2 : CHECKPOINT nouveau ; SELECTION 101373/101373 ; A_FAIRE 101373 ; DEJA_AU_CHECKPOINT 0
+OK    I2 cote 2 : EXECUTEES_CE_LANCEMENT 101373 ; REPRISES_DU_CHECKPOINT 0 ; TACHES_TERMINEES 101373/101373
+OK    I2 cote 2 : TOTAL_TOUCHES 0 ; COUVERTURE_COMPLETE 101373/101373 ; CATALOGUE fe2b7eb6... ; ligne FIN
+OK    I2 cote 2 : aucune ligne TOUCHE / ERREUR / ARRET / REPRISE / Exception ; 79 lignes de veille, toutes « touches 0 »
+OK    I2 cote 2 : code de sortie Java = 0 ; stderr de 0 octets
+      duree imprimee cote 2 : 47678 s
+      COMPTE_U : cote 1 358234264 ; cote 2 358234264 (constat : egaux, comme pour P4969 et P4049)
+OK    I2 chaine.log : DEBUT/FIN des deux cotes, codes java 0, COUVERTURE_COMPLETE 74027/74027 et 101373/101373, TOTAL_TOUCHES 0, aucun REJETE
+OK    I2 VERDICT.txt = « DEUX_COTES_COMPLETS_SANS_TOUCHE (a confirmer par raccord et contre-audit) »
+OK    I3 cote 1 : SHA du catalogue .taches = CATALOGUE_SHA256 du journal (287b1e72...)
+OK    I3 cote 1 : catalogue identique a celui de l'autotest du 17 oct. (genere avant le calcul)
+OK    I3 cote 1 : en-tete R88Z_TACHES_V1|n=44|BA=1057/200|S=12|DA=1151|DB=1|d=2302|F=40|D=6|Dmax=16|seuil=0.2|total=74027
+OK    I3 cote 1 : 74027 lignes de tache, indices 0..74026 dans l'ordre
+OK    I3 cote 1 : le journal de catalogue de l'autotest annonce aussi 74027 taches certifiees
+OK    I3 cote 2 : SHA du catalogue .taches = CATALOGUE_SHA256 du journal (fe2b7eb6...)
+OK    I3 cote 2 : catalogue identique a celui de l'autotest du 17 oct. (genere avant le calcul)
+OK    I3 cote 2 : en-tete R88Z_TACHES_V1|n=44|BA=1057/200|S=12|DA=1151|DB=1|d=2302|F=40|D=6|Dmax=16|seuil=0.2|total=101373
+OK    I3 cote 2 : 101373 lignes de tache, indices 0..101372 dans l'ordre
+OK    I3 cote 2 : le journal de catalogue de l'autotest annonce aussi 101373 taches certifiees
+OK    I4 cote 1 : en-tete des recus R88Z_CKPT_V1|mode=run|n=44|BA=1057/200|S=12|DA=1151|DB=1|d=2302|F=40|D=6|Dmax=16|seuil=0.2|total=74027|catalogue=287b1e72...|entrees, classes = LIEN du journal
+OK    I4 cote 1 : 74027 recus T|...|FIN, fichier termine par LF
+OK    I4 cote 1 : SHA du fichier de recus = CHECKPOINT_SHA256 du journal
+OK    I4 cote 2 : en-tete des recus R88Z_CKPT_V1|mode=run|n=44|BA=1057/200|S=12|DA=1151|DB=1|d=2302|F=40|D=6|Dmax=16|seuil=0.2|total=101373|catalogue=fe2b7eb6...|entrees, classes = LIEN du journal
+OK    I4 cote 2 : 101373 recus T|...|FIN, fichier termine par LF
+OK    I4 cote 2 : SHA du fichier de recus = CHECKPOINT_SHA256 du journal
+OK    I4 aucun fichier *.touches dans run_P1151s24 (inventaire : VERDICT.txt, chaine.log, cote1.ckpt, cote1.java.exit, cote1.stderr.log, cote1.stdout.log, cote1.taches, cote2.ckpt, cote2.java.exit, cote2.stderr.log, cote2.stdout.log, cote2.taches, empreintes_entrees.txt)
+OK    I5 autotest autotest_20261017_224736 : TestCertZ « TOTAL : 910 controles, 0 echecs » et TEST_OK
+OK    I5 autotest : validation P461 (COMPTE_U 697, TOTAL_TOUCHES 2, COUVERTURE_COMPLETE 3658/3658)
+BILAN : 49 controles, 0 echecs
+INTEGRITE_OK
+code de sortie 0

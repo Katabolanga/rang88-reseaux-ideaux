@@ -1,0 +1,18 @@
+== P461s91 : I_data = data/P461s91/entrees/I_data.gp
+OK    P461s91 A1 : I = P sigma_91(P), P = (461, zeta - 5), sigma_91(P) = (461, zeta - 115) ; p = 1 mod 115, racines primitives, exposant conforme au nom ; GEN = y^2 + 341*y + 114
+OK    P461s91 A2 : base C construite depuis (p, GEN) : |det C| = p^2 = Q = 212521 et C stable par zeta, donc C engendre I
+OK    P461s91 A3 : BASE du fichier engendre le meme module (|det BASE| = Q, C^-1 BASE entiere)
+OK    P461s91 B1 : PM = polynome minimal de zeta + 1/zeta, ALPHA * NU = BETA0 mod PM
+OK    P461s91 B2 : G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P461s91 B3 : det G = 1
+OK    P461s91 B4 : G definie positive (qfsign exact)
+OK    P461s91 B5 : GRAM du fichier = BASE~ H BASE (provenance)
+OK    P461s91 D1 : les 8 controles de reconstruit() (commun_rang88.gp du detecteur, inchange) sont OK
+OK    P461s91 D2 : U du detecteur 88 x 88 entiere, |det U| = 1
+OK    P461s91 D3a : fichier Gram du detecteur de 88 lignes
+OK    P461s91 D3 : U~ G U = Gram du detecteur (detecteur_copie/gram/P461s91.gram)
+OK    P461s91 D4 : W = BASE^-1 C U entiere, |det W| = 1, W~ GRAM W = Gram du detecteur
+P461s91 : diagonale de la Gram du detecteur : min 22, max 60
+P461s91 : 8 + 5 controles, 0 echecs
+RACCORD_DETECTEUR_OK P461s91
+code de sortie 0

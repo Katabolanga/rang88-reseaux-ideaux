@@ -8,6 +8,23 @@ Données, programmes et vérifications qui accompagnent la note **« Réseaux id
 
 Le dépôt est autoportant : avec PARI/GP 2.15, Python ≥ 3.9 (bibliothèque standard seulement) et, pour les essais facultatifs, Java 11 ou plus, on peut rejouer toutes les vérifications exactes de la note, sauf les deux qui lisent la matrice de Gram de L₀ publiée par R. Sakamoto : ce fichier n'est pas redistribué et doit être téléchargé à part (`externe/LISEZMOI.md`). Les balayages certifiants eux-mêmes (plusieurs heures par côté) ne sont pas relancés par les vérificateurs : leurs reçus, journaux et catalogues sont fournis et contrôlés exactement ; la commande pour les refaire est dans `REPRODUIRE.md`.
 
+## Version 1.4 (31 octobre 2026) : horodatage de X(P₁₁₅₁σ₂₄) et du CANDIDAT X(P₄₆₁σ₉₁)
+
+> **X(P₄₆₁σ₉₁) est un CANDIDAT** : minimum annoncé par les auteurs, **NON répliqué** (seule la partie courte de ses reçus est recoupée, par ceux de P₄₆₁σ₂₄) ; non-isométrie à L₀ **sous GRH seulement**.
+
+Le dossier `v14_P1151s24_et_candidat_P461s91/` date publiquement deux réseaux idéaux pairs unimodulaires de rang 88, attachés à des produits de deux premiers de degré 1 échangés par Galois. Son `README_v14.md` (français, puis anglais) donne les constructions, les statuts, les commandes et ce qui n'est pas revendiqué. La note et l'addendum sont inchangés.
+
+| Énoncé | Statut | Dossier | Commande (depuis `v14_P1151s24_et_candidat_P461s91/verification/`, sauf mention) | Résultat attendu |
+|---|---|---|---|---|
+| X(P₁₁₅₁σ₂₄), I = (1151, ζ − 6)(1151, ζ − 605) : pair, unimodulaire, défini positif ; raccord exact des entrées | démontré | `verification/` | `python3 -I code/verifier_raccord_P1151s24.py P1151s24` | `BILAN : 38 controles, 0 echecs`, `FIN_OK` |
+| Minimum 8 de X(P₁₁₅₁σ₂₄) : deux côtés balayés sans touche, deux fois, sur deux machines | assisté par calcul (M1, M2, H1–H3), répliqué | `balayages/P1151s24_*` | `controle_execution.py` (voir `README_v14.md`, § 5) | 27 contrôles, 0 échec par exécution ; empreintes canoniques `36c946d4…`, `32818d45…` égales deux à deux |
+| X(P₁₁₅₁σ₂₄) non isométrique aux six extrémaux connus | non-conjugaison : démontrée, sans GRH ; non-isométrie : par le th. 3.3 | `verification/` | `python3 -I code/verifier_non_isometrie_P1151s24.py` | `BILAN : 85 controles, 0 echecs` |
+| **Candidat** X(P₄₆₁σ₉₁), I = (461, ζ − 5)(461, ζ − 115) : pair, unimodulaire, défini positif ; raccord exact | démontré | `verification/` | `python3 -I code/verifier_raccord_tranche1.py P461s91` | `BILAN : 38 controles, 0 echecs`, `FIN_OK` |
+| Minimum 8 du **candidat** X(P₄₆₁σ₉₁) : deux côtés balayés sans touche, une fois (côté 1 repris d'un lancement interrompu) | **CANDIDAT : annoncé par les auteurs, NON répliqué** (seule la partie courte des reçus est recoupée) | `balayages/CANDIDAT_P461s91_non_replique_Crapaud08_V2_20261019/` | `controle_execution.py` (voir `README_v14.md`, § 5) | côté 2 : 28 contrôles, 0 échec ; côté 1 : 4 échecs E1 de reprise, attendus |
+| **Candidat** X(P₄₆₁σ₉₁) non isométrique à X₁₃₉, X₅₉₉, X₄₉₆₉, X₄₀₄₉, X(P₁₁₅₁σ₂₄), L_S ; à L₀ | sans GRH, sauf L₀ : **sous GRH seulement** | `verification/` | `python3 -I code/verifier_non_isometrie_tranche1.py` | `BILAN : 123 controles, 0 echecs` |
+
+Avec X(P₁₁₅₁σ₂₄), la famille compte au moins sept réseaux extrémaux de rang 88, deux à deux non isométriques : L₀, L_S (Sakamoto) et cinq réseaux à minimum assisté par calcul et répliqué. X(P₄₆₁σ₉₁) est un huitième candidat, non répliqué, dont la nouveauté face à L₀ dépend de GRH.
+
 ## Version 1.3 (octobre 2026) : traduction anglaise et archivage
 
 - **La note en anglais** : `article/rang88_en.pdf` (24 p.) et sa source `article/rang88_en.tex`. C'est une traduction ; l'original français fait foi.
@@ -95,6 +112,7 @@ catalogue/          fiches .std au format du catalogue de Nebe et Sloane, constr
 verification_P4969/, verification_P4049/   raccord exact et non-isométrie de X₄₉₆₉ et X₄₀₄₉ (version 1.1)
 calcul_externe_resultats_20261015/        balayages certifiés de X₄₉₆₉, X₄₀₄₉ et leurs réplications (version 1.1)
 contre_audit_20261016/                    contre-audit du 16 octobre : bilans et scripts (version 1.1)
+v14_P1151s24_et_candidat_P461s91/         X(P₁₁₅₁σ₂₄) et le CANDIDAT X(P₄₆₁σ₉₁) : constructions, balayages, vérificateurs et contrôles rejoués (version 1.4)
 ```
 
 ## Fichiers conservés tels quels
@@ -118,6 +136,7 @@ Aucune formalisation n'est fournie. Les énoncés finis suivants s'y prêteraien
 - **1.1** (17 octobre 2026, commit `89d8679`) : addendum (X₄₉₆₉ et X₄₀₄₉ extrémaux, jumeaux de la couche σ₂₄, cadran sans GRH), balayages certifiés et réplications, fiches au format du catalogue de Nebe et Sloane, contre-audit du 16 octobre.
 - **1.2** (18 octobre 2026) : témoins de norme 6 des quatre rejets du tableau 4 et de la prop. 4.6 de l'addendum, avec leurs vérificateurs en PARI/GP et en Python ; bilan, audit et journaux des 21 filtres ; précision, dans ce README, du statut de la non-isométrie. Les textes de la note et de l'addendum sont inchangés.
 - **1.3** (octobre 2026) : traduction anglaise de la note (`article/rang88_en`), texte français mis à jour (celui de la soumission arXiv du 15 octobre), métadonnées `.zenodo.json` pour l'archivage avec DOI. Aucun nouveau calcul.
+- **1.4** (31 octobre 2026) : horodatage de X(P₁₁₅₁σ₂₄), extrémal, et du **candidat** X(P₄₆₁σ₉₁), dans `v14_P1151s24_et_candidat_P461s91/`. X(P₁₁₅₁σ₂₄), I = (1151, ζ − 6)(1151, ζ − 605) : minimum 8 assisté par calcul, balayé deux fois sur deux machines (reçus identiques), non isométrique aux six extrémaux connus sans GRH. X(P₄₆₁σ₉₁), I = (461, ζ − 5)(461, ζ − 115), **CANDIDAT** : balayage exhaustif sans touche, **non répliqué** (seule la partie courte des reçus est recoupée, par ceux de P₄₆₁σ₂₄), minimum **annoncé par les auteurs** ; non isométrique sans GRH à X₁₃₉, X₅₉₉, X₄₉₆₉, X₄₀₄₉, X(P₁₁₅₁σ₂₄) et L_S, et à L₀ seulement sous GRH. Constructions, entrées, reçus, journaux, vérificateurs et contrôles rejoués. La note et l'addendum sont inchangés.
 
 ## Attribution
 
@@ -138,5 +157,7 @@ What can be checked (commands from the repository root; real outputs in `verific
 Status: the minimum 8 of X₁₃₉ and X₅₉₉ is a **computer-assisted proof** under the explicit execution model M1, M2, H1–H3 of the note. Non-isometry is proved without GRH, given the minimum 8 of at least one of the two lattices compared, which the isometry theorem requires; non-isometry to L₀ and L_S does not depend on the computer-assisted minimum. No independent implementation of the enumeration has been run, and no human specialist has reviewed the proofs.
 
 Version 1.3 adds an English translation of the note (`article/rang88_en.pdf`; the French original prevails), the updated French text submitted to arXiv on October 15, 2026, and Zenodo archive metadata (`.zenodo.json`); no new computation. Version 1.1 (October 17, 2026) adds the addendum (X₄₉₆₉ and X₄₀₄₉, twins of the σ₂₄-layer, the dial without GRH) and its data. Version 1.2 (October 18, 2026) adds the norm-6 witnesses of the addendum: the four filter rejections of Table 4, and Proposition 4.6, on which Theorem B relies. They come with a PARI/GP checker and a PARI-free Python checker, in `addendum/temoins_norme6/`.
+
+Version 1.4 timestamps two further lattices in `v14_P1151s24_et_candidat_P461s91/`: X(P₁₁₅₁σ₂₄), whose minimum 8 is computer-assisted and was swept twice on two machines with identical receipts, and the **candidate** X(P₄₆₁σ₉₁), swept once without touch (not replicated, only the short part of its receipts cross-checked; minimum claimed by the authors; non-isometric to L₀ only under GRH). The note and the addendum are unchanged.
 
 Author: Ivan Gauvin. Claude Opus 5.5 (Anthropic) and Astra (OpenAI) assisted the author; they are not authors. **Licences:** MIT for the programs in `code/` (`LICENSE`); CC BY 4.0 for the article, data, proofs, verification results and documentation (`LICENSE-CC-BY-4.0.md`); public address of the repository: https://github.com/Katabolanga/rang88-reseaux-ideaux.

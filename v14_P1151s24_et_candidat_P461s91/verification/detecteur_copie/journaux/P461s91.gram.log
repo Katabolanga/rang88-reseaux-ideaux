@@ -1,0 +1,13 @@
+== P461s91 : I_data = entrees/P461s91_I_data.gp
+OK    P461s91 A1 : I = P sigma_91(P), P = (461, zeta - 5), sigma_91(P) = (461, zeta - 115) ; p = 1 mod 115, racines primitives, exposant conforme au nom ; GEN = y^2 + 341*y + 114
+OK    P461s91 A2 : base C construite depuis (p, GEN) : |det C| = p^2 = Q = 212521 et C stable par zeta, donc C engendre I
+OK    P461s91 A3 : BASE du fichier engendre le meme module (|det BASE| = Q, C^-1 BASE entiere)
+OK    P461s91 B1 : PM = polynome minimal de zeta + 1/zeta, ALPHA * NU = BETA0 mod PM
+OK    P461s91 B2 : G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P461s91 B3 : det G = 1
+OK    P461s91 B4 : G definie positive (qfsign exact)
+OK    P461s91 B5 : GRAM du fichier = BASE~ H BASE (provenance)
+OK    P461s91 R1 : U = qflllgram(G) unimodulaire, Gr = U~ G U entiere symetrique paire de det 1
+P461s91 : diagonale de la Gram LLL : min 22, max 60 ; normes <= 6 sur la diagonale : 0
+P461s91 : 9 controles, 0 echecs (5122 ms)
+GRAM88_OK P461s91 type s91 Q 212521

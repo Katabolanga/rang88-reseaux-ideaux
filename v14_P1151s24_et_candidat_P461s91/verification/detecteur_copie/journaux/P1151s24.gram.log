@@ -1,0 +1,13 @@
+== P1151s24 : I_data = entrees/P1151s24_I_data.gp
+OK    P1151s24 A1 : I = P sigma_24(P), P = (1151, zeta - 6), sigma_24(P) = (1151, zeta - 605) ; p = 1 mod 115, racines primitives, exposant conforme au nom ; GEN = y^2 + 540*y + 177
+OK    P1151s24 A2 : base C construite depuis (p, GEN) : |det C| = p^2 = Q = 1324801 et C stable par zeta, donc C engendre I
+OK    P1151s24 A3 : BASE du fichier engendre le meme module (|det BASE| = Q, C^-1 BASE entiere)
+OK    P1151s24 B1 : PM = polynome minimal de zeta + 1/zeta, ALPHA * NU = BETA0 mod PM
+OK    P1151s24 B2 : G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P1151s24 B3 : det G = 1
+OK    P1151s24 B4 : G definie positive (qfsign exact)
+OK    P1151s24 B5 : GRAM du fichier = BASE~ H BASE (provenance)
+OK    P1151s24 R1 : U = qflllgram(G) unimodulaire, Gr = U~ G U entiere symetrique paire de det 1
+P1151s24 : diagonale de la Gram LLL : min 28, max 68 ; normes <= 6 sur la diagonale : 0
+P1151s24 : 9 controles, 0 echecs (6093 ms)
+GRAM88_OK P1151s24 type s24 Q 1324801

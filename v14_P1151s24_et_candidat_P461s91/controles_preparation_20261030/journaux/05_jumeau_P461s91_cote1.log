@@ -1,0 +1,25 @@
+date : 2026-10-30 23:38:35 CET
+repertoire : . (relatif a la racine du depot)
+commande : python3 -I v14_P1151s24_P461s91/controles_preparation_20261030/verifier_jumeau_P461s91.py 1 v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/sorties/run_P461s91_cote1/cote1.ckpt calcul_externe_resultats_20261015/final_P461s24_AMS3/run_P461s24_cote1.tar.gz calcul_externe_resultats_20261015/final_P461s24_AMS3/SHA256SUMS_RAPATRIEMENT.txt calcul_externe_resultats_20261015/final_P461s24_AMS3/bilan_P461s24.txt v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/seed_inputs/cote1.ckpt v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/lot/ref/filtre_s91_20261017_cote1.ckpt
+python : Python 3.12.3
+source : verifier_jumeau_P461s91.py SHA-256 0253963ef52e98e2de08c0aaa296457bf22eb37614a1036ef7867765c4fc0bf2
+cote 1 ; P461s91 : v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/sorties/run_P461s91_cote1/cote1.ckpt ; jumeau P461s24 : calcul_externe_resultats_20261015/final_P461s24_AMS3/run_P461s24_cote1.tar.gz
+OK    J0 SHA-256 de run_P461s24_cote1.tar.gz = 03ae8991b56eec70... (SHA256SUMS_RAPATRIEMENT.txt du depot)
+OK    J0 SHA-256 du ckpt du jumeau (lu dans l'archive, sans extraction sur disque) = CHECKPOINT_SHA256 de bilan_P461s24.txt (ea2dffeeac3efaa8...)
+      SHA-256 des recus P461s91 cote 1 : 459a677d5c3858c7e78583d0b95450c17906f860703655b55d0a86f55cc442dd
+OK    J1 en-tetes : memes parametres, total 73244, catalogue 0189bac379e039fb..., classes 4f1ed5ad5834cdca...
+OK    J1 en-tetes : empreintes 'entrees' differentes (recollement T different) : 9b14886c216896d6... / f98d06c2affec46f...
+OK    J2 recus au format strict : 73244 (P461s91) et 73244 (P461s24) lignes
+OK    J2 memes indices, permutation de 0..73243
+OK    J3 cote court identique tache par tache (U, CVP, NA, HIST) : 73244 taches, 0 differences
+OK    J3 TOUCHES = 0 dans chaque recu des deux reseaux
+      information : somme des U = 143529602 ; NB egal pour 38128 taches sur 73244 (la fibre depend du recollement)
+      seed : v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/seed_inputs/cote1.ckpt ; SHA-256 93d8b081c47ed9fb28265e021fb7458c1832d2273cc695e0132ab10242c3b8d3
+OK    J4 seed : en-tete identique a celui des recus finaux
+OK    J4 seed : 2089 recus au format strict, indices distincts
+OK    J4 seed : chaque recu herite est identique a la ligne finale de meme indice
+OK    J4 parmi les 2089 herites : 1419 dans la reference E7 (identiques : 1419), 670 hors de E7
+OK    J4 les 670 herites hors de E7 ont un cote court (U, CVP, NA, HIST) identique a celui du jumeau
+BILAN : 13 controles, 0 echecs
+JUMEAU_COURT_IDENTIQUE
+code de sortie 0

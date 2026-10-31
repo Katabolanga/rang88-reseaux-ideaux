@@ -1,0 +1,13 @@
+13:27:37 P1151s24.gram apres BKZ-20 : 8 plus petites normes exactes [14, 16, 18, 18, 18, 18, 18, 18]
+13:27:38 P1151s24.gram pump dim4free 48 : 0.6 s ; norme exacte en tete 10
+13:27:42 P1151s24.gram pump dim4free 40 : 0.8 s ; norme exacte en tete 8
+13:27:49 P1151s24.gram pump dim4free 32 : 0.9 s ; norme exacte en tete 8
+13:28:01 P1151s24.gram pump dim4free 24 : 2.1 s ; norme exacte en tete 8
+13:28:33 P1151s24.gram pump dim4free 16 : 6.7 s ; norme exacte en tete 8
+13:31:03 P1151s24.gram pump dim4free 8 : 29.8 s ; norme exacte en tete 8
+13:31:41 P1151s24.gram pump dim4free 7 : 37.8 s ; norme exacte en tete 8
+13:32:33 P1151s24.gram pump dim4free 6 : 51.7 s ; norme exacte en tete 8
+13:32:33 P1151s24.gram apres workout G6K (dim4free 6, 296 s) : 8 plus petites normes exactes [8, 8, 8, 8, 8, 8, 8, 8]
+PUMPS_FINAUX 1 a dim4free 6
+aucun vecteur de norme <= 6 trouve (heuristique, pas une preuve)
+TEMPS 298.09 s ecoules, 1067.70 s utilisateur, RSS max 555956 Ko

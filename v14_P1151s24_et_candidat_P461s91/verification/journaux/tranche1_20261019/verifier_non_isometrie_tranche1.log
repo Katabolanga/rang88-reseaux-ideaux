@@ -1,0 +1,150 @@
+source : verifier_non_isometrie_tranche1.py SHA-256 982827c960c05c54a6113ca893c1d09ba2040c3bed69aacaa876416eb9563b34
+methode adaptee de : verifier_non_isometrie_P4969_v2.py SHA-256 9ab89c63414eac4cbb8fb48c2f97f4187c772367a1c346ce3565850987a45da6
+copie adaptee de : verifier_non_isometrie_P1151s24.py SHA-256 9779c05385657bd9e3226839cee79d7d6333e31e0825da9847d8e3b419967c6a
+certificat : data/P139/certificat_K22.txt SHA-256 4ad7bbfdd9fc171d4657513ec8a60810703a1d68e00c0c5d001a8fee574eb09d
+certificat : data/cadran/cadran_sans_GRH_certificats.txt SHA-256 8d89444666db99f4431ffff005df288bf1f8482be373c413c947edd72dfda466
+OK    cadran : les 12 cibles sont presentes, une ligne chacune
+OK    P22 unitaire de degre 22
+OK    Gamma_139 du certificat de [Gau26] = Gamma de la ligne P139pub du cadran (meme element)
+      denominateur commun des pieces : 28657
+OK    Phi_115 de degre 88, unitaire
+OK    (C1) P22(theta) = 0 dans Z[zeta_115], theta = zeta + zeta^22 + zeta^24 + zeta^68
+OK    (C1) {1,22,24,68} est un sous-groupe de (Z/115)^* (K = Fix<sigma_22>, de degre 22) et contient 24 : sigma_24 est dans Gal(L/K)
+      P1151s24 : I_data.gp SHA-256 1d2b926698ec42f5cf6a7ec77b7886b251460067372d0d499c6bbaa76b97cbe2 ; [[1151, 6], [1151, 605]]
+OK    (C1) P1151s24 : BASE de I_data.gp 88 x 88
+OK    (C1) P1151s24 : I mod 1151 = (g), g = (y - 6)(y - 605) de degre 2 SCINDE a racines distinctes (racines [6, 605])
+OK    (C1) P1151s24 : 6 et 605 racines primitives 115-iemes mod 1151 (P_6, P_605 premiers de degre 1) et 605 = 6^24 (sigma_24(P_6) = P_605)
+OK    (C1) P1151s24 : |det BASE| = 1151^2 : BASE engendre exactement (1151, g(zeta)) = P_6 P_605 (C1 autonome)
+OK    (C1) P1151s24 : theta = 76 mod P_6 et 76 mod P_605 : un seul premier q = (1151, theta - 76) de K sous I, de degre 1 ; N_{L/K}(I) = q^2, e = 2
+OK    (C1) P1151s24 : P22 a 22 racines simples mod 1151 (1151 totalement decompose dans K), dont 76
+      P461s91 : I_data.gp SHA-256 31e138c88dac1c9d343ac079213b4b412875fd31db18a26a9c73b0760be1aea3 ; [[461, 5], [461, 115]]
+OK    (C1) P461s91 : BASE de I_data.gp 88 x 88
+OK    (C1) P461s91 : I mod 461 = (g), g = (y - 5)(y - 115) de degre 2 SCINDE a racines distinctes (racines [5, 115])
+OK    (C1) P461s91 : 5 et 115 racines primitives 115-iemes mod 461 et 115 = 5^91, 5 = 115^91 (sigma_91(P_5) = P_115, sigma_91 involution : 91^2 = 1 mod 115)
+OK    (C1) P461s91 : |det BASE| = 461^2 : BASE engendre exactement (461, g(zeta)) = P_5 P_115
+OK    (C1) P461s91 : theta = 0 mod P_5 et 43 mod P_115 : DEUX premiers q1 = (461, theta - 0), q2 = (461, theta - 43) de K, N_{L/K}(I) = q1 q2 ; q1 = premier de la ligne P461s24 du cadran (lien 5, r = 0)
+OK    (C1) P461s91 : q2 = sigma_91(q1) : theta mod P_115 = somme des 5^(91 h), h dans {1,22,24,68} (sigma_b(x) en q_a = x en q_ab)
+OK    (C1) P461s91 : P22 a 22 racines simples mod 461 (461 totalement decompose dans K)
+      P3359 : I_data.gp SHA-256 e387f8fd7a95abfac35593bc9cd7e6deec2a62f6ae2f93d2a38d106a3ae87dc3 ; [[3359, 2, 1]]
+OK    (C1) P3359 : I mod 3359 = (y^2 + 2202 y + 1829), irreductible (degre residuel 2) ; 3359 d'ordre 2 mod 115 ; |det BASE| = 3359^2
+OK    (C1) P3359 : le representant du cadran (3359, y^2 + 17 y + 417) est aussi un premier de degre 2 au-dessus de 3359 (facteur irreductible de Phi_115 mod 3359) ; Gal(L/Q) agit transitivement sur les premiers au-dessus de 3359 : les deux ideaux sont CONJUGUES, leurs classes aussi
+OK    (C1) P3359 : theta mod P_J = 1067 et theta mod P_cadran = 971 dans F_3359 (= r = 971 du cadran) : racines de P22 ; e = 2
+      P139 : I_data.gp SHA-256 a133ab58a8e95ded67f38e2e1c8d224ce0cb9a4849555d61e2c4f0b6f269bbd4 ; [[139, 2, 1]]
+OK    (C1) P139 : I mod 139 = (y^2 + 1 y + 77), irreductible (degre residuel 2), = lien du cadran ; |det BASE| = 139^2
+OK    (C1) P139 : theta mod P dans F_139, egal a r = 0 du cadran ; e = 2 ; P22 a 22 racines simples mod 139
+      P599 : I_data.gp SHA-256 19b69c8ecbd8ad256b02afc0717e92898f3d4438f92ff863498139a041922692 ; [[599, 2, 1]]
+OK    (C1) P599 : I mod 599 = (y^2 + 87 y + 322), irreductible (degre residuel 2), = lien du cadran ; |det BASE| = 599^2
+OK    (C1) P599 : theta mod P dans F_599, egal a r = 333 du cadran ; e = 2 ; P22 a 22 racines simples mod 599
+      P4969 : I_data.gp SHA-256 768ab11514b21931102c0216765a1ccd153b15ecd6da2ad90d334be75dc8c907 ; [[4969, 2, 1]]
+OK    (C1) P4969 : I mod 4969 = (y^2 + 3763 y + 2809), irreductible (degre residuel 2), = lien du cadran ; |det BASE| = 4969^2
+OK    (C1) P4969 : theta mod P dans F_4969, egal a r = 4770 du cadran ; e = 2 ; P22 a 22 racines simples mod 4969
+      P4049 : I_data.gp SHA-256 7f8192d5968f65e32801a4c6a7d215b48b937bdb5713dcbda9eece40d8385960 ; [[4049, 2, 1]]
+OK    (C1) P4049 : I mod 4049 = (y^2 + 105 y + 2084), irreductible (degre residuel 2), = lien du cadran ; |det BASE| = 4049^2
+OK    (C1) P4049 : theta mod P dans F_4049, egal a r = 512 du cadran ; e = 2 ; P22 a 22 racines simples mod 4049
+OK    (C1) P691s24 (information) : sorte b, lien 4, theta = 152 modulo le premier de L ; P22 a 22 racines simples mod 691
+OK    (C1) P829 (information) : sorte a, lien 608,7, theta = 230 modulo le premier de L ; P22 a 22 racines simples mod 829
+OK    (C1) P39239 (information) : sorte a, lien 33686,553, theta = 37054 modulo le premier de L ; P22 a 22 racines simples mod 39239
+OK    (C1) P6211s24 (information) : sorte b, lien 9, theta = 321 modulo le premier de L ; P22 a 22 racines simples mod 6211
+OK    (C1) P53269 (information) : sorte a, lien 26354,688, theta = 28037 modulo le premier de L ; P22 a 22 racines simples mod 53269
+OK    (C2) XI_2 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_3 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_4 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_5 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_6 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_7 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_8 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_9 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_10 entier algebrique de norme +-1 (unite de K)
+OK    (C2) XI_11 entier algebrique de norme +-1 (unite de K)
+OK    (C2) P139 (certificat [Gau26]) : Gamma entier algebrique, |N(Gamma)| = 139^331
+OK    (C2) P139 (certificat [Gau26]) : v(Gamma) = 331 en q = (139, theta - 0) et 0 aux 21 autres premiers de K sur 139 : (Gamma) = q^331
+OK    (C2) P461s24 : Gamma entier algebrique, |N(Gamma)| = 461^331
+OK    (C2) P461s24 : v(Gamma) = 331 en q = (461, theta - 0) et 0 aux 21 autres premiers de K sur 461 : (Gamma) = q^331
+OK    (C2) P3359 : Gamma entier algebrique, |N(Gamma)| = 3359^331
+OK    (C2) P3359 : v(Gamma) = 331 en q = (3359, theta - 971) et 0 aux 21 autres premiers de K sur 3359 : (Gamma) = q^331
+OK    (C2) P1151s24 : Gamma entier algebrique, |N(Gamma)| = 1151^331
+OK    (C2) P1151s24 : v(Gamma) = 331 en q = (1151, theta - 76) et 0 aux 21 autres premiers de K sur 1151 : (Gamma) = q^331
+OK    (C2) P599pub : Gamma entier algebrique, |N(Gamma)| = 599^331
+OK    (C2) P599pub : v(Gamma) = 331 en q = (599, theta - 333) et 0 aux 21 autres premiers de K sur 599 : (Gamma) = q^331
+OK    (C2) P4969pub : Gamma entier algebrique, |N(Gamma)| = 4969^331
+OK    (C2) P4969pub : v(Gamma) = 331 en q = (4969, theta - 4770) et 0 aux 21 autres premiers de K sur 4969 : (Gamma) = q^331
+OK    (C2) P4049pub : Gamma entier algebrique, |N(Gamma)| = 4049^331
+OK    (C2) P4049pub : v(Gamma) = 331 en q = (4049, theta - 512) et 0 aux 21 autres premiers de K sur 4049 : (Gamma) = q^331
+OK    (C2) P691s24 : Gamma entier algebrique, |N(Gamma)| = 691^331
+OK    (C2) P691s24 : v(Gamma) = 331 en q = (691, theta - 152) et 0 aux 21 autres premiers de K sur 691 : (Gamma) = q^331
+OK    (C2) P829 : Gamma entier algebrique, |N(Gamma)| = 829^331
+OK    (C2) P829 : v(Gamma) = 331 en q = (829, theta - 230) et 0 aux 21 autres premiers de K sur 829 : (Gamma) = q^331
+OK    (C2) P39239 : Gamma entier algebrique, |N(Gamma)| = 39239^331
+OK    (C2) P39239 : v(Gamma) = 331 en q = (39239, theta - 37054) et 0 aux 21 autres premiers de K sur 39239 : (Gamma) = q^331
+OK    (C2) P6211s24 : Gamma entier algebrique, |N(Gamma)| = 6211^331
+OK    (C2) P6211s24 : v(Gamma) = 331 en q = (6211, theta - 321) et 0 aux 21 autres premiers de K sur 6211 : (Gamma) = q^331
+OK    (C2) P53269 : Gamma entier algebrique, |N(Gamma)| = 53269^331
+OK    (C2) P53269 : v(Gamma) = 331 en q = (53269, theta - 28037) et 0 aux 21 autres premiers de K sur 53269 : (Gamma) = q^331
+OK    22 classes de (Z/115)^* modulo <22> : les 22 elements tau_b de Gal(K/Q)
+      premiers auxiliaires l : [380651, 1065821, 1522601, 2055511] ; 88 lignes (22 premiers de K au-dessus de chaque l)
+OK    (C3) premiers auxiliaires = ceux de la prop. 4.7 de l'addendum (380651, 1065821, 1522601, 2055511)
+OK    (C3) les 10 unites XI_a sont independantes modulo les puissances 331-iemes (rang 10)
+OK    (C3) [unites | Gamma_139] de rang 11
+OK    (C3) P461s24 : une seule solution c = [330] (publie : 330) ; heure [0]
+OK    (C3) P3359 : une seule solution c = [87] (publie : 87) ; heure [2]
+OK    (C3) P1151s24 : une seule solution c = [67] (publie : 67) ; heure [6]
+OK    (C3) P139pub : une seule solution c = [1] (publie : 1) ; heure [0]
+OK    (C3) P599pub : une seule solution c = [63] (publie : 63) ; heure [8]
+OK    (C3) P4969pub : une seule solution c = [41] (publie : 41) ; heure [13]
+OK    (C3) P4049pub : une seule solution c = [53] (publie : 53) ; heure [8]
+OK    (C3) P691s24 : une seule solution c = [227] (publie : 227) ; heure [13]
+OK    (C3) P829 : une seule solution c = [199] (publie : 199) ; heure [5]
+OK    (C3) P39239 : une seule solution c = [239] (publie : 239) ; heure [12]
+OK    (C3) P6211s24 : une seule solution c = [115] (publie : 115) ; heure [6]
+OK    (C3) P53269 : une seule solution c = [180] (publie : 180) ; heure [0]
+OK    (C3) c(I) = 67 non nul : [unites | Gamma_I] de rang 11, la composante 331 de [I] est NON NULLE (I non principal ; support contient 331)
+OK    mu_22 de F_331 a 22 elements ; 3 racine primitive mod 331 ; F_331^*/mu_22 cyclique d'ordre 15 engendre par 2
+OK    (C3) c(I)/c(P599pub) = 67/63 = 248 mod 331 n'est pas dans mu_22 : composantes 331 NON conjuguees (heures 6 et 8)
+OK    (C3) c(I)/c(P139pub) = 67/1 = 67 mod 331 n'est pas dans mu_22 : composantes 331 NON conjuguees (heures 6 et 0)
+OK    (C3) c(I)/c(P4969pub) = 67/41 = 42 mod 331 n'est pas dans mu_22 : composantes 331 NON conjuguees (heures 6 et 13)
+OK    (C3) c(I)/c(P4049pub) = 67/53 = 20 mod 331 n'est pas dans mu_22 : composantes 331 NON conjuguees (heures 6 et 8)
+OK    (C4) P139 : pour les 22 tau de Gal(K/Q), Gamma_I / tau(Gamma_P139) n'est pas dans <unites> . K^{*331} (rangs [11])
+OK    (C4) P599pub : pour les 22 tau de Gal(K/Q), Gamma_I / tau(Gamma_P599pub) n'est pas dans <unites> . K^{*331} (rangs [11])
+OK    (C4) P4969pub : pour les 22 tau de Gal(K/Q), Gamma_I / tau(Gamma_P4969pub) n'est pas dans <unites> . K^{*331} (rangs [11])
+OK    (C4) P4049pub : pour les 22 tau de Gal(K/Q), Gamma_I / tau(Gamma_P4049pub) n'est pas dans <unites> . K^{*331} (rangs [11])
+OK    (C5) 1151 = 1 mod 23 (decompose dans F) et 4*1151 = 4604 = 48^2 + 23*10^2 : le premier de F sous P_6 est principal
+OK    (C5) (24/23) = 1 : chi_3(sigma_24) = 1, donc [I]_3 = [P_6]_3 + sigma_24[P_6]_3 = 2 [P_6]_3 = 0
+OK    (C5) 4p n'est pas de la forme a^2 + 23 b^2 pour p = 139, 4969, 4049 : composantes 3 de X139, X4969, X4049 non nulles
+OK    (C5) rappel : 599 = 24^2 + 23 (4*599 = 48^2 + 23*2^2), composante 3 de X599 nulle
+OK    (C5) information : 4*691 = 44^2 + 23*6^2 (composante 3 nulle), 4*829 = 2^2 + 23*12^2, 6211 : aucun (composante 3 non nulle), 53269 = 1 mod 23 : representation
+      etiquettes (c, heure) : P461s24 (330, 0) ; P3359 (87, 2) ; P1151s24 (67, 6) ; P139pub (1, 0) ; P599pub (63, 8) ; P4969pub (41, 13) ; P4049pub (53, 8) ; P691s24 (227, 13) ; P829 (199, 5) ; P39239 (239, 12) ; P6211s24 (115, 6) ; P53269 (180, 0)
+OK    information : heure de I = 6 ; orbites exterieures REJETEES (norme 6 demontree) aux heures [5, 12, 13] : I n'est conjugue a aucune (coherence avec le balayage)
+      information : jumeau de X_I = orbite interieure d'heure 6 (P6211s24, heure 6, survivant partiel) ; jumeau de X139 = P53269 (heure 0)
+      (fin des controles de l'original, rejoues sur les entrees REGENEREES de P1151s24 : controle positif de la copie adaptee)
+OK    (C3) P461s91 : une seule solution c(I) = [0] de (1/2) lambda(Gamma_461 sigma_91(Gamma_461)) = c lambda(Gamma_139) mod U, et c(I) = 0 : [unites | lambda(Gamma_I)] de rang 10 (prop. 4.7 : [I]_331 = 0)
+OK    (C3) P461s91 : coherence avec les caracteres : c(P461s24) = 330 = 2 c(q1) (e = 2) non nul, et c(q2) = c(sigma_91 q1) = chi_331(sigma_91) c(q1) = -c(q1) : c(I) = c(q1) + c(q2) = 0
+OK    (C3) P3359 : c = 87 non nul, heure 2 : [J]_331 != 0 (J et le representant du cadran sont conjugues : meme heure)
+OK    (C3) P3359 : c(J)/c(P599pub) = 87/63 = 159 mod 331 hors de mu_22 : composantes 331 NON conjuguees (heures 2 et 8)
+OK    (C3) P3359 : c(J)/c(P139pub) = 87/1 = 87 mod 331 hors de mu_22 : composantes 331 NON conjuguees (heures 2 et 0)
+OK    (C3) P3359 : c(J)/c(P4969pub) = 87/41 = 99 mod 331 hors de mu_22 : composantes 331 NON conjuguees (heures 2 et 13)
+OK    (C3) P3359 : c(J)/c(P4049pub) = 87/53 = 189 mod 331 hors de mu_22 : composantes 331 NON conjuguees (heures 2 et 8)
+OK    (C3) P3359 : c(J)/c(P1151s24) = 87/67 = 26 mod 331 hors de mu_22 : composantes 331 NON conjuguees (heures 2 et 6)
+OK    (C3) P3359 : c(J)/c(P461s24) = 87/330 = 244 mod 331 hors de mu_22 : composantes 331 NON conjuguees (heures 2 et 0)
+OK    (C4) P461s91 / P139 : pour les 22 tau, Gamma_I / tau(Gamma_P139)^2 hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P3359 / P139 : pour les 22 tau, Gamma_3359 / tau(Gamma_P139) hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P461s91 / P599pub : pour les 22 tau, Gamma_I / tau(Gamma_P599pub)^2 hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P3359 / P599pub : pour les 22 tau, Gamma_3359 / tau(Gamma_P599pub) hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P461s91 / P4969pub : pour les 22 tau, Gamma_I / tau(Gamma_P4969pub)^2 hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P3359 / P4969pub : pour les 22 tau, Gamma_3359 / tau(Gamma_P4969pub) hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P461s91 / P4049pub : pour les 22 tau, Gamma_I / tau(Gamma_P4049pub)^2 hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P3359 / P4049pub : pour les 22 tau, Gamma_3359 / tau(Gamma_P4049pub) hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P461s91 / P1151s24 : pour les 22 tau, Gamma_I / tau(Gamma_P1151s24)^2 hors de <unites> . K^{*331} (rangs [11])
+OK    (C4) P3359 / P1151s24 : pour les 22 tau, Gamma_3359 / tau(Gamma_P1151s24) hors de <unites> . K^{*331} (rangs [11])
+OK    (C5) P461s91 : 461 = 1 mod 23 et (91/23) = -1 : chi_3(sigma_91) = -1, donc [I]_3 = [P_5]_3 + sigma_91 [P_5]_3 = 0
+OK    (C5) rappel : 4*461 = aucune representation a^2 + 23 b^2 : composante 3 de [P_5] non nulle (information ; sans effet sur [I]_3 = 0)
+OK    (C5) P3359 : 3359 = 1 mod 23 ; 4*3359 = 48^2 + 23*22^2 : composante 3 de [J] nulle (anneau exterieur)
+      etiquettes : P461s91 c = 0 (composantes 3 et 331 nulles) ; P3359 c = 87, heure 2, anneau exterieur
+BILAN : 123 controles, 0 echecs
+CONCLUSION P461s91 (SANS GRH, modulo [Gau26] prop. 2.2, 2.5 et addendum prop. 4.7) : [I], I = P_5 sigma_91(P_5) au-dessus de 461,
+  a des composantes 3 et 331 NULLES.  Elle n'est donc conjuguee ni a [P139], [P4969], [P4049] (support {3,331}), ni a [P599],
+  [P1151 sigma_24] (support {331}), ni aux classes de support {3} (LS).  Avec [Gau26, th. 3.3] (minimum 8 d'au moins un des deux) :
+  X_I n'est isometrique ni a X139, X599, X4969, X4049, X_{P1151 sigma_24}, ni a LS.
+  NON DEMONTRE ICI : [I] != 0, c'est-a-dire la non-isometrie a L0 ; elle equivaut a [I]_45013 != 0, vraie SOUS GRH (addendum 2, heure 885).
+CONCLUSION P3359 (SANS GRH, memes reserves) : [J] a une composante 331 non nulle d'heure 2, hors de mu_22 . c(T) pour T = X599, X139, X4969,
+  X4049, P1151 sigma_24 : X_J n'est isometrique a aucun d'eux ; ni a L0 (classe nulle) ni a LS (support {3}), [J]_331 != 0.
+code de sortie 0

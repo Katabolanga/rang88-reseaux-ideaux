@@ -1,0 +1,66 @@
+date : 2026-10-30 23:38:40 CET
+repertoire : v14_P1151s24_P461s91/verification (relatif a la racine du depot)
+commande : python3 -I code/verifier_raccord_P1151s24.py P1151s24
+python : Python 3.12.3
+candidat P1151s24
+source : verifier_raccord_P1151s24.py SHA-256 9e2607fccb5aeca835f902f1a2c316bb8cf78670763d3b4a77efc1e3d7a0d125
+original adapte : verifier_raccord.py SHA-256 b30e9068772003f35da5868ebae732d05257918899da015e287e91c7cd13180f
+I_data.gp SHA-256 1d2b926698ec42f5cf6a7ec77b7886b251460067372d0d499c6bbaa76b97cbe2 ; PREMIERS = [[1151, 6], [1151, 605]] ; Q = 1324801
+      1151 mod 115 = 1 : 1151 est totalement decompose dans L, ses premiers sont de degre residuel 1
+OK    dimensions : BASE, GRAM, AB 88 x 88 ; NU, ALPHA de degre <= 43 ; Q = 1151^2
+OK    G1 |det BASE| = 1151^2 (indice de I dans Z[zeta])
+OK    G1 zeta * I contenu dans I (I est un ideal de Z[zeta_115])
+OK    G1 I mod 1151 = (g), g unitaire de degre 2 divisant Phi_115 mod 1151
+OK    G1a g = (y - r1)(y - r2) scinde modulo 1151, racines distinctes (discriminant 840 : carre non nul) ; r = [6, 605]
+OK    G1a les racines sont celles qu'annonce PREMIERS = [[1151, 6], [1151, 605]] dans I_data.gp
+OK    G1b Phi_115(r) = 0 mod 1151 et r d'ordre multiplicatif exactement 115 : P_r = (1151, zeta - r) premiers de degre residuel 1
+OK    G1c r2 = r1^24 et r1 = r2^24 mod 1151 (6^24 = 605) : sigma_24(P_r1) = P_r2, donc sigma_24(I) = I
+OK    G1d 1151 dans I et g(zeta) dans I, indice 1151^2 : I = (1151, g(zeta)) = P_6 P_605 (produit de deux premiers distincts de degre 1)
+OK    G1e I + Ibar = O_L : Ibar = P_192 P_1073, aucun ri rj = 1 mod 1151 (pgcd(g, g*) = 1), donc I inter Ibar = I Ibar
+      g = y^2 + 540 y + 177 = (y - 6)(y - 605) ; g* = y^2 + 1037 y + 1138 = (y - 192)(y - 1073) (mod 1151)
+OK    G2 alpha reel : Tr(alpha zeta^k) = Tr(alpha zeta^-k)
+OK    G2 BASE~ H BASE = GRAM (H recalculee depuis ALPHA), entiere
+OK    G2 GRAM symetrique et paire
+OK    G2 GRAM definie positive (88 mineurs principaux dominants > 0, exact)
+OK    G2 det GRAM = 1
+      diagonale de GRAM : min 1393300106, max 125494664886
+OK    G3 nu dans I (donc dans I inter Ibar = I Ibar, nu etant reel)
+OK    G3 Pm(c) = 0 dans Z[zeta], Pm unitaire de degre 44 (polynome minimal de c = zeta + 1/zeta)
+OK    G3 N_{L+/Q}(nu) = 1151^2 = N(I) : (nu) O_L = I Ibar
+OK    G4 pour les 88 vecteurs de base z de I : z + zbar = a(c), z - zbar = e b(c), (b ; a) = colonne de AB
+OK    G4 |det AB| = 2^44 * 1151^2
+OK    G5 AB~ diag(QB, QA) AB / 2 = GRAM : N(z) = (Lambda(a) + Lambda'(b)) / 2 sur tout I
+OK    G5 QA (denominateur commun 1151) definie positive, det = 1/1151^2
+OK    G5 QB (denominateur commun 1151) definie positive, det = 1/1151^2
+      SHA-256 71a3fe72e37c9a33ead4aa336a63e3ce31159610b9943bc9cbfd38f260c968f1  cote1_A.gram
+      SHA-256 b92378f3b09c2ddbfed63a04d61ecd2d0aa242dbe081dfe790b7477fe369026c  cote1_B.gram
+      SHA-256 5a6e224361d33096f91fd8222a729ce2efebf195d1a389f69c4fa854f49c49fc  cote1_T.mat
+      SHA-256 3cc5a16e0231d39fd34ffb79c8046eda81b424250b95dd42ffb8fa67933d490d  cote1_meta.txt
+      SHA-256 b41d2f92edc356af45e5dd762fab0b6dbd5800963e9a8a24ed87d09102646786  cote1_bases.gp
+OK    G6 cote 1 : les 4 empreintes d'entrees imprimees par chacun des 1 journaux d'execution (premiere_execution/cote1.stdout.log) = fichiers actuels
+OK    G6 cote 1 : R^-1 [[Hf, Hl], [0, Hc]] entiere et |det| egaux : meme reseau M (bijection I <-> (u, y) dans Z^44 x Z^44)
+OK    G6 cote 1 : A.gram = DA Hc~ QC Hc (DA = 1151)
+OK    G6 cote 1 : B.gram = DB Hf~ QF Hf (DB = 1)
+OK    G6 cote 1 : Hf Tn = d Hl (d = 2302) : coordonnees de fibre du relevement = Tn u / d
+OK    G6 cote 1 : reseau de fibre Hf Z^44 = 2 nu O+ (meme reseau colonne)
+      SHA-256 525019bbbc525923212240a15e106e2c8dc5d38a0f4025660d2014010c750b58  cote2_A.gram
+      SHA-256 b65671c32264c15fc22d39afd1e4257cf8bb6102a88d9b61391d11f9b28522eb  cote2_B.gram
+      SHA-256 8a87a917006c5bf2ac7a5ba4eb0483ec3ae9b9d8c4aada99f96a849ce8dd04a2  cote2_T.mat
+      SHA-256 3cc5a16e0231d39fd34ffb79c8046eda81b424250b95dd42ffb8fa67933d490d  cote2_meta.txt
+      SHA-256 ce20971a05645e8ef7b0a092413af7b26172c4f5e69905906302901bed02c3d1  cote2_bases.gp
+OK    G6 cote 2 : les 4 empreintes d'entrees imprimees par chacun des 1 journaux d'execution (premiere_execution/cote2.stdout.log) = fichiers actuels
+OK    G6 cote 2 : R^-1 [[Hf, Hl], [0, Hc]] entiere et |det| egaux : meme reseau M (bijection I <-> (u, y) dans Z^44 x Z^44)
+OK    G6 cote 2 : A.gram = DA Hc~ QC Hc (DA = 1151)
+OK    G6 cote 2 : B.gram = DB Hf~ QF Hf (DB = 1)
+OK    G6 cote 2 : Hf Tn = d Hl (d = 2302) : coordonnees de fibre du relevement = Tn u / d
+OK    G6 cote 2 : reseau de fibre Hf Z^44 = 2 nu O+ (meme reseau colonne)
+OK    G7 (6 - 1057/200)^2 < 45/88, soit 6 (1 - sqrt(5/352)) < 1057/200 ; et 3*6/4 <= 1057/200
+OK    G8 rotation zeta sur les coordonnees de I : matrice entiere, Rot~ GRAM Rot = GRAM
+      vecteur 0 : N = 3255598640454 ; max |f| = 3209838619053.3120 >= N sqrt(5/352) = 388011438658.9626
+      vecteur 1 : N = 780010550132 ; max |f| = 619049488208.3823 >= N sqrt(5/352) = 92963859845.9669
+      vecteur 2 : N = 3985824832156 ; max |f| = 3979579709209.3032 >= N sqrt(5/352) = 475041858093.3548
+OK    G8 sur 3 vecteurs : Lambda(a_k) + Lambda'(b_k) = 2N, somme a cinq termes nulle, Parseval, max |f| >= N sqrt(5/352)
+      G9 : norme8.txt absent, controle non fait
+BILAN : 38 controles, 0 echecs
+FIN_OK
+code de sortie 0

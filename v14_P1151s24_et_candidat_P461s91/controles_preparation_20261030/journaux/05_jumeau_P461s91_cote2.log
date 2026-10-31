@@ -1,0 +1,19 @@
+date : 2026-10-30 23:38:37 CET
+repertoire : . (relatif a la racine du depot)
+commande : python3 -I v14_P1151s24_P461s91/controles_preparation_20261030/verifier_jumeau_P461s91.py 2 v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/sorties/run_P461s91_cote2/cote2.ckpt calcul_externe_resultats_20261015/final_P461s24_AMS3/run_P461s24_cote2.tar.gz calcul_externe_resultats_20261015/final_P461s24_AMS3/SHA256SUMS_RAPATRIEMENT.txt calcul_externe_resultats_20261015/final_P461s24_AMS3/bilan_P461s24.txt
+python : Python 3.12.3
+source : verifier_jumeau_P461s91.py SHA-256 0253963ef52e98e2de08c0aaa296457bf22eb37614a1036ef7867765c4fc0bf2
+cote 2 ; P461s91 : v14_P1151s24_P461s91/balayages/P461s91_Crapaud08_V2_20261019/sorties/run_P461s91_cote2/cote2.ckpt ; jumeau P461s24 : calcul_externe_resultats_20261015/final_P461s24_AMS3/run_P461s24_cote2.tar.gz
+OK    J0 SHA-256 de run_P461s24_cote2.tar.gz = 9944966309b1f1d0... (SHA256SUMS_RAPATRIEMENT.txt du depot)
+OK    J0 SHA-256 du ckpt du jumeau (lu dans l'archive, sans extraction sur disque) = CHECKPOINT_SHA256 de bilan_P461s24.txt (3b88973687399b82...)
+      SHA-256 des recus P461s91 cote 2 : a1f4bf8d552ed5ee6c3a425ff82e6da6125fed02461c1cbfeea8e6c7a723e118
+OK    J1 en-tetes : memes parametres, total 73359, catalogue 388a5734bb6ce7e5..., classes 4f1ed5ad5834cdca...
+OK    J1 en-tetes : empreintes 'entrees' differentes (recollement T different) : 24c8610207705b9c... / d43c0e5ffc1f5437...
+OK    J2 recus au format strict : 73359 (P461s91) et 73359 (P461s24) lignes
+OK    J2 memes indices, permutation de 0..73358
+OK    J3 cote court identique tache par tache (U, CVP, NA, HIST) : 73359 taches, 0 differences
+OK    J3 TOUCHES = 0 dans chaque recu des deux reseaux
+      information : somme des U = 143529602 ; NB egal pour 38204 taches sur 73359 (la fibre depend du recollement)
+BILAN : 8 controles, 0 echecs
+JUMEAU_COURT_IDENTIQUE
+code de sortie 0

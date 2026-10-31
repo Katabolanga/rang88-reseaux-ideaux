@@ -1,0 +1,22 @@
+2026-10-19 09:44:05  DEBUT replication P1151s24 ; hote rang88-p4969-cote1 ; 32 processeurs ; FILS=32 ; MAXH=8 ; COTES=1 ; reprise=0
+2026-10-19 09:44:05  java : openjdk version "21.0.12.1" 2026-08-18 ; python : Python 3.12.3
+2026-10-19 09:44:05  0 OK : empreintes du lot (31 fichiers)
+2026-10-19 09:44:17  1a OK : TestCertZ, 910 controles, 0 echec
+2026-10-19 09:44:23  1b OK : validation P461 (697 u, 2 touches attendues, couverture 3658/3658)
+sha256 71a3fe72e37c9a33ead4aa336a63e3ce31159610b9943bc9cbfd38f260c968f1  java_P1151s24/cote1_A.gram
+sha256 b92378f3b09c2ddbfed63a04d61ecd2d0aa242dbe081dfe790b7477fe369026c  java_P1151s24/cote1_B.gram
+sha256 5a6e224361d33096f91fd8222a729ce2efebf195d1a389f69c4fa854f49c49fc  java_P1151s24/cote1_T.mat
+sha256 3cc5a16e0231d39fd34ffb79c8046eda81b424250b95dd42ffb8fa67933d490d  java_P1151s24/cote1_meta.txt
+sha256 9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8  classes/Rang88CertZ$Compteurs.class
+sha256 a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af  classes/Rang88CertZ$EnumZ.class
+sha256 b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9  classes/Rang88CertZ$FormeZ.class
+sha256 5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b  classes/Rang88CertZ$Recepteur.class
+sha256 5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3  classes/Rang88CertZ$Tache.class
+sha256 a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3  classes/Rang88CertZ$Travail.class
+sha256 35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5  classes/Rang88CertZ.class
+sha256 60aed39c3fc32a76da5e61fad04465a45a224edef1dd069cbeabf30961638fc4  classes/TestCertZ.class
+2026-10-19 09:44:23  DEBUT cote 1 (74027 taches), 32 fils, garde-fou 8 h ; journal sorties/run_P1151s24_cote1/cote1_crapaud08_20261019_094423.stdout.log
+2026-10-19 13:10:32  FIN cote 1 : code natif Java 0 (124 = garde-fou) ; lignes TOUCHE 0 ; fichier de touche 0 ; stderr 0 octets
+2026-10-19 13:10:33  cote 1 : controle_execution.py code 0 (BILAN : 27 controles, 0 echecs ; |U| = 358234264 ; empreinte canonique 36c946d4551a6d403cfc8e8ecadabab8efa8b9090c8fe3898cdafcd04d2e32f7) ; empreinte canonique 36c946d4551a6d403cfc8e8ecadabab8efa8b9090c8fe3898cdafcd04d2e32f7 (attendue 36c946d4551a6d403cfc8e8ecadabab8efa8b9090c8fe3898cdafcd04d2e32f7)
+FIN_COTE 1 IDENTIQUE 2026-10-19 13:10:33 : 74027/74027 taches, 0 touche, catalogue 287b1e724cb845e266356bbaed182a6c95d47f207dc7def9acf10c5d78711b8e, empreinte canonique 36c946d4551a6d403cfc8e8ecadabab8efa8b9090c8fe3898cdafcd04d2e32f7
+2026-10-19 13:10:33  VERDICT : REPLICATION_IDENTIQUE pour les cotes 1 (aucune touche ; recus identiques a ceux de SpiraleG, par l'empreinte canonique)
