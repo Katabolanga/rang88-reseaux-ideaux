@@ -1,0 +1,15 @@
+lancement 2026-10-19T18:33:54+02:00 (SpiraleG, 14 fils, garde-fou 96 h par cote)
+2026-10-19 18:33:55  DEBUT P3359 ; lot R88_P3359_CERT_20261019 ; hote SpiraleG ; 16 processeurs ; FILS=14 ; MAXH=96 ; reprise=0 ; ESSAI_TACHES=0
+2026-10-19 18:33:55  java : openjdk version "11.0.16.1" 2022-08-12 LTS ; python : Python 3.12.3
+2026-10-19 18:33:55  0 OK : empreintes du lot (39 fichiers)
+2026-10-19 18:34:12  1a OK : TestCertZ, 910 controles, 0 echec, code natif 0
+2026-10-19 18:34:18  1b OK : validation P461 (697 u, 2 touches attendues, couverture 3658/3658), code natif 0
+2026-10-19 18:34:20  DEBUT cote 1 (109662 taches), 14 fils, garde-fou 96 h ; journal sorties/run_P3359_cote1/cote1_20261019_183419.stdout.log
+2026-10-20 19:10:07  FIN cote 1 : code natif Java 0 (124 = garde-fou) ; lignes TOUCHE 0 ; fichier de touche 0 ; lignes ERREUR/ARRET/Exception 0 ; stderr 0 octets
+2026-10-20 19:10:15  cote 1 : controle_execution.py code natif 0 (BILAN : 31 controles, 0 echecs ; |U| = 1044123618 ; empreinte canonique 9fc5bb74) ; lancements 1 ; empreinte canonique 9fc5bb7437cf86d8ed076c0358caab0eb889170942391e434bacf0c2346387ad ; predictions du jumeau OK
+2026-10-20 19:10:16  DEBUT cote 2 (107548 taches), 14 fils, garde-fou 96 h ; journal sorties/run_P3359_cote2/cote2_20261020_191016.stdout.log
+2026-10-21 23:16:12  FIN cote 2 : code natif Java 0 (124 = garde-fou) ; lignes TOUCHE 0 ; fichier de touche 0 ; lignes ERREUR/ARRET/Exception 0 ; stderr 0 octets
+2026-10-21 23:16:17  cote 2 : controle_execution.py code natif 0 (BILAN : 29 controles, 0 echecs ; |U| = 1044123618 ; empreinte canonique a5e5f7b9) ; lancements 1 ; empreinte canonique a5e5f7b989218a71a087db648cd2fe73a8e130833a50b93a7c5bf9792ebf96b3 ; predictions du jumeau OK
+2026-10-21 23:16:18  VERDICT : COMPLET_SANS_TOUCHE P3359 : deux cotes complets, 0 touche, un seul lancement chacun, controles 100 % (aucune affirmation d'extremalite avant raccord, non-isometrie et contre-audit) (code de sortie 0)
+2026-10-21 23:16:19  SHA256SUMS_SORTIES.txt ecrit en dernier (23 fichiers) ; fin, code 0
+fin du lanceur, code natif 0 2026-10-21T23:16:19+02:00

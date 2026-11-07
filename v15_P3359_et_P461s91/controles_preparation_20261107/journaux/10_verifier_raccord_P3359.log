@@ -1,0 +1,64 @@
+2026-11-07 21:50:02    
+commande (depuis v15_P3359_et_P461s91/verification/) : python -I code/verifier_raccord_tranche1.py P3359
+candidat P3359
+source : verifier_raccord_tranche1.py SHA-256 1285ad9c5f7760bf57239da022cfaab886e7999e4a08347610b39bc17dda9146
+original adapte : verifier_raccord_ORIGINAL_P4969.py SHA-256 b30e9068772003f35da5868ebae732d05257918899da015e287e91c7cd13180f
+original adapte : verifier_raccord_P1151s24.py SHA-256 9e2607fccb5aeca835f902f1a2c316bb8cf78670763d3b4a77efc1e3d7a0d125
+I_data.gp SHA-256 e387f8fd7a95abfac35593bc9cd7e6deec2a62f6ae2f93d2a38d106a3ae87dc3 ; PREMIERS = [[3359, 2, 1]] ; Q = 11282881
+      3359 mod 115 = 24 : ordre 2 modulo 115, premiers de degre residuel 2
+OK    dimensions : BASE, GRAM, AB 88 x 88 ; NU, ALPHA de degre <= 43 ; Q = 3359^2
+OK    G1 |det BASE| = 3359^2 (indice de I dans Z[zeta])
+OK    G1 zeta * I contenu dans I (I est un ideal de Z[zeta_115])
+OK    G1 I mod 3359 = (g), g unitaire de degre 2 divisant Phi_115 mod 3359
+OK    G1 3359 d'ordre 2 modulo 115 (3359^2 = 1 mod 115) : premiers de L au-dessus de 3359 de degre residuel 2
+OK    G1 PREMIERS = [[3359, 2, 1]] : un premier de degre 2 au-dessus de 3359
+OK    G1 g irreductible mod 3359 (discriminant non residu)
+OK    G1 3359 dans I et g(zeta) dans I : I = (3359, g(zeta)), premier de degre residuel 2
+OK    G1 I different de son conjugue (g* != g), donc I + Ibar = O_L
+      g = y^2 + 2202 y + 1829 ; g* = y^2 + 2475 y + 2303 (mod 3359)
+OK    G2 alpha reel : Tr(alpha zeta^k) = Tr(alpha zeta^-k)
+OK    G2 BASE~ H BASE = GRAM (H recalculee depuis ALPHA), entiere
+OK    G2 GRAM symetrique et paire
+OK    G2 GRAM definie positive (88 mineurs principaux dominants > 0, exact)
+OK    G2 det GRAM = 1
+      diagonale de GRAM : min 5075908, max 31104184196
+OK    G3 nu dans I (donc dans I inter Ibar = I Ibar, nu etant reel)
+OK    G3 Pm(c) = 0 dans Z[zeta], Pm unitaire de degre 44 (polynome minimal de c = zeta + 1/zeta)
+OK    G3 N_{L+/Q}(nu) = 3359^2 = N(I) : (nu) O_L = I Ibar
+OK    G4 pour les 88 vecteurs de base z de I : z + zbar = a(c), z - zbar = e b(c), (b ; a) = colonne de AB
+OK    G4 |det AB| = 2^44 * 3359^2
+OK    G5 AB~ diag(QB, QA) AB / 2 = GRAM : N(z) = (Lambda(a) + Lambda'(b)) / 2 sur tout I
+OK    G5 QA (denominateur commun 3359) definie positive, det = 1/3359^2
+OK    G5 QB (denominateur commun 3359) definie positive, det = 1/3359^2
+      SHA-256 62ed69549fae810a41668994138a26315b0e7f412558614b535455a55ac66f90  cote1_A.gram
+      SHA-256 3f532311bfd7c19dafc44b2323abf038dd8922e0e78bccbdd39ea52c52521805  cote1_B.gram
+      SHA-256 12cd296676d454a9595e7f84ebf959da84569398eb5b5c3065456023aaf37f3b  cote1_T.mat
+      SHA-256 2948577dea82861bb4eb0ff1df8d8872a5a763df12f3b9bb205d04a7b4588440  cote1_meta.txt
+      SHA-256 4eb93f7063940f6746f78436d53a0a92cd0e932fe3709b2baaf7e29f2c54f5fd  cote1_bases.gp
+OK    G6 cote 1 : les 4 empreintes d'entrees imprimees par chacun des 6 journaux d'execution (journaux/balayage_interrompu_20261012_cote1.log, journaux/catalogue_SpiraleG_20261019_cote1.log, journaux/filtre_1017_complement_P3359_cote1.log, journaux/filtre_1017_p2_cote1.log, journaux/filtre_20261011_2309_cote1.log, journaux/filtre_20261012_0309_cote1.log) = fichiers actuels
+OK    G6 cote 1 : R^-1 [[Hf, Hl], [0, Hc]] entiere et |det| egaux : meme reseau M (bijection I <-> (u, y) dans Z^44 x Z^44)
+OK    G6 cote 1 : A.gram = DA Hc~ QC Hc (DA = 3359)
+OK    G6 cote 1 : B.gram = DB Hf~ QF Hf (DB = 1)
+OK    G6 cote 1 : Hf Tn = d Hl (d = 6718) : coordonnees de fibre du relevement = Tn u / d
+OK    G6 cote 1 : reseau de fibre Hf Z^44 = 2 nu O+ (meme reseau colonne)
+      SHA-256 c5366b5b69bff956234d3427a6ab2cbe52b16510a4c07f4f15a45674724b9125  cote2_A.gram
+      SHA-256 906ed4e0168279eb43d6ddeea5381c1138dac8e64b4dcd18520cec17d2fa20eb  cote2_B.gram
+      SHA-256 8f329a7148633c247cedadae82c6b14659701b5c39b66688082f5ef9fd126745  cote2_T.mat
+      SHA-256 2948577dea82861bb4eb0ff1df8d8872a5a763df12f3b9bb205d04a7b4588440  cote2_meta.txt
+      SHA-256 cc7122098d003d8e117fb36982fc2f7ea34e9ef1888a36505dca39a495ee4a07  cote2_bases.gp
+OK    G6 cote 2 : les 4 empreintes d'entrees imprimees par chacun des 3 journaux d'execution (journaux/catalogue_SpiraleG_20261019_cote2.log, journaux/filtre_1017_complement_P3359_cote2.log, journaux/filtre_1017_p2_cote2.log) = fichiers actuels
+OK    G6 cote 2 : R^-1 [[Hf, Hl], [0, Hc]] entiere et |det| egaux : meme reseau M (bijection I <-> (u, y) dans Z^44 x Z^44)
+OK    G6 cote 2 : A.gram = DA Hc~ QC Hc (DA = 3359)
+OK    G6 cote 2 : B.gram = DB Hf~ QF Hf (DB = 1)
+OK    G6 cote 2 : Hf Tn = d Hl (d = 6718) : coordonnees de fibre du relevement = Tn u / d
+OK    G6 cote 2 : reseau de fibre Hf Z^44 = 2 nu O+ (meme reseau colonne)
+OK    G7 (6 - 1057/200)^2 < 45/88, soit 6 (1 - sqrt(5/352)) < 1057/200 ; et 3*6/4 <= 1057/200
+OK    G8 rotation zeta sur les coordonnees de I : matrice entiere, Rot~ GRAM Rot = GRAM
+      vecteur 0 : N = 257294504714 ; max |f| = 233310369260.6767 >= N sqrt(5/352) = 30665085582.9091
+      vecteur 1 : N = 307762710094 ; max |f| = 276590618955.2209 >= N sqrt(5/352) = 36680028804.9332
+      vecteur 2 : N = 722751240898 ; max |f| = 716531517021.2661 >= N sqrt(5/352) = 86139533690.8840
+OK    G8 sur 3 vecteurs : Lambda(a_k) + Lambda'(b_k) = 2N, somme a cinq termes nulle, Parseval, max |f| >= N sqrt(5/352)
+      G9 : norme8.txt absent, controle non fait
+BILAN : 37 controles, 0 echecs
+FIN_OK
+code 0

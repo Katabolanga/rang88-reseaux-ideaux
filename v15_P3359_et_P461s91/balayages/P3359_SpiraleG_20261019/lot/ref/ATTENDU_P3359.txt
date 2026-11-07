@@ -1,0 +1,16 @@
+# Valeurs ATTENDUES pour le lot R88_P3359_CERT_20261019 (P3359), calculees sur SpiraleG le 19 oct. 2026 (Claude) AVANT tout calcul sur Crapaud08.
+# Catalogues : Rang88CertZ en mode « taches » (catalogue seul, aucune certification), memes classes, memes parametres que l'invocation
+# (BA = 1057/200, S = 12, D = 6, Dmax = 16, seuil = 0.2), OpenJDK 11.0.16.1, Windows 11 ; journaux dans preparation/catalogues/ du dossier de tranche.
+# Entrees : regenerees par la chaine prep_java.gp (PARI/GP 2.15.4), identiques a l'octet a agents/rang88_ideaux/java_P3359/ (9-17 oct.).
+cote 1 : TOTAL_TACHES 109662 ; catalogue 32900e663a387c75d112bf5b9effba06ece70822b1fad4d1be10f74e85386ea0 ; (132714 noeuds de generation)
+cote 1 : ENTREES SHA-256 : A 62ed69549fae810a41668994138a26315b0e7f412558614b535455a55ac66f90 ; B 3f532311bfd7c19dafc44b2323abf038dd8922e0e78bccbdd39ea52c52521805 ; T 12cd296676d454a9595e7f84ebf959da84569398eb5b5c3065456023aaf37f3b ; meta 2948577dea82861bb4eb0ff1df8d8872a5a763df12f3b9bb205d04a7b4588440
+cote 2 : TOTAL_TACHES 107548 ; catalogue 088d53a7470411c74729dc1068267fb949483abb6c9412e5df4f46442b4b5518 ; (130519 noeuds de generation)
+cote 2 : ENTREES SHA-256 : A c5366b5b69bff956234d3427a6ab2cbe52b16510a4c07f4f15a45674724b9125 ; B 906ed4e0168279eb43d6ddeea5381c1138dac8e64b4dcd18520cec17d2fa20eb ; T 8f329a7148633c247cedadae82c6b14659701b5c39b66688082f5ef9fd126745 ; meta 2948577dea82861bb4eb0ff1df8d8872a5a763df12f3b9bb205d04a7b4588440
+# Recus de reference (executions partielles anterieures sur SpiraleG, memes classes et memes entrees ; controle E7 de controle_execution.py :
+# chaque recu commun doit etre identique a l'octet).  Coherence deux a deux verifiee (coherence_references.py, 29/29).
+reference balayage_interrompu_20261012_cote1.ckpt : 16285 recus ; SHA-256 3dfb3c5ec43dbd0b664cf407c1930a1b1c96ff7d8147afc0bc5e5de4cc805fa8
+reference filtre_1017_complement_P3359_cote1.ckpt : 313 recus ; SHA-256 eb444be4e496a36e1f17e0679aa43df8f2f3a0563ab4fb808b6d34629e606ec1
+reference filtre_1017_complement_P3359_cote2.ckpt : 260 recus ; SHA-256 7cc66e21bb8201da4ddf11481a2f2e39340bc900d597b5312febbc0900021025
+reference filtre_1017_p2_cote1.ckpt : 1576 recus ; SHA-256 64424892c6fed3f7f54696b4f4897b4ae2542483a21cea7f8e5d72f6f2b328c2
+reference filtre_1017_p2_cote2.ckpt : 1305 recus ; SHA-256 ae27e9f345b092d9c860358f4e870b090dc467d092b6f43030a9f1d9fe36b1fb
+reference filtre_20261012_cote1.ckpt : 3981 recus ; SHA-256 5c51aaf249b3a2deb1b21e6fba399e0c583a617a1824acb0c92a2b15a3defe61

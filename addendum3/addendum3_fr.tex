@@ -1,0 +1,263 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english,french]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[a4paper,textwidth=15.4cm,textheight=23.5cm,centering]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{xurl}
+\usepackage{array}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+\setlist[enumerate]{leftmargin=2.2em}
+\setlist[itemize]{leftmargin=1.6em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{corollary}[theorem]{Corollaire}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remarque}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\aaa}{\mathfrak{a}}
+\newcommand{\bb}{\mathfrak{b}}
+\newcommand{\lpr}{\mathfrak{l}}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\Lz}{L_{0}}
+\newcommand{\LS}{L_{S}}
+\newcommand{\XA}{X(P_{3359})}
+\newcommand{\XB}{X(P_{461}\sigma_{91})}
+\newcommand{\XC}{X(P_{1151}\sigma_{24})}
+\newcommand{\st}[1]{\textup{\textsf{\small[#1]}}}
+\newcommand{\DEM}{\st{démontré}}
+\newcommand{\ASS}{\st{assisté par calcul}}
+\newcommand{\CONS}{\st{constaté}}
+
+\title[Addendum 3 : rang 88 sur $\Q(\zeta_{115})$]{Addendum 3 à \guillemotleft~Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$~\guillemotright{} :\\ les réseaux $X(P_{3359})$ et $X(P_{461}\sigma_{91})$,\\ la composante $45\,013$ sans GRH, et des corrections}
+\author{Ivan Gauvin}
+\date{7 novembre 2026}
+\subjclass[2020]{11H06 ; 11H56, 11R18, 11R29}
+\keywords{réseaux extrémaux, réseaux unimodulaires pairs, réseaux idéaux, corps cyclotomiques, groupe des classes, théorème de Stickelberger, énumération certifiée}
+
+\begin{document}
+
+\begin{abstract}
+Deux réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$ de plus, $\XA$ et $\XB$, sont de minimum $8$ par la méthode assistée par calcul de~\cite{Gau26} : les deux côtés du critère de~\cite[th.~4.6]{Gau26} ont été balayés sans aucune touche, deux fois, sur deux machines, avec le même programme et des reçus identiques à l'octet. Sans GRH, leurs classes ne sont conjuguées ni entre elles ni à celles des sept réseaux extrémaux connus ; sous les hypothèses énoncées, la famille contient donc au moins neuf réseaux extrémaux de rang $88$ deux à deux non isométriques. Un certificat par sommes de Jacobi et le théorème de Stickelberger montrent, sans GRH, que la classe de $\XB$ a une composante $45\,013$ non nulle ; $\XB$ n'est donc pas isométrique au réseau $\Lz$ de Sakamoto, point que la version~1.4 du dépôt laissait sous GRH. L'addendum recense aussi les corrections apportées aux textes publics dans la version~1.5 : le théorème d'isométrie de~\cite{Gau26} étend un argument de Quebbemann~\cite{Que81}, et plusieurs lignes de statut de la non-isométrie sont précisées.
+\end{abstract}
+
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small Cet addendum reprend les notations et les statuts de~\cite{Gau26} : \DEM, \ASS, \CONS. Un énoncé \ASS{} repose sur le modèle d'exécution de~\cite[\S5.4]{Gau26} (M1, M2, H1--H3). Les références numérotées à~\cite{Gau26} et à~\cite{Gau26a} valent pour les versions française et anglaise, dont la numérotation est identique. Il fait suite à l'addendum du 17 octobre 2026~\cite{Gau26a} ; un deuxième addendum a été rédigé le même jour mais n'a pas été publié, et le présent texte ne s'appuie pas sur lui. Aucune pièce de cet addendum n'a été relue par un spécialiste humain.}}
+\end{center}
+
+\section{Synthèse}\label{sec:summary}
+
+Comme dans~\cite{Gau26}, $L=\Q(\zeta_{115})$, $G=\Gal(L/\Q)\cong(\Z/115)^\times$, $\sigma_t\colon\zeta\mapsto\zeta^t$, et $X_I=(I,\beta_0/\nu)$ est le réseau idéal attaché à un idéal entier $I$ tel que $I+\bar I=\OO_L$, où $\nu\gg0$ engendre $I\bar I$. Sa classe dans l'ensemble $S$ de~\cite{Gau26} est $[I]\in\Cl(L)\cong\Z/3\times\Z/331\times\Z/45\,013$~\cite[prop.~2.2, 2.3]{Gau26}. On note
+\[
+P_{3359}=(3359,\ \zeta^2+2202\zeta+1829),\qquad I_{91}=P_5\,\sigma_{91}(P_5)=(461,\ \zeta-5)(461,\ \zeta-115),
+\]
+$\XA=X_{P_{3359}}$ et $\XB=X_{I_{91}}$. L'idéal $P_{3359}$ est premier de degré~$2$ ($3359\equiv24\pmod{115}$), et $I_{91}$ est le produit de deux premiers de degré~$1$ échangés par l'involution $\sigma_{91}$ ($5^{91}\equiv115\pmod{461}$). Les sept réseaux extrémaux connus avant cet addendum sont $\Lz$, $\LS$~\cite{Sak26}, $X_{139}$, $X_{599}$~\cite{Gau26}, $X_{4969}$, $X_{4049}$~\cite{Gau26a} et $\XC$ (version~1.4 du dépôt~\cite{Gau26b}).
+
+\begin{theorem}[deux réseaux extrémaux de plus, sous les hypothèses énoncées]\label{thm:neuf}
+Les réseaux $\XA$ et $\XB$ sont pairs, unimodulaires, définis positifs, de rang $88$ et de minimum $8$. Leurs classes ne sont conjuguées sous Galois ni entre elles, ni aux classes des sept réseaux ci-dessus. La famille des réseaux idéaux pairs unimodulaires sur $L$ contient donc au moins neuf réseaux extrémaux de rang $88$, deux à deux non isométriques.
+
+\st{parité, unimodularité : démontré (contrôles exacts) ; minimum : assisté par calcul (\cite[th.~4.6]{Gau26}, programme \texttt{Rang88CertZ}, M1, M2, H1--H3), chaque côté balayé deux fois sur deux machines avec le même programme, reçus identiques, non audité par un humain ; non-conjugaison : démontrée, sans GRH, modulo~\cite[prop.~2.2, 2.5]{Gau26}, \cite[prop.~4.7]{Gau26a} et, pour $\XB$ face à $\Lz$, la proposition~\ref{prop:45013} ; non-isométrie : déduite de la non-conjugaison par le théorème d'isométrie~\cite[th.~3.3]{Gau26}, qui demande le minimum $8$ d'au moins un des deux réseaux comparés, minimum assisté par calcul pour $X_{139}$, $X_{599}$, $X_{4969}$, $X_{4049}$, $\XC$, $\XA$ et $\XB$ ; vis-à-vis de $\Lz$ et $\LS$, sans calcul assisté de notre part, leur minimum $8$ étant celui de~\cite{Sak26}}
+\end{theorem}
+
+\begin{proposition}[la composante $45\,013$ de $\XB$]\label{prop:45013}
+La classe $[I_{91}]$ a une composante $45\,013$ non nulle. Son support est $\{45\,013\}$.
+
+\st{démontré, sans GRH ; non-annulation : modulo le théorème de Stickelberger et l'indice des unités $[U_L:\mu_LU_L^+]\le2$~\cite[th.~6.10, 4.12]{Was97}, par un certificat exact contrôlé par un programme qui n'utilise que la bibliothèque standard de Python ; support : modulo~\cite[prop.~2.2, 2.5]{Gau26} et~\cite[prop.~4.7]{Gau26a}, pour les composantes $3$ et $331$ (version~1.4)}
+\end{proposition}
+
+\begin{corollary}\label{cor:L0}
+$\XB$ n'est isométrique ni à $\Lz$ ni à $\LS$.
+
+\st{démontré, sans GRH, modulo~\cite[th.~3.3]{Gau26} et le minimum $8$ de $\Lz$ et $\LS$~\cite{Sak26} ; sans calcul assisté de notre part}
+\end{corollary}
+
+\begin{proof}
+La classe de $\Lz$ est principale et celle de $\LS$ a pour support $\{3\}$~\cite[prop.~2.7]{Gau26}. Chaque $\sigma_t$ est un automorphisme de $\Cl(L)$ : il conserve l'annulation de la composante $45\,013$, et une classe de composante $45\,013$ non nulle n'est conjuguée à aucune des deux. Si $\XB$ était isométrique à $\Lz$ ou à $\LS$, il serait de minimum $8$, et~\cite[th.~3.3]{Gau26} rendrait les classes conjuguées.
+\end{proof}
+
+La version~1.4 du dépôt donnait la non-isométrie de $\XB$ à $\Lz$ \guillemotleft~sous GRH seulement~\guillemotright, et publiait $\XB$ comme \emph{candidat}, de minimum annoncé mais non répliqué. Ces deux réserves sont levées ici : corollaire~\ref{cor:L0}, et réplication du \S\ref{subsec:B}.
+
+\section{Les deux réseaux}\label{sec:reseaux}
+
+\subsection{\texorpdfstring{$\XA$}{X(P3359)}}\label{subsec:A}
+\emph{Place dans $S$.} La classe $[P_{3359}]$ est fixée par $\sigma_{24}$, substitution de Frobenius de $3359$ ; elle est dans la couche $\sigma_{24}$ de~\cite[\S4]{Gau26a}, sur l'anneau extérieur (support $\{331\}$), à l'heure~$2$. Sa composante $3$ est nulle, car $4\cdot3359=48^2+23\cdot22^2$, et sa composante $45\,013$ aussi, car $\chi_{45\,013}(24)=-1$. L'heure est celle de~\cite[tableau~3]{Gau26a}, où $P_{3359}$ représente l'heure~$2$ de l'anneau extérieur ; elle est démontrée sans GRH par~\cite[prop.~4.7, cor.~4.8]{Gau26a}. \DEM, sans GRH
+
+\emph{Raccord exact.} Les fichiers d'entrée du programme décrivent exactement $X_{P_{3359}}$ : $37$ contrôles sur $37$ en arithmétique entière et rationnelle exacte, sans PARI/GP (vérificateur de la version~1.4, exécuté sur les fichiers de cette version) ; la matrice de Gram en base LLL est raccordée à la construction exacte par $13$ contrôles PARI/GP. \DEM
+
+\emph{Balayages.} Les deux côtés du critère de~\cite[th.~4.6]{Gau26} ($B_A=1057/200$, $S=12$) ont été balayés avec les classes publiées de \texttt{Rang88CertZ}, identiques à l'octet, par la même invocation que dans~\cite{Gau26} :
+
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.6cm}ll}
+\toprule
+& côté 1 ($109\,662$ tâches) & côté 2 ($107\,548$ tâches) \\
+\midrule
+exécution 1 : SpiraleG, Windows~11, OpenJDK 11.0.16.1, $14$ fils & 19--20 oct., $88\,546$~s & 20--21 oct., $101\,155$~s \\
+exécution 2 : Bertha, Linux (WSL), OpenJDK 21.0.12.1, $16$ fils & 6 nov., $34\,448$~s & 6--7 nov., $39\,337$~s \\
+\midrule
+empreinte canonique (les deux exécutions) & \texttt{9fc5bb74\dots87ad} & \texttt{a5e5f7b9\dots96b3} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Chaque exécution est un lancement unique : point de contrôle neuf, aucune reprise, code Java $0$, flux d'erreur vide, couverture complète, \emph{aucune touche} et aucun fichier de touche. Le contrôle d'exécution \texttt{controle\_execution.py} du dépôt (contrôles E1 à E7) passe en entier sur chacune des quatre exécutions, et les reçus des deux exécutions d'un même côté sont identiques tâche par tâche ($109\,662$ et $107\,548$ reçus) ; les fichiers bruts ne diffèrent que par l'ordre d'écriture des fils. Sur chaque côté, $|\mathcal U|=1\,044\,123\,618$. Par~\cite[th.~4.6]{Gau26}, $\XA$ est de minimum $8$. \ASS
+
+\subsection{\texorpdfstring{$\XB$}{X(P461 sigma91)}}\label{subsec:B}
+\emph{Place dans $S$.} Les composantes $3$ et $331$ de $[I_{91}]$ sont nulles (version~1.4, sans GRH : $(91/23)=-1$, et $\chi_{331}(91)=-1$ avec $\sigma_{91}(I_{91})=I_{91}$) ; sa composante $45\,013$ ne l'est pas (proposition~\ref{prop:45013}). Le raccord exact des fichiers d'entrée ($38$ contrôles) a été publié dans la version~1.4.
+
+\emph{Balayages.} L'exécution~1 est celle de la version~1.4 (Crapaud08, Linux, OpenJDK 21.0.12.1, $8$ fils, 19--20 octobre) ; son côté~1 avait été repris à partir de $2\,089$ reçus d'un lancement interrompu, dont $670$ n'étaient recoupés par aucune autre exécution. L'exécution~2 a été faite sur Bertha le 7 novembre (Linux (WSL), OpenJDK 21.0.12.1, $8$ fils), à partir du lot inchangé de la version~1.4 : côté~1 ($73\,244$ tâches) en $12\,628$~s et côté~2 ($73\,359$ tâches) en $12\,191$~s, chacun en un seul lancement neuf, sans touche. Le contrôle d'exécution passe en entier sur les deux côtés ($28$ contrôles, plus la comparaison~E7 aux reçus de l'exécution~1). Les $146\,603$ reçus de l'exécution~2, partie fibre comprise, sont identiques à l'octet à ceux de l'exécution~1, et les empreintes canoniques (SHA-256 des reçus triés par indice de tâche) sont égales : \texttt{db04c32e\dots a1e4} (côté~1) et \texttt{652ef2f8\dots 6d13} (côté~2). En particulier, les $670$ reçus hérités de l'exécution~1 sont désormais recoupés par une exécution neuve. Par~\cite[th.~4.6]{Gau26}, $\XB$ est de minimum $8$. \ASS{} Le statut \guillemotleft~candidat, non répliqué~\guillemotright{} de la version~1.4 est caduc ; le statut de $\XB$ est désormais celui de $\XC$.
+
+\subsection{Une seconde implantation, comme recoupement numérique}\label{subsec:enum88}
+Un second programme pour le critère de~\cite[th.~4.6]{Gau26}, \texttt{enum88.c}, a été écrit par l'assistant sans reprendre le code de \texttt{Rang88CertZ} : énumération de Fincke--Pohst par intervalles, décomposition de Cholesky en double précision, décisions finales en entiers exacts. Sur le cas de validation de~\cite[\S5.2]{Gau26} ($P_{461}$, seuil $7/2$), il trouve les mêmes $697$ projections courtes et les deux mêmes touches. Sur les deux côtés de $\XB$, en mode complet (7 novembre, Bertha), il trouve le même nombre $|\mathcal U|=143\,529\,602$, le même histogramme des énergies courtes (sur ses $32$ cases), le même nombre de recherches de vecteur le plus proche, et aucune touche. C'est un recoupement numérique, pas un certificat : ses bornes en flottants n'ont pas d'analyse d'erreur, il lit les mêmes fichiers d'entrée et applique le même critère, et son auteur est le même. Il n'a pas été exécuté sur $\XA$. \CONS
+
+\section{La composante \texorpdfstring{$45\,013$}{45013} sans GRH}\label{sec:45013}
+
+\subsection{Stickelberger}
+Soit $\theta=\sum_{u\in(\Z/115)^\times}\{u/115\}\,\sigma_u^{-1}\in\Q[G]$ l'élément de Stickelberger, et
+\[
+\omega=\sigma_{-1}(2-\sigma_2)\,\theta=\sum_{t}\omega_t\,\sigma_t,\qquad \omega_t=2\{u/115\}-\{2u/115\}\in\{0,1\},\quad u=-t^{-1}\bmod 115 .
+\]
+Pour un idéal $\aaa$, on note $\aaa^\omega=\prod_t\sigma_t(\aaa)^{\omega_t}$.
+
+\begin{lemma}\label{lem:stick}
+$\omega\in\Z[G]$ appartient à l'idéal de Stickelberger $\Z[G]\cap\Z[G]\theta$ ; donc $\aaa^\omega$ est principal pour tout idéal fractionnaire $\aaa$ de $L$. \st{démontré, modulo le théorème de Stickelberger~\cite[th.~6.10]{Was97}}
+\end{lemma}
+
+\begin{proof}
+$(2-\sigma_2)\theta=\sum_w(2\{w/115\}-\{2w/115\})\sigma_w^{-1}$ est à coefficients entiers et appartient à $\Z[G]\theta$ ; l'idéal $\Z[G]\cap\Z[G]\theta$ est stable par multiplication par $\sigma_{-1}$. Le théorème de Stickelberger dit que cet idéal annule $\Cl(L)$.
+\end{proof}
+
+\subsection{Un lemme de type Kummer}
+Soit $p$ un nombre premier impair, avec $p\nmid 88$ et $p\nmid|\mu_L|=230$. Soit $\chi\colon G\to\F_p^\times$ un caractère \emph{impair} ($\chi(\sigma_{-1})=-1$), et $e_\chi=88^{-1}\sum_\sigma\chi(\sigma)^{-1}\sigma\in\F_p[G]$, de sorte que $e_\chi\sigma=\chi(\sigma)e_\chi$. Soit $V=L^\times/L^{\times p}$, $\F_p[G]$-module noté additivement, et $\chi(\omega)=\sum_t\omega_t\chi(\sigma_t)\in\F_p$.
+
+\begin{lemma}\label{lem:kummer}
+On suppose $\chi(\omega)=0$. Soient $\aaa$ un idéal fractionnaire et $\alpha\in L^\times$ tel que $(\alpha)=\aaa^\omega$. Si $e_\chi[\aaa]=0$ dans $\Cl(L)/p$, alors $e_\chi\alpha=0$ dans $V$. \DEM
+\end{lemma}
+
+\begin{proof}
+Soit $C\in\Z[G]$ qui se réduit sur $e_\chi$ modulo $p$. Par hypothèse, $\aaa^C=\bb^p(\beta)$ pour un idéal $\bb$ et un $\beta\in L^\times$. En appliquant $\omega$, $(\alpha^C)=(\bb^\omega)^p(\beta^\omega)$, et $\bb^\omega=(\gamma)$ par le lemme~\ref{lem:stick} ; donc $\alpha^C=\varepsilon\gamma^p\beta^\omega$ avec $\varepsilon\in U_L$. Dans $V$, $\alpha^C=e_\chi\alpha$, $\gamma^p=0$ et $e_\chi\beta^\omega=\chi(\omega)e_\chi\beta=0$. Reste à voir que $e_\chi\varepsilon=0$. Comme $[U_L:\mu_LU_L^+]\le2$~\cite[th.~4.12]{Was97}, on a $\varepsilon^2=\xi\eta$ avec $\xi\in\mu_L$ et $\eta\in U_L^+$. Comme $p\nmid230$, $\xi$ est une puissance $p$-ième, donc $\xi=0$ dans $V$. La conjugaison complexe $\sigma_{-1}$ fixe $\eta$, donc $e_\chi\eta=e_\chi\sigma_{-1}\eta=\chi(\sigma_{-1})e_\chi\eta=-e_\chi\eta$, et $e_\chi\eta=0$ puisque $p$ est impair. Ainsi $2e_\chi\varepsilon=0$, donc $e_\chi\varepsilon=0$, et $e_\chi\alpha=0$.
+\end{proof}
+
+\begin{corollary}[le test]\label{cor:test}
+Sous les hypothèses du lemme~\ref{lem:kummer}, soient $\ell\equiv1\pmod{115p}$ un nombre premier et $\lpr=(\ell,\zeta-s)$ un premier de degré~$1$ de $L$ au-dessus de $\ell$, premier à $\alpha$ et à ses conjugués. Soient $w$ un générateur de $\mu_p(\F_\ell)$ et $\psi(x)=\log_w\bigl((x\bmod\lpr)^{(\ell-1)/p}\bigr)\in\F_p$ pour $x$ premier à $\lpr$. Si
+\[
+S_\ell(\alpha)=\sum_t\chi(\sigma_t)^{-1}\psi(\sigma_t\alpha)\neq0\quad\text{dans }\F_p,
+\]
+alors $e_\chi[\aaa]\neq0$ dans $\Cl(L)/p$ ; en particulier, la composante $p$-primaire de $[\aaa]$ est non nulle. \DEM
+\end{corollary}
+
+\begin{proof}
+$\psi$ est un homomorphisme nul sur les puissances $p$-ièmes des éléments premiers à $\lpr$ ; si $x=yz^p$ avec $x$, $y$ premiers à $\lpr$, alors $z$ l'est aussi. Donc $\psi$ est bien défini sur les classes, dans $V$, des éléments premiers à $\lpr$, et $S_\ell(\alpha)=88\,\psi(e_\chi\alpha)$. Si $S_\ell(\alpha)\ne0$, alors $e_\chi\alpha\ne0$, et le lemme~\ref{lem:kummer} donne $e_\chi[\aaa]\ne0$. Si la composante $p$-primaire de $[\aaa]$ était nulle, $[\aaa]$ serait divisible par $p$ dans $\Cl(L)$, et $e_\chi[\aaa]$ serait nul dans $\Cl(L)/p$.
+\end{proof}
+
+Un seul premier auxiliaire suffit. Le test n'utilise ni la valeur de $h^-(115)$, ni le théorème de Miller~\cite{Mil14}, ni aucun calcul de groupe de classes.
+
+\subsection{Le certificat}\label{subsec:certificat}
+On prend $p=45\,013$, $\aaa=P_5=(461,\zeta-5)$ et, pour $\alpha$, la somme de Jacobi $J(\chi_{P_5},\chi_{P_5})$ du symbole de puissance $115$-ième modulo $P_5$. Le certificat \texttt{certificat\_45013\_P461s91.json} donne $\alpha$ par ses $115$ coefficients, l'exposant $\omega$, un caractère $\chi$ et trois premiers auxiliaires. Son vérificateur, \texttt{verifier\_certificat\_45013.py}, n'utilise que la bibliothèque standard de Python et ne recalcule aucune somme de Jacobi. Il contrôle exactement :
+\begin{enumerate}[label=\textup{(C\arabic*)}]
+\item $\alpha\bar\alpha=461$ dans $\Z[\zeta]$ (réduction modulo $\Phi_{115}$) ;
+\item $\alpha\in\sigma_t(P_5)$ exactement pour les $44$ valeurs de $t$ telles que $\omega_t=1$ ; avec (C1), et comme $461$ est totalement décomposé, cela donne $(\alpha)=P_5^\omega$ ;
+\item $\omega_t=2\{u/115\}-\{2u/115\}$, $u=-t^{-1}$, pour tout $t$ (lemme~\ref{lem:stick}) ;
+\item $\chi$ est multiplicatif, impair, de noyau $\{1,91\}$, et $\chi(\omega)=0$ dans $\F_p$ ;
+\item pour $\ell=20\,705\,981$, $62\,117\,941$ et $186\,353\,821$ (premiers, $\equiv1\pmod{115p}$, racine primitive contrôlée), les symboles $S_\ell(\alpha)$ valent $24\,733$, $30\,643$ et $4\,522$, tous non nuls.
+\end{enumerate}
+Il imprime $462$ contrôles et aucun échec. Trois certificats altérés (un $\alpha$ altéré, un autre caractère, un $\omega$ complémentaire) sont rejetés ($49$, $4$ et $176$ échecs). Comme $p=45\,013$ est premier et $p\nmid88\cdot230$, le corollaire~\ref{cor:test} donne $[P_5]_{45\,013}\neq0$.
+
+\begin{proof}[Preuve de la proposition~\ref{prop:45013}]
+Par le corollaire~\ref{cor:test}, $e_\chi[P_5]\ne0$ dans $\Cl(L)/p$. Comme $e_\chi\sigma_{91}=\chi(91)e_\chi=e_\chi$, on a $e_\chi[I_{91}]=e_\chi[P_5]+e_\chi\sigma_{91}[P_5]=2e_\chi[P_5]\ne0$ ; comme à la fin de la preuve du corollaire~\ref{cor:test}, la composante $45\,013$-primaire de $[I_{91}]$ est non nulle. Cela n'utilise ni $h^-(115)$ ni~\cite{Mil14}. Les composantes $3$ et $331$ sont nulles (\S\ref{subsec:B}) ; le support est donc $\{45\,013\}$.
+\end{proof}
+
+\begin{remark}[autres conséquences, non revendiquées ici]\label{rem:autres}
+Comme $\Cl(L)_{45\,013}$ et $\Cl(L)_{331}$ sont cycliques sans GRH~\cite[prop.~2.2]{Gau26}, le rapport de deux symboles $S_\ell$ calculés au même $\ell$ avec le même $\omega$ donne l'étiquette relative de deux classes, et un symbole nul, face à une référence non nulle au même $\ell$, prouve qu'une composante est nulle. Des programmes de l'assistant, non publiés dans cette version, s'en sont servis pour recalculer sans GRH les colonnes \guillemotleft~orbite~\guillemotright{} des tableaux~2 et~3 de~\cite{Gau26} (mêmes supports), pour montrer que les quatre orbites génériques de taille $88$ du tableau~2 sont deux à deux distinctes, et pour montrer que la composante $45\,013$ du premier au-dessus de $p=157\,146\,581$ de~\cite[\S4.5]{Gau26a} est nulle. Ces énoncés sont ici \CONS{} ; ils ne servent nulle part.
+\end{remark}
+
+\section{Non-isométrie}\label{sec:noniso}
+
+Le théorème d'isométrie~\cite[th.~3.3]{Gau26} s'applique à deux réseaux idéaux de minimum au moins $8$ ; une isométrie conserve le minimum, et il suffit donc que l'un des deux réseaux comparés soit de minimum $8$.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{4.9cm}>{\raggedright\arraybackslash}p{5.6cm}}
+\toprule
+paire & raison de la non-conjugaison (sans GRH) & non-isométrie \\
+\midrule
+$\XA$ et $\Lz$, $\LS$ & support $\{331\}$ contre $\emptyset$, $\{3\}$ & sans calcul assisté de notre part (minimum de~\cite{Sak26}) \\
+$\XA$ et $X_{139}$, $X_{4969}$, $X_{4049}$ & support $\{331\}$ contre $\{3,331\}$ & sous le minimum assisté par calcul de l'un des deux \\
+$\XA$ et $X_{599}$, $\XC$ & anneau extérieur, heure $2$ contre $8$ et $6$~\cite[cor.~4.8]{Gau26a} & idem \\
+$\XB$ et $\Lz$, $\LS$ & support $\{45\,013\}$ contre $\emptyset$, $\{3\}$ (prop.~\ref{prop:45013}) & sans calcul assisté de notre part (cor.~\ref{cor:L0}) \\
+$\XB$ et les cinq autres, et $\XA$ & composante $331$ nulle contre non nulle & sous le minimum assisté par calcul de l'un des deux \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Les énoncés de non-conjugaison qui portent sur $\XA$, et la composante $331$ de $\XB$, sont contrôlés par le vérificateur de la version~1.4 (\nolinkurl{verifier_non_isometrie_tranche1.py}, $123$ contrôles, aucun échec, rejoué pour cette version). Les neuf classes $[\OO_L]$, $[J\OO_L]$, $[P_{139}]$, $[P_{599}]$, $[P_{4969}]$, $[P_{4049}]$, $[P_{1151}\sigma_{24}(P_{1151})]$, $[P_{3359}]$, $[I_{91}]$ sont donc dans neuf orbites galoisiennes distinctes, sans GRH.
+
+L'heuristique de~\cite[Q2]{Gau26} prévoit de nombreuses orbites extrémales dans $S$ ; ces exemples comptent moins en eux-mêmes que la méthode (critère galoisien, certificats de Stickelberger sans GRH).
+
+\section{Corrections aux textes publics (version 1.5)}\label{sec:corrections}
+Chaque correction est relevée, avec le fichier, la ligne, l'ancien et le nouveau texte, dans le fichier \texttt{CHANGEMENTS\_V15.md} du dépôt. Les textes antérieurs restent dans l'historique du dépôt et dans les archives Zenodo des versions~1.3 et~1.4.
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item \emph{Antériorité : Quebbemann.} Pour un automorphisme d'ordre premier $p$ en rang $n$ avec $p\le n<2(p-1)$, Quebbemann~\cite[\S3]{Que81} a démontré, par le même argument de Sylow, que l'isométrie des réseaux sous-jacents équivaut à la conjugaison galoisienne des données arithmétiques (Satz~3.2\,b), p.~165), avec, lorsque le nombre de classes concerné est impair, une bijection des classes d'isométrie avec le produit d'un ensemble fini et de l'ensemble des orbites galoisiennes sur un groupe de classes d'idéaux (Kor.~3.3, p.~166), et la structure du normalisateur (Lemma~3.4, p.~166) ; p.~168, il minore un minimum par une identité de Parseval sur les coordonnées de $\Z[\zeta_p]$ (réseau de Leech). La note~\cite{Gau26} ne citait pas ce travail et rangeait le théorème d'isométrie et le lemme de Parseval parmi ses apports propres. Ce qui reste propre à la note : l'extension au conducteur composé $m=115$, où la condition de rang est remplacée par une condition de minimum (bornes de Blichfeldt), le critère fini et son seuil $1057/200$, et la certification. La note, en français et en anglais, le dit désormais (\S1.4, remarque~3.4, après le lemme~4.3, bibliographie).
+\item \emph{Bayer-Fluckiger.} \cite[cor.~3.3]{Bay84} est une \emph{majoration} : lorsque $h^-$ est impair, le nombre de classes d'isométrie de réseaux unimodulaires définis munis d'un automorphisme de polynôme caractéristique $\Phi_m$ est au plus le nombre d'orbites du groupe de Galois sur un groupe de classes d'idéaux ; le nombre exact est demandé p.~526, avec un renvoi à Quebbemann pour les automorphismes d'ordre premier. La note le cite désormais sous cette forme.
+\item \emph{Statut de la non-isométrie.} Là où la note et l'addendum~\cite{Gau26a} écrivaient \guillemotleft~non-isométrie : démontrée, sans GRH~\guillemotright, ils disent désormais que la non-conjugaison est démontrée sans GRH et que la non-isométrie s'en déduit sous le minimum $8$ assisté par calcul de l'un des deux réseaux comparés, sauf vis-à-vis de $\Lz$ et $\LS$.
+\item \emph{Version 1.4.} Les énoncés \guillemotleft~$\XB$ : candidat, non répliqué~\guillemotright{} et \guillemotleft~non isométrique à $\Lz$ sous GRH seulement~\guillemotright{} sont remplacés par le \S\ref{subsec:B} et le corollaire~\ref{cor:L0} ; le dossier de la version~1.4 est conservé tel quel, avec un avertissement.
+\item \emph{Points mineurs.} La bibliographie de~\cite{Gau26a} donnait la note avec un \guillemotleft~identifiant arXiv en attente~\guillemotright{} ; la soumission à arXiv du 15 octobre n'a pas été retenue, et la note est citée d'après le dépôt. Les données de~\cite{Gau26a} étaient annoncées comme \guillemotleft~à ajouter~\guillemotright{} ; elles sont dans les versions~1.1 et~1.2. L'étiquette v1.3 du 22 octobre n'a pas été archivée sur Zenodo ; la première archive est celle de la release v1.3.1, du 25 octobre (DOI 10.5281/zenodo.23638085).
+\end{enumerate}
+
+\section{Ce qui n'est pas vérifié, et ce qui n'est pas revendiqué}\label{sec:limites}
+\begin{itemize}
+\item Le minimum $8$ des sept réseaux qui sont les nôtres repose sur un seul programme, \texttt{Rang88CertZ}, du même auteur, exécuté sur deux machines pour chacun ; aucune implantation indépendante n'a produit de certificat (le \S\ref{subsec:enum88} est un recoupement numérique). La preuve de non-omission~\cite[th.~5.1]{Gau26} a été relue dans une portée limitée ; H2 et H3 sont étayées par les réplications, non démontrées.
+\item Les lemmes~\ref{lem:stick} et~\ref{lem:kummer} et le corollaire~\ref{cor:test} ont été rédigés par l'assistant et relus par une seconde instance du même assistant (même modèle), pas par un humain. Le théorème d'isométrie~\cite[th.~3.3]{Gau26} n'a pas été relu par un spécialiste. Le théorème de Stickelberger, l'indice des unités et les résultats de~\cite{Sak26} sont cités, non redémontrés ; les numéros de théorèmes de~\cite{Was97} n'ont pas été recontrôlés sur le livre.
+\item Aucune étiquette ni heure sur l'anneau $\sigma_{91}$ n'est revendiquée ; aucun vecteur explicite de norme $8$, groupe d'automorphismes ou fiche de catalogue n'est donné pour $\XA$ ou $\XB$ ; rien n'est affirmé sur le nombre total de réseaux extrémaux de rang $88$.
+\item Antériorité : une recherche du 7 novembre 2026 (catalogue de Nebe et Sloane, arXiv, Zenodo, GitHub) n'a trouvé aucun réseau extrémal de rang $88$ publié par un tiers depuis le 15 octobre 2026 ; c'est une recherche datée, pas une preuve de priorité. La méthode des sommes de Jacobi est classique (Kummer, Stickelberger) ; seul son emploi ici est de nous.
+\end{itemize}
+
+\section*{Données, usage de l'intelligence artificielle}
+\emph{Données.} Tout est dans le dossier \texttt{v15\_P3359\_et\_P461s91} du dépôt~\cite{Gau26b} : les fichiers d'entrée de $\XA$, les reçus, catalogues, journaux et verdicts des trois nouvelles exécutions (six côtés), le certificat et son vérificateur, les journaux du recoupement du \S\ref{subsec:enum88}, et les journaux des contrôles rejoués pour cette version. Son \texttt{README\_v15.md} donne les commandes.
+
+\emph{Usage de l'intelligence artificielle.} Comme pour~\cite{Gau26}, l'auteur s'est fait aider de Claude Opus~5.5 (Anthropic), qui n'est pas auteur. Le texte, le certificat, les programmes et les contrôles ont été écrits, et les calculs conduits, avec Claude Opus~5.5 ; une seconde instance du même assistant a relu la preuve du lemme~\ref{lem:kummer} et contrôlé le certificat par un programme distinct, en un quatrième premier auxiliaire. Astra (OpenAI), le second assistant de~\cite{Gau26}, n'a relu aucune pièce de cet addendum.
+
+L'auteur assume la responsabilité scientifique de l'ensemble du contenu. Cet addendum n'a pas fait l'objet d'une relecture humaine spécialisée.
+
+\begin{thebibliography}{Gau26b}
+\bibitem[Bay84]{Bay84}
+E.~Bayer-Fluckiger, \emph{Definite unimodular lattices having an automorphism of given characteristic polynomial}, Comment. Math. Helv. \textbf{59} (1984), 509--538.
+
+\bibitem[Gau26]{Gau26}
+I.~Gauvin, \emph{Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}, prépublication, 15 octobre 2026, révisée le 7 novembre 2026 ; traduction anglaise : \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}. Dans le dépôt~\cite{Gau26b}, dossier \texttt{article}.
+
+\bibitem[Gau26a]{Gau26a}
+I.~Gauvin, \emph{Addendum à \guillemotleft~Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$~\guillemotright}, 17 octobre 2026, révisé le 7 novembre 2026. Dans le dépôt~\cite{Gau26b}, dossier \texttt{addendum}.
+
+\bibitem[Gau26b]{Gau26b}
+I.~Gauvin, \emph{rang88-reseaux-ideaux} : données, programmes et vérifications, \url{https://github.com/Katabolanga/rang88-reseaux-ideaux} ; Zenodo, DOI de concept 10.5281/zenodo.23638084 (version~1.4 : DOI 10.5281/zenodo.23835418).
+
+\bibitem[Mil14]{Mil14}
+J.~C.~Miller, \emph{Class numbers of real cyclotomic fields of composite conductor}, LMS J. Comput. Math. \textbf{17} (2014), suppl.~A, 404--417.
+
+\bibitem[Que81]{Que81}
+H.-G.~Quebbemann, \emph{Zur Klassifikation unimodularer Gitter mit Isometrie von Primzahlordnung}, J. reine angew. Math. \textbf{326} (1981), 158--170.
+
+\bibitem[Sak26]{Sak26}
+R.~Sakamoto, \emph{Two extremal even unimodular lattices of rank $88$}, prépublication arXiv 2609.15633, version~2 du 27 septembre 2026.
+
+\bibitem[Was97]{Was97}
+L.~C.~Washington, \emph{Introduction to cyclotomic fields}, 2\textsuperscript{e}~éd., Graduate Texts in Math. \textbf{83}, Springer, 1997.
+\end{thebibliography}
+
+\end{document}

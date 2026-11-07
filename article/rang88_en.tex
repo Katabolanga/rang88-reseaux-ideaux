@@ -61,14 +61,14 @@
 
 \title[Ideal lattices of rank 88 over $\Q(\zeta_{115})$]{Even unimodular ideal lattices of rank $88$\\ over $\Q(\zeta_{115})$}
 \author{Ivan Gauvin}
-\date{October 15, 2026}
+\date{October 15, 2026; revised November 7, 2026 (version~1.5 of the repository)}
 \subjclass[2020]{Primary 11H06; Secondary 11H56, 11R18, 11R29, 11E12}
 \keywords{ideal lattices, even unimodular lattices, extremal lattices, cyclotomic fields, class group, certified enumeration}
 
 \begin{document}
 
 \begin{abstract}
-Let $L=\Q(\zeta_{115})$, of degree $88$. We study the set $S$ of classes of unimodular ideal lattices $(I,\Tr_{L/\Q}(\alpha x\bar y))$ over $L$; these lattices are even. We show that $S$ is in bijection with the class group of $L$, which is cyclic of order $h^-(115)=44\,697\,909=3\cdot331\cdot45\,013$, and that $S$ splits into $508\,463$ Galois orbits. Sakamoto's two extremal lattices, $\Lz$ and $\LS$, occupy the principal orbit and the unique non-trivial $3$-torsion orbit. We prove that two ideal lattices over $L$ with minimum at least $8$ are isometric if and only if their classes are conjugate under $\Gal(L/\Q)$. We extend to non-principal ideals a gluing into two forms of rank $44$, and we derive from it, by a Parseval-type inequality, a finite extremality criterion. The orbits of eight prime ideals are rejected by explicit vectors of norm $6$. For two prime ideals of degree $2$, $P_{139}$ and $P_{599}$, the lattices they carry are extremal: their minimum $8$ is established by a computer-assisted proof, whose execution model is made explicit and whose computations were replicated on a second computer. They are isometric neither to each other nor to $\Lz$ and $\LS$, without assuming GRH. To our knowledge, after a literature check as of October 13, 2026, these are two new examples of extremal lattices of rank $88$.
+Let $L=\Q(\zeta_{115})$, of degree $88$. We study the set $S$ of classes of unimodular ideal lattices $(I,\Tr_{L/\Q}(\alpha x\bar y))$ over $L$; these lattices are even. We show that $S$ is in bijection with the class group of $L$, which is cyclic of order $h^-(115)=44\,697\,909=3\cdot331\cdot45\,013$, and that $S$ splits into $508\,463$ Galois orbits. Sakamoto's two extremal lattices, $\Lz$ and $\LS$, occupy the principal orbit and the unique non-trivial $3$-torsion orbit. Extending an argument of Quebbemann for automorphisms of prime order, we prove that two ideal lattices over $L$ with minimum at least $8$ are isometric if and only if their classes are conjugate under $\Gal(L/\Q)$. We extend to non-principal ideals a gluing into two forms of rank $44$, and we derive from it, by a Parseval-type inequality, a finite extremality criterion. The orbits of eight prime ideals are rejected by explicit vectors of norm $6$. For two prime ideals of degree $2$, $P_{139}$ and $P_{599}$, the lattices they carry are extremal: their minimum $8$ is established by a computer-assisted proof, whose execution model is made explicit and whose computations were replicated on a second computer. Without assuming GRH, they are isometric neither to $\Lz$ nor to $\LS$, nor, under this computer-assisted minimum, to each other. To our knowledge, after a literature check as of October 13, 2026, these are two new examples of extremal lattices of rank $88$.
 \end{abstract}
 
 \maketitle
@@ -97,7 +97,7 @@ The present note starts from the following observation: $\Lz$ and $\LS$ are two 
 \item \emph{Results} (\S\ref{sec:resultats}). Eight prime ideals give non-extremal lattices, by an explicit vector of norm~$6$. Two prime ideals of degree~$2$, $P_{139}$ and $P_{599}$, carry two new extremal lattices, to our knowledge as of October 13, 2026, isometric neither to each other nor to Sakamoto's lattices; the minimum is established by a computer-assisted proof (Theorem~\ref{thm:extremaux}). Four other ideals are partial survivors of a filter, with no conclusion.
 \end{enumerate}
 
-The minimum $8$ of $X_{139}$ and $X_{599}$ is established by a computer-assisted proof (Theorem~\ref{thm:extremaux}): a program, whose non-omission is proved in an explicit model of the machine (\S\ref{sec:certifiant}), went through both sides of the criterion of \S\ref{sec:recollement} without finding a short vector. Each sweep was executed twice, on two different computers, under two operating systems and two versions of Java, and the receipts of the two executions are identical byte for byte. The non-isometry is proved without GRH.
+The minimum $8$ of $X_{139}$ and $X_{599}$ is established by a computer-assisted proof (Theorem~\ref{thm:extremaux}): a program, whose non-omission is proved in an explicit model of the machine (\S\ref{sec:certifiant}), went through both sides of the criterion of \S\ref{sec:recollement} without finding a short vector. Each sweep was executed twice, on two different computers, under two operating systems and two versions of Java, and the receipts of the two executions are identical byte for byte. Without assuming GRH, the two lattices are isometric neither to $\Lz$ nor to $\LS$; their mutual non-isometry follows, without GRH, from the non-conjugacy of their classes, under this computer-assisted minimum.
 
 \subsection{Statuses}\label{subsec:statuts}
 We use five statuses.
@@ -138,7 +138,7 @@ $P_{139}$: no non-zero vector of norm $\le6$ & minimum $\ge8$ computer-assisted 
 $P_{599}$: no non-zero vector of norm $\le6$ & minimum $\ge8$ computer-assisted (H1--H3); two complete executions on two computers, identical receipts \\
 $[P_{139}]^3\neq1$; the order of $[P_{599}]$ is divisible by $331$ (Prop.~\ref{prop:classeP139}, \ref{prop:classeP599}) & proved, without GRH \\
 Neither $P_{139}$ nor $P_{599}$ is isometric to $\Lz$ or to $\LS$ (Prop.~\ref{prop:noniso}) & proved, modulo~\cite{Sak26} and Thm.~\ref{thm:isometrie}; does not depend on the computer-assisted statement \\
-Extremality of $X_{139}$ and $X_{599}$; non-isometry to each other, to $\Lz$ and to $\LS$ (Thm.~\ref{thm:extremaux}) & minimum: computer-assisted proof (M1, M2, H1--H3); non-isometry: proved, without GRH (Rem.~\ref{rem:normeF}) \\
+Extremality of $X_{139}$ and $X_{599}$; non-isometry to each other, to $\Lz$ and to $\LS$ (Thm.~\ref{thm:extremaux}) & minimum: computer-assisted proof (M1, M2, H1--H3); non-conjugacy: proved, without GRH (Rem.~\ref{rem:normeF}); non-isometry between $X_{139}$ and $X_{599}$: under this computer-assisted minimum; to $\Lz$ and $\LS$: independent of it \\
 Exact label of the orbits of $P_{139}$ and $P_{599}$ & under GRH (details in \S\ref{subsec:classes}) \\
 $P_{3359}$, $P_{4049}$, $P_{4969}$, $P_{5659}$ (Table~\ref{tab:survivants}) & observed: partial survivors of a filter; no conclusion \\
 Number of orbits of minimum $8$ in $S$ & open; between $4$ and $508\,463$: the orbits of $\Lz$ and $\LS$ (minimum by~\cite{Sak26}) and those of $X_{139}$ and $X_{599}$ (Thm.~\ref{thm:extremaux}), pairwise distinct \\
@@ -147,11 +147,11 @@ Number of orbits of minimum $8$ in $S$ & open; between $4$ and $508\,463$: the o
 \end{center}
 
 \subsection{What is taken from the literature and what is specific to this work}\label{subsec:connu}
-\emph{Taken from the literature.} The lattices $\Lz$ and $\LS$, their extremality, their description as ideal lattices over $\Q(\zeta_{115})$ and their automorphism groups are due to Sakamoto~\cite{Sak26}. The automatic evenness of a unimodular ideal lattice when $L/L^+$ is unramified at the finite places is classical~\cite{Bay84,Bay99}. The parametrization of ideal lattices by ideal classes and by a quotient of units is that of Nebe~\cite[Rem.~4.4]{Neb16}; Nebe~\cite[Lemma~4.3, Thm.~4.5]{Neb16} also uses the direction ``conjugate, hence isometric'' of Theorem~\ref{thm:isometrie}. The equality $h(\Q(\zeta_{115})^+)=1$ is due to Miller~\cite{Mil14}. The analytic formula for the relative class number and the Stickelberger relation are classical~\cite{Was97}. The gluing of lattices is classical~\cite[Ch.~4]{SPLAG}. Blichfeldt's bound~\cite{Bli29} is used for the isometry theorem.
+\emph{Taken from the literature.} The lattices $\Lz$ and $\LS$, their extremality, their description as ideal lattices over $\Q(\zeta_{115})$ and their automorphism groups are due to Sakamoto~\cite{Sak26}. The automatic evenness of a unimodular ideal lattice when $L/L^+$ is unramified at the finite places is classical~\cite{Bay84,Bay99}. The parametrization of ideal lattices by ideal classes and by a quotient of units is that of Nebe~\cite[Rem.~4.4]{Neb16}; Nebe~\cite[Lemma~4.3, Thm.~4.5]{Neb16} also uses the direction ``conjugate, hence isometric'' of Theorem~\ref{thm:isometrie}. The equality $h(\Q(\zeta_{115})^+)=1$ is due to Miller~\cite{Mil14}. The analytic formula for the relative class number and the Stickelberger relation are classical~\cite{Was97}. The gluing of lattices is classical~\cite[Ch.~4]{SPLAG}. Blichfeldt's bound~\cite{Bli29} is used for the isometry theorem. This theorem extends an argument of Quebbemann~\cite[\S3]{Que81}: for an automorphism of prime order $p$ in rank $n$, with $p\le n<2(p-1)$, isometry of the underlying lattices amounts to Galois conjugacy of the arithmetic data, by a Sylow argument (Satz~3.2\,b), p.~165; see also Kor.~3.3 and Lemma~3.4, p.~166). The idea of bounding a minimum from below by a Parseval identity on the coordinates of $\Z[\zeta_p]$ is also in Quebbemann (p.~168, for the Leech lattice). Bayer-Fluckiger~\cite[Cor.~3.3]{Bay84} gives an \emph{upper bound}: when $h^-$ is odd, the number of isometry classes of definite unimodular lattices with an automorphism of characteristic polynomial $\Phi_m$ is at most the number of orbits of the Galois group on a group of ideal classes; she asks (p.~526) for the exact number.
 
-\emph{Specific to this work.} The computation of $h^-(115)$ as used here, the description of $S$ and of its orbits (\S\ref{sec:S}); the isometry theorem for $m=115$, whose proof does not use Kronecker's theorem (\S\ref{sec:isometrie}); the gluing for a non-principal ideal, the Parseval lemma and the criterion (\S\ref{sec:recollement}); the certifying program and its non-omission proof (\S\ref{sec:certifiant}); the rejections, the two candidates and their classes (\S\ref{sec:resultats}). The integer isometry certificate $H\cong\Lz$ is also part of this work; the lattice itself is Sakamoto's.
+\emph{Specific to this work.} The computation of $h^-(115)$ as used here, the description of $S$ and of its orbits (\S\ref{sec:S}); the extension of the isometry theorem to the composite conductor $m=115$, where the rank condition of~\cite{Que81} is replaced by a condition on the minimum (Blichfeldt bounds), and whose proof does not use Kronecker's theorem (\S\ref{sec:isometrie}); the gluing for a non-principal ideal, the form of the Parseval lemma adapted to this gluing (quintuples with zero sum) and the finite criterion derived from it, with its threshold $1057/200$ (\S\ref{sec:recollement}); the certifying program and its non-omission proof (\S\ref{sec:certifiant}); the rejections, the two candidates and their classes (\S\ref{sec:resultats}). The integer isometry certificate $H\cong\Lz$ is also part of this work; the lattice itself is Sakamoto's.
 
-\emph{Prior-art search.} A literature search was carried out in October 2026: arXiv, the record and the text of~\cite{Sak26} (version~2 of September 27, 2026), the computation repository of its author, the catalogue of Nebe and Sloane (explicitly incomplete), keyword searches in academic sources. The only other explicit object of rank $88$ that was found has a Gram matrix whose diagonal contains $6$: it has a vector of norm $6$ and is not extremal. No other explicit example of an extremal lattice of rank $88$ was identified. To our knowledge, as of October 13, 2026, $X_{139}$ and $X_{599}$ are therefore two new examples; this is the result of a dated search, not a proof of priority over unpublished or unindexed work.
+\emph{Prior-art search.} A literature search was carried out in October 2026: arXiv, the record and the text of~\cite{Sak26} (version~2 of September 27, 2026), the computation repository of its author, the catalogue of Nebe and Sloane (explicitly incomplete), keyword searches in academic sources. The only other explicit object of rank $88$ that was found has a Gram matrix whose diagonal contains $6$: it has a vector of norm $6$ and is not extremal. No other explicit example of an extremal lattice of rank $88$ was identified. To our knowledge, as of October 13, 2026, $X_{139}$ and $X_{599}$ are therefore two new examples; this is the result of a dated search, not a proof of priority over unpublished or unindexed work. This search had not identified Quebbemann's article~\cite{Que81}, which is cited since the revision of November 7, 2026.
 
 \subsection*{Outline}
 Section~\ref{sec:S} describes $S$. Section~\ref{sec:isometrie} proves the isometry theorem. Section~\ref{sec:recollement} establishes the gluing, the Parseval lemma and the criterion. Section~\ref{sec:certifiant} presents the certified enumeration and its hypotheses. Section~\ref{sec:resultats} gives the results. Section~\ref{sec:fin} gathers the open questions, the methods and the declaration on the use of artificial intelligence.
@@ -346,7 +346,7 @@ The ``if'' direction follows from the isometries $z\mapsto xz$ and $z\mapsto\sig
 \end{proof}
 
 \begin{remark}
-Here $115=5\cdot23$ and the two Sylow arguments suffice: the proof uses neither Kronecker's theorem nor the class group. The rational comparisons of~\eqref{eq:blichfeldt}, the details on the $23$-groups and the alignment of the two Sylow subgroups were reviewed by a second assistant. The proof has not been reviewed by a specialist.
+For an automorphism of prime order $p$ in rank $n<2(p-1)$, the Sylow argument and the semi-linearity of Step~3 are those of Quebbemann~\cite[Satz~3.2\,b), p.~165]{Que81}; there, the condition $n<2(p-1)$ plays the role that the minimum $8$ plays here (Lemma~\ref{lem:syl23}). Here $115=5\cdot23$ and the two Sylow arguments suffice: the proof uses neither Kronecker's theorem nor the class group. The rational comparisons of~\eqref{eq:blichfeldt}, the details on the $23$-groups and the alignment of the two Sylow subgroups were reviewed by a second assistant. The proof has not been reviewed by a specialist.
 \end{remark}
 
 \begin{corollary}\label{cor:bijection}
@@ -428,6 +428,8 @@ For every non-zero $z\in I$, of norm $N$,
 \begin{proof}
 In the expression $f(k)=\sum_a\sigma_a(\alpha z^2)\omega^{2ak}$, the $88$ frequencies $2a$ are pairwise distinct modulo $115$. The orthogonality of the characters of $\Z/115$ gives the equality, with $|\sigma_a(\alpha z^2)|=\sigma_a(\alpha)|\sigma_a(z)|^2$. The inequality is the Cauchy--Schwarz inequality, applied to $N=\sum_a\sigma_a(\alpha)|\sigma_a(z)|^2$, a sum of $88$ terms.
 \end{proof}
+
+The idea of bounding a norm from below by a Parseval identity on the coordinates of $\Z[\zeta_p]$ is already in Quebbemann~\cite[p.~168]{Que81}, for the Leech lattice ($p=23$, rank $24$). Lemma~\ref{lem:parseval} applies it to the orbit of $\zeta$ in the gluing into two forms of rank $44$; the next corollary adds the five-term relation~\eqref{eq:R5}.
 
 \begin{corollary}[threshold]\label{cor:seuil}
 Let $z\in I$ be non-zero, of norm $N$, and let $M=\max_k|f(k)|$. Then $M\ge N\sqrt{5/352}$. There therefore exists $k$ such that
@@ -811,13 +813,13 @@ Let $F=\Q(\sqrt{-23})\subset L$. Since $L/\Q$ is abelian, $\Nm_{L/F}(\sigma(I))=
 \item $139$ splits in $F$ and has residue degree $2$ in $L$; hence $\Nm_{L/F}(P_{139})=\mathfrak p_{139}^2$. A generator of $\mathfrak p_{139}$ would be $(a+b\sqrt{-23})/2$ with $a^2+23b^2=556$; for $|b|\le4$, $556-23b^2$ takes the values $556$, $533$, $464$, $349$, $188$, none of which is a square. Hence $\mathfrak p_{139}$, and with it $\mathfrak p_{139}^2$, is not principal.
 \item $599=24^2+23$: the two prime ideals of $F$ above $599$ are generated by $24\pm\sqrt{-23}$, hence principal, and $\Nm_{L/F}(P_{599})$ is principal.
 \end{itemize}
-The classes $[P_{139}]$ and $[P_{599}]$ are therefore not conjugate under $\Gal(L/\Q)$, without using $h^-(115)$ or the exact order of the classes. With Theorem~\ref{thm:isometrie}, which applies since both lattices have minimum $8$, we obtain $X_{139}\not\cong X_{599}$. \DEM, without GRH
+The classes $[P_{139}]$ and $[P_{599}]$ are therefore not conjugate under $\Gal(L/\Q)$, without using $h^-(115)$ or the exact order of the classes. With Theorem~\ref{thm:isometrie}, which applies since both lattices have minimum $8$, we obtain $X_{139}\not\cong X_{599}$. \DEM, without GRH, for the non-conjugacy; the non-isometry also requires the minimum $8$ of one of the two lattices, which is computer-assisted (Theorem~\ref{thm:extremaux})
 \end{remark}
 
 
 \begin{theorem}[two extremal lattices; computer-assisted proof]\label{thm:extremaux}
 The explicit lattices $X_{139}$ and $X_{599}$ are even, unimodular, of rank $88$ and of minimum $8$; they are therefore extremal. They are isometric neither to each other, nor to $\Lz$, nor to $\LS$.
-\st{minimum: computer-assisted proof, in the execution model of \S\ref{subsec:hyp} (M1, M2, H1--H3); non-isometry: proved without GRH}
+\st{minimum: computer-assisted proof, in the execution model of \S\ref{subsec:hyp} (M1, M2, H1--H3); non-conjugacy of the classes: proved without GRH; non-isometry to each other: under this computer-assisted minimum; to $\Lz$ and $\LS$: without recourse to this minimum (Proposition~\ref{prop:noniso})}
 \end{theorem}
 
 \begin{proof}
@@ -882,7 +884,7 @@ The author publishes this note mainly to make known old ideas that are the autho
 \item \emph{Translation.} The original text of this note is in French; it follows this English version in the same document. This English translation was prepared with Claude Opus~5.5.
 \item \emph{Proofs.} The proofs of \S\S\ref{sec:S}--\ref{sec:recollement}, the non-omission proof summarized in \S\ref{sec:certifiant} and the proofs of \S\ref{subsec:classes} were developed or put into shape with Claude Opus~5.5. Astra reviewed parts of them, listed in \S\ref{subsec:methodes}, and corrected several points, among them the value of the Blichfeldt bound in rank $22$ and the justification of the threshold $1057/200$; the short proof of Remark~\ref{rem:normeF} is due to Astra.
 \item \emph{Programs and computations.} The PARI/GP, Python and Java programs were written with Claude Opus~5.5. The first certifying program, based on intervals, was corrected and proved with Astra from a draft by Claude, and the program \texttt{Rang88CertZ} reuses parts of it. Astra's independent checks use programs written on Astra's side.
-\item \emph{Bibliography.} The reading of~\cite{Sak26} and the prior-art search were done with both assistants, on public copies.
+\item \emph{Bibliography.} The reading of~\cite{Sak26} and the prior-art search were done with both assistants, on public copies. The article~\cite{Que81} was read in November 2026, on the images of the journal, with Claude Opus~5.5.
 \end{itemize}
 The author takes scientific responsibility for the entire content. This note has not been reviewed by a human specialist.
 
@@ -917,6 +919,9 @@ G.~Nebe, \emph{Automorphisms of extremal unimodular lattices in dimension $72$},
 
 \bibitem[PARI]{PARI}
 The PARI Group, \emph{PARI/GP version 2.15.4}, Univ. Bordeaux, 2023, \url{https://pari.math.u-bordeaux.fr/}.
+
+\bibitem[Que81]{Que81}
+H.-G.~Quebbemann, \emph{Zur Klassifikation unimodularer Gitter mit Isometrie von Primzahlordnung}, J. reine angew. Math. \textbf{326} (1981), 158--170. (Cited since the revision of November 7, 2026.)
 
 \bibitem[Sak26]{Sak26}
 R.~Sakamoto, \emph{Two extremal even unimodular lattices of rank $88$}, preprint arXiv 2609.15633, version~1 of September 14, 2026, version~2 of September 27, 2026. We cite version~2.

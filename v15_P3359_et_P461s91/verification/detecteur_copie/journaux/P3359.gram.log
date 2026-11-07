@@ -1,0 +1,13 @@
+== P3359 : I_data = entrees/P3359_I_data.gp
+OK    P3359 A1 : I = (3359, GEN) premier de degre 2 : p premier d'ordre 2 mod 115, un seul facteur quadratique de Phi mod p dans BASE (1) : GEN = y^2 + 2202*y + 1829
+OK    P3359 A2 : base C construite depuis (p, GEN) : |det C| = p^2 = Q = 11282881 et C stable par zeta, donc C engendre I
+OK    P3359 A3 : BASE du fichier engendre le meme module (|det BASE| = Q, C^-1 BASE entiere)
+OK    P3359 B1 : PM = polynome minimal de zeta + 1/zeta, ALPHA * NU = BETA0 mod PM
+OK    P3359 B2 : G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P3359 B3 : det G = 1
+OK    P3359 B4 : G definie positive (qfsign exact)
+OK    P3359 B5 : GRAM du fichier = BASE~ H BASE (provenance)
+OK    P3359 R1 : U = qflllgram(G) unimodulaire, Gr = U~ G U entiere symetrique paire de det 1
+P3359 : diagonale de la Gram LLL : min 26, max 54 ; normes <= 6 sur la diagonale : 0
+P3359 : 9 controles, 0 echecs (7479 ms)
+GRAM88_OK P3359 type deg2 Q 11282881

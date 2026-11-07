@@ -5,8 +5,8 @@ type: dataset
 authors:
   - family-names: Gauvin
     given-names: Ivan
-version: "1.4"
-date-released: "2026-10-31"
+version: "1.5"
+date-released: "2026-11-07"
 doi: "10.5281/zenodo.23638084"
 identifiers:
   - type: doi
@@ -31,7 +31,12 @@ abstract: >-
   version 1.4 : horodatage de X(P₁₁₅₁σ₂₄) (minimum 8 assisté par calcul, balayé deux fois sur deux machines, reçus
   identiques ; non isométrique sans GRH aux six extrémaux connus) et du CANDIDAT X(P₄₆₁σ₉₁) (balayage exhaustif sans touche,
   non répliqué ; minimum annoncé par les auteurs ; non-isométrie à L₀ seulement sous GRH) : constructions, entrées,
-  reçus, journaux et vérificateurs ; la note et l'addendum sont inchangés.
+  reçus, journaux et vérificateurs ; la note et l'addendum sont inchangés ;
+  version 1.5 (7 novembre 2026) : addendum 3 ; X(P₃₃₅₉) et X(P₄₆₁σ₉₁) de minimum 8 assisté par calcul (chaque côté
+  balayé deux fois sur deux machines, même programme, reçus identiques ; non audité par un humain) ; certificat sans GRH
+  de la composante 45 013 de la classe de X(P₄₆₁σ₉₁), d'où sa non-isométrie à L₀ sans GRH ; recoupement numérique par
+  une seconde implantation ; note et addendum corrigés (citation de Quebbemann 1981 et de Bayer-Fluckiger 1984, statut
+  de la non-isométrie), corrections relevées dans CHANGEMENTS_V15.md.
   Claude Opus 5.5 (Anthropic) et Astra (OpenAI) ont assisté l'auteur ; ils ne sont pas auteurs.
 keywords:
   - réseaux idéaux

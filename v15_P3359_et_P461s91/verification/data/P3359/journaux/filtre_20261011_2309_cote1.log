@@ -1,0 +1,15 @@
+Rang88CertZ run : java_P3359/cote1 ; mode=run|n=44|BA=1057/200|S=12|DA=3359|DB=1|d=6718|F=40|D=6|Dmax=16|seuil=0.2 ; 4 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 11.0.16.1 ; Windows 11 amd64 ; processeurs 16 ; PID 9356 ; Sun Oct 11 23:09:51 CEST 2026
+  ENTREES SHA-256 : A 62ed69549fae810a41668994138a26315b0e7f412558614b535455a55ac66f90 ; B 3f532311bfd7c19dafc44b2323abf038dd8922e0e78bccbdd39ea52c52521805 ; T 12cd296676d454a9595e7f84ebf959da84569398eb5b5c3065456023aaf37f3b ; meta 2948577dea82861bb4eb0ff1df8d8872a5a763df12f3b9bb205d04a7b4588440
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=d269b8474f7e4c04f682a16fef914d389e3efc3df146408f3607195bcd463942|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 647.1467889908256 , max dL = 7139.0 , max |q| ~ 0.5055885719085669 ; fibre : min dL = 1.69689315483708 , max dL = 20.0 , max |q| ~ 0.5093373373224638 ; B_U(court) = 17752.315000000002
+  109662 taches certifiees (132714 noeuds de generation) ; niv37:30507 niv36:1411 niv35:2522 niv34:3949 niv33:5806 niv32:7895 niv31:9647 niv30:10965 niv29:12139 niv28:11958 niv27:12863
+CATALOGUE_SHA256 32900e663a387c75d112bf5b9effba06ece70822b1fad4d1be10f74e85386ea0 ; TOTAL_TACHES 109662
+CHECKPOINT nouveau : certifiant/run_P3359/cote1.ckpt
+SELECTION 109662/109662 ; A_FAIRE 109662 ; DEJA_AU_CHECKPOINT 0
+  [veille] taches terminees 148/109662 (+0 reprises ; 4 en cours) ; u(terminees) 1841398 ; cvp 1841398 ; noeuds A ~160434192 B ~19940193450 ; touches 0 [601 s]
+  [veille] taches terminees 413/109662 (+0 reprises ; 4 en cours) ; u(terminees) 3774644 ; cvp 3774644 ; noeuds A ~441786131 B ~40424545219 ; touches 0 [1201 s]
+  [veille] taches terminees 711/109662 (+0 reprises ; 4 en cours) ; u(terminees) 5859031 ; cvp 5859031 ; noeuds A ~794157185 B ~60982273036 ; touches 0 [1801 s]
+  [veille] taches terminees 1011/109662 (+0 reprises ; 4 en cours) ; u(terminees) 7938768 ; cvp 7938768 ; noeuds A ~1102717969 B ~81882426285 ; touches 0 [2401 s]
+  [veille] taches terminees 1302/109662 (+0 reprises ; 4 en cours) ; u(terminees) 10011047 ; cvp 10011047 ; noeuds A ~1599677061 B ~103435638675 ; touches 0 [3001 s]

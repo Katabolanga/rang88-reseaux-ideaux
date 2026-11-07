@@ -1,0 +1,2 @@
+recus nouveaux : 73244 ; reference : 73244 ; communs : 73244 ; differents : 0 ; absents de la reference : 0
+COMPARAISON_OK

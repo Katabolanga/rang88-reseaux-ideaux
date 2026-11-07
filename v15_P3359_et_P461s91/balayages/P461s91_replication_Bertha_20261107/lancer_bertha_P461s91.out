@@ -1,0 +1,13 @@
+2026-11-07 10:09:16  DEBUT P461s91 ; lot R88_P461S91_CERT_V2_20261019 ; hote BERTHA ; 24 processeurs ; FILS=8 ; MAXH=24 ; reprise=0 ; ESSAI_TACHES=0
+2026-11-07 10:09:16  java : openjdk version "21.0.12.1" 2026-08-18 ; python : Python 3.12.3
+2026-11-07 10:09:16  0 OK : empreintes du lot (35 fichiers)
+2026-11-07 10:09:21  1a OK : TestCertZ, 910 controles, 0 echec, code natif 0
+2026-11-07 10:09:28  1b OK : validation P461 (697 u, 2 touches attendues, couverture 3658/3658), code natif 0
+2026-11-07 10:09:28  DEBUT cote 1 (73244 taches), 8 fils, garde-fou 24 h ; journal sorties/run_P461s91_cote1/cote1_20261107_100928.stdout.log
+2026-11-07 13:39:56  FIN cote 1 : code natif Java 0 (124 = garde-fou) ; lignes TOUCHE 0 ; fichier de touche 0 ; lignes ERREUR/ARRET/Exception 0 ; stderr 0 octets
+2026-11-07 13:39:57  cote 1 : controle_execution.py code natif 0 (BILAN : 28 controles, 0 echecs ; |U| = 143529602 ; empreinte canonique db04c32e6) ; lancements 1 ; empreinte canonique db04c32e641f75bcce3739f09921e3aab27917903b4b4e36aedafae518eaa1e4 ; predictions du jumeau OK
+2026-11-07 13:39:57  DEBUT cote 2 (73359 taches), 8 fils, garde-fou 24 h ; journal sorties/run_P461s91_cote2/cote2_20261107_133957.stdout.log
+2026-11-07 17:03:08  FIN cote 2 : code natif Java 0 (124 = garde-fou) ; lignes TOUCHE 0 ; fichier de touche 0 ; lignes ERREUR/ARRET/Exception 0 ; stderr 0 octets
+2026-11-07 17:03:09  cote 2 : controle_execution.py code natif 0 (BILAN : 28 controles, 0 echecs ; |U| = 143529602 ; empreinte canonique 652ef2f89) ; lancements 1 ; empreinte canonique 652ef2f89497cb0784326c1ab280b86b99febb3206749f3ee4592c4f59936d13 ; predictions du jumeau OK
+2026-11-07 17:03:09  VERDICT : COMPLET_SANS_TOUCHE P461s91 : deux cotes complets, 0 touche, un seul lancement chacun, controles 100 % (aucune affirmation d'extremalite avant raccord, non-isometrie et contre-audit) (code de sortie 0)
+2026-11-07 17:03:09  SHA256SUMS_SORTIES.txt ecrit en dernier (23 fichiers) ; fin, code 0

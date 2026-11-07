@@ -1,5 +1,9 @@
 # Version 1.4 : horodatage de X(P₁₁₅₁σ₂₄), extrémal, et du CANDIDAT X(P₄₆₁σ₉₁)
 
+> **Mise à jour du 7 novembre 2026 (version 1.5).** Deux statuts de ce dossier sont caducs ; le reste est inchangé, et ce dossier est conservé tel qu'il a été publié, à cet avertissement près. (1) X(P₄₆₁σ₉₁) n'est plus un candidat non répliqué : une seconde exécution neuve (Bertha, 7 nov. 2026) redonne tous ses reçus à l'octet ; son minimum 8 est assisté par calcul, au même titre que celui de X(P₁₁₅₁σ₂₄). (2) Sa non-isométrie à L₀ ne dépend plus de GRH : un certificat montre que la composante 45 013 de sa classe est non nulle. Voir `v15_P3359_et_P461s91/README_v15.md` et l'addendum 3 (`addendum3/`).
+>
+> *Update of November 7, 2026 (version 1.5). Two statuses of this folder are superseded; the rest is unchanged, and the folder is kept as published, apart from this notice. (1) X(P₄₆₁σ₉₁) is no longer an unreplicated candidate: a second, fresh run (Bertha, Nov. 7, 2026) reproduces all its receipts byte for byte; its minimum 8 is computer-assisted, like that of X(P₁₁₅₁σ₂₄). (2) Its non-isometry to L₀ no longer depends on GRH: a certificate shows that the 45 013-component of its class is non-zero. See `v15_P3359_et_P461s91/README_v15.md` and Addendum 3 (`addendum3/`).*
+
 > **X(P₄₆₁σ₉₁) est publié comme CANDIDAT.** Son minimum 8 est seulement **annoncé par les auteurs** : le balayage n'a **pas été répliqué**, et seule la partie courte de ses reçus est recoupée, par ceux de P₄₆₁σ₂₄ (la partie fibre ne l'est pas). Sa non-isométrie à L₀ n'est démontrée que **sous GRH**. Seul X(P₁₁₅₁σ₂₄) a un minimum assisté par calcul et répliqué.
 
 *English version below.*

@@ -1,0 +1,20 @@
+2026-11-07 21:53:39    
+commande (depuis v15_P3359_et_P461s91/verification/) : gp -q -D parisize=400000000 code/raccord_detecteur_P3359.gp < /dev/null
+== P3359 : I_data = data/P3359/entrees/I_data.gp
+OK    P3359 A1 : I = (3359, GEN) premier de degre 2 : p premier d'ordre 2 mod 115, un seul facteur quadratique de Phi mod p dans BASE (1) : GEN = y^2 + 2202*y + 1829
+OK    P3359 A2 : base C construite depuis (p, GEN) : |det C| = p^2 = Q = 11282881 et C stable par zeta, donc C engendre I
+OK    P3359 A3 : BASE du fichier engendre le meme module (|det BASE| = Q, C^-1 BASE entiere)
+OK    P3359 B1 : PM = polynome minimal de zeta + 1/zeta, ALPHA * NU = BETA0 mod PM
+OK    P3359 B2 : G = C~ H C (depuis ALPHA seul) entiere, symetrique, paire
+OK    P3359 B3 : det G = 1
+OK    P3359 B4 : G definie positive (qfsign exact)
+OK    P3359 B5 : GRAM du fichier = BASE~ H BASE (provenance)
+OK    P3359 D1 : les 8 controles de reconstruit() (commun_rang88.gp du detecteur, inchange) sont OK
+OK    P3359 D2 : U du detecteur 88 x 88 entiere, |det U| = 1
+OK    P3359 D3a : fichier Gram du detecteur de 88 lignes
+OK    P3359 D3 : U~ G U = Gram du detecteur (detecteur_copie/gram/P3359.gram)
+OK    P3359 D4 : W = BASE^-1 C U entiere, |det W| = 1, W~ GRAM W = Gram du detecteur
+P3359 : diagonale de la Gram du detecteur : min 26, max 54
+P3359 : 8 + 5 controles, 0 echecs
+RACCORD_DETECTEUR_OK P3359
+code 0

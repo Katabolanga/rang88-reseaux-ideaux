@@ -1,0 +1,14 @@
+Rang88CertZ run : java_P3359_1017/cote2 ; mode=run|n=44|BA=1057/200|S=12|DA=3359|DB=1|d=6718|F=40|D=6|Dmax=16|seuil=0.2 ; 6 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 11.0.16.1 ; Windows 11 amd64 ; processeurs 16 ; PID 37216 ; Sat Oct 17 13:41:34 CEST 2026
+  ENTREES SHA-256 : A c5366b5b69bff956234d3427a6ab2cbe52b16510a4c07f4f15a45674724b9125 ; B 906ed4e0168279eb43d6ddeea5381c1138dac8e64b4dcd18520cec17d2fa20eb ; T 8f329a7148633c247cedadae82c6b14659701b5c39b66688082f5ef9fd126745 ; meta 2948577dea82861bb4eb0ff1df8d8872a5a763df12f3b9bb205d04a7b4588440
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=26e14efe14d37705dd37682e55d83e463a4720e2b2be8d61d42727aa3d3c6d1d|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 645.9615384615385 , max dL = 7436.525423728813 , max |q| ~ 0.49905019588996413 ; fibre : min dL = 1.518535262206148 , max dL = 20.0 , max |q| ~ 0.5080044010820575 ; B_U(court) = 17752.315000000002
+  107548 taches certifiees (130519 noeuds de generation) ; niv37:28686 niv36:1552 niv35:2528 niv34:3845 niv33:5860 niv32:7514 niv31:9448 niv30:10968 niv29:12081 niv28:11751 niv27:13315
+CATALOGUE_SHA256 088d53a7470411c74729dc1068267fb949483abb6c9412e5df4f46442b4b5518 ; TOTAL_TACHES 107548
+CHECKPOINT nouveau : ../../relecture_astra/recens30/filtres_1017/p2/P3359_1017_c2.ckpt
+SELECTION 107548/107548 ; A_FAIRE 107548 ; DEJA_AU_CHECKPOINT 0
+  [veille] taches terminees 243/107548 (+0 reprises ; 6 en cours) ; u(terminees) 2505048 ; cvp 2505048 ; noeuds A ~286268635 B ~30250834949 ; touches 0 [602 s]
+  [veille] taches terminees 567/107548 (+0 reprises ; 6 en cours) ; u(terminees) 5150651 ; cvp 5150651 ; noeuds A ~682186493 B ~60375278014 ; touches 0 [1202 s]
+  [veille] taches terminees 913/107548 (+0 reprises ; 6 en cours) ; u(terminees) 7830578 ; cvp 7830578 ; noeuds A ~1205063377 B ~90239488005 ; touches 0 [1802 s]
+  [veille] taches terminees 1298/107548 (+0 reprises ; 6 en cours) ; u(terminees) 10574510 ; cvp 10574510 ; noeuds A ~1915601404 B ~120491382249 ; touches 0 [2402 s]

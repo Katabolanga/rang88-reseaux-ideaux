@@ -1,0 +1,19 @@
+2026-11-07 21:49:27    
+== contre Bertha (Rang88CertZ, 7 nov.)
+OK    code de sortie d'enum88 = 0
+OK    U0 = 1 (seul y = 0 dans la boule de la fibre au rayon S*DB)
+OK    COMPTE_U enum88 = COMPTE_U Rang88CertZ (143529602, 143529602)
+OK    histogramme identique case par case (32 cases, 32 cases)
+OK    CVP enum88 = CVP Rang88CertZ (143529602, 143529602)
+OK    TOTAL_TOUCHES = 0 dans les deux journaux (0, 0)
+BILAN comparer_enum88 : 6 controles, 0 echecs
+code 0
+== contre Crapaud08 (Rang88CertZ, 19-20 oct.)
+OK    code de sortie d'enum88 = 0
+OK    U0 = 1 (seul y = 0 dans la boule de la fibre au rayon S*DB)
+OK    COMPTE_U enum88 = COMPTE_U Rang88CertZ (143529602, 143529602)
+OK    histogramme identique case par case (32 cases, 32 cases)
+OK    CVP enum88 = CVP Rang88CertZ (143529602, 143529602)
+OK    TOTAL_TOUCHES = 0 dans les deux journaux (0, 0)
+BILAN comparer_enum88 : 6 controles, 0 echecs
+code 0

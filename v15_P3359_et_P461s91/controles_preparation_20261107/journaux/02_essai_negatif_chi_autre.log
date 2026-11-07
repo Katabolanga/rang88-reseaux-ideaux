@@ -1,0 +1,12 @@
+2026-11-07 21:46:29    
+certificat altere : essais_negatifs/chi_autre.json (doit etre REJETE)
+ECHEC : (C4) chi(omega) = 0
+l = 20705981 : S = 42238
+ECHEC : symbole egal a la valeur annoncee
+l = 62117941 : S = 2130
+ECHEC : symbole egal a la valeur annoncee
+l = 186353821 : S = 13817
+ECHEC : symbole egal a la valeur annoncee
+BILAN verifier_certificat_45013 : 458 controles, 4 echecs
+CONCLUSION : certificat REJETE
+code 1

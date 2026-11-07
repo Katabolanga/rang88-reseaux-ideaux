@@ -1,0 +1,184 @@
+2026-11-07 21:46:31    
+certificat altere : essais_negatifs/omega_complementaire.json (doit etre REJETE)
+ECHEC : (C2) appartenance a sigma_1(P)
+ECHEC : (C2) appartenance a sigma_2(P)
+ECHEC : (C2) appartenance a sigma_3(P)
+ECHEC : (C2) appartenance a sigma_4(P)
+ECHEC : (C2) appartenance a sigma_6(P)
+ECHEC : (C2) appartenance a sigma_7(P)
+ECHEC : (C2) appartenance a sigma_8(P)
+ECHEC : (C2) appartenance a sigma_9(P)
+ECHEC : (C2) appartenance a sigma_11(P)
+ECHEC : (C2) appartenance a sigma_12(P)
+ECHEC : (C2) appartenance a sigma_13(P)
+ECHEC : (C2) appartenance a sigma_14(P)
+ECHEC : (C2) appartenance a sigma_16(P)
+ECHEC : (C2) appartenance a sigma_17(P)
+ECHEC : (C2) appartenance a sigma_18(P)
+ECHEC : (C2) appartenance a sigma_19(P)
+ECHEC : (C2) appartenance a sigma_21(P)
+ECHEC : (C2) appartenance a sigma_22(P)
+ECHEC : (C2) appartenance a sigma_24(P)
+ECHEC : (C2) appartenance a sigma_26(P)
+ECHEC : (C2) appartenance a sigma_27(P)
+ECHEC : (C2) appartenance a sigma_28(P)
+ECHEC : (C2) appartenance a sigma_29(P)
+ECHEC : (C2) appartenance a sigma_31(P)
+ECHEC : (C2) appartenance a sigma_32(P)
+ECHEC : (C2) appartenance a sigma_33(P)
+ECHEC : (C2) appartenance a sigma_34(P)
+ECHEC : (C2) appartenance a sigma_36(P)
+ECHEC : (C2) appartenance a sigma_37(P)
+ECHEC : (C2) appartenance a sigma_38(P)
+ECHEC : (C2) appartenance a sigma_39(P)
+ECHEC : (C2) appartenance a sigma_41(P)
+ECHEC : (C2) appartenance a sigma_42(P)
+ECHEC : (C2) appartenance a sigma_43(P)
+ECHEC : (C2) appartenance a sigma_44(P)
+ECHEC : (C2) appartenance a sigma_47(P)
+ECHEC : (C2) appartenance a sigma_48(P)
+ECHEC : (C2) appartenance a sigma_49(P)
+ECHEC : (C2) appartenance a sigma_51(P)
+ECHEC : (C2) appartenance a sigma_52(P)
+ECHEC : (C2) appartenance a sigma_53(P)
+ECHEC : (C2) appartenance a sigma_54(P)
+ECHEC : (C2) appartenance a sigma_56(P)
+ECHEC : (C2) appartenance a sigma_57(P)
+ECHEC : (C2) appartenance a sigma_58(P)
+ECHEC : (C2) appartenance a sigma_59(P)
+ECHEC : (C2) appartenance a sigma_61(P)
+ECHEC : (C2) appartenance a sigma_62(P)
+ECHEC : (C2) appartenance a sigma_63(P)
+ECHEC : (C2) appartenance a sigma_64(P)
+ECHEC : (C2) appartenance a sigma_66(P)
+ECHEC : (C2) appartenance a sigma_67(P)
+ECHEC : (C2) appartenance a sigma_68(P)
+ECHEC : (C2) appartenance a sigma_71(P)
+ECHEC : (C2) appartenance a sigma_72(P)
+ECHEC : (C2) appartenance a sigma_73(P)
+ECHEC : (C2) appartenance a sigma_74(P)
+ECHEC : (C2) appartenance a sigma_76(P)
+ECHEC : (C2) appartenance a sigma_77(P)
+ECHEC : (C2) appartenance a sigma_78(P)
+ECHEC : (C2) appartenance a sigma_79(P)
+ECHEC : (C2) appartenance a sigma_81(P)
+ECHEC : (C2) appartenance a sigma_82(P)
+ECHEC : (C2) appartenance a sigma_83(P)
+ECHEC : (C2) appartenance a sigma_84(P)
+ECHEC : (C2) appartenance a sigma_86(P)
+ECHEC : (C2) appartenance a sigma_87(P)
+ECHEC : (C2) appartenance a sigma_88(P)
+ECHEC : (C2) appartenance a sigma_89(P)
+ECHEC : (C2) appartenance a sigma_91(P)
+ECHEC : (C2) appartenance a sigma_93(P)
+ECHEC : (C2) appartenance a sigma_94(P)
+ECHEC : (C2) appartenance a sigma_96(P)
+ECHEC : (C2) appartenance a sigma_97(P)
+ECHEC : (C2) appartenance a sigma_98(P)
+ECHEC : (C2) appartenance a sigma_99(P)
+ECHEC : (C2) appartenance a sigma_101(P)
+ECHEC : (C2) appartenance a sigma_102(P)
+ECHEC : (C2) appartenance a sigma_103(P)
+ECHEC : (C2) appartenance a sigma_104(P)
+ECHEC : (C2) appartenance a sigma_106(P)
+ECHEC : (C2) appartenance a sigma_107(P)
+ECHEC : (C2) appartenance a sigma_108(P)
+ECHEC : (C2) appartenance a sigma_109(P)
+ECHEC : (C2) appartenance a sigma_111(P)
+ECHEC : (C2) appartenance a sigma_112(P)
+ECHEC : (C2) appartenance a sigma_113(P)
+ECHEC : (C2) appartenance a sigma_114(P)
+ECHEC : (C3) omega_1 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_2 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_3 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_4 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_6 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_7 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_8 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_9 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_11 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_12 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_13 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_14 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_16 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_17 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_18 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_19 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_21 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_22 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_24 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_26 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_27 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_28 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_29 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_31 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_32 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_33 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_34 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_36 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_37 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_38 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_39 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_41 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_42 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_43 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_44 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_47 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_48 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_49 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_51 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_52 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_53 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_54 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_56 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_57 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_58 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_59 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_61 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_62 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_63 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_64 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_66 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_67 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_68 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_71 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_72 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_73 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_74 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_76 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_77 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_78 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_79 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_81 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_82 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_83 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_84 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_86 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_87 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_88 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_89 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_91 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_93 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_94 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_96 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_97 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_98 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_99 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_101 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_102 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_103 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_104 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_106 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_107 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_108 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_109 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_111 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_112 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_113 = 2{u/m} - {2u/m}, u = -t^-1
+ECHEC : (C3) omega_114 = 2{u/m} - {2u/m}, u = -t^-1
+l = 20705981 : S = 24733
+l = 62117941 : S = 30643
+l = 186353821 : S = 4522
+BILAN verifier_certificat_45013 : 286 controles, 176 echecs
+CONCLUSION : certificat REJETE
+code 1

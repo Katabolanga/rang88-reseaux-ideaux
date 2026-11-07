@@ -1,0 +1,74 @@
+Rang88CertZ run : java_P3359/cote1 ; mode=run|n=44|BA=1057/200|S=12|DA=3359|DB=1|d=6718|F=40|D=6|Dmax=16|seuil=0.2 ; 16 fils ; verif=false
+  JVM OpenJDK 64-Bit Server VM 21.0.12.1 ; Linux amd64 ; processeurs 24 ; PID 6115 ; Fri Nov 06 13:11:09 CET 2026
+  ENTREES SHA-256 : A 62ed69549fae810a41668994138a26315b0e7f412558614b535455a55ac66f90 ; B 3f532311bfd7c19dafc44b2323abf038dd8922e0e78bccbdd39ea52c52521805 ; T 12cd296676d454a9595e7f84ebf959da84569398eb5b5c3065456023aaf37f3b ; meta 2948577dea82861bb4eb0ff1df8d8872a5a763df12f3b9bb205d04a7b4588440
+  CLASSES SHA-256 : Rang88CertZ=35130e199599a72f6c65b199a13f0190c6ba0438899594d9a0cea48c38c652e5 Rang88CertZ$Compteurs=9db7355dc8cad2ecfa8056b9bff569642544ebbab23e3db30833fafdda9152a8 Rang88CertZ$EnumZ=a1ed4ee2f289e88cd440246ce066455ac3fed9d414a0525ab80bdf12342830af Rang88CertZ$FormeZ=b7028cb6168c77ed08dd552dcf9760946c7e8bddbb0d245ab4b31fdae8ed6cb9 Rang88CertZ$Recepteur=5c47eba99fa800f0dbbdf8adb5de1efb5f1a11e08bac5158f97787eb3b2b526b Rang88CertZ$Tache=5e3b4b4877e242bcd76f202c87929473af00944b277d815d2b0c8cc95f7aa2b3 Rang88CertZ$Travail=a33c837d37c4d03ac0a064170fb6f853790ae0010e14d5a52e217c47076857e3
+  LIEN entrees=d269b8474f7e4c04f682a16fef914d389e3efc3df146408f3607195bcd463942|classes=4f1ed5ad5834cdca3c34b7b70c5af9bdf3f942c6f4e088c6f9083c73cec8d20c
+  LDL^T exacte verifiee : court : min dL = 647.1467889908256 , max dL = 7139.0 , max |q| ~ 0.5055885719085669 ; fibre : min dL = 1.69689315483708 , max dL = 20.0 , max |q| ~ 0.5093373373224638 ; B_U(court) = 17752.315000000002
+  109662 taches certifiees (132714 noeuds de generation) ; niv37:30507 niv36:1411 niv35:2522 niv34:3949 niv33:5806 niv32:7895 niv31:9647 niv30:10965 niv29:12139 niv28:11958 niv27:12863
+CATALOGUE_SHA256 32900e663a387c75d112bf5b9effba06ece70822b1fad4d1be10f74e85386ea0 ; TOTAL_TACHES 109662
+CHECKPOINT nouveau : sorties/run_P3359_cote1/cote1.ckpt
+SELECTION 109662/109662 ; A_FAIRE 109662 ; DEJA_AU_CHECKPOINT 0
+  [veille] taches terminees 2790/109662 (+0 reprises ; 16 en cours) ; u(terminees) 20002358 ; cvp 20002358 ; noeuds A ~4059808286 B ~206458903459 ; touches 0 [621 s]
+  [veille] taches terminees 5620/109662 (+0 reprises ; 16 en cours) ; u(terminees) 40799261 ; cvp 40799261 ; noeuds A ~9881060510 B ~414791807153 ; touches 0 [1247 s]
+  [veille] taches terminees 8071/109662 (+0 reprises ; 16 en cours) ; u(terminees) 62045613 ; cvp 62045613 ; noeuds A ~17351001825 B ~621815606631 ; touches 0 [1875 s]
+  [veille] taches terminees 10507/109662 (+0 reprises ; 16 en cours) ; u(terminees) 82059821 ; cvp 82059821 ; noeuds A ~25456227593 B ~827705223668 ; touches 0 [2503 s]
+  [veille] taches terminees 12616/109662 (+0 reprises ; 16 en cours) ; u(terminees) 103283933 ; cvp 103283933 ; noeuds A ~34992557203 B ~1031679869824 ; touches 0 [3132 s]
+  [veille] taches terminees 14952/109662 (+0 reprises ; 16 en cours) ; u(terminees) 124066535 ; cvp 124066535 ; noeuds A ~42418062710 B ~1234339235518 ; touches 0 [3759 s]
+  [veille] taches terminees 17021/109662 (+0 reprises ; 16 en cours) ; u(terminees) 143737947 ; cvp 143737947 ; noeuds A ~50946110979 B ~1433390035503 ; touches 0 [4385 s]
+  [veille] taches terminees 18029/109662 (+0 reprises ; 16 en cours) ; u(terminees) 162612758 ; cvp 162612758 ; noeuds A ~67899521469 B ~1623923141955 ; touches 0 [5011 s]
+  [veille] taches terminees 20594/109662 (+0 reprises ; 16 en cours) ; u(terminees) 184519882 ; cvp 184519882 ; noeuds A ~74716110990 B ~1825318236192 ; touches 0 [5638 s]
+  [veille] taches terminees 22861/109662 (+0 reprises ; 16 en cours) ; u(terminees) 204918088 ; cvp 204918088 ; noeuds A ~82651676721 B ~2025201718797 ; touches 0 [6266 s]
+  [veille] taches terminees 24625/109662 (+0 reprises ; 16 en cours) ; u(terminees) 224247520 ; cvp 224247520 ; noeuds A ~92964227259 B ~2222747733605 ; touches 0 [6891 s]
+  [veille] taches terminees 26727/109662 (+0 reprises ; 16 en cours) ; u(terminees) 245393252 ; cvp 245393252 ; noeuds A ~101322013961 B ~2421774788196 ; touches 0 [7518 s]
+  [veille] taches terminees 28999/109662 (+0 reprises ; 16 en cours) ; u(terminees) 265063071 ; cvp 265063071 ; noeuds A ~109123403852 B ~2620548877965 ; touches 0 [8143 s]
+  [veille] taches terminees 30799/109662 (+0 reprises ; 16 en cours) ; u(terminees) 283889960 ; cvp 283889960 ; noeuds A ~119209815499 B ~2817610769254 ; touches 0 [8767 s]
+  [veille] taches terminees 32373/109662 (+0 reprises ; 16 en cours) ; u(terminees) 302579569 ; cvp 302579569 ; noeuds A ~142986066630 B ~3001089422079 ; touches 0 [9391 s]
+  [veille] taches terminees 33418/109662 (+0 reprises ; 16 en cours) ; u(terminees) 323873271 ; cvp 323873271 ; noeuds A ~157986161540 B ~3192990850162 ; touches 0 [10014 s]
+  [veille] taches terminees 35147/109662 (+0 reprises ; 16 en cours) ; u(terminees) 344730283 ; cvp 344730283 ; noeuds A ~171233348999 B ~3386239043768 ; touches 0 [10637 s]
+  [veille] taches terminees 36565/109662 (+0 reprises ; 16 en cours) ; u(terminees) 364951796 ; cvp 364951796 ; noeuds A ~183226653400 B ~3581976408661 ; touches 0 [11260 s]
+  [veille] taches terminees 38748/109662 (+0 reprises ; 16 en cours) ; u(terminees) 385538481 ; cvp 385538481 ; noeuds A ~191454998498 B ~3784784647477 ; touches 0 [11880 s]
+  [veille] taches terminees 41269/109662 (+0 reprises ; 16 en cours) ; u(terminees) 405787668 ; cvp 405787668 ; noeuds A ~198488704599 B ~3988378192439 ; touches 0 [12502 s]
+  [veille] taches terminees 42583/109662 (+0 reprises ; 16 en cours) ; u(terminees) 425519455 ; cvp 425519455 ; noeuds A ~211195900579 B ~4180964157570 ; touches 0 [13121 s]
+  [veille] taches terminees 43642/109662 (+0 reprises ; 16 en cours) ; u(terminees) 442930910 ; cvp 442930910 ; noeuds A ~226179277278 B ~4353524891445 ; touches 0 [13740 s]
+  [veille] taches terminees 45722/109662 (+0 reprises ; 16 en cours) ; u(terminees) 462150848 ; cvp 462150848 ; noeuds A ~232909456249 B ~4534945812991 ; touches 0 [14357 s]
+  [veille] taches terminees 47394/109662 (+0 reprises ; 16 en cours) ; u(terminees) 480122151 ; cvp 480122151 ; noeuds A ~241680675104 B ~4713938013764 ; touches 0 [14972 s]
+  [veille] taches terminees 48824/109662 (+0 reprises ; 16 en cours) ; u(terminees) 498879959 ; cvp 498879959 ; noeuds A ~251909419851 B ~4891365334014 ; touches 0 [15588 s]
+  [veille] taches terminees 50272/109662 (+0 reprises ; 16 en cours) ; u(terminees) 515867803 ; cvp 515867803 ; noeuds A ~264301294441 B ~5066980939724 ; touches 0 [16203 s]
+  [veille] taches terminees 51983/109662 (+0 reprises ; 16 en cours) ; u(terminees) 532522908 ; cvp 532522908 ; noeuds A ~286678628901 B ~5231158394186 ; touches 0 [16818 s]
+  [veille] taches terminees 56555/109662 (+0 reprises ; 16 en cours) ; u(terminees) 550382690 ; cvp 550382690 ; noeuds A ~312266398401 B ~5391446031944 ; touches 0 [17433 s]
+  [veille] taches terminees 57339/109662 (+0 reprises ; 16 en cours) ; u(terminees) 567796821 ; cvp 567796821 ; noeuds A ~329457311038 B ~5558868979363 ; touches 0 [18043 s]
+  [veille] taches terminees 59174/109662 (+0 reprises ; 16 en cours) ; u(terminees) 584698280 ; cvp 584698280 ; noeuds A ~352165032105 B ~5720483949001 ; touches 0 [18651 s]
+  [veille] taches terminees 60396/109662 (+0 reprises ; 16 en cours) ; u(terminees) 603524452 ; cvp 603524452 ; noeuds A ~363132275192 B ~5893868261606 ; touches 0 [19262 s]
+  [veille] taches terminees 61741/109662 (+0 reprises ; 16 en cours) ; u(terminees) 620125405 ; cvp 620125405 ; noeuds A ~373897687799 B ~6068211746329 ; touches 0 [19872 s]
+  [veille] taches terminees 62621/109662 (+0 reprises ; 16 en cours) ; u(terminees) 638769430 ; cvp 638769430 ; noeuds A ~389337668955 B ~6240025587173 ; touches 0 [20482 s]
+  [veille] taches terminees 64342/109662 (+0 reprises ; 16 en cours) ; u(terminees) 657407853 ; cvp 657407853 ; noeuds A ~397625246325 B ~6418525782991 ; touches 0 [21092 s]
+  [veille] taches terminees 66691/109662 (+0 reprises ; 16 en cours) ; u(terminees) 675607196 ; cvp 675607196 ; noeuds A ~403294615116 B ~6598448093397 ; touches 0 [21701 s]
+  [veille] taches terminees 68498/109662 (+0 reprises ; 16 en cours) ; u(terminees) 693730329 ; cvp 693730329 ; noeuds A ~411119386365 B ~6775566832791 ; touches 0 [22307 s]
+  [veille] taches terminees 69826/109662 (+0 reprises ; 16 en cours) ; u(terminees) 711179595 ; cvp 711179595 ; noeuds A ~421575544350 B ~6947898667716 ; touches 0 [22907 s]
+  [veille] taches terminees 71882/109662 (+0 reprises ; 16 en cours) ; u(terminees) 729332122 ; cvp 729332122 ; noeuds A ~427736458628 B ~7124371981973 ; touches 0 [23507 s]
+  [veille] taches terminees 72983/109662 (+0 reprises ; 16 en cours) ; u(terminees) 745519759 ; cvp 745519759 ; noeuds A ~441868623748 B ~7292783532574 ; touches 0 [24107 s]
+  [veille] taches terminees 74002/109662 (+0 reprises ; 16 en cours) ; u(terminees) 763224198 ; cvp 763224198 ; noeuds A ~453860588454 B ~7463364951528 ; touches 0 [24707 s]
+  [veille] taches terminees 75712/109662 (+0 reprises ; 16 en cours) ; u(terminees) 782021687 ; cvp 782021687 ; noeuds A ~462036916400 B ~7637975842301 ; touches 0 [25307 s]
+  [veille] taches terminees 76951/109662 (+0 reprises ; 16 en cours) ; u(terminees) 798837945 ; cvp 798837945 ; noeuds A ~475076089703 B ~7807124241564 ; touches 0 [25907 s]
+  [veille] taches terminees 78474/109662 (+0 reprises ; 16 en cours) ; u(terminees) 816412957 ; cvp 816412957 ; noeuds A ~494662422727 B ~7969685519063 ; touches 0 [26507 s]
+  [veille] taches terminees 79337/109662 (+0 reprises ; 16 en cours) ; u(terminees) 833041737 ; cvp 833041737 ; noeuds A ~510684114500 B ~8135811130637 ; touches 0 [27107 s]
+  [veille] taches terminees 80937/109662 (+0 reprises ; 16 en cours) ; u(terminees) 851882971 ; cvp 851882971 ; noeuds A ~519317411518 B ~8309610180501 ; touches 0 [27707 s]
+  [veille] taches terminees 83078/109662 (+0 reprises ; 16 en cours) ; u(terminees) 869568683 ; cvp 869568683 ; noeuds A ~525535669810 B ~8485594552239 ; touches 0 [28307 s]
+  [veille] taches terminees 84154/109662 (+0 reprises ; 16 en cours) ; u(terminees) 886996816 ; cvp 886996816 ; noeuds A ~536557998903 B ~8657814505258 ; touches 0 [28907 s]
+  [veille] taches terminees 85672/109662 (+0 reprises ; 16 en cours) ; u(terminees) 904274754 ; cvp 904274754 ; noeuds A ~547598711753 B ~8830436487087 ; touches 0 [29507 s]
+  [veille] taches terminees 86910/109662 (+0 reprises ; 16 en cours) ; u(terminees) 922520543 ; cvp 922520543 ; noeuds A ~559594334755 B ~9001211901448 ; touches 0 [30107 s]
+  [veille] taches terminees 88157/109662 (+0 reprises ; 16 en cours) ; u(terminees) 939756373 ; cvp 939756373 ; noeuds A ~570454353889 B ~9173282563477 ; touches 0 [30707 s]
+  [veille] taches terminees 90115/109662 (+0 reprises ; 16 en cours) ; u(terminees) 958854133 ; cvp 958854133 ; noeuds A ~577357618058 B ~9349376597759 ; touches 0 [31307 s]
+  [veille] taches terminees 91386/109662 (+0 reprises ; 16 en cours) ; u(terminees) 975215511 ; cvp 975215511 ; noeuds A ~588294389646 B ~9521258060991 ; touches 0 [31907 s]
+  [veille] taches terminees 93175/109662 (+0 reprises ; 16 en cours) ; u(terminees) 992645396 ; cvp 992645396 ; noeuds A ~609479011540 B ~9683255692262 ; touches 0 [32507 s]
+  [veille] taches terminees 94462/109662 (+0 reprises ; 16 en cours) ; u(terminees) 1007384098 ; cvp 1007384098 ; noeuds A ~632273650757 B ~9843707976372 ; touches 0 [33107 s]
+  [veille] taches terminees 100194/109662 (+0 reprises ; 16 en cours) ; u(terminees) 1024818383 ; cvp 1024818383 ; noeuds A ~663550308738 B ~9995774025295 ; touches 0 [33707 s]
+  [veille] taches terminees 105305/109662 (+0 reprises ; 16 en cours) ; u(terminees) 1042172952 ; cvp 1042172952 ; noeuds A ~691709716163 B ~10151512077156 ; touches 0 [34307 s]
+CHECKPOINT_SHA256 25e626c39fabf1e0d508ca2aef8106d4a6f59d7a2551b729576b03ca810818a5 ; sorties/run_P3359_cote1/cote1.ckpt
+EXECUTEES_CE_LANCEMENT 109662 ; REPRISES_DU_CHECKPOINT 0
+TACHES_TERMINEES 109662/109662
+COMPTE_U (au signe pres, energie courte <= 1057/200) 1044123618 ; histogramme [2.1,2.2):2 [2.2,2.3):4 [2.3,2.4):10 [2.4,2.5):50 [2.5,2.6):94 [2.6,2.7):204 [2.7,2.8):492 [2.8,2.9):1010 [2.9,3.0):2046 [3.0,3.1):4220 [3.1,3.2):8272 [3.2,3.3):16414 [3.3,3.4):30812 [3.4,3.5):56802 [3.5,3.6):103484 [3.6,3.7):185320 [3.7,3.8):328380 [3.8,3.9):567794 [3.9,4.0):968086 [4.0,4.1):1636934 [4.1,4.2):2736628 [4.2,4.3):4516250 [4.3,4.4):7353682 [4.4,4.5):11860980 [4.5,4.6):18899758 [4.6,4.7):29821768 [4.7,4.8):46611146 [4.8,4.9):72170448 [4.9,5.0):110376332 [5.0,5.1):167975912 [5.1,5.2):254074770 [5.2,5.3):313815514 
+NOEUDS court 694345077694 ; fibre 10157859951531 ; CVP 1044123618
+TOTAL_TOUCHES 0
+COUVERTURE_COMPLETE 109662/109662 ; CATALOGUE 32900e663a387c75d112bf5b9effba06ece70822b1fad4d1be10f74e85386ea0
+FIN [34448 s]

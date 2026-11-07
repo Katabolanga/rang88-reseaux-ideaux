@@ -1,0 +1,5 @@
+2026-11-07 21:48:36    
+commande : python -I v14_P1151s24_et_candidat_P461s91/balayages/outils/compare_recus.py v15_P3359_et_P461s91/balayages/P3359_replication_Bertha_20261106/sorties/run_P3359_cote1/cote1.ckpt v15_P3359_et_P461s91/balayages/P3359_SpiraleG_20261019/sorties/run_P3359_cote1/cote1.ckpt
+recus nouveaux : 109662 ; reference : 109662 ; communs : 109662 ; differents : 0 ; absents de la reference : 0
+COMPARAISON_OK
+code 0

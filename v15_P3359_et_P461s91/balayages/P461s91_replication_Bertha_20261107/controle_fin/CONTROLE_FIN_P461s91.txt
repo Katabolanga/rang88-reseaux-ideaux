@@ -1,0 +1,25 @@
+CONTROLE_FIN_P461s91 (M10) 2026-11-07 20:41:37 ; hote BERTHA
+OK    verdict present
+verdict : COMPLET_SANS_TOUCHE P461s91 : deux cotes complets, 0 touche, un seul lancement chacun, controles 100 % (aucune affirmation d'extremalite avant raccord, non-isometrie et contre-audit)
+OK    verdict COMPLET_SANS_TOUCHE (code 0 du lanceur)
+OK    empreintes des recus de reference Crapaud08
+OK    cote 1 : aucun fichier de touche
+OK    cote 1 : FIN_COTE COMPLET (un seul lancement, controles 100 %)
+cote 1 : empreinte canonique Bertha db04c32e641f75bcce3739f09921e3aab27917903b4b4e36aedafae518eaa1e4
+OK    cote 1 : empreinte canonique identique a Crapaud08 (db04c32e641f75bcce3739f09921e3aab27917903b4b4e36aedafae518eaa1e4)
+recus nouveaux : 73244 ; reference : 73244 ; communs : 73244 ; differents : 0 ; absents de la reference : 0
+COMPARAISON_OK
+OK    cote 1 : 73244 recus Bertha identiques a l'octet aux recus Crapaud08
+BILAN : 28 controles, 0 echecs ; |U| = 143529602 ; empreinte canonique db04c32e641f75bcce3739f09921e3aab27917903b4b4e36aedafae518eaa1e4
+OK    cote 1 : controle_execution.py rejoue, code 0
+OK    cote 2 : aucun fichier de touche
+OK    cote 2 : FIN_COTE COMPLET (un seul lancement, controles 100 %)
+cote 2 : empreinte canonique Bertha 652ef2f89497cb0784326c1ab280b86b99febb3206749f3ee4592c4f59936d13
+OK    cote 2 : empreinte canonique identique a Crapaud08 (652ef2f89497cb0784326c1ab280b86b99febb3206749f3ee4592c4f59936d13)
+recus nouveaux : 73359 ; reference : 73359 ; communs : 73359 ; differents : 0 ; absents de la reference : 0
+COMPARAISON_OK
+OK    cote 2 : 73359 recus Bertha identiques a l'octet aux recus Crapaud08
+BILAN : 28 controles, 0 echecs ; |U| = 143529602 ; empreinte canonique 652ef2f89497cb0784326c1ab280b86b99febb3206749f3ee4592c4f59936d13
+OK    cote 2 : controle_execution.py rejoue, code 0
+OK    SHA256SUMS_SORTIES.txt
+BILAN controle_fin : 14 OK, 0 echecs

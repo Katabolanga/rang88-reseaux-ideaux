@@ -58,14 +58,14 @@
 
 \title[Addendum: rank 88 over $\Q(\zeta_{115})$]{Addendum to ``Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$'':\\ two further extremal lattices, an adversarial audit,\\ and the twins of the $\sigma_{24}$-layer}
 \author{Ivan Gauvin}
-\date{October 17, 2026}
+\date{October 17, 2026; revised November 7, 2026 (version~1.5 of the repository: status of the non-isometry, references)}
 \subjclass[2020]{Primary 11H06; Secondary 11H56, 11R18, 11R29}
 \keywords{extremal lattices, even unimodular lattices, ideal lattices, cyclotomic fields, class group, certified enumeration}
 
 \begin{document}
 
 \begin{abstract}
-This addendum to~\cite{Gau26} has three parts. (1) The ideal lattices $X_{4969}$ and $X_{4049}$, which~\cite{Gau26} listed as partial survivors of a filter, are extremal: their minimum $8$ is established by the computer-assisted method of~\cite{Gau26}, each of their four sides having been swept twice, with byte-identical receipts. Without assuming GRH, their ideal classes are conjugate neither to each other nor to those of $X_{139}$, $X_{599}$ and of Sakamoto's two lattices; by the isometry theorem of~\cite{Gau26}, six orbits of extremal lattices of rank $88$ are now known among the unimodular ideal lattices over $\Q(\zeta_{115})$. (2) The certified enumeration was attacked from seven sides: predicted hits, mutations, an independent recount, replications, a generic control group, a change of representative, and a review by a second assistant. (3) The $32$ orbits fixed by $\sigma_{24}$ are carried by the powers of a single prime ideal, $P_{139}^{\,k}$, and the orbit of an explicit ideal of this layer can be read without GRH; Sakamoto's lattice $\LS$ is isometric to the lattice of $P_{139}^{\,331}$. These orbits form sixteen \emph{twin pairs}, whose members differ by the class of Sakamoto's ideal. Twin certificates without GRH show that $X_{4049}$ and $X_{599}$ are twins, like $\Lz$ and $\LS$, whereas the twin of $X_{4969}$ contains a vector of norm $6$: extremality is not an invariant of twin pairs. Overnight filters on $\nfiltres$ of the $\navant$ undecided orbits of the layer rejected $\nrejets$ of them and left $\nsurv$ partial survivors, far more than a naive heuristic predicts.
+This addendum to~\cite{Gau26} has three parts. (1) The ideal lattices $X_{4969}$ and $X_{4049}$, which~\cite{Gau26} listed as partial survivors of a filter, are extremal: their minimum $8$ is established by the computer-assisted method of~\cite{Gau26}, each of their four sides having been swept twice, with byte-identical receipts. Without assuming GRH, their ideal classes are conjugate neither to each other nor to those of $X_{139}$, $X_{599}$ and of Sakamoto's two lattices; by the isometry theorem of~\cite{Gau26}, applied with the computer-assisted minimum, six orbits of extremal lattices of rank $88$ are now known among the unimodular ideal lattices over $\Q(\zeta_{115})$. (2) The certified enumeration was attacked from seven sides: predicted hits, mutations, an independent recount, replications, a generic control group, a change of representative, and a review by a second assistant. (3) The $32$ orbits fixed by $\sigma_{24}$ are carried by the powers of a single prime ideal, $P_{139}^{\,k}$, and the orbit of an explicit ideal of this layer can be read without GRH; Sakamoto's lattice $\LS$ is isometric to the lattice of $P_{139}^{\,331}$. These orbits form sixteen \emph{twin pairs}, whose members differ by the class of Sakamoto's ideal. Twin certificates without GRH show that $X_{4049}$ and $X_{599}$ are twins, like $\Lz$ and $\LS$, whereas the twin of $X_{4969}$ contains a vector of norm $6$: extremality is not an invariant of twin pairs. Overnight filters on $\nfiltres$ of the $\navant$ undecided orbits of the layer rejected $\nrejets$ of them and left $\nsurv$ partial survivors, far more than a naive heuristic predicts.
 \end{abstract}
 
 \maketitle
@@ -80,7 +80,7 @@ This addendum to~\cite{Gau26} has three parts. (1) The ideal lattices $X_{4969}$
 \begin{theorem}[six extremal orbits]\label{thm:six}
 The lattices $X_{139}$, $X_{599}$, $X_{4969}$ and $X_{4049}$ are even unimodular of rank $88$ and minimum $8$. They are pairwise non-isometric, and isometric neither to $\Lz$ nor to $\LS$. Together with Sakamoto's lattices, they form six pairwise distinct orbits of extremal lattices in the set $S$ of~\cite{Gau26}.
 
-\st{minimum of $X_{4969}$, $X_{4049}$: computer-assisted (M1, M2, H1--H3), as for $X_{139}$, $X_{599}$ in~\cite[Thm.~6.11]{Gau26}; non-isometry: proved, without GRH, as in~\cite[Thm.~6.11]{Gau26}, by non-conjugacy of the classes and the isometry theorem; minimum of $\Lz$, $\LS$: by~\cite{Sak26}}
+\st{minimum of $X_{4969}$, $X_{4049}$: computer-assisted (M1, M2, H1--H3), as for $X_{139}$, $X_{599}$ in~\cite[Thm.~6.11]{Gau26}; non-isometry: deduced without GRH from the non-conjugacy of the classes by the isometry theorem, which requires the (computer-assisted) minimum $8$ of at least one of the two lattices compared, as in~\cite[Thm.~6.11]{Gau26}; with respect to $\Lz$ and $\LS$, it does not depend on the computer-assisted minimum; minimum of $\Lz$, $\LS$: by~\cite{Sak26}}
 \end{theorem}
 
 \begin{theorem}[extremality is not a twin invariant]\label{thm:twins}
@@ -181,7 +181,7 @@ $X_{4969}$ and $X_{4049}$ contain no non-zero vector of norm at most $6$. \ASS
 For each of the four sides, Corollary~5.2 of~\cite{Gau26} applies to the fresh executions of Table~\ref{tab:sweeps}: exit code $0$, the line \texttt{COUVERTURE\_COMPLETE}, no hit file in the output directory (complete inventory taken after the end of the computation), and launch scripts that delete nothing. Hence $\Tc=\emptyset$ for each side, under H1--H3, and the criterion~\cite[Thm.~4.6]{Gau26}, with the geometric link of Proposition~\ref{prop:exact}, gives the claim. Hypothesis H4 plays no role.
 \end{proof}
 
-\subsection{Classes and non-isometry, without GRH}
+\subsection{Classes without GRH, and non-isometry}
 Let $K=K_{22}=\Q(\theta)$, $\theta=\zeta+\zeta^{22}+\zeta^{24}+\zeta^{68}$, as in~\cite[\S6.4]{Gau26}, and $\q_p=P_p\cap K$; it has degree $1$, and $\Nm_{L/K}(P_p)=\q_p^2$.
 
 \begin{proposition}\label{prop:classes}
@@ -202,7 +202,7 @@ A certificate, verified by a Python program in exact arithmetic without PARI/GP,
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:six}]
-Evenness, unimodularity and the vector of norm $8$: Proposition~\ref{prop:exact} and~\cite[Prop.~6.3, 6.4]{Gau26}. Minimum $\ge8$: Proposition~\ref{prop:sweeps} and~\cite[Thm.~6.11]{Gau26}; hence minimum $8$. Non-isometry: the classes $[P_{139}]$, $[P_{599}]$, $[P_{4969}]$, $[P_{4049}]$ are pairwise non-conjugate (Proposition~\ref{prop:classes} and~\cite[Rem.~6.10]{Gau26}), and none of their cubes is trivial, whereas those of the classes of $\Lz$ and $\LS$ are~\cite[Prop.~2.7]{Gau26}. The isometry theorem~\cite[Thm.~3.3]{Gau26} applies to lattices of minimum at least $8$; all six have minimum $8$, so it turns non-conjugacy into non-isometry. As in~\cite[Prop.~6.9(a)]{Gau26}, the non-isometry to $\Lz$ and $\LS$ does not even need the computer-assisted minimum: a lattice of minimum at most $6$ is not isometric to a lattice of minimum $8$.
+Evenness, unimodularity and the vector of norm $8$: Proposition~\ref{prop:exact} and~\cite[Prop.~6.3, 6.4]{Gau26}. Minimum $\ge8$: Proposition~\ref{prop:sweeps} and~\cite[Thm.~6.11]{Gau26}; hence minimum $8$. Non-isometry: the classes $[P_{139}]$, $[P_{599}]$, $[P_{4969}]$, $[P_{4049}]$ are pairwise non-conjugate (Proposition~\ref{prop:classes} and~\cite[Rem.~6.10]{Gau26}), and none of their cubes is trivial, whereas those of the classes of $\Lz$ and $\LS$ are~\cite[Prop.~2.7]{Gau26}. The isometry theorem~\cite[Thm.~3.3]{Gau26} applies to lattices of minimum at least $8$; all six have minimum $8$, so it turns non-conjugacy into non-isometry. It suffices that one of the two lattices compared have minimum $8$; for $X_{139}$, $X_{599}$, $X_{4969}$, $X_{4049}$ this minimum is computer-assisted. As in~\cite[Prop.~6.9(a)]{Gau26}, the non-isometry to $\Lz$ and $\LS$ does not even need the computer-assisted minimum: a lattice of minimum at most $6$ is not isometric to a lattice of minimum $8$.
 \end{proof}
 
 \begin{remark}
@@ -428,7 +428,7 @@ With the representatives of Table~\ref{tab:census}, a cost of $0.0035\,p$ hours 
 \end{enumerate}
 
 \section*{Data, methods and declarations}
-\emph{Data.} The input files, receipts, logs, verifiers and certificates of this addendum will be added to the public repository of~\cite{Gau26}, in the folders \texttt{addendum} (twin certificates, labels without GRH, filters of \S\ref{subsec:census}), \texttt{verification\_P4969}, \texttt{verification\_P4049}, \texttt{calcul\_externe\_resultats\_20261015} and \texttt{contre\_audit\_20261016}. The computations used PARI/GP 2.15.4, Python~3 in exact integer and rational arithmetic, and Java (OpenJDK 11, 17 and 21). The sweeps ran on rented Scaleway instances POP2-HC-32C-64G.
+\emph{Data.} The input files, receipts, logs, verifiers and certificates of this addendum are in the public repository of~\cite{Gau26} (versions~1.1 and~1.2), in the folders \texttt{addendum} (twin certificates, labels without GRH, filters of \S\ref{subsec:census}; norm-$6$ witnesses of Proposition~\ref{prop:temoin} and of the filters in \texttt{addendum/temoins\_norme6}, since version~1.2), \texttt{verification\_P4969}, \texttt{verification\_P4049}, \texttt{calcul\_externe\_resultats\_20261015} and \texttt{contre\_audit\_20261016}. The computations used PARI/GP 2.15.4, Python~3 in exact integer and rational arithmetic, and Java (OpenJDK 11, 17 and 21). The sweeps ran on rented Scaleway instances POP2-HC-32C-64G.
 
 \emph{Use of artificial intelligence.} As for~\cite{Gau26}, the author was helped by two assistants, Claude Opus~5.5 (Anthropic) and Astra (OpenAI), who are not authors. The text, the programs and the certificates were written, and the computations conducted, with Claude Opus~5.5. Astra designed part of the audit plan, had the records listed in \S\ref{subsec:review} attacked and reread, and found the defects reported there. On October~17, Astra also read, without executing them, the argument of Proposition~\ref{prop:dial} with its two verifiers, and the launcher, the witness verifier and the audit of the filters of \S\ref{subsec:census}. It confirmed the argument. It required the hypothesis that $\q$ be prime to the auxiliary primes, and it found gaps in the contract of the first Python verifier (no primality test, no check of $e$ against the type, no fixed list of targets, floating-point square roots), a defect in the first launcher, which recorded a hit as a rejection whatever the outcome of the exact check, and a contract of the witness verifier that was too broad, now restricted to the two forms of ideals actually used. All were corrected, and every rejection was re-verified. Astra also read the twin and same-orbit certificates and the witness of norm $6$ of $P_{691}\sigma_{24}(P_{691})$, without executing them: it found no mathematical defect in the positive chain of Theorem~\ref{thm:twins}, and asked for the four elements $\delta$ of the same-orbit certificates to be exported, which was done. The census and the other results of \S\ref{sec:layer} have not been reviewed by Astra.
 
@@ -436,7 +436,7 @@ The author takes scientific responsibility for the entire content. This addendum
 
 \begin{thebibliography}{NS}
 \bibitem[Gau26]{Gau26}
-I.~Gauvin, \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}, preprint, October 15, 2026 (arXiv identifier pending); French original: \emph{R\'eseaux id\'eaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}. Repository: \url{https://github.com/Katabolanga/rang88-reseaux-ideaux}.
+I.~Gauvin, \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}, preprint, October 15, 2026, revised November 7, 2026 (the arXiv submission of October 15, 2026 was not accepted); French original: \emph{R\'eseaux id\'eaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}. Repository: \url{https://github.com/Katabolanga/rang88-reseaux-ideaux}.
 
 \bibitem[NS]{NS}
 G.~Nebe, N.~J.~A.~Sloane, \emph{A Catalogue of Lattices}, \url{https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/}.

@@ -1,0 +1,266 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[a4paper,textwidth=15.4cm,textheight=23.5cm,centering]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{xurl}
+\usepackage{array}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+\setlist[enumerate]{leftmargin=2.2em}
+\setlist[itemize]{leftmargin=1.6em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\Pp}{\mathfrak{P}}
+\newcommand{\aaa}{\mathfrak{a}}
+\newcommand{\bb}{\mathfrak{b}}
+\newcommand{\lpr}{\mathfrak{l}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Nm}{N}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\Lz}{L_{0}}
+\newcommand{\LS}{L_{S}}
+\newcommand{\XA}{X(P_{3359})}
+\newcommand{\XB}{X(P_{461}\sigma_{91})}
+\newcommand{\XC}{X(P_{1151}\sigma_{24})}
+\newcommand{\st}[1]{\textup{\textsf{\small[#1]}}}
+\newcommand{\DEM}{\st{proved}}
+\newcommand{\ASS}{\st{computer-assisted}}
+\newcommand{\CONS}{\st{observed}}
+
+\title[Addendum 3: rank 88 over $\Q(\zeta_{115})$]{Addendum 3 to ``Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$'':\\ the lattices $X(P_{3359})$ and $X(P_{461}\sigma_{91})$,\\ the $45\,013$-component without GRH, and corrections}
+\author{Ivan Gauvin}
+\date{November 7, 2026}
+\subjclass[2020]{Primary 11H06; Secondary 11H56, 11R18, 11R29}
+\keywords{extremal lattices, even unimodular lattices, ideal lattices, cyclotomic fields, class group, Stickelberger's theorem, certified enumeration}
+
+\begin{document}
+
+\begin{abstract}
+Two further even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$, $\XA$ and $\XB$, have minimum $8$ by the computer-assisted method of~\cite{Gau26}: both sides of the criterion of~\cite[Thm.~4.6]{Gau26} were swept without any hit, twice, on two machines, with the same program and byte-identical receipts. Without assuming GRH, their classes are conjugate neither to each other nor to those of the seven known extremal lattices; under the stated hypotheses, the family therefore contains at least nine pairwise non-isometric extremal lattices of rank $88$. A Jacobi-sum certificate and Stickelberger's theorem show, without GRH, that the class of $\XB$ has a non-zero $45\,013$-component; hence $\XB$ is not isometric to Sakamoto's lattice $\Lz$, a point left under GRH in version~1.4 of the repository. The addendum also lists the corrections made to the public texts in version~1.5: the isometry theorem of~\cite{Gau26} extends an argument of Quebbemann~\cite{Que81}, and several status lines of the non-isometry are made precise.
+\end{abstract}
+
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\small This addendum uses the notation and the statuses of~\cite{Gau26}: \DEM, \ASS, \CONS. A statement \ASS{} rests on the execution model of~\cite[\S5.4]{Gau26} (M1, M2, H1--H3). Numbered references to~\cite{Gau26} and to~\cite{Gau26a} are to their English versions. It follows the addendum of October~17, 2026~\cite{Gau26a}; a second addendum was drafted on the same day but not published, and the present text does not rely on it. Nothing in this addendum has been reviewed by a human specialist.}}
+\end{center}
+
+\section{Summary}\label{sec:summary}
+
+As in~\cite{Gau26}, $L=\Q(\zeta_{115})$, $G=\Gal(L/\Q)\cong(\Z/115)^\times$, $\sigma_t\colon\zeta\mapsto\zeta^t$, and $X_I=(I,\beta_0/\nu)$ is the ideal lattice attached to an integral ideal $I$ with $I+\bar I=\OO_L$, where $\nu\gg0$ generates $I\bar I$. Its class in the set $S$ of~\cite{Gau26} is $[I]\in\Cl(L)\cong\Z/3\times\Z/331\times\Z/45\,013$~\cite[Prop.~2.2, 2.3]{Gau26}. We write
+\[
+P_{3359}=(3359,\ \zeta^2+2202\zeta+1829),\qquad I_{91}=P_5\,\sigma_{91}(P_5)=(461,\ \zeta-5)(461,\ \zeta-115),
+\]
+$\XA=X_{P_{3359}}$ and $\XB=X_{I_{91}}$. The ideal $P_{3359}$ is prime of degree~$2$ ($3359\equiv24\pmod{115}$), and $I_{91}$ is a product of two primes of degree~$1$ exchanged by the involution $\sigma_{91}$ ($5^{91}\equiv115\pmod{461}$). The seven extremal lattices known before this addendum are $\Lz$, $\LS$~\cite{Sak26}, $X_{139}$, $X_{599}$~\cite{Gau26}, $X_{4969}$, $X_{4049}$~\cite{Gau26a} and $\XC$ (version~1.4 of the repository~\cite{Gau26b}).
+
+\begin{theorem}[two further extremal lattices, under the stated hypotheses]\label{thm:neuf}
+The lattices $\XA$ and $\XB$ are even, unimodular, positive definite, of rank $88$ and of minimum $8$. Their classes are not Galois conjugate to each other, nor to the classes of the seven lattices above. The family of even unimodular ideal lattices over $L$ therefore contains at least nine pairwise non-isometric extremal lattices of rank $88$.
+
+\st{evenness, unimodularity: proved (exact checks); minimum: computer-assisted (\cite[Thm.~4.6]{Gau26}, program \texttt{Rang88CertZ}, M1, M2, H1--H3), each side swept twice on two machines with the same program and identical receipts, not reviewed by a human; non-conjugacy: proved, without GRH, modulo~\cite[Prop.~2.2, 2.5]{Gau26}, \cite[Prop.~4.7]{Gau26a} and, for $\XB$ against $\Lz$, Proposition~\ref{prop:45013}; non-isometry: deduced from non-conjugacy by the isometry theorem~\cite[Thm.~3.3]{Gau26}, which requires the minimum $8$ of at least one of the two lattices compared, a minimum that is computer-assisted for $X_{139}$, $X_{599}$, $X_{4969}$, $X_{4049}$, $\XC$, $\XA$ and $\XB$; with respect to $\Lz$ and $\LS$, it involves no computer-assisted step on our side, their minimum $8$ being that of~\cite{Sak26}}
+\end{theorem}
+
+\begin{proposition}[the $45\,013$-component of $\XB$]\label{prop:45013}
+The class $[I_{91}]$ has a non-zero $45\,013$-component. Its support is $\{45\,013\}$.
+
+\st{proved, without GRH; non-vanishing: modulo Stickelberger's theorem and the unit index $[U_L:\mu_LU_L^+]\le2$~\cite[Thm.~6.10, 4.12]{Was97}, by an exact certificate checked by a program that uses only the Python standard library; support: modulo~\cite[Prop.~2.2, 2.5]{Gau26} and~\cite[Prop.~4.7]{Gau26a}, for the $3$- and $331$-components (version~1.4)}
+\end{proposition}
+
+\begin{corollary}\label{cor:L0}
+$\XB$ is isometric neither to $\Lz$ nor to $\LS$.
+
+\st{proved, without GRH, modulo~\cite[Thm.~3.3]{Gau26} and the minimum $8$ of $\Lz$ and $\LS$~\cite{Sak26}; no computer-assisted step on our side}
+\end{corollary}
+
+\begin{proof}
+The class of $\Lz$ is principal and that of $\LS$ has support $\{3\}$~\cite[Prop.~2.7]{Gau26}; each $\sigma_t$ is an automorphism of $\Cl(L)$, so it preserves the vanishing of the $45\,013$-primary component, and a class with non-zero $45\,013$-component is conjugate to neither. If $\XB$ were isometric to $\Lz$ or $\LS$, it would have minimum $8$, and~\cite[Thm.~3.3]{Gau26} would make the classes conjugate.
+\end{proof}
+
+Version~1.4 of the repository stated the non-isometry of $\XB$ to $\Lz$ ``under GRH only'', and published $\XB$ as a \emph{candidate} whose minimum was claimed but not replicated. Both reservations are lifted here: Corollary~\ref{cor:L0}, and the replication of \S\ref{subsec:B}.
+
+\section{The two lattices}\label{sec:reseaux}
+
+\subsection{\texorpdfstring{$\XA$}{X(P3359)}}\label{subsec:A}
+\emph{Place in $S$.} The class $[P_{3359}]$ is fixed by $\sigma_{24}$, since $\sigma_{24}$ is the Frobenius substitution of $3359$; it lies in the $\sigma_{24}$-layer of~\cite[\S4]{Gau26a}, in the outer ring (support $\{331\}$), at hour~$2$. Its $3$-component vanishes because $4\cdot3359=48^2+23\cdot22^2$, and its $45\,013$-component because $\chi_{45\,013}(24)=-1$. The hour is that of~\cite[Table~3]{Gau26a}, where $P_{3359}$ is the representative of hour~$2$ of the outer ring; it is proved without GRH by~\cite[Prop.~4.7, Cor.~4.8]{Gau26a}. \DEM, without GRH
+
+\emph{Exact link.} The input files of the program describe exactly $X_{P_{3359}}$: $37$ checks out of $37$ in exact integer and rational arithmetic, without PARI/GP (the checker of version~1.4, run on the files of this version); the Gram matrix in an LLL basis is linked to the exact construction by $13$ PARI/GP checks. \DEM
+
+\emph{Sweeps.} Both sides of the criterion of~\cite[Thm.~4.6]{Gau26} ($B_A=1057/200$, $S=12$) were swept with the published classes of \texttt{Rang88CertZ}, identical byte for byte, by the same invocation as in~\cite{Gau26}:
+
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.6cm}ll}
+\toprule
+& side 1 ($109\,662$ tasks) & side 2 ($107\,548$ tasks) \\
+\midrule
+run 1: SpiraleG, Windows~11, OpenJDK 11.0.16.1, $14$ threads & Oct.~19--20, $88\,546$~s & Oct.~20--21, $101\,155$~s \\
+run 2: Bertha, Linux (WSL), OpenJDK 21.0.12.1, $16$ threads & Nov.~6, $34\,448$~s & Nov.~6--7, $39\,337$~s \\
+\midrule
+canonical fingerprint (both runs) & \texttt{9fc5bb74\dots87ad} & \texttt{a5e5f7b9\dots96b3} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Each run is a single launch: fresh checkpoint, no resume, Java exit code $0$, empty error stream, complete coverage, \emph{no hit} and no hit file. The execution check \texttt{controle\_execution.py} of the repository (checks E1--E7) passes entirely on each of the four executions, and the receipts of the two runs of each side are identical task by task ($109\,662$ and $107\,548$ receipts); the raw files differ only by the writing order of the threads. On each side $|\mathcal U|=1\,044\,123\,618$. By~\cite[Thm.~4.6]{Gau26}, $\XA$ has minimum $8$. \ASS
+
+\subsection{\texorpdfstring{$\XB$}{X(P461 sigma91)}}\label{subsec:B}
+\emph{Place in $S$.} The $3$- and $331$-components of $[I_{91}]$ vanish (version~1.4, without GRH: $(91/23)=-1$, and $\chi_{331}(91)=-1$ with $\sigma_{91}(I_{91})=I_{91}$); its $45\,013$-component does not (Proposition~\ref{prop:45013}). The exact link of the input files ($38$ checks) was published in version~1.4.
+
+\emph{Sweeps.} Run~1 is that of version~1.4 (Crapaud08, Linux, OpenJDK 21.0.12.1, $8$ threads, October 19--20); its side~1 was resumed from $2\,089$ receipts of an interrupted launch, $670$ of which were cross-checked by no other run. Run~2 was made on Bertha on November~7 (Linux (WSL), OpenJDK 21.0.12.1, $8$ threads), from the unchanged batch of version~1.4: side~1 ($73\,244$ tasks) in $12\,628$~s and side~2 ($73\,359$ tasks) in $12\,191$~s, each in a single fresh launch, with no hit. The execution check passes entirely on both sides ($28$ checks, and the comparison~E7 with the receipts of run~1). All $146\,603$ receipts of run~2, fibre part included, are identical byte for byte to those of run~1, and the canonical fingerprints (SHA-256 of the receipts sorted by task index) are equal: \texttt{db04c32e\dots a1e4} (side~1) and \texttt{652ef2f8\dots 6d13} (side~2). In particular, the $670$ inherited receipts of run~1 are now cross-checked by a fresh run. By~\cite[Thm.~4.6]{Gau26}, $\XB$ has minimum $8$. \ASS{} The status ``candidate, not replicated'' of version~1.4 is superseded; the status of $\XB$ is now that of $\XC$.
+
+\subsection{A second implementation, as a numerical cross-check}\label{subsec:enum88}
+A second program for the criterion of~\cite[Thm.~4.6]{Gau26}, \texttt{enum88.c}, was written by the assistant without reusing the code of \texttt{Rang88CertZ}: interval Fincke--Pohst enumeration, Cholesky decomposition in double precision, final decisions in exact integers. On the validation case of~\cite[\S5.2]{Gau26} ($P_{461}$, threshold $7/2$) it finds the same $697$ short projections and the same two hits. On both sides of $\XB$, in its full mode (November~7, Bertha), it finds the same number $|\mathcal U|=143\,529\,602$, the same histogram of short energies (all $32$ bins), the same number of closest-vector searches, and no hit. This is a numerical cross-check, not a certificate: its floating-point bounds have no error analysis, it uses the same input files and the same criterion, and its author is the same. It was not run on $\XA$. \CONS
+
+\section{The \texorpdfstring{$45\,013$}{45013}-component without GRH}\label{sec:45013}
+
+\subsection{Stickelberger}
+Let $\theta=\sum_{u\in(\Z/115)^\times}\{u/115\}\,\sigma_u^{-1}\in\Q[G]$ be the Stickelberger element, and
+\[
+\omega=\sigma_{-1}(2-\sigma_2)\,\theta=\sum_{t}\omega_t\,\sigma_t,\qquad \omega_t=2\{u/115\}-\{2u/115\}\in\{0,1\},\quad u=-t^{-1}\bmod 115 .
+\]
+For an ideal $\aaa$ we write $\aaa^\omega=\prod_t\sigma_t(\aaa)^{\omega_t}$.
+
+\begin{lemma}\label{lem:stick}
+$\omega\in\Z[G]$ lies in the Stickelberger ideal $\Z[G]\cap\Z[G]\theta$; hence $\aaa^\omega$ is principal for every fractional ideal $\aaa$ of $L$. \st{proved, modulo Stickelberger's theorem~\cite[Thm.~6.10]{Was97}}
+\end{lemma}
+
+\begin{proof}
+$(2-\sigma_2)\theta=\sum_w(2\{w/115\}-\{2w/115\})\sigma_w^{-1}$ has integral coefficients and lies in $\Z[G]\theta$; the ideal $\Z[G]\cap\Z[G]\theta$ is stable under multiplication by $\sigma_{-1}$. Stickelberger's theorem states that this ideal annihilates $\Cl(L)$.
+\end{proof}
+
+\subsection{A Kummer-type lemma}
+Let $p$ be an odd prime with $p\nmid 88$ and $p\nmid|\mu_L|=230$. Let $\chi\colon G\to\F_p^\times$ be an \emph{odd} character ($\chi(\sigma_{-1})=-1$), and $e_\chi=88^{-1}\sum_\sigma\chi(\sigma)^{-1}\sigma\in\F_p[G]$, so that $e_\chi\sigma=\chi(\sigma)e_\chi$. Let $V=L^\times/L^{\times p}$, an $\F_p[G]$-module written additively, and $\chi(\omega)=\sum_t\omega_t\chi(\sigma_t)\in\F_p$.
+
+\begin{lemma}\label{lem:kummer}
+Assume $\chi(\omega)=0$. Let $\aaa$ be a fractional ideal and $\alpha\in L^\times$ with $(\alpha)=\aaa^\omega$. If $e_\chi[\aaa]=0$ in $\Cl(L)/p$, then $e_\chi\alpha=0$ in $V$. \DEM
+\end{lemma}
+
+\begin{proof}
+Let $C\in\Z[G]$ reduce to $e_\chi$ modulo $p$. By assumption, $\aaa^C=\bb^p(\beta)$ for an ideal $\bb$ and some $\beta\in L^\times$. Applying $\omega$, $(\alpha^C)=(\bb^\omega)^p(\beta^\omega)$, and $\bb^\omega=(\gamma)$ by Lemma~\ref{lem:stick}; hence $\alpha^C=\varepsilon\gamma^p\beta^\omega$ with $\varepsilon\in U_L$. In $V$, $\alpha^C=e_\chi\alpha$, $\gamma^p=0$, and $e_\chi\beta^\omega=\chi(\omega)e_\chi\beta=0$. It remains to see that $e_\chi\varepsilon=0$. Since $[U_L:\mu_LU_L^+]\le2$~\cite[Thm.~4.12]{Was97}, $\varepsilon^2=\xi\eta$ with $\xi\in\mu_L$ and $\eta\in U_L^+$. As $p\nmid230$, $\xi$ is a $p$-th power, so $\xi=0$ in $V$. Complex conjugation $\sigma_{-1}$ fixes $\eta$, so $e_\chi\eta=e_\chi\sigma_{-1}\eta=\chi(\sigma_{-1})e_\chi\eta=-e_\chi\eta$, and $e_\chi\eta=0$ since $p$ is odd. Thus $2e_\chi\varepsilon=0$, hence $e_\chi\varepsilon=0$, and $e_\chi\alpha=0$.
+\end{proof}
+
+\begin{corollary}[the test]\label{cor:test}
+Under the assumptions of Lemma~\ref{lem:kummer}, let $\ell\equiv1\pmod{115p}$ be a prime and $\lpr=(\ell,\zeta-s)$ a prime of degree~$1$ of $L$ above $\ell$, prime to $\alpha$ and its conjugates. Let $w$ generate $\mu_p(\F_\ell)$ and $\psi(x)=\log_w\bigl((x\bmod\lpr)^{(\ell-1)/p}\bigr)\in\F_p$ for $x$ prime to $\lpr$. If
+\[
+S_\ell(\alpha)=\sum_t\chi(\sigma_t)^{-1}\psi(\sigma_t\alpha)\neq0\quad\text{in }\F_p,
+\]
+then $e_\chi[\aaa]\neq0$ in $\Cl(L)/p$; in particular, the $p$-primary component of $[\aaa]$ is non-zero. \DEM
+\end{corollary}
+
+\begin{proof}
+$\psi$ is a homomorphism that vanishes on $p$-th powers of elements prime to $\lpr$; if $x=yz^p$ with $x$, $y$ prime to $\lpr$, then so is $z$. Hence $\psi$ is well defined on the classes in $V$ of elements prime to $\lpr$, and $S_\ell(\alpha)=88\,\psi(e_\chi\alpha)$. If $S_\ell(\alpha)\ne0$, then $e_\chi\alpha\ne0$, and Lemma~\ref{lem:kummer} gives $e_\chi[\aaa]\ne0$. If the $p$-primary component of $[\aaa]$ were zero, $[\aaa]$ would be divisible by $p$ in $\Cl(L)$, and $e_\chi[\aaa]$ would vanish in $\Cl(L)/p$.
+\end{proof}
+
+A single auxiliary prime suffices. The test uses neither the value of $h^-(115)$ nor the theorem of Miller~\cite{Mil14}, nor any class group computation.
+
+\subsection{The certificate}\label{subsec:certificat}
+Take $p=45\,013$, $\aaa=P_5=(461,\zeta-5)$, and for $\alpha$ the Jacobi sum $J(\chi_{P_5},\chi_{P_5})$ of the $115$-th power residue symbol modulo $P_5$. The certificate \texttt{certificat\_45013\_P461s91.json} gives $\alpha$ by its $115$ coefficients, the exponent $\omega$, a character $\chi$ and three auxiliary primes. Its checker, \texttt{verifier\_certificat\_45013.py}, uses only the Python standard library and recomputes no Jacobi sum. It checks exactly:
+\begin{enumerate}[label=\textup{(C\arabic*)}]
+\item $\alpha\bar\alpha=461$ in $\Z[\zeta]$ (reduction modulo $\Phi_{115}$);
+\item $\alpha\in\sigma_t(P_5)$ exactly for the $44$ values of $t$ with $\omega_t=1$; with (C1), and since $461$ splits completely, this gives $(\alpha)=P_5^\omega$;
+\item $\omega_t=2\{u/115\}-\{2u/115\}$, $u=-t^{-1}$, for every $t$ (Lemma~\ref{lem:stick});
+\item $\chi$ is multiplicative, odd, of kernel $\{1,91\}$, and $\chi(\omega)=0$ in $\F_p$;
+\item for $\ell=20\,705\,981$, $62\,117\,941$ and $186\,353\,821$ (primes, $\equiv1\pmod{115p}$, with a verified primitive root), the symbols $S_\ell(\alpha)$ are $24\,733$, $30\,643$ and $4\,522$, all non-zero.
+\end{enumerate}
+It reports $462$ checks and no failure. Three altered certificates (an altered $\alpha$, another character, a complementary $\omega$) are rejected ($49$, $4$ and $176$ failures). With $p=45\,013$ prime, $p\nmid88\cdot230$, Corollary~\ref{cor:test} gives $[P_5]_{45\,013}\neq0$.
+
+\begin{proof}[Proof of Proposition~\ref{prop:45013}]
+By Corollary~\ref{cor:test}, $e_\chi[P_5]\ne0$ in $\Cl(L)/p$. Since $e_\chi\sigma_{91}=\chi(91)e_\chi=e_\chi$, we get $e_\chi[I_{91}]=e_\chi[P_5]+e_\chi\sigma_{91}[P_5]=2e_\chi[P_5]\ne0$; as at the end of the proof of Corollary~\ref{cor:test}, the $45\,013$-primary component of $[I_{91}]$ is non-zero. This uses neither $h^-(115)$ nor~\cite{Mil14}. The $3$- and $331$-components vanish (\S\ref{subsec:B}); hence the support is $\{45\,013\}$.
+\end{proof}
+
+\begin{remark}[further consequences, not claimed here]\label{rem:autres}
+Because $\Cl(L)_{45\,013}$ and $\Cl(L)_{331}$ are cyclic without GRH~\cite[Prop.~2.2]{Gau26}, the ratio of two symbols $S_\ell$ computed at the same $\ell$ with the same $\omega$ gives the relative label of two classes, and a vanishing symbol, against a non-zero reference at the same $\ell$, proves that a component vanishes. Programs of the assistant, not published in this version, used this to recompute without GRH the ``orbit'' columns of Tables~2 and~3 of~\cite{Gau26} (with the same supports), to show that the four generic orbits of size $88$ of Table~2 are pairwise distinct, and to show that the $45\,013$-component of the prime above $p=157\,146\,581$ of~\cite[\S4.5]{Gau26a} vanishes. These statements are \CONS{} here; they are not used.
+\end{remark}
+
+\section{Non-isometry}\label{sec:noniso}
+
+The isometry theorem~\cite[Thm.~3.3]{Gau26} applies to two ideal lattices of minimum at least $8$; an isometry preserves the minimum, so it suffices that one of the two lattices compared have minimum $8$.
+
+\begin{center}\small\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{4.9cm}>{\raggedright\arraybackslash}p{5.6cm}}
+\toprule
+pair & reason for non-conjugacy (without GRH) & non-isometry \\
+\midrule
+$\XA$ and $\Lz$, $\LS$ & support $\{331\}$ against $\emptyset$, $\{3\}$ & no computer-assisted step on our side (minimum of~\cite{Sak26}) \\
+$\XA$ and $X_{139}$, $X_{4969}$, $X_{4049}$ & support $\{331\}$ against $\{3,331\}$ & under the computer-assisted minimum of one of the two \\
+$\XA$ and $X_{599}$, $\XC$ & outer ring, hour $2$ against $8$ and $6$~\cite[Cor.~4.8]{Gau26a} & idem \\
+$\XB$ and $\Lz$, $\LS$ & support $\{45\,013\}$ against $\emptyset$, $\{3\}$ (Prop.~\ref{prop:45013}) & no computer-assisted step on our side (Cor.~\ref{cor:L0}) \\
+$\XB$ and the five others, and $\XA$ & zero $331$-component against non-zero & under the computer-assisted minimum of one of the two \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The non-conjugacy statements involving $\XA$ and the $331$-component of $\XB$ are checked by the verifier of version~1.4 (\nolinkurl{verifier_non_isometrie_tranche1.py}, $123$ checks, no failure, rerun for this version). The nine classes $[\OO_L]$, $[J\OO_L]$, $[P_{139}]$, $[P_{599}]$, $[P_{4969}]$, $[P_{4049}]$, $[P_{1151}\sigma_{24}(P_{1151})]$, $[P_{3359}]$, $[I_{91}]$ thus lie in nine distinct Galois orbits, without GRH.
+
+The heuristic of~\cite[Q2]{Gau26} predicts many extremal orbits in $S$; these examples matter less in themselves than the method (Galois criterion, Stickelberger certificates without GRH).
+
+\section{Corrections to the public texts (version 1.5)}\label{sec:corrections}
+Each correction is listed, with file, line, old and new text, in \texttt{CHANGEMENTS\_V15.md} of the repository. The earlier texts remain in the history of the repository and in the Zenodo archives of versions~1.3 and~1.4.
+\begin{enumerate}[label=\textup{(\arabic*)}]
+\item \emph{Prior work: Quebbemann.} For an automorphism of prime order $p$ in rank $n$ with $p\le n<2(p-1)$, Quebbemann~\cite[\S3]{Que81} proved by the same Sylow argument that isometry of the underlying lattices amounts to Galois conjugacy of the arithmetic data (Satz~3.2\,b), p.~165), with, when the relevant class number is odd, a bijection of the isometry classes with the product of a finite set and of the set of Galois orbits on a group of ideal classes (Kor.~3.3, p.~166) and the structure of the normalizer (Lemma~3.4, p.~166); on p.~168 he bounds a minimum from below by a Parseval identity on the coordinates of $\Z[\zeta_p]$ (Leech lattice). The note~\cite{Gau26} did not cite this work and presented the isometry theorem and the Parseval lemma among its own contributions. What remains specific to the note is the extension to the composite conductor $m=115$, where the condition on the rank is replaced by a condition on the minimum (Blichfeldt bounds), the finite criterion with its threshold $1057/200$, and the certification. The note, French and English, now says so (\S1.4, Remark~3.4, after Lemma~4.3, bibliography).
+\item \emph{Bayer-Fluckiger.} \cite[Cor.~3.3]{Bay84} is an \emph{upper bound}: when $h^-$ is odd, the number of isometry classes of definite unimodular lattices with an automorphism of characteristic polynomial $\Phi_m$ is at most the number of orbits of the Galois group on a group of ideal classes; the exact number is asked for on p.~526, with a reference to Quebbemann for automorphisms of prime order. The note now cites it in this form.
+\item \emph{Status of the non-isometry.} Where the note and the addendum~\cite{Gau26a} wrote ``non-isometry: proved, without GRH'', they now say that non-conjugacy is proved without GRH and that non-isometry follows from it under the computer-assisted minimum $8$ of one of the two lattices compared, except with respect to $\Lz$ and $\LS$.
+\item \emph{Version 1.4.} The statements ``$\XB$: candidate, not replicated'' and ``non-isometric to $\Lz$ under GRH only'' are superseded by \S\ref{subsec:B} and Corollary~\ref{cor:L0}; the folder of version~1.4 is kept unchanged, with a notice.
+\item \emph{Minor.} The bibliography of~\cite{Gau26a} gave the note as ``arXiv identifier pending''; the arXiv submission of October~15 was not accepted, and the note is cited from the repository. The data of~\cite{Gau26a} were announced as ``will be added''; they are in versions~1.1 and~1.2. The release v1.3 of October~22 was not archived on Zenodo; the first archive is that of release v1.3.1, of October~25 (DOI 10.5281/zenodo.23638085).
+\end{enumerate}
+
+\section{What is not verified, and what is not claimed}\label{sec:limites}
+\begin{itemize}
+\item The minimum $8$ of the seven lattices that are ours rests on a single program, \texttt{Rang88CertZ}, by the same author, run on two machines for each; no independent implementation has produced a certificate (\S\ref{subsec:enum88} is a numerical cross-check). The non-omission proof~\cite[Thm.~5.1]{Gau26} was reviewed within a limited scope; H2 and H3 are supported by the replications, not proved.
+\item Lemmas~\ref{lem:stick}--\ref{lem:kummer} and Corollary~\ref{cor:test} were written by the assistant and reread by a second instance of the same assistant (same model), not by a human. The isometry theorem~\cite[Thm.~3.3]{Gau26} has not been reviewed by a specialist. Stickelberger's theorem, the unit index and the results of~\cite{Sak26} are cited, not reproved; the theorem numbers of~\cite{Was97} were not rechecked on the book.
+\item No orbit label or hour on the $\sigma_{91}$-ring is claimed; no explicit vector of norm $8$, automorphism group or catalogue entry is given for $\XA$ or $\XB$; nothing is claimed on the total number of extremal lattices of rank $88$.
+\item Priority: a search on November~7, 2026 (catalogue of Nebe and Sloane, arXiv, Zenodo, GitHub) found no extremal lattice of rank $88$ published by a third party since October~15, 2026; this is a dated search, not a proof of priority. The Jacobi-sum method is classical (Kummer, Stickelberger); only its use here is ours.
+\end{itemize}
+
+\section*{Data, use of artificial intelligence}
+\emph{Data.} Everything is in the folder \texttt{v15\_P3359\_et\_P461s91} of the repository~\cite{Gau26b}: the input files of $\XA$, the receipts, catalogues, logs and verdicts of the three new runs (six sides), the certificate and its checker, the logs of the cross-check of \S\ref{subsec:enum88}, and the logs of the checks rerun for this version. Its \texttt{README\_v15.md} gives the commands.
+
+\emph{Use of artificial intelligence.} As for~\cite{Gau26}, the author was helped by Claude Opus~5.5 (Anthropic), which is not an author. The text, the certificate, the programs and the checks were written, and the computations conducted, with Claude Opus~5.5; a second instance of the same assistant reread the proof of Lemma~\ref{lem:kummer} and checked the certificate with a distinct program, at a fourth auxiliary prime. Astra (OpenAI), the second assistant of~\cite{Gau26}, did not review this addendum.
+
+The author takes scientific responsibility for the entire content. This addendum has not been reviewed by a human specialist.
+
+\begin{thebibliography}{Gau26b}
+\bibitem[Bay84]{Bay84}
+E.~Bayer-Fluckiger, \emph{Definite unimodular lattices having an automorphism of given characteristic polynomial}, Comment. Math. Helv. \textbf{59} (1984), 509--538.
+
+\bibitem[Gau26]{Gau26}
+I.~Gauvin, \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}, preprint, October 15, 2026, revised November 7, 2026; French original: \emph{R\'eseaux id\'eaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}. In the repository~\cite{Gau26b}, folder \texttt{article}.
+
+\bibitem[Gau26a]{Gau26a}
+I.~Gauvin, \emph{Addendum to ``Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$''}, October 17, 2026, revised November 7, 2026. In the repository~\cite{Gau26b}, folder \texttt{addendum}.
+
+\bibitem[Gau26b]{Gau26b}
+I.~Gauvin, \emph{rang88-reseaux-ideaux}: data, programs and verifications, \url{https://github.com/Katabolanga/rang88-reseaux-ideaux}; Zenodo, concept DOI 10.5281/zenodo.23638084 (version~1.4: DOI 10.5281/zenodo.23835418).
+
+\bibitem[Mil14]{Mil14}
+J.~C.~Miller, \emph{Class numbers of real cyclotomic fields of composite conductor}, LMS J. Comput. Math. \textbf{17} (2014), suppl.~A, 404--417.
+
+\bibitem[Que81]{Que81}
+H.-G.~Quebbemann, \emph{Zur Klassifikation unimodularer Gitter mit Isometrie von Primzahlordnung}, J. reine angew. Math. \textbf{326} (1981), 158--170.
+
+\bibitem[Sak26]{Sak26}
+R.~Sakamoto, \emph{Two extremal even unimodular lattices of rank $88$}, preprint arXiv 2609.15633, version~2 of September 27, 2026.
+
+\bibitem[Was97]{Was97}
+L.~C.~Washington, \emph{Introduction to cyclotomic fields}, 2nd ed., Graduate Texts in Math. \textbf{83}, Springer, 1997.
+\end{thebibliography}
+
+\end{document}

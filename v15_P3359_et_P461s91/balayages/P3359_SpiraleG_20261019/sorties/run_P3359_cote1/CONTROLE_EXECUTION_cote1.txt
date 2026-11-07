@@ -1,0 +1,33 @@
+OK    E1 un seul journal de lancement (1 trouve(s))
+OK    E1 CHECKPOINT nouveau
+OK    E1 SELECTION 109662/109662 ; A_FAIRE 109662 ; DEJA_AU_CHECKPOINT 0
+OK    E1 EXECUTEES_CE_LANCEMENT 109662 ; REPRISES_DU_CHECKPOINT 0
+OK    E1 TACHES_TERMINEES 109662/109662
+OK    E1 TOTAL_TOUCHES 0
+OK    E1 COUVERTURE_COMPLETE 109662/109662
+OK    E1 ligne FIN
+OK    E1 aucune ligne ERREUR / TOUCHE / ARRET / REPRISE / Exception
+OK    E1 code de sortie 0
+OK    E1 stderr vide
+OK    E2 SHA du catalogue = valeur attendue 32900e66...
+OK    E2 CATALOGUE_SHA256 du journal = SHA du fichier ; TOTAL_TACHES 109662
+OK    E2 en-tete des recus : catalogue et total
+OK    E3 fichier de recus termine par LF
+OK    E3 109662 lignes de recu au format strict (109662 lues)
+OK    E3 indices = permutation de 0..109661
+OK    E3 TOUCHES = 0 dans chaque recu
+OK    E4 somme des U = COMPTE_U du journal (1044123618)
+OK    E4 somme des CVP = CVP du journal (1044123618)
+OK    E4 somme des NA + 132714 noeuds de generation = NOEUDS court (694344944980)
+OK    E4 chaque recu : CVP = U, somme de HIST = U, NA >= 1
+OK    E4 somme des NB = NOEUDS fibre (10157859951531)
+OK    E4 somme des HIST des recus = histogramme du journal (32 cases) ; total HIST = somme des U
+OK    E5 SHA du fichier de recus = CHECKPOINT_SHA256 du journal
+OK    E5 aucun fichier .touches dans le repertoire
+OK    E6 empreinte canonique (deux calculs) 9fc5bb7437cf86d8ed076c0358caab0eb889170942391e434bacf0c2346387ad
+OK    E7 reference balayage_interrompu_20261012_cote1.ckpt : 16285 recus communs, 0 differents
+OK    E7 reference filtre_20261012_cote1.ckpt : 3981 recus communs, 0 differents
+OK    E7 reference filtre_1017_p2_cote1.ckpt : 1576 recus communs, 0 differents
+OK    E7 reference filtre_1017_complement_P3359_cote1.ckpt : 313 recus communs, 0 differents
+BILAN : 31 controles, 0 echecs ; |U| = 1044123618 ; empreinte canonique 9fc5bb7437cf86d8ed076c0358caab0eb889170942391e434bacf0c2346387ad
+CONTROLE_OK

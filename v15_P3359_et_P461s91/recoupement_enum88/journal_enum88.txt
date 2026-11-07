@@ -1,0 +1,11 @@
+2026-11-07 11:06:23 attente de la fin du lanceur Java 398281
+2026-11-07 17:05:07 lanceur Java termine ; verdict : COMPLET_SANS_TOUCHE P461s91 : deux cotes complets, 0 touche, un seul lancement chacun, controles 100 % (aucune affirmation d'extremalite avant raccord, non-isometrie et contre-audit)
+MemAvailable:   47799268 kB
+2026-11-07 17:05:07 enum88 cote 1 lance (enveloppe 2312889)
+2026-11-07 17:05:07 enum88 cote 2 lance (enveloppe 2312891)
+2312889   0  0.0       00:20 bash -c timeout 12h nice -n 6 ./enum88_n5_statique /home/ivan/m10/R88_P461S91_CERT_V2_20261019/java_P461s91/cote1 1057 200 12 4 1 > m1_P461s91_cote1.log 2>&1; echo "code $?" >> m1_P461s91_cote1.log
+2312891   0  0.0       00:20 bash -c timeout 12h nice -n 6 ./enum88_n5_statique /home/ivan/m10/R88_P461S91_CERT_V2_20261019/java_P461s91/cote2 1057 200 12 4 1 > m1_P461s91_cote2.log 2>&1; echo "code $?" >> m1_P461s91_cote2.log
+2312893   0  0.0       00:20 timeout 12h nice -n 6 ./enum88_n5_statique /home/ivan/m10/R88_P461S91_CERT_V2_20261019/java_P461s91/cote1 1057 200 12 4 1
+2312895   6  400       00:20 ./enum88_n5_statique /home/ivan/m10/R88_P461S91_CERT_V2_20261019/java_P461s91/cote1 1057 200 12 4 1
+2312896   0  0.0       00:20 timeout 12h nice -n 6 ./enum88_n5_statique /home/ivan/m10/R88_P461S91_CERT_V2_20261019/java_P461s91/cote2 1057 200 12 4 1
+2312897   6  400       00:20 ./enum88_n5_statique /home/ivan/m10/R88_P461S91_CERT_V2_20261019/java_P461s91/cote2 1057 200 12 4 1

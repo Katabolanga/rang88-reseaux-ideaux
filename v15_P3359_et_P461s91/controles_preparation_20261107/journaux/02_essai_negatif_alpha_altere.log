@@ -1,0 +1,57 @@
+2026-11-07 21:46:29    
+certificat altere : essais_negatifs/alpha_altere.json (doit etre REJETE)
+ECHEC : (C1) alpha * conj(alpha) = q
+ECHEC : (C2) appartenance a sigma_1(P)
+ECHEC : (C2) appartenance a sigma_4(P)
+ECHEC : (C2) appartenance a sigma_7(P)
+ECHEC : (C2) appartenance a sigma_11(P)
+ECHEC : (C2) appartenance a sigma_12(P)
+ECHEC : (C2) appartenance a sigma_16(P)
+ECHEC : (C2) appartenance a sigma_18(P)
+ECHEC : (C2) appartenance a sigma_21(P)
+ECHEC : (C2) appartenance a sigma_24(P)
+ECHEC : (C2) appartenance a sigma_26(P)
+ECHEC : (C2) appartenance a sigma_28(P)
+ECHEC : (C2) appartenance a sigma_29(P)
+ECHEC : (C2) appartenance a sigma_31(P)
+ECHEC : (C2) appartenance a sigma_32(P)
+ECHEC : (C2) appartenance a sigma_33(P)
+ECHEC : (C2) appartenance a sigma_34(P)
+ECHEC : (C2) appartenance a sigma_36(P)
+ECHEC : (C2) appartenance a sigma_37(P)
+ECHEC : (C2) appartenance a sigma_42(P)
+ECHEC : (C2) appartenance a sigma_44(P)
+ECHEC : (C2) appartenance a sigma_48(P)
+ECHEC : (C2) appartenance a sigma_49(P)
+ECHEC : (C2) appartenance a sigma_54(P)
+ECHEC : (C2) appartenance a sigma_58(P)
+ECHEC : (C2) appartenance a sigma_59(P)
+ECHEC : (C2) appartenance a sigma_62(P)
+ECHEC : (C2) appartenance a sigma_63(P)
+ECHEC : (C2) appartenance a sigma_64(P)
+ECHEC : (C2) appartenance a sigma_68(P)
+ECHEC : (C2) appartenance a sigma_72(P)
+ECHEC : (C2) appartenance a sigma_73(P)
+ECHEC : (C2) appartenance a sigma_74(P)
+ECHEC : (C2) appartenance a sigma_76(P)
+ECHEC : (C2) appartenance a sigma_77(P)
+ECHEC : (C2) appartenance a sigma_88(P)
+ECHEC : (C2) appartenance a sigma_93(P)
+ECHEC : (C2) appartenance a sigma_96(P)
+ECHEC : (C2) appartenance a sigma_98(P)
+ECHEC : (C2) appartenance a sigma_101(P)
+ECHEC : (C2) appartenance a sigma_102(P)
+ECHEC : (C2) appartenance a sigma_106(P)
+ECHEC : (C2) appartenance a sigma_107(P)
+ECHEC : (C2) appartenance a sigma_109(P)
+ECHEC : (C2) appartenance a sigma_112(P)
+ECHEC : (C2) appartenance a sigma_113(P)
+l = 20705981 : S = 41788
+ECHEC : symbole egal a la valeur annoncee
+l = 62117941 : S = 42604
+ECHEC : symbole egal a la valeur annoncee
+l = 186353821 : S = 34403
+ECHEC : symbole egal a la valeur annoncee
+BILAN verifier_certificat_45013 : 413 controles, 49 echecs
+CONCLUSION : certificat REJETE
+code 1
