@@ -18,6 +18,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23835418"
     description: "DOI Zenodo de la version 1.4 (release v1.4, 31 octobre 2026) / Zenodo DOI of version 1.4 (release v1.4)"
+  - type: doi
+    value: "10.5281/zenodo.24044458"
+    description: "DOI Zenodo de la version 1.5 (release v1.5, 7 novembre 2026) / Zenodo DOI of version 1.5 (release v1.5)"
 abstract: >-
   Données et vérificateurs qui accompagnent la note « Réseaux idéaux pairs unimodulaires de rang 88 sur Q(ζ₁₁₅) » :
   h⁻(115) et orbites galoisiennes, certificat d'isométrie H ≅ L₀, témoins de norme 6, programme certifiant Rang88CertZ
