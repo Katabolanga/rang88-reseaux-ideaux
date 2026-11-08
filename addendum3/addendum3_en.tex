@@ -49,7 +49,7 @@
 
 \title[Addendum 3: rank 88 over $\Q(\zeta_{115})$]{Addendum 3 to ``Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$'':\\ the lattices $X(P_{3359})$ and $X(P_{461}\sigma_{91})$,\\ the $45\,013$-component without GRH, and corrections}
 \author{Ivan Gauvin}
-\date{November 7, 2026}
+\date{November 7, 2026; clarification of November 8, 2026 (\S\ref{sec:corrections})}
 \subjclass[2020]{Primary 11H06; Secondary 11H56, 11R18, 11R29}
 \keywords{extremal lattices, even unimodular lattices, ideal lattices, cyclotomic fields, class group, Stickelberger's theorem, certified enumeration}
 
@@ -212,10 +212,10 @@ The non-conjugacy statements involving $\XA$ and the $331$-component of $\XB$ ar
 
 The heuristic of~\cite[Q2]{Gau26} predicts many extremal orbits in $S$; these examples matter less in themselves than the method (Galois criterion, Stickelberger certificates without GRH).
 
-\section{Corrections to the public texts (version 1.5)}\label{sec:corrections}
-Each correction is listed, with file, line, old and new text, in \texttt{CHANGEMENTS\_V15.md} of the repository. The earlier texts remain in the history of the repository and in the Zenodo archives of versions~1.3 and~1.4.
+\section{Corrections to the public texts (versions 1.5 and 1.5.1)}\label{sec:corrections}
+Each correction is listed, with file, line, old and new text, in \texttt{CHANGEMENTS\_V15.md} of the repository, and, for the clarification of November 8, 2026, in \texttt{CHANGEMENTS\_V151.md}. The earlier texts remain in the history of the repository and in the Zenodo archives of versions~1.3 and~1.4.
 \begin{enumerate}[label=\textup{(\arabic*)}]
-\item \emph{Prior work: Quebbemann.} For an automorphism of prime order $p$ in rank $n$ with $p\le n<2(p-1)$, Quebbemann~\cite[\S3]{Que81} proved by the same Sylow argument that isometry of the underlying lattices amounts to Galois conjugacy of the arithmetic data (Satz~3.2\,b), p.~165), with, when the relevant class number is odd, a bijection of the isometry classes with the product of a finite set and of the set of Galois orbits on a group of ideal classes (Kor.~3.3, p.~166) and the structure of the normalizer (Lemma~3.4, p.~166); on p.~168 he bounds a minimum from below by a Parseval identity on the coordinates of $\Z[\zeta_p]$ (Leech lattice). The note~\cite{Gau26} did not cite this work and presented the isometry theorem and the Parseval lemma among its own contributions. What remains specific to the note is the extension to the composite conductor $m=115$, where the condition on the rank is replaced by a condition on the minimum (Blichfeldt bounds), the finite criterion with its threshold $1057/200$, and the certification. The note, French and English, now says so (\S1.4, Remark~3.4, after Lemma~4.3, bibliography).
+\item \emph{Prior work: Quebbemann.} For an automorphism of prime order $p$ in rank $n$ with $p\le n<2(p-1)$, Quebbemann~\cite[\S3]{Que81} proved by the same Sylow argument that isometry of the underlying lattices amounts to Galois conjugacy of the arithmetic data (Satz~3.2\,b), p.~165), with, when the relevant class number is odd, a bijection of the isometry classes with the product of a finite set and of the set of Galois orbits on a group of ideal classes (Kor.~3.3, p.~166) and the structure of the normalizer (Lemma~3.4, p.~166); on p.~168 he bounds a minimum from below by a Parseval identity on the coordinates of $\Z[\zeta_p]$ (Leech lattice). The note~\cite{Gau26} did not cite this work and presented the isometry theorem and the Parseval lemma among its own contributions. What remains specific to the note is the direction ``isometric, hence conjugate'' of this equivalence for the composite conductor $m=115$, where the condition on the rank is replaced by a condition on the minimum (Blichfeldt bounds), the finite criterion with its threshold $1057/200$, and the certification. The note, French and English, now says so (\S1.4, Remark~3.4, after Lemma~4.3, bibliography). \emph{Clarification of November 8, 2026.} In dimensions $48$ and $72$, Nebe had already classified by exhaustive enumeration the extremal even unimodular ideal lattices over cyclotomic fields, composite conductors included: in dimension $48$, only $m=65$ and $m=104$ give such lattices~\cite[Thm.~5.3]{Neb13}; in dimension $72$, only $m=91$ (automorphism of order $91$ or $182$)~\cite[Thm.~4.5]{Neb16}. There, the extremal lattices form a single isometry class ($P_{48n}$, then $\Gamma_{72}$): the question of separating several classes by Galois orbits does not arise, and we found neither a statement nor a general argument for the converse direction. The note says so in \S1.4.
 \item \emph{Bayer-Fluckiger.} \cite[Cor.~3.3]{Bay84} is an \emph{upper bound}: when $h^-$ is odd, the number of isometry classes of definite unimodular lattices with an automorphism of characteristic polynomial $\Phi_m$ is at most the number of orbits of the Galois group on a group of ideal classes; the exact number is asked for on p.~526, with a reference to Quebbemann for automorphisms of prime order. The note now cites it in this form.
 \item \emph{Status of the non-isometry.} Where the note and the addendum~\cite{Gau26a} wrote ``non-isometry: proved, without GRH'', they now say that non-conjugacy is proved without GRH and that non-isometry follows from it under the computer-assisted minimum $8$ of one of the two lattices compared, except with respect to $\Lz$ and $\LS$.
 \item \emph{Version 1.4.} The statements ``$\XB$: candidate, not replicated'' and ``non-isometric to $\Lz$ under GRH only'' are superseded by \S\ref{subsec:B} and Corollary~\ref{cor:L0}; the folder of version~1.4 is kept unchanged, with a notice.
@@ -242,7 +242,7 @@ The author takes scientific responsibility for the entire content. This addendum
 E.~Bayer-Fluckiger, \emph{Definite unimodular lattices having an automorphism of given characteristic polynomial}, Comment. Math. Helv. \textbf{59} (1984), 509--538.
 
 \bibitem[Gau26]{Gau26}
-I.~Gauvin, \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}, preprint, October 15, 2026, revised November 7, 2026; French original: \emph{R\'eseaux id\'eaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}. In the repository~\cite{Gau26b}, folder \texttt{article}.
+I.~Gauvin, \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}, preprint, October 15, 2026, revised November 7 and 8, 2026; French original: \emph{R\'eseaux id\'eaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}. In the repository~\cite{Gau26b}, folder \texttt{article}.
 
 \bibitem[Gau26a]{Gau26a}
 I.~Gauvin, \emph{Addendum to ``Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$''}, October 17, 2026, revised November 7, 2026. In the repository~\cite{Gau26b}, folder \texttt{addendum}.
@@ -252,6 +252,12 @@ I.~Gauvin, \emph{rang88-reseaux-ideaux}: data, programs and verifications, \url{
 
 \bibitem[Mil14]{Mil14}
 J.~C.~Miller, \emph{Class numbers of real cyclotomic fields of composite conductor}, LMS J. Comput. Math. \textbf{17} (2014), suppl.~A, 404--417.
+
+\bibitem[Neb13]{Neb13}
+G.~Nebe, \emph{On automorphisms of extremal even unimodular lattices}, Int. J. Number Theory \textbf{9} (2013), no.~8, 1933--1959; preprint arXiv 1212.0865v1 (numbering followed here).
+
+\bibitem[Neb16]{Neb16}
+G.~Nebe, \emph{Automorphisms of extremal unimodular lattices in dimension $72$}, J. Number Theory \textbf{161} (2016), 362--383; preprint arXiv 1409.8473v1 (numbering followed here).
 
 \bibitem[Que81]{Que81}
 H.-G.~Quebbemann, \emph{Zur Klassifikation unimodularer Gitter mit Isometrie von Primzahlordnung}, J. reine angew. Math. \textbf{326} (1981), 158--170.

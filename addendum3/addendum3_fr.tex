@@ -46,7 +46,7 @@
 
 \title[Addendum 3 : rang 88 sur $\Q(\zeta_{115})$]{Addendum 3 à \guillemotleft~Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$~\guillemotright{} :\\ les réseaux $X(P_{3359})$ et $X(P_{461}\sigma_{91})$,\\ la composante $45\,013$ sans GRH, et des corrections}
 \author{Ivan Gauvin}
-\date{7 novembre 2026}
+\date{7 novembre 2026 ; précision du 8 novembre 2026 (\S\ref{sec:corrections})}
 \subjclass[2020]{11H06 ; 11H56, 11R18, 11R29}
 \keywords{réseaux extrémaux, réseaux unimodulaires pairs, réseaux idéaux, corps cyclotomiques, groupe des classes, théorème de Stickelberger, énumération certifiée}
 
@@ -209,10 +209,10 @@ Les énoncés de non-conjugaison qui portent sur $\XA$, et la composante $331$ d
 
 L'heuristique de~\cite[Q2]{Gau26} prévoit de nombreuses orbites extrémales dans $S$ ; ces exemples comptent moins en eux-mêmes que la méthode (critère galoisien, certificats de Stickelberger sans GRH).
 
-\section{Corrections aux textes publics (version 1.5)}\label{sec:corrections}
-Chaque correction est relevée, avec le fichier, la ligne, l'ancien et le nouveau texte, dans le fichier \texttt{CHANGEMENTS\_V15.md} du dépôt. Les textes antérieurs restent dans l'historique du dépôt et dans les archives Zenodo des versions~1.3 et~1.4.
+\section{Corrections aux textes publics (versions 1.5 et 1.5.1)}\label{sec:corrections}
+Chaque correction est relevée, avec le fichier, la ligne, l'ancien et le nouveau texte, dans le fichier \texttt{CHANGEMENTS\_V15.md} du dépôt, et, pour la précision du 8 novembre 2026, dans \texttt{CHANGEMENTS\_V151.md}. Les textes antérieurs restent dans l'historique du dépôt et dans les archives Zenodo des versions~1.3 et~1.4.
 \begin{enumerate}[label=\textup{(\arabic*)}]
-\item \emph{Antériorité : Quebbemann.} Pour un automorphisme d'ordre premier $p$ en rang $n$ avec $p\le n<2(p-1)$, Quebbemann~\cite[\S3]{Que81} a démontré, par le même argument de Sylow, que l'isométrie des réseaux sous-jacents équivaut à la conjugaison galoisienne des données arithmétiques (Satz~3.2\,b), p.~165), avec, lorsque le nombre de classes concerné est impair, une bijection des classes d'isométrie avec le produit d'un ensemble fini et de l'ensemble des orbites galoisiennes sur un groupe de classes d'idéaux (Kor.~3.3, p.~166), et la structure du normalisateur (Lemma~3.4, p.~166) ; p.~168, il minore un minimum par une identité de Parseval sur les coordonnées de $\Z[\zeta_p]$ (réseau de Leech). La note~\cite{Gau26} ne citait pas ce travail et rangeait le théorème d'isométrie et le lemme de Parseval parmi ses apports propres. Ce qui reste propre à la note : l'extension au conducteur composé $m=115$, où la condition de rang est remplacée par une condition de minimum (bornes de Blichfeldt), le critère fini et son seuil $1057/200$, et la certification. La note, en français et en anglais, le dit désormais (\S1.4, remarque~3.4, après le lemme~4.3, bibliographie).
+\item \emph{Antériorité : Quebbemann.} Pour un automorphisme d'ordre premier $p$ en rang $n$ avec $p\le n<2(p-1)$, Quebbemann~\cite[\S3]{Que81} a démontré, par le même argument de Sylow, que l'isométrie des réseaux sous-jacents équivaut à la conjugaison galoisienne des données arithmétiques (Satz~3.2\,b), p.~165), avec, lorsque le nombre de classes concerné est impair, une bijection des classes d'isométrie avec le produit d'un ensemble fini et de l'ensemble des orbites galoisiennes sur un groupe de classes d'idéaux (Kor.~3.3, p.~166), et la structure du normalisateur (Lemma~3.4, p.~166) ; p.~168, il minore un minimum par une identité de Parseval sur les coordonnées de $\Z[\zeta_p]$ (réseau de Leech). La note~\cite{Gau26} ne citait pas ce travail et rangeait le théorème d'isométrie et le lemme de Parseval parmi ses apports propres. Ce qui reste propre à la note : le sens « isométriques, donc conjugués » de cette équivalence pour le conducteur composé $m=115$, où la condition de rang est remplacée par une condition de minimum (bornes de Blichfeldt), le critère fini et son seuil $1057/200$, et la certification. La note, en français et en anglais, le dit désormais (\S1.4, remarque~3.4, après le lemme~4.3, bibliographie). \emph{Précision du 8 novembre 2026.} En dimensions $48$ et $72$, Nebe avait déjà classé par énumération exhaustive les réseaux idéaux unimodulaires pairs extrémaux sur les corps cyclotomiques, y compris de conducteur composé : en dimension $48$, seuls $m=65$ et $m=104$ en donnent~\cite[th.~5.3]{Neb13} ; en dimension $72$, seul $m=91$ (automorphisme d'ordre $91$ ou $182$)~\cite[th.~4.5]{Neb16}. Les réseaux extrémaux y forment une seule classe d'isométrie ($P_{48n}$, puis $\Gamma_{72}$) : la question de séparer plusieurs classes par les orbites galoisiennes ne s'y pose pas, et nous n'y avons trouvé ni énoncé ni argument général du sens réciproque. La note le dit au \S1.4.
 \item \emph{Bayer-Fluckiger.} \cite[cor.~3.3]{Bay84} est une \emph{majoration} : lorsque $h^-$ est impair, le nombre de classes d'isométrie de réseaux unimodulaires définis munis d'un automorphisme de polynôme caractéristique $\Phi_m$ est au plus le nombre d'orbites du groupe de Galois sur un groupe de classes d'idéaux ; le nombre exact est demandé p.~526, avec un renvoi à Quebbemann pour les automorphismes d'ordre premier. La note le cite désormais sous cette forme.
 \item \emph{Statut de la non-isométrie.} Là où la note et l'addendum~\cite{Gau26a} écrivaient \guillemotleft~non-isométrie : démontrée, sans GRH~\guillemotright, ils disent désormais que la non-conjugaison est démontrée sans GRH et que la non-isométrie s'en déduit sous le minimum $8$ assisté par calcul de l'un des deux réseaux comparés, sauf vis-à-vis de $\Lz$ et $\LS$.
 \item \emph{Version 1.4.} Les énoncés \guillemotleft~$\XB$ : candidat, non répliqué~\guillemotright{} et \guillemotleft~non isométrique à $\Lz$ sous GRH seulement~\guillemotright{} sont remplacés par le \S\ref{subsec:B} et le corollaire~\ref{cor:L0} ; le dossier de la version~1.4 est conservé tel quel, avec un avertissement.
@@ -239,7 +239,7 @@ L'auteur assume la responsabilité scientifique de l'ensemble du contenu. Cet ad
 E.~Bayer-Fluckiger, \emph{Definite unimodular lattices having an automorphism of given characteristic polynomial}, Comment. Math. Helv. \textbf{59} (1984), 509--538.
 
 \bibitem[Gau26]{Gau26}
-I.~Gauvin, \emph{Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}, prépublication, 15 octobre 2026, révisée le 7 novembre 2026 ; traduction anglaise : \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}. Dans le dépôt~\cite{Gau26b}, dossier \texttt{article}.
+I.~Gauvin, \emph{Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$}, prépublication, 15 octobre 2026, révisée les 7 et 8 novembre 2026 ; traduction anglaise : \emph{Even unimodular ideal lattices of rank $88$ over $\Q(\zeta_{115})$}. Dans le dépôt~\cite{Gau26b}, dossier \texttt{article}.
 
 \bibitem[Gau26a]{Gau26a}
 I.~Gauvin, \emph{Addendum à \guillemotleft~Réseaux idéaux pairs unimodulaires de rang $88$ sur $\Q(\zeta_{115})$~\guillemotright}, 17 octobre 2026, révisé le 7 novembre 2026. Dans le dépôt~\cite{Gau26b}, dossier \texttt{addendum}.
@@ -249,6 +249,12 @@ I.~Gauvin, \emph{rang88-reseaux-ideaux} : données, programmes et vérifications
 
 \bibitem[Mil14]{Mil14}
 J.~C.~Miller, \emph{Class numbers of real cyclotomic fields of composite conductor}, LMS J. Comput. Math. \textbf{17} (2014), suppl.~A, 404--417.
+
+\bibitem[Neb13]{Neb13}
+G.~Nebe, \emph{On automorphisms of extremal even unimodular lattices}, Int. J. Number Theory \textbf{9} (2013), no.~8, 1933--1959 ; prépublication arXiv 1212.0865v1 (numérotation suivie ici).
+
+\bibitem[Neb16]{Neb16}
+G.~Nebe, \emph{Automorphisms of extremal unimodular lattices in dimension $72$}, J. Number Theory \textbf{161} (2016), 362--383 ; prépublication arXiv 1409.8473v1 (numérotation suivie ici).
 
 \bibitem[Que81]{Que81}
 H.-G.~Quebbemann, \emph{Zur Klassifikation unimodularer Gitter mit Isometrie von Primzahlordnung}, J. reine angew. Math. \textbf{326} (1981), 158--170.
