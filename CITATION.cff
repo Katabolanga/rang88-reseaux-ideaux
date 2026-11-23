@@ -5,8 +5,8 @@ type: dataset
 authors:
   - family-names: Gauvin
     given-names: Ivan
-version: "1.5"
-date-released: "2026-11-07"
+version: "1.5.1"
+date-released: "2026-11-23"
 doi: "10.5281/zenodo.23638084"
 identifiers:
   - type: doi
@@ -33,13 +33,19 @@ abstract: >-
   (non-isométrie sans GRH, normalisateurs d'ordres 460 et 920), métadonnées d'archivage Zenodo ; aucun nouveau calcul ;
   version 1.4 : horodatage de X(P₁₁₅₁σ₂₄) (minimum 8 assisté par calcul, balayé deux fois sur deux machines, reçus
   identiques ; non isométrique sans GRH aux six extrémaux connus) et du CANDIDAT X(P₄₆₁σ₉₁) (balayage exhaustif sans touche,
-  non répliqué ; minimum annoncé par les auteurs ; non-isométrie à L₀ seulement sous GRH) : constructions, entrées,
+  non répliqué ; minimum annoncé par l'auteur ; non-isométrie à L₀ seulement sous GRH) : constructions, entrées,
   reçus, journaux et vérificateurs ; la note et l'addendum sont inchangés ;
   version 1.5 (7 novembre 2026) : addendum 3 ; X(P₃₃₅₉) et X(P₄₆₁σ₉₁) de minimum 8 assisté par calcul (chaque côté
   balayé deux fois sur deux machines, même programme, reçus identiques ; non audité par un humain) ; certificat sans GRH
-  de la composante 45 013 de la classe de X(P₄₆₁σ₉₁), d'où sa non-isométrie à L₀ sans GRH ; recoupement numérique par
+  de la composante 45 013 de la classe de X(P₄₆₁σ₉₁), d'où sa non-isométrie à L₀ sans GRH ; recoupement numérique sur X(P₄₆₁σ₉₁) par
   une seconde implantation ; note et addendum corrigés (citation de Quebbemann 1981 et de Bayer-Fluckiger 1984, statut
-  de la non-isométrie), corrections relevées dans CHANGEMENTS_V15.md.
+  de la non-isométrie), corrections relevées dans CHANGEMENTS_V15.md ;
+  version 1.5.1 (8, 14 et 23 novembre 2026) : correctifs d'antériorité, sans calcul supplémentaire : description des
+  classifications de Nebe 2013 et 2016 en dimensions 48 et 72, conducteurs composés compris, la note ne revendiquant plus
+  que le sens « isométriques, donc conjugués » du théorème d'isométrie ; bijection de S avec le groupe des classes
+  rapportée à Bayer-Fluckiger 1984, la note en gardant la preuve directe pour m = 115 ; h⁻(115) tabulé (OEIS A061653) ;
+  sens « conjugués, donc isométriques » rapporté à Bayer-Fluckiger 1984 et à Bayer-Fluckiger–Suarez 2005 ;
+  Quebbemann 1992 signalé, non lu ; corrections relevées dans CHANGEMENTS_V151.md.
   Claude Opus 5.5 (Anthropic) et Astra (OpenAI) ont assisté l'auteur ; ils ne sont pas auteurs.
 keywords:
   - réseaux idéaux
